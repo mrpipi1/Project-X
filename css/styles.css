@@ -54,7 +54,7 @@ h4 {
 .landingpage {
   height: 100vh;
 
-  background-image: url(../img/landingpage.jpg);
+  background-image: url(../img/landingpage.jpg;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -182,6 +182,8 @@ h4 {
 .nav_main li:hover {
   background-color: #476d5e;
 }
+
+
 
 /*#############################################################
 #############################################################
@@ -381,6 +383,11 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 .saleproducts_main ul {
     padding: 1vw;
     margin: 5vw;
+
+    position: relative;
+    transform: translateX(20px);
+    transition: all 0.3s ease-in-out;
+
 }
 
 .saleproducts_main img {
@@ -388,10 +395,15 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
   width: 15vw;
 
   background-color: #f8fafc;
+
+  display: block;
 }
+
 
 .saleproducts_main ul:hover {
   border: 1px solid #b3b3b3;
+
+
 }
 
 .saleproducts_main a p {
@@ -402,6 +414,12 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
   font-style: italic;
   font-size: 1.2vw;
 }
+
+
+
+
+
+
 
 /*#############################################################
 #############################################################
@@ -466,6 +484,7 @@ ______ ____  _____  __  __
   display: block;
 
   text-align: center;
+
 }
 
 .form_main {
