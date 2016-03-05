@@ -28,7 +28,7 @@
     		<li><a href="#about_us">Über uns</a></li>
     		<li><a href="#course">Kurse</a></li>
   			<li><a href="#contact">Kontakt</a></li>
-        <li><a href="#shop">Shop</a></li>
+        <li><a href="index.php?page=shop">Shop</a></li>
         <li><a href="#login">Login</a></li>
         <li><a href="#cart">CART</a></li>
   		</ul>

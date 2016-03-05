@@ -117,7 +117,8 @@
 
         <div class="shopitem">
             <ul>
-                <li><a href="#"><img src="img/shop-images/2er-band.png" alt="2 Gummiarmbänder" /></a></li>
+                <!-- &amp;item=2  2 steht für die id von dem item, die es später in der datenbank geben wird-->
+                <li><a href="index.php?page=shop-item&amp;item=2"><img src="img/shop-images/2er-band.png" alt="2 Gummiarmbänder" /></a></li>
                 <li><a href="#">2 Gummiarmbänder</a>
                 <li class="price">3,99€</li>
             </ul>

@@ -19,15 +19,21 @@ include ('content/landingpage.php');
 
 
 // GET-Abfrage
-if( $page == "home" ){
-	$content .= "home.php";
-	$title = "Lotus Yoga - Ihr Yogastudio";
-}elseif( $page == "AGB" ){
-	$content .= "agb.php";
-	$title = "Lotus Yoga - Allgemeine Geschäftsbedingungen";
+//if( $page == "home" ){
+//	$content .= "home.php";
+//	$title = "Lotus Yoga - Ihr Yogastudio";
+//}elseif( $page == "AGB" ){
+//	$content .= "agb.php";
+//	$title = "Lotus Yoga - Allgemeine Geschäftsbedingungen";
+//}
+
+
+// GET-Abfrage verkürzt:
+
+if($page){
+	$content .= $page .".php";
+	$title = "Lotus Yoga - " .$page;
 }
-
-
 
 
 

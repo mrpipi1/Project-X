@@ -7,7 +7,6 @@ include("breadcrumbs.php");
 
         <h2>Anmelden</h2>
 
-
         <form class="form_register" action="" method="post">
 
             <div class="form-group">
