@@ -32,7 +32,6 @@ include ('content/landingpage.php');
 
 if($page){
 	$content .= $page .".php";
-	$title = "Lotus Yoga - " .$page;
 }
 
 

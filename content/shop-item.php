@@ -13,6 +13,6 @@
 
 
 <div>
-    <a href="index.php?page=shop&amp;action=shop" class="btn">zurück</a>
-    <a href="index.php?site=reservations&amp;action=new" class="btn">weiter</a>
+    <a href="index.php?page=shop" class="btn">zurück</a>
+    <a href="index.php?page=cart" class="btn">weiter</a>
 </div>

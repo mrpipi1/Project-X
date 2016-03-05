@@ -59,6 +59,6 @@ include("breadcrumbs.php");
 
 
 <div>
-    <a href="#" class="btn">zurück</a>
-    <a href="#" class="btn">weiter</a>
+    <a href="index.php?page=cart" class="btn">zurück</a>
+    <a href="index.php?page=address" class="btn">weiter</a>
 </div>

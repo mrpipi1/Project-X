@@ -5,7 +5,7 @@
     <!-- mobile initial -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <!-- information -->
-    <title>Lotus Yoga</title>
+    <title><?php echo "Lotus Yoga - " .$_GET["page"]; ?></title>
     <meta name="description" content=" ">
     <meta name="author" content=" ">
     <!-- favicon -->
