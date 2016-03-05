@@ -1,10 +1,11 @@
 <?php
+include('content/header.php');
 
 
 // Content-Dateien-Ordner
 $content = "content/";
 // zusätzlich noch eine $ für css definiert
-$css = "css";
+//$css = "css";
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
 if( ! isset($_GET['page']) ){
@@ -12,6 +13,9 @@ if( ! isset($_GET['page']) ){
 }else{
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
+
+
+include ('content/landingpage.php');
 
 
 // GET-Abfrage
@@ -23,16 +27,18 @@ if( $page == "home" ){
 	$title = "Lotus Yoga - Allgemeine Geschäftsbedingungen";
 }
 
+
+
+
+
 // content eingebunden
 include($content);
 // zusätzlich noch css eingebunden
-include ($css);
+//include ($css);
 
 
 // konnte $content nicht einbinden. Muss den Pfad angeben 'content/'
-include ('content/landingpage.php');
 
-include('content/header.php');
 
 include('content/footer.php');
 

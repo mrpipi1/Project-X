@@ -45,63 +45,63 @@
 
       <section class="employees_main">
         <ul>
-          <li><img src="../img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
         </ul>
 
         <ul>
-          <li><img src="../img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
+          <li><img src="img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
           <li>Name</li>
           <li>0664 555 555</li>
           <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
@@ -122,19 +122,19 @@
       <section class="beginners-courses_main">
         <h3>Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
           <ul>
-            <li><img src="../img/kurse/yin_yoga.svg" alt="" /></li>
+            <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
             <li><h5>yin yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
 
           <ul>
-            <li><img src="../img/kurse/ashtanga_yoga.svg" alt="" /></li>
+            <li><img src="img/kurse/ashtanga_yoga.svg" alt="" /></li>
             <li><h5>ashtanga yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
 
           <ul>
-            <li><img src="../img/kurse/tri_yoga.svg" alt="" /></li>
+            <li><img src="img/kurse/tri_yoga.svg" alt="" /></li>
             <li><h5>tri yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>

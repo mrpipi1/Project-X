@@ -54,7 +54,7 @@ h4 {
 .landingpage {
   height: 100vh;
 
-  background-image: url(../img/landingpage.jpg;
+  background-image: url(img/landingpage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -141,7 +141,7 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
+  /*  -ms-flex-pack: distribute;           wird bei mir als fehler angezeigt ? */
           justify-content: space-around;
 
   background-color: #5a8e7d;
