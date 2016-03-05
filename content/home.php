@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <!-- mobile initial -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <!-- information -->
-    <title>Lotus Yoga</title>
-    <meta name="description" content=" ">
-    <meta name="author" content=" ">
-    <!-- favicon -->
-    <link rel="icon" type="icon" href="" sizes="16x16">
-
-    <!-- stylesheet -->
-    <link href="../css/styles.css" rel="stylesheet">
-    <!-- jQuery library (served from Google) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-</head>
-<body>
 
   <!-- <div class="landingpage">
 
@@ -34,11 +15,7 @@
 
   </div> -->
 
-<?php require_once ("landingpage.php") ?>
 
-
-<!-- Header File include -->
-<?php require("header.php"); ?>
 
  <main>
    <h2> <a name="about_us"></a>
@@ -272,14 +249,14 @@
           <input type="text" name="name" value="" required>
           <span class="highlight"></span>
           <span class="form-bar"></span>
-          <label>Vorname | Nachname</label>
+          <label>Vorname | Nachname*</label>
         </div>
 
         <div class="form-group">
           <input type="text" name="tel" value="" required>
           <span class="highlight"></span>
           <span class="form-bar"></span>
-          <label>Telefonnumer</label>
+          <label>Telefonnumer*</label>
         </div>
 
         <div class="form-group">
@@ -330,16 +307,3 @@
 
 
   </script>
-
-
-
-
-
-
-
-<!-- Footer File include -->
- <?php
-
-   require("footer.php");
-
-  ?>
