@@ -1,6 +1,7 @@
 <?php
-require("header.php");
+include("breadcrumbs.php");
 ?>
+
     <section class="wrapper_form_register">
 
 
@@ -34,9 +35,7 @@ require("header.php");
     </section>
 
 
-
 <p>oder</p>
-
 
 
     <section class="wrapper_form_register">
@@ -60,10 +59,7 @@ require("header.php");
     </section>
 
 
-
-
-
-
-<?php
-require("footer.php");
-?>
+<div>
+    <a href="#" class="btn">zurück</a>
+    <a href="#" class="btn">weiter</a>
+</div>
