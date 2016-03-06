@@ -21,6 +21,9 @@
 
 <h3>Wie gebe ich einen Artikel zurück?</h3>
 <p>Sie können Ihre(n) Artikel innerhalb von 14 Tagen nach Erhalt Ihres Pakets für eine Gebühr in Höhe von 1,00 € zurückschicken. Die Artikel müssen ungetragen und in einwandfreiem Zustand sein.  Alle Pakete enthalten ein Rücksendeetikett und einen Lieferschein. Bitte verwenden Sie dieses Etikett, wenn Sie Artikel zurücksenden möchten.</p>
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 96875091093053f72ad5c4f76827d468c126cc17

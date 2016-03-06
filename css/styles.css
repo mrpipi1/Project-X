@@ -8,8 +8,6 @@
   font-weight: lighter;
 
   box-sizing: border-box;
-
-
 }
 
 p {
@@ -35,8 +33,12 @@ h2 {
 
 h3 {
   text-align: center;
-  padding: 100px 0;
+  padding: 50px 0;
+  text-align: center;
+
 }
+
+
 
 h4 {
   color: white;
@@ -48,13 +50,33 @@ h4 {
 
 }
 
+.employees_headline {
+  font-size: 2.2vw;
+}
+
+.courses_headline {
+  font-style: italic;
+  color: #b3b3b3;
+  font-size: 2vw;
+
+  padding: 10px 0;
+}
+
+
+h5 {
+  text-align: center;
+  font-size: 1.9vw;
+
+  margin: 40px 0;
+}
+
 
 /* Landing Page */
 
 .landingpage {
   height: 100vh;
 
-  background-image: url(img/landingpage.jpg);
+  background-image: url(../img/landingpage.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -126,7 +148,7 @@ h4 {
 /* Header */
 
 .header_main {
-  height: 100px;
+  height: 60px;
   width: 100vw;
 
   display: -webkit-box;
@@ -141,17 +163,21 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   -webkit-justify-content: space-around;
-  /*  -ms-flex-pack: distribute;           wird bei mir als fehler angezeigt ? */
+  -ms-flex-pack: center;
           justify-content: space-around;
 
-  background-color: #5a8e7d;
+  background-color: rgba(90, 142, 125, 0.5);
+
+
+  position: fixed;
+  z-index: 100;
 
 }
 
 
 .logo {
-  width: 85px;
-  height: 85px;
+  width: 50px;
+  height: 50px;
 
   background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
@@ -159,6 +185,12 @@ h4 {
   background-position: center;
 
   text-indent: -99999px;
+
+}
+
+.logo a {
+  display: block;
+
 }
 
 .nav_main ul {
@@ -181,6 +213,7 @@ h4 {
 
 .nav_main li:hover {
   background-color: #476d5e;
+
 }
 
 
@@ -310,17 +343,6 @@ _  ___    _ _____   _____ ______
 #############################################################*/
 
 
-.courses_main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-
-  text-align: center;
-}
 
 
 .beginners-courses_main  {
@@ -348,8 +370,20 @@ _  ___    _ _____   _____ ______
 
 .beginners-courses_main img {
   opacity: 0.5;
+
+  border: 1px solid red;
 }
 
+
+.advanced-courses_main img {
+  border: 1px solid red;
+  background-image: url(../img/kurse/yin_yoga.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 50px;
+  height: 50px;
+}
 
 /*#############################################################
 #############################################################
@@ -755,21 +789,7 @@ ______ ____   ____ _______ ______ _____
 .footer_main {
   height: 80px;
 
-  display: -webkit-box;
-
-  display: -webkit-flex;
-
-  display: -ms-flexbox;
-
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
 
   margin-top: 100px;
 
@@ -777,6 +797,8 @@ ______ ____   ____ _______ ______ _____
   font-size: 2vh;
 
   background-color: #5a8e7d;
+
+
 }
 
 .footer_main a:hover {
@@ -794,9 +816,13 @@ ______ ____   ____ _______ ______ _____
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
 
   color: white;
+  text-indent: -99999px;
+
+  height: 40px;
+
+  justify-content: center;
 }
 
 .nav_footer {
@@ -806,8 +832,37 @@ ______ ____   ____ _______ ______ _____
   display: flex;
 
   color: white;
+
+  justify-content: center;
+
 }
 
+
+.facebook {
+  background-image: url(../img/socialmedia/fb.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+
+.instagram {
+  background-image: url(../img/socialmedia/insta.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.youtube {
+  background-image: url(../img/socialmedia/youtube.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
 
 
 /*---------------------------------------------*/
@@ -858,4 +913,3 @@ li {
 
 .price {
   color: #b3b3b3; }
-

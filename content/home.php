@@ -14,8 +14,13 @@
     </div>
 
   </div> -->
+<<<<<<< HEAD
 
 <?php include ('content/landingpage.php');
+=======
+<?php
+include ('content/landingpage.php');
+>>>>>>> 96875091093053f72ad5c4f76827d468c126cc17
  ?>
 
 <main>
@@ -120,8 +125,8 @@
   </h2>
 
     <section class="courses_main">
+      <h3 class="courses_headline">Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
       <section class="beginners-courses_main">
-        <h3>Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
           <ul>
             <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
             <li><h5>yin yoga</h5></li>
@@ -141,9 +146,8 @@
           </ul>
       </section>
 
-
+      <h3 class="courses_headline">Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
       <section class="advanced-courses_main">
-        <h3>Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
           <ul>
             <li><img src="" alt="" /></li>
             <li><h5>yin yoga</h5></li>
@@ -176,31 +180,31 @@
 
     <section class="saleproducts_main">
       <ul>
-        <li><a href="#"><img src="../img/shop/jumper_black.png" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/jumper_black.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
       <ul>
-        <li><a href="#"><img src="../img/shop/jumper_white.png" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/jumper_white.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
       <ul>
-        <li><a href="#"><img src="../img/shop/tragetasche_yogamatte.png" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/tragetasche_yogamatte.png" alt="" /></a></li>
         <li><a href="#"><p>Tragetasche mit Yogamatte</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
       <ul>
-        <li><a href="#"><img src="../img/shop/tshirt_w_red.png" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/tshirt_w_red.png" alt="" /></a></li>
         <li><a href="#"><p>Damen T-Shirt</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
       <ul>
-        <li><a href="#"><img src="" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/no" alt="" /></a></li>
         <li><a href="#"><p>Notizbuch</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
@@ -213,7 +217,7 @@
 
 
       <div class="btn">
-        <a href="#">Zum Shop</a>
+        <a href="index.php?page=shop">Zum Shop</a>
       </div>
 
     </section>
@@ -235,14 +239,14 @@
       </div>
 
       <div class="btn">
-        <a href="#">Zum Kontaktformular</a>
+        <a href="#contactform_main">Zum Kontaktformular</a>
       </div>
 
     </section>
 
   <h2>Kontaktformular</h2>
 
-    <section class="contactform_main">
+    <section class="contactform_main"> <a name="contactform_main"></a>
 
       <form class="form_main" action="" method="post">
 
