@@ -15,7 +15,6 @@ if( ! isset($_GET['page']) ){
 }
 
 
-include ('content/landingpage.php');
 
 
 // GET-Abfrage

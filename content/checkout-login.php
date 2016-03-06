@@ -24,7 +24,7 @@ include("breadcrumbs.php");
             </div>
 
             <div class="btn_register btn">
-                <input type="button" name="name" value="Registrieren">
+                <input type="submit" name="name" value="Registrieren">
             </div>
         </form>
 
