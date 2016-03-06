@@ -9,8 +9,8 @@
     <ul class="nav_footer">
       <li><a href="#">&copy; Lotus Yoga</a></li>
       <li><a href="#">Impressum</a></li>
-      <li><a href="#">FAQs</a></li>
-      <li><a href="agb.php">AGB</a></li> <!-- geht nicht -->
+      <li><a href="index.php?page=faqs">FAQs</a></li>
+      <li><a href="index.php?page=agb">AGB</a></li> <!-- geht nicht -->
       <li><a href="#">Datenschutz</a></li>
     </ul>
   </footer>

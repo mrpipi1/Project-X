@@ -1,6 +1,3 @@
-<?php
-require("header.php");
-?>
 
 <h2>FAQs</h2>
 
@@ -26,7 +23,4 @@ require("header.php");
 <p>Sie können Ihre(n) Artikel innerhalb von 14 Tagen nach Erhalt Ihres Pakets für eine Gebühr in Höhe von 1,00 € zurückschicken. Die Artikel müssen ungetragen und in einwandfreiem Zustand sein.  Alle Pakete enthalten ein Rücksendeetikett und einen Lieferschein. Bitte verwenden Sie dieses Etikett, wenn Sie Artikel zurücksenden möchten.</p>
 
 
-<?php
-require("footer.php");
-?>
 
