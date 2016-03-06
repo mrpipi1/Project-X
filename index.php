@@ -13,12 +13,7 @@ if( ! isset($_GET['page']) ){
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> 96875091093053f72ad5c4f76827d468c126cc17
 // GET-Abfrage
 //if( $page == "home" ){
 //	$content .= "home.php";

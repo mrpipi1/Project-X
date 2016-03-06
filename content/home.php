@@ -14,13 +14,8 @@
     </div>
 
   </div> -->
-<<<<<<< HEAD
 
 <?php include ('content/landingpage.php');
-=======
-<?php
-include ('content/landingpage.php');
->>>>>>> 96875091093053f72ad5c4f76827d468c126cc17
  ?>
 
 <main>
