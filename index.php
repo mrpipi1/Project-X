@@ -1,11 +1,10 @@
 <?php
+
+// content definieren
+$content = ('content/');
+
+// header eingebunden
 include('content/header.php');
-
-
-// Content-Dateien-Ordner
-$content = "content/";
-// zusätzlich noch eine $ für css definiert
-//$css = "css";
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
 if( ! isset($_GET['page']) ){
@@ -13,10 +12,6 @@ if( ! isset($_GET['page']) ){
 }else{
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
-
-
-include ('content/landingpage.php');
-
 
 // GET-Abfrage
 //if( $page == "home" ){
@@ -35,17 +30,9 @@ if($page){
 	$title = "Lotus Yoga - " .$page;
 }
 
-
-
 // content eingebunden
 include($content);
-// zusätzlich noch css eingebunden
-//include ($css);
-
-
-// konnte $content nicht einbinden. Muss den Pfad angeben 'content/'
-
-
+// footer eingebunden
 include('content/footer.php');
 
 ?>
