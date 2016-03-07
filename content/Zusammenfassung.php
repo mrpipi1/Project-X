@@ -2,6 +2,7 @@
 include("breadcrumbs.php");
 ?>
 
+<!-- Adressen -->
 <section class="billing-address">
 
     <h2>Rechnungsadresse:</h2>
@@ -77,6 +78,7 @@ include("breadcrumbs.php");
 </section>
 
 
+<!-- Versand und Bezahlung -->
 <section class="shipping-info_confirmation">
 
     <h2>Versandart:</h2>
@@ -94,6 +96,7 @@ include("breadcrumbs.php");
 </section>
 
 
+<!-- warenkorb -->
 <section class="wrapper_card">
 
     <div class="card-item">
@@ -166,6 +169,7 @@ include("breadcrumbs.php");
 </ul>
 
 
+<!-- AGB und Datenschutzbestimmungen akzeptieren -->
 <form class="form_confirmation" action="" method="post">
 
     <p>

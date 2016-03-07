@@ -2,12 +2,11 @@
 include("breadcrumbs.php");
 ?>
 
-    <section class="wrapper_form_register">
-
+    <section class="wrapper_form_login">
 
         <h2>Anmelden</h2>
 
-        <form class="form_register" action="" method="post">
+        <form class="form_login" action="" method="post">
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
@@ -37,11 +36,11 @@ include("breadcrumbs.php");
 <p>oder</p>
 
 
-    <section class="wrapper_form_register">
+    <section class="wrapper_form_login">
 
         <h2>als Gast fortfahren</h2>
 
-        <form class="form_register" action="" method="post">
+        <form class="form_loin" action="" method="post">
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
