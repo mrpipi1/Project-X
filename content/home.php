@@ -210,12 +210,11 @@
         <li><p>24,99€</p></li>
       </ul>
 
-
-      <div class="btn">
-        <a href="index.php?page=shop">Zum Shop</a>
-      </div>
-
     </section>
+
+    <div class="btn">
+      <a href="index.php?page=shop">Zum Shop</a>
+    </div>
 
   <h2>Kontakt</h2> <a name="contact"></a>
     <section class="contact_main">

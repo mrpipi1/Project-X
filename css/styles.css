@@ -1,3 +1,12 @@
+/*
+    COLORS
+
+    Erstes      #65a591
+    Zweites     #5a8e7d
+    Drittes     #486e5f
+
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +19,15 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0px 0px 150px;
+}
+
 p {
   line-height: 6vh;
   font-size: 1.2em;
@@ -18,7 +36,6 @@ p {
 a {
   color: inherit;
   display: inline-block;
-
 }
 
 
@@ -27,7 +44,6 @@ h2 {
   text-align: center;
   font-size: 2.2em;
   font-weight: 200;
-
 }
 
 
@@ -35,10 +51,7 @@ h3 {
   text-align: center;
   padding: 50px 0;
   text-align: center;
-
 }
-
-
 
 h4 {
   color: white;
@@ -47,6 +60,10 @@ h4 {
   font-weight: 400;
   text-align: center;
   margin: 2%;
+}
+
+.landingpage_headline {
+
 
 }
 
@@ -117,7 +134,7 @@ h5 {
 }
 
 .btn_landingpage {
-  height: 2.5vw;
+  height: 1vw;
 
   display: -webkit-box;
 
@@ -128,21 +145,20 @@ h5 {
   display: flex;
 
   margin: 2vw;
-  padding: 2vw 4vw;
+  padding: 1.8vw 4vw;
 
-  border: 0.2vw solid white;
+  align-items: center;
 
+  background-color: #5a8e7d;
 }
 
 .btn_landingpage:hover {
-  background-color: #5a8e7d;
-
-  border: none;
-
   -webkit-transition: 0.8s;
+  transition: 0.3s;
 
-  transition: 0.8s;
+  transform: scale(1.1);
 
+  color: #fff;
 }
 
 /* Header */
@@ -170,7 +186,10 @@ h5 {
 
 
   position: fixed;
+
   z-index: 100;
+
+
 
 }
 
@@ -178,6 +197,8 @@ h5 {
 .logo {
   width: 50px;
   height: 50px;
+
+
 
   background-image: url(../img/logo.svg);
   background-repeat: no-repeat;
@@ -193,6 +214,7 @@ h5 {
 
 }
 
+
 .nav_main ul {
   display: -webkit-box;
   display: -webkit-flex;
@@ -201,21 +223,27 @@ h5 {
 
   color: white;
 
-  list-style: none;
+
+  padding: 20px;
+
+  justify-content: flex-end;
+
 }
 
 .nav_main li {
   font-size: 0.9em;
   letter-spacing: 1px;
 
-  padding: 2.8em;
+  padding: 1.5vw 3vw;
+
+
 }
 
 .nav_main li:hover {
   background-color: #476d5e;
+  transition: 0.6s;
 
 }
-
 
 
 /*#############################################################
@@ -231,6 +259,7 @@ __  __          _____ _   _
 
 #############################################################
 #############################################################*/
+
 
 
 /*#############################################################
@@ -788,17 +817,18 @@ ______ ____   ____ _______ ______ _____
 
 .footer_main {
   height: 80px;
+  width: 100%;
 
   display: block;
 
-  margin-top: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 
   color: white;
   font-size: 2vh;
 
   background-color: #5a8e7d;
-
-
 }
 
 .footer_main a:hover {
@@ -867,6 +897,12 @@ ______ ____   ____ _______ ______ _____
 
 /*---------------------------------------------*/
 
+
+/*  NAV FOOTER  */
+
+.impressum_footer, .faqs_footer, .agb_footer, .datenschutz_footer {
+  padding-top: 50px;
+}
 
 /*#############################################################
 ###############################################################

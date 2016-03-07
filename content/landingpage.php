@@ -1,6 +1,6 @@
 <div class="landingpage">
 
-    <h4>Willkommen <br> bei <br>Lotus Yoga</h4>
+    <h4 class="landingpage_headline">Willkommen <br> bei <br>Lotus Yoga</h4>
 
     <div class="btn_wrapper">
       <div class="btn_landingpage">
