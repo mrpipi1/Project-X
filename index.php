@@ -4,7 +4,7 @@
 $content = ('content/');
 
 // header eingebunden
-include('content/header.php');
+include('header.php');
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
 if( ! isset($_GET['page']) ){
@@ -33,6 +33,6 @@ if($page){
 // content eingebunden
 include($content);
 // footer eingebunden
-include('content/footer.php');
+include('footer.php');
 
 ?>

@@ -1,4 +1,4 @@
-<section class="impressum_footer">
+<section class="content-wrapper">
     <h2>Impressum</h2>
     <h3>Lorem Ipsum</h3>
     <p>

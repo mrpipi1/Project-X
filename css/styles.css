@@ -195,6 +195,12 @@ h5 {
 
 }
 
+.nav_main {
+
+  height: 100%;
+
+}
+
 
 .logo {
   width: 50px;
@@ -226,24 +232,33 @@ h5 {
   color: white;
 
 
+
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.nav_main li {
+  display: flex;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+
+  padding: 0vw 3vw;
+
+  height: 100%;
+
+  align-items: center;
   padding: 20px;
 
   justify-content: flex-end;
 
 }
 
-.nav_main li {
-  font-size: 0.9em;
-  letter-spacing: 1px;
-
-  padding: 1.5vw 3vw;
-
-
-}
 
 .nav_main li:hover {
   background-color: #476d5e;
-  transition: 0.6s;
+
+  transition: 1s;
 
 }
 
@@ -907,9 +922,24 @@ ______ ____   ____ _______ ______ _____
 
 /*  NAV FOOTER  */
 
-.impressum_footer, .faqs_footer, .agb_footer, .datenschutz_footer {
-  padding: 0px 50px 0px 50px;
+.content-wrapper {
+  padding: 20px 50px 0px 50px;
 }
+
+.content-wrapper h3 {
+  font-weight: 400;
+  text-align: left;
+
+  padding: 1vw 0vw;
+}
+
+.content-wrapper p {
+  margin-bottom: 30px;
+  font-size: 1.3vw;
+  line-height: 1.8;
+  text-align: justify;
+}
+
 
 /*#############################################################
 ###############################################################

@@ -1,5 +1,5 @@
 
-<section class="faqs_footer">
+<section class="content-wrapper">
   <h2>FAQs</h2>
 
   <h3>Ich habe mein Passwort vergessen, was kann ich tun?</h3>
