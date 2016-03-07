@@ -19,6 +19,8 @@
   box-sizing: border-box;
 }
 
+
+
 html {
   position: relative;
   min-height: 100%;
@@ -892,6 +894,11 @@ ______ ____   ____ _______ ______ _____
   background-position: center;
   background-size: cover;
 
+}
+
+
+.active_footer {
+  color: #b3b3b3;
 }
 
 
