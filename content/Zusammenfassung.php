@@ -177,6 +177,6 @@ include("breadcrumbs.php");
 
 
 <div>
-    <a href="index.php?page=payment" class="btn">zurück</a>
-    <a href="index.php?page=end" class="btn">zahlungspflichtig bestellen</a>
+    <a href="index.php?page=Versand" class="btn">zurück</a>
+    <a href="index.php?page=Abschluss" class="btn">zahlungspflichtig bestellen</a>
 </div>

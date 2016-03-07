@@ -75,6 +75,6 @@ include("breadcrumbs.php");
 
 
 <div>
-    <a href="index.php?page=shop-item" class="btn">zurück</a>
-    <a href="index.php?page=checkout-login" class="btn">weiter</a>
+    <a href="index.php?page=Detailansicht" class="btn">zurück</a>
+    <a href="index.php?page=Anmelden" class="btn">weiter</a>
 </div>

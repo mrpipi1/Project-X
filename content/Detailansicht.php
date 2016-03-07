@@ -45,8 +45,8 @@
 
 
 <div>
-    <a href="index.php?page=shop" class="btn">zurück</a>
-    <a href="index.php?page=cart" class="btn">weiter</a>
+    <a href="index.php?page=Shop" class="btn">zurück</a>
+    <a href="index.php?page=Warenkorb" class="btn">weiter</a>
 </div>
 
 

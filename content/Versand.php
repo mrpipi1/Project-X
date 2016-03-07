@@ -62,7 +62,7 @@ include("breadcrumbs.php");
 </section>
 
 <div>
-    <a href="index.php?page=address" class="btn">zurück</a>
-    <a href="index.php?page=conclusion" class="btn">weiter</a>
+    <a href="index.php?page=Adressen" class="btn">zurück</a>
+    <a href="index.php?page=Zusammenfassung" class="btn">weiter</a>
 </div>
 
