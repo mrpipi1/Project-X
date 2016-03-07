@@ -171,7 +171,7 @@
     </div>
   </div>
 
-  <h2>Produkt Aktion</h2> <a name="shop"></a>
+  <h2>Produkt Aktion</h2> <a name="saleproducts_main"></a>
 
     <section class="saleproducts_main">
       <ul>
