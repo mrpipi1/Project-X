@@ -195,12 +195,15 @@ h5 {
 
 }
 
+<<<<<<< HEAD
 .nav_main {
 
   height: 100%;
 
 }
 
+=======
+>>>>>>> 5046b1cfc920a4adec66f6f6ee65219f7ddb5566
 
 .logo {
   width: 50px;
@@ -232,6 +235,7 @@ h5 {
   color: white;
 
 
+<<<<<<< HEAD
   justify-content: space-around;
   align-items: center;
   height: 100%;
@@ -247,13 +251,30 @@ h5 {
   height: 100%;
 
   align-items: center;
+=======
+  padding: 20px;
+
+  justify-content: flex-end;
+
+}
+
+.nav_main li {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+
+  padding: 1.5vw 3vw;
+>>>>>>> 5046b1cfc920a4adec66f6f6ee65219f7ddb5566
 
 
 }
 
 .nav_main li:hover {
   background-color: #476d5e;
+<<<<<<< HEAD
   transition: 1s;
+=======
+  transition: 0.6s;
+>>>>>>> 5046b1cfc920a4adec66f6f6ee65219f7ddb5566
 
 }
 
