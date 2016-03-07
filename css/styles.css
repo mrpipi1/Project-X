@@ -577,8 +577,8 @@ ______ ____  _____  __  __
 }
 
 .btn a:hover {
-  box-shadow: 0 0 2px 0.5px rgba(0,0,0,0.75);
-  opacity: 0.9;
+  background-color: #486e5f;
+  transition: 0.2s;
 }
 
 input[type="submit"] {
@@ -908,7 +908,7 @@ ______ ____   ____ _______ ______ _____
 /*  NAV FOOTER  */
 
 .impressum_footer, .faqs_footer, .agb_footer, .datenschutz_footer {
-  padding-top: 50px;
+  padding: 0px 50px 0px 50px;
 }
 
 /*#############################################################
