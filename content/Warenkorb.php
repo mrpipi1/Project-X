@@ -1,3 +1,4 @@
+<section class="content-wrapper">
 <?php
 include("breadcrumbs.php");
 ?>
@@ -78,3 +79,5 @@ include("breadcrumbs.php");
     <a href="index.php?page=Detailansicht" class="btn">zurück</a>
     <a href="index.php?page=Anmelden" class="btn">weiter</a>
 </div>
+
+</section>

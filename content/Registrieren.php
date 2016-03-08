@@ -1,10 +1,5 @@
-<?php
-require("header.php");
-?>
 
-
-
-<section class="wrapper_form_register">
+<section class="content-wrapper">
 
     <form class="form_register" action="" method="post">
 
@@ -62,7 +57,3 @@ require("header.php");
 
 
 
-
-<?php
-require("footer.php");
-?>
