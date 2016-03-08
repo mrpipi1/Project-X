@@ -4,7 +4,7 @@
 
     <div class="btn_wrapper">
       <div class="btn_landingpage">
-        <a href="#h1">Klick Mich</a>
+        <a href="#about_us">Klick Mich</a>
       </div>
 
       <div class="btn_landingpage">

@@ -199,13 +199,13 @@
       </ul>
 
       <ul>
-        <li><a href="#"><img src="img/shop/no" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/notebook.png" alt="" /></a></li>
         <li><a href="#"><p>Notizbuch</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
       <ul>
-        <li><a href="#"><img src="" alt="" /></a></li>
+        <li><a href="#"><img src="img/shop/yogaring.png" alt="" /></a></li>
         <li><a href="#"><p>Yoga-Ring</p></a></li>
         <li><p>24,99€</p></li>
       </ul>

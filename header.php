@@ -35,7 +35,7 @@
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#saleproducts_main";}else{echo "index.php?page=home#saleproducts_main";} ?>""#saleproducts_main">Aktionen</a></li>
         <li><a href="index.php?page=Shop">Shop</a></li>
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#login";}else{echo "index.php?page=home#login";} ?>">Login</a></li>
-        <li><a href="index.php?page=Warenkorb">CART</a></li>
+        <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
   		</ul>
   	</nav>
   </header>
