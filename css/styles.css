@@ -577,6 +577,10 @@ ______ ____  _____  __  __
   display: inline-block;;
 }
 
+.btn {
+  margin-bottom: 50px;;
+}
+
 .btn a {
   width: 25%;
 
