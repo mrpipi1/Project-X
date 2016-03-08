@@ -1,7 +1,14 @@
-<section class="content-wrapper">
+<section class="content-wrapper impressum-p">
     <h2>Impressum</h2>
-    <h3>Lorem Ipsum</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <h3>Yoga Studio - Lotus Yoga</h3>
+      <p>Siebensterngasse 2</p>
+      <p>A-1070 Wien</p>
+      <p>Tel.: 01 555 555 55</p>
+      <p>E-Mail: office@lotusyoga.at</p>
+      <p>Web: www.lotusyoga.at</p>
+      <br>
+      <p>Firmenname: Lotus Yoga</p>
+      <p>Firmengericht: Handelsgericht Wien</p>
+      <p>FN:</p>
+      <p>UID:</p>
 </section>
