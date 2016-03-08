@@ -865,8 +865,8 @@ ______ ____   ____ _______ ______ _____
 
 }
 
-.footer_main a:hover {
-  color: #b3b3b3;
+.nav_footer a:hover {
+  color: #486e5f;
 
   transition: 0.3s;
 
@@ -879,7 +879,9 @@ ______ ____   ____ _______ ______ _____
 
 }
 
-
+.socialmedia_footer a:hover {
+  color: #5a8e7d;
+}
 
 .socialmedia_footer {
   display: -webkit-box;
@@ -911,24 +913,17 @@ ______ ____   ____ _______ ______ _____
   font-weight: 500;
   letter-spacing: 0.5px;
 
-
   border-bottom: 1px solid rgba( 255, 255, 255, 0.4);
-
-  padding: 20px;
 
   width: 50%;
 
   margin: 0 auto;
-
+  padding: 20px;
 
 }
 
-
-
-
-
 .active_footer {
-  color: #b3b3b3;
+  color: #486e5f;
 }
 
 
