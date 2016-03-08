@@ -14,7 +14,7 @@
   list-style: none;
   text-decoration: none;
   font-family: 'roboto';
-  font-weight: lighter;
+
 
   box-sizing: border-box;
 }
@@ -187,7 +187,7 @@ h5 {
   -ms-flex-pack: center;
           justify-content: space-around;
 
-  background-color: rgba(90, 142, 125, 0.5);
+  background-color: rgba(90, 142, 125, 1);
 
 
   position: fixed;
@@ -862,11 +862,16 @@ ______ ____   ____ _______ ______ _____
 
 .footer_main a:hover {
   color: #b3b3b3;
+
+  transition: 0.3s;
+
 }
 
 
 .footer_main li {
-  padding: 0 4vh;
+  padding: 0 3vh;
+
+
 }
 
 
@@ -877,12 +882,18 @@ ______ ____   ____ _______ ______ _____
   display: -ms-flexbox;
 
   color: white;
-  text-indent: -99999px;
 
-  height: 40px;
+  height: 10px;
 
   justify-content: center;
-  border: 1px solid red;
+  align-items: center;
+
+
+
+  height: 30%;
+
+  background-color: #486e5f;
+
 }
 
 .nav_footer {
@@ -892,38 +903,25 @@ ______ ____   ____ _______ ______ _____
   display: flex;
 
   color: white;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 
-  justify-content: center;
-  border: 1px solid red;
+
+  border-bottom: 1px solid rgba( 255, 255, 255, 0.4);
+
+  padding: 20px;
+
+  width: 50%;
+
+  margin: 0 auto;
+
 
 }
 
 
-.facebook {
-  background-image: url(../img/socialmedia/fb.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 
-}
-
-
-
-.instagram {
-  background-image: url(../img/socialmedia/insta.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-}
-
-.youtube {
-  background-image: url(../img/socialmedia/youtube.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-}
 
 
 .active_footer {
