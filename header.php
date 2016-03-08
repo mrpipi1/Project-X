@@ -21,8 +21,8 @@
 </head>
 <body>
   <header class="header_main">
-    <h1 class="logo"> <a name="h1"></a>
-  	  <a href="index.php?=page=Home">
+    <h1 class="logo">
+  	  <a href="index.php?=page=home#about_us">
   		  Logo
   		</a>
   	</h1>

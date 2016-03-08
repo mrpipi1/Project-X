@@ -141,22 +141,22 @@
           </ul>
       </section>
 
-      <h3 class="courses_headline">Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
+      <h3 class="courses_headline">Fortgeschrittener</h3> <!-- Anders stylen als Mitarbeiter H3 -->
       <section class="advanced-courses_main">
           <ul>
-            <li><img src="" alt="" /></li>
+            <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
             <li><h5>yin yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
 
           <ul>
-            <li><img src="" alt="" /></li>
+            <li><img src="img/kurse/ashtanga_yoga.svg" alt="" /></li>
             <li><h5>ashtanga yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
 
           <ul>
-            <li><img src="" alt="" /></li>
+            <li><img src="img/kurse/tri_yoga.svg" alt="" /></li>
             <li><h5>tri yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>

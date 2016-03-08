@@ -33,6 +33,7 @@ body {
 p {
   line-height: 6vh;
   font-size: 1.2em;
+  font-weight: 100;
 }
 
 a {
@@ -40,19 +41,19 @@ a {
   display: inline-block;
 }
 
+h2, h3 {
+  text-align: center;
+}
 
 h2 {
   padding: 5vw 0 2vw 0;
-  text-align: center;
   font-size: 2.2em;
   font-weight: 200;
 }
 
-
 h3 {
-  text-align: center;
   padding: 50px 0;
-  text-align: center;
+
 }
 
 h4 {
@@ -71,12 +72,14 @@ h4 {
 
 .employees_headline {
   font-size: 2.2vw;
+  font-weight: 200;
 }
 
 .courses_headline {
   font-style: italic;
   color: #b3b3b3;
   font-size: 2vw;
+  font-weight: 200;
 
   padding: 10px 0;
 }
@@ -87,6 +90,9 @@ h5 {
   font-size: 1.9vw;
 
   margin: 40px 0;
+
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 
@@ -133,28 +139,28 @@ h5 {
   display: -ms-flexbox;
   display: flex;
 
-  font-size: 1.1vw;
-  text-transform: uppercase;
-  color: white;
+
 }
 
 .btn_landingpage {
   height: 1vw;
 
   display: -webkit-box;
-
   display: -webkit-flex;
-
   display: -ms-flexbox;
-
   display: flex;
+  align-items: center;
 
   margin: 2vw;
   padding: 1.8vw 4vw;
 
-  align-items: center;
-
   background-color: #5a8e7d;
+
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  color: white;
 }
 
 .btn_landingpage:hover {
@@ -406,7 +412,7 @@ _  ___    _ _____   _____ ______
 
 
 
-.beginners-courses_main  {
+.beginners-courses_main, .advanced-courses_main  {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -414,13 +420,6 @@ _  ___    _ _____   _____ ______
 
   text-align: center;
 
-}
-
-.advanced-courses_main {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .courses_main ul {
@@ -432,18 +431,12 @@ _  ___    _ _____   _____ ______
 .beginners-courses_main img {
   opacity: 0.5;
 
-  border: 1px solid red;
+  width: 50%;
 }
 
 
 .advanced-courses_main img {
-  border: 1px solid red;
-  background-image: url(../img/kurse/yin_yoga.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  width: 50px;
-  height: 50px;
+  width: 50%;
 }
 
 /*#############################################################
@@ -941,9 +934,10 @@ ______ ____   ____ _______ ______ _____
 
 .content-wrapper {
   position: relative;
-  padding: 20px 50px 0px 50px;
+  padding: 60px 50px 0px 50px;
   z-index: 50;
   background-color: #ffffff;
+
 }
 
 .content-wrapper h3 {
