@@ -1006,3 +1006,35 @@ li {
 
 .price {
   color: #b3b3b3; }
+
+
+.order-confirmation {
+    height: 100vh;
+
+    background-image: url(../img/parallax/studio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+
+    z-index: 0;
+}
+
+.order-confirmation h3 {
+  text-align: center;
+}
+
+.bg-wrapper {
+  height: 50vh;
+
+  margin: 50px;
+
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  padding: 5vw 10vw;
+
+  text-align: center; /* geht nicht */
+
+}
