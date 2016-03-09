@@ -1,9 +1,9 @@
 
   <footer class="footer_main">
     <ul class="socialmedia_footer">
-      <li class="facebook"><a href="#">Facebook</a></li>
-      <li class="instagram"><a href="#">instagram</a></li>
-      <li class="youtube"><a href="#">youtube</a></li>
+      <li class="instagram footer_sm-icon"><a href="#">instagram</a></li>
+      <li class="facebook footer_sm-icon"><a href="#">Facebook</a></li>
+      <li class="youtube footer_sm-icon"><a href="#">youtube</a></li>
     </ul>
 
     <ul class="nav_footer">
