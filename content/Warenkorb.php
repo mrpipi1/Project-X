@@ -1,4 +1,4 @@
-<section class="content-wrapper">
+<section class="content-wrapper wrapper_checkout">
 <?php
 include("breadcrumbs.php");
 ?>
@@ -75,7 +75,7 @@ include("breadcrumbs.php");
 </ul>
 
 
-<div>
+<div class="btn-wrapper_checkout">
     <a href="index.php?page=Detailansicht" class="btn">zurück</a>
     <a href="index.php?page=Anmelden" class="btn">weiter</a>
 </div>

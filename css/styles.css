@@ -351,7 +351,7 @@ _   _ ____  ______ _____    _    _ _   _  _____
 
 
 .employees_main ul {
-  padding: 3vw 10vw;
+  padding: 3vw 8vw;
 
   line-height: 2;
 
@@ -494,7 +494,6 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 .saleproducts_main ul:hover {
   border: 1px solid #b3b3b3;
   transition: 0.2s;
-
 
 }
 
@@ -1082,3 +1081,161 @@ li {
   text-align: center; /* geht nicht */
 
 }
+
+
+
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .employees_main ul {
+    color: red;
+  }
+}
+
+*/
+
+/*############################
+
+    Checkout
+
+############################*/
+
+
+.wrapper_checkout{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn-wrapper_checkout{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* weiter und zurück Button */
+
+.btn {
+  height: 1vw;
+
+  display: flex;
+  align-items: center;
+
+  margin: 1.8vw;
+  padding: 1.8vw 3vw;
+
+  background-color: #5a8e7d;
+
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  color: white;
+}
+
+.btn:hover {
+  transition: 0.3s;
+
+  transform: scale(1.1);
+
+  color: #fff;
+}
+
+
+
+/*####################
+
+Detailseite
+
+####################*/
+
+/* Allgemein */
+
+
+.info-wrapper_detailansicht{
+  width: 35vw;
+}
+
+.info-wrapper_detailansicht p{
+  margin-bottom: 10px;
+}
+
+.headline-wrapper_detailansicht{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* BILDER */
+
+.pictures_wrapper{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2vw;
+}
+
+.zoomed-picture img{
+  width: 25vw;
+  min-width: 220px;
+}
+
+.thumbs{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  width: 25vw;
+  min-width: 220px;
+}
+
+.thumbs img{
+  width: 8vw;
+  min-width: 70px;
+}
+
+
+/* Farbe und Größe wählen: */
+
+.selects{
+  display: flex;
+  padding-top: 10px;
+}
+
+
+.color, .size{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+
+
+/* COLORPICKER */
+
+
+.color:hover{
+  transition: 0.3s;
+
+  transform: scale(1.2);
+}
+
+.colorpicker-white{
+  background-color: white;
+  border: 1px solid #b3b3b3;
+}
+
+.colorpicker-black{
+  background-color: black;
+}
+
+.colorpicker-red{
+  background-color: #7a3b51;
+}
+
+
+
+
