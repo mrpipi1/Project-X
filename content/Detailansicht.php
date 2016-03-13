@@ -7,9 +7,9 @@
         </div>
 
         <ul class="thumbs">
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt.png" alt="Damen T-Shirt"></a></li>
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt.png" alt="Damen T-Shirt Rückseite"></a></li>
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt.png" alt="Damen T-Shirt"></a></li>
+            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt"></a></li>
+            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt Rückseite"></a></li>
+            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt"></a></li>
         </ul>
 
     </section>

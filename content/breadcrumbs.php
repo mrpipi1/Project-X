@@ -1,11 +1,11 @@
-<div class="breadcrumbs-wrapper_card">
+<div class="breadcrumbs-wrapper">
 
     <ul class="breadcrumbs">
-        <li><a href="#">Warenkorb</a></li>
-        <li><a href="#">Anmelden</a></li>
-        <li><a href="#">Lieferadresse</a></li>
-        <li><a href="#">Bezahlung & Versand</a></li>
-        <li><a href="#">Zusammenfassung</a></li>
+        <li class="visited_breadcrumb"><a href="index.php?page=Warenkorb">Warenkorb</a></li>
+        <li class="active_breadcrumb"><a href="index.php?page=Anmelden">Anmelden</a></li>
+        <li class="future_breadcrumb"><a href="index.php?page=Adressen">Lieferadresse</a></li>
+        <li class="future_breadcrumb"><a href="index.php?page=Versand">Bezahlung & Versand</a></li>
+        <li class="future_breadcrumb"><a href="index.php?page=Zusammenfassung">Zusammenfassung</a></li>
     </ul>
 
 </div>

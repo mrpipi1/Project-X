@@ -1,7 +1,8 @@
+<section class="content-wrapper wrapper_checkout">
+
 <?php
 include("breadcrumbs.php");
 ?>
-<section class="content-wrapper wrapper_checkout">
     <!-- Adressen -->
     <section class="billing-address">
 
