@@ -495,7 +495,6 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
   border: 1px solid #b3b3b3;
   transition: 0.2s;
 
-
 }
 
 .saleproducts_main a p {
@@ -1083,4 +1082,245 @@ li {
 
 .bg-wrapper p {
   text-align: center;
+}
+
+
+
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+  .employees_main ul {
+    color: red;
+  }
+}
+
+*/
+
+/*############################
+
+    Checkout
+
+############################*/
+
+
+.wrapper_checkout{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.btn-wrapper_checkout{
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-text{
+  font-size: small;
+}
+
+/*###########
+Breadcrumbs
+############*/
+
+.breadcrumbs-wrapper{
+  width: 100vw;
+}
+
+.breadcrumbs{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #b3b3b3;
+  margin-bottom: 5vw;
+}
+
+.breadcrumbs li{
+  margin-left: 5vw;
+  padding: 10px;
+
+}
+
+.visited_breadcrumb{
+  color: #000000;
+}
+
+.active_breadcrumb{
+  color: black;
+  border-bottom: 2px solid #486e5f;
+}
+
+.future_breadcrumb{
+  color: #b3b3b3;
+}
+
+
+/*########
+ weiter und zurück Button
+ ########*/
+
+.btn {
+  height: 1vw;
+
+  display: flex;
+  align-items: center;
+
+  margin: 1.8vw;
+  padding: 1.8vw 3vw;
+
+  background-color: #5a8e7d;
+
+  font-size: 1vw;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1vw;
+  color: white;
+}
+
+.btn:hover {
+  transition: 0.3s;
+
+  transform: scale(1.1);
+
+  color: #fff;
+}
+
+
+
+/*####################
+
+Detailseite
+
+####################*/
+
+/* Allgemein */
+
+
+.info-wrapper_detailansicht{
+  width: 35vw;
+}
+
+.info-wrapper_detailansicht p{
+  margin-bottom: 10px;
+}
+
+.headline-wrapper_detailansicht{
+
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+/* BILDER */
+
+.pictures_wrapper{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2vw;
+}
+
+.zoomed-picture img{
+  width: 25vw;
+  min-width: 220px;
+}
+
+.thumbs{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+
+  width: 25vw;
+  min-width: 220px;
+}
+
+.thumbs img{
+  width: 8vw;
+  min-width: 70px;
+}
+
+
+/* Farbe und Größe wählen: */
+
+.selects{
+  display: flex;
+  padding-top: 10px;
+}
+
+
+.color, .size{
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+}
+
+
+
+/* COLORPICKER */
+
+
+.color:hover{
+  transition: 0.3s;
+
+  transform: scale(1.2);
+}
+
+.colorpicker-white{
+  background-color: white;
+  border: 1px solid #b3b3b3;
+}
+
+.colorpicker-black{
+  background-color: black;
+}
+
+.colorpicker-red{
+  background-color: #7a3b51;
+}
+
+
+/*################################
+
+Warenkorb
+
+################################*/
+
+.wrapper_card{
+  width: 65vw;
+}
+
+.card-item{
+  margin-bottom: 2vw;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-item li{
+  width: 20vw;
+}
+
+
+.description_card-item{
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+
+.sum_card_wrapper{
+  width: 100vw;
+  border-top: 1px solid #b3b3b3;
+  justify-content: flex-end;
+  margin: 3vw 1.8vw;
+}
+
+.sum_card li{
+  margin-right: 10vw;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1vw;
 }
