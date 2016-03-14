@@ -182,8 +182,8 @@ include("breadcrumbs.php");
 
 
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Versand" class="btn">zurück</a>
-        <a href="index.php?page=Abschluss" class="btn">zahlungspflichtig bestellen</a>
+        <a href="index.php?page=Versand" class="btn_checkout">zurück</a>
+        <a href="index.php?page=Abschluss" class="btn_checkout">zahlungspflichtig bestellen</a>
     </div>
 
 </section>

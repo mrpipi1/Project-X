@@ -59,8 +59,8 @@
 
 
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Warenkorb" class="btn">zurück</a>
-        <a href="index.php?page=Adressen" class="btn">weiter</a>
+        <a href="index.php?page=Warenkorb" class="btn_checkout">zurück</a>
+        <a href="index.php?page=Adressen" class="btn_checkout">weiter</a>
     </div>
 
 </section>
