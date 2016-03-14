@@ -1077,9 +1077,11 @@ li {
   background: rgba(0, 0, 0, 0.5);
 
   padding: 5vw 10vw;
+  text-align: center;
+}
 
-  text-align: center; /* geht nicht */
-
+.bg-wrapper p {
+  text-align: center;
 }
 
 
