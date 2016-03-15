@@ -8,7 +8,7 @@
       </div>
 
       <div class="btn_landingpage">
-        <a href="content/shop.php">Zum Shop</a>
+        <a href="index.php?page=Shop">Zum Shop</a>
       </div>
     </div>
 

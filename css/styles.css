@@ -1245,6 +1245,7 @@ Detailseite
 .selects{
   display: flex;
   padding-top: 10px;
+  align-items: baseline;
 }
 
 
