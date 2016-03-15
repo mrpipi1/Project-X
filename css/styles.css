@@ -1158,7 +1158,7 @@ Breadcrumbs
  weiter und zurück Button
  ########*/
 
-.btn {
+.btn_checkout {
   height: 1vw;
 
   display: flex;
@@ -1176,7 +1176,7 @@ Breadcrumbs
   color: white;
 }
 
-.btn:hover {
+.btn_checkout:hover {
   transition: 0.3s;
 
   transform: scale(1.1);

@@ -31,7 +31,7 @@
                 <label>Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn">
+            <div class="btn_checkout">
                 <input type="submit" name="address" value="Übernehmen">
             </div>
 
@@ -68,7 +68,7 @@
                 <label>Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn">
+            <div class="btn_checkout">
                 <input type="submit" name="address" value="Übernehmen">
             </div>
 
@@ -79,7 +79,7 @@
 
 
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Anmelden" class="btn">zurück</a>
-        <a href="index.php?page=Versand" class="btn">weiter</a>
+        <a href="index.php?page=Anmelden" class="btn_checkout">zurück</a>
+        <a href="index.php?page=Versand" class="btn_checkout">weiter</a>
     </div>
 </section>

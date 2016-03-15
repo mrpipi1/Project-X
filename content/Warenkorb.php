@@ -77,8 +77,8 @@ include("breadcrumbs.php");
 
 
 <div class="btn-wrapper_checkout">
-    <a href="index.php?page=Detailansicht" class="btn">zurück</a>
-    <a href="index.php?page=Anmelden" class="btn">weiter</a>
+    <a href="index.php?page=Detailansicht" class="btn_checkout">zurück</a>
+    <a href="index.php?page=Anmelden" class="btn_checkout">weiter</a>
 </div>
 
 </section>
