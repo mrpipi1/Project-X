@@ -11,4 +11,5 @@
       <p>Firmengericht: Handelsgericht Wien</p>
       <p>FN:</p>
       <p>UID:</p>
+      <img class="impressum-img" src="../../MS_3/img/logo_impressum.svg" alt="Lotus Yoga Logo" />
 </section>
