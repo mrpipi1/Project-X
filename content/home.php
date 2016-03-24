@@ -47,65 +47,65 @@
       <section class="employees_main">
         <ul>
           <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Julia Ulrike</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Lisbeth Thekla</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Clara Augustine</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:c.augustine@lotusyoga.at?subject=lorem">c.augustine@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Leonie Barbara</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:l.barbara@lotusyoga.at?subject=lorem">l.barbara@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Zella Kristiane</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:z.kristiane@lotusyoga.at?subject=lorem">z.kristiane@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Laurenz Luri</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:l.luri@lotusyoga.at?subject=lorem">l.luri@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Elli Sophie</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:e.sophie@lotusyoga.at?subject=lorem">e.sophie@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Lukas Bernhard</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:l.bernhard@lotusyoga.at?subject=lorem">l.bernhard@lotusyoga.at</a></li>
         </ul>
 
         <ul>
           <li><img src="img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
-          <li>Name</li>
+          <li>Kathrin Antonia</li>
           <li>0664 555 555</li>
-          <li><a href="mailto:lorem@lotusyoga.at?subject=lorem">lorem@lotusyoga.at</a></li>
+          <li><a href="mailto:k.antonia@lotusyoga.at?subject=lorem">k.antonia@lotusyoga.at</a></li>
         </ul>
       </section>
 

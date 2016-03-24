@@ -1004,6 +1004,16 @@ ______ ____   ____ _______ ______ _____
   margin: 0;
 }
 
+
+.impressum-img {
+  width: auto;
+  height: 300px;
+
+  position: absolute;
+  right: 50px;
+  top: 200px;
+}
+
 /*#############################################################
 ###############################################################
 
@@ -1316,6 +1326,7 @@ Detailseite
 .selects{
   display: flex;
   padding-top: 10px;
+  align-items: baseline;
 }
 
 
