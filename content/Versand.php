@@ -32,7 +32,8 @@ include("breadcrumbs.php");
         <form class="form_payment" action="" method="post">
 
             <p>
-                <input type="radio" id="vorkasse" name="payment-type"/> <label for="vorkasse">Vorkasse</label>
+                <label for="vorkasse">Vorkasse</label>
+                <input type="radio" id="vorkasse" name="payment-type"/>
             </p>
 
             <p>

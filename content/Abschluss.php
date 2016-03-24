@@ -7,12 +7,12 @@
       <a href="mailto:office@lotusyoga.at?subject=Kontaktformular Website">office@lotusyoga.at</a>
       oder  01 555 555 55.</p>
 
-    <div class="#">
-      <div class="#">
+    <div class="btn-wrapper_abschluss">
+      <div class="btn_checkout">
            <a href="index.php?page=Shop" class="#">Zum Shop</a>
       </div>
 
-     <div class="#">
+     <div class="btn_checkout">
          <a href="index.php?page=home#about_us" class="#">Zur Startseite</a>
      </div>
     </div>

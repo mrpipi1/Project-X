@@ -3,13 +3,13 @@
     <section class="pictures_wrapper">
 
         <div class="zoomed-picture">
-            <a href="#"><img src="img/shop-images/damen-tshirt.png" alt="Damen T-Shirt"></a>
+            <a href="#"><img id="detail_img" src="img/shop-images/damen-tshirt.png" alt="Damen T-Shirt"></a>
         </div>
 
         <ul class="thumbs">
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt"></a></li>
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt Rückseite"></a></li>
-            <li class="pic_detailansicht"><a href="#"><img src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt"></a></li>
+            <li class="pic_detailansicht"><div ><img class="img-container" src="img/shop-images/jumper-grau.png" alt="Damen T-Shirt"></div></li>
+            <li class="pic_detailansicht"><div ><img class="img-container" src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt Rückseite"></div></li>
+            <li class="pic_detailansicht"><div ><img class="img-container" src="img/shop-images/damen-tshirt_small.png" alt="Damen T-Shirt"></div></li>
         </ul>
 
     </section>

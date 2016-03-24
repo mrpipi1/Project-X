@@ -1096,6 +1096,77 @@ li {
 
 */
 
+
+/* MAIN HOVER STYLING */
+
+.shopitem{
+  width: 200px;
+
+  padding: 1vw;
+  margin: 5vw;
+
+  position: relative;
+}
+
+.shopitem img {
+  height: 15vw;
+  width: 15vw;
+
+  background-color: #f8fafc;
+}
+
+/*.saleproducts_main ul:hover {
+
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-out;
+
+}*/
+
+.shopitem ul:hover .price-info_product {
+  color: white;
+  transition: all 0.3s;
+}
+
+.info-hover_product {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  color: #000;
+  text-align: center;
+
+  opacity: 0;  /* Opacity statt display:none oder visibility:hiiden, sonst kein transition*/
+}
+
+.info-hover_product p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2vw;
+
+  padding: 10px;
+}
+
+.product:hover .info-hover_product {
+  transition: all 1s ease-out;
+  bottom: 0;
+
+  opacity: 1;
+}
+
+.price-info_product {
+  display: flex;
+
+  justify-content: space-around;
+}
+
+/*--------------------------------*/
+
+
 /*############################
 
     Checkout
@@ -1259,10 +1330,12 @@ Detailseite
 /* COLORPICKER */
 
 
-.color:hover{
+.color:hover, .size:hover{
   transition: 0.3s;
 
   transform: scale(1.2);
+
+  cursor: pointer;
 }
 
 .colorpicker-white{
@@ -1323,4 +1396,26 @@ Warenkorb
   display: flex;
   justify-content: flex-end;
   margin-top: 1vw;
+}
+
+
+
+/*#######################
+Anmelden
+#######################*/
+
+
+
+
+
+
+/*#################
+Abschluss
+#################*/
+
+
+.btn-wrapper_abschluss{
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
