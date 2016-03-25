@@ -32,7 +32,7 @@ body {
 
 p {
   line-height: 6vh;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 100;
 }
 
@@ -114,49 +114,23 @@ h5 {
   background-position: 50% 50%;
   background-attachment: fixed;
 
-  display: -webkit-box;
-
-  display: -webkit-flex;
-
-  display: -ms-flexbox;
-
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
 
-    position: relative;
-          z-index: 200;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  z-index: 200;
 }
 
-
-
-
 .btn_wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-
-
 }
 
 .btn_landingpage {
   height: 1vw;
 
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
 
@@ -170,15 +144,17 @@ h5 {
   font-weight: 500;
   letter-spacing: 0.1vw;
   color: white;
+
+  position: relative;
 }
+
 
 .btn_landingpage:hover {
   transition: all ease-in 0.4s;
 
   background-color: #262626;
 
-  border: none;
-
+  border: 1px solid #262626;
 
 }
 
@@ -195,16 +171,10 @@ h5 {
   display: -ms-flexbox;
 
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: center;
-          justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
 
   background-color: #383838;
-
 
   position: fixed;
 
@@ -255,6 +225,13 @@ h5 {
   justify-content: space-around;
   align-items: center;
   height: 100%;
+
+
+  overflow: hidden;
+
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.4s;
 }
 
 .nav_main li {
@@ -281,6 +258,17 @@ h5 {
   transition: 1s;
 
 }
+
+.handle {
+	width: 100%;
+	text-align: left;
+	box-sizing: border-box;
+	padding: 15px 10px;
+	cursor: pointer;
+	display: none;
+	color: #fff;
+}
+
 
 
 /*#############################################################
@@ -331,30 +319,52 @@ _   _ ____  ______ _____    _    _ _   _  _____
 /*Mitarbeiter*/
 
 .employees_main  {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  /*display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
   text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;*/
 }
 
 
 .employees_main ul {
-  padding: 3vw 8vw;
+  padding: 3vw;
 
   line-height: 2;
+
+  border: 1px solid skyblue;
+
+  display: flex;
+
+  align-items: center;
+}
+
+
+
+.employees_main p {
+  text-align: justify;
+  border-right: 1px solid rgba(155, 155, 155, 0.5);
+  padding: 20px;
+
+}
+
+.employees_main li {
+  border: 1px solid gold;
+  flex-wrap: wrap;
+
+}
+
+.employees_main ul:nth-child(2n) {
+  display: flex;
+
+  flex-direction: row-reverse;
+
+  align-items: center;
+
+}
+
+.employees_main li:nth-child(2n) {
+  flex-direction: row-reverse;
 
 }
 
@@ -872,9 +882,6 @@ ______ ____   ____ _______ ______ _____
 }
 
 .nav_footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-around;
 
@@ -886,10 +893,12 @@ ______ ____   ____ _______ ______ _____
 
   border-bottom: 1px solid rgba( 255, 255, 255, 0.4);
 
-  width: 50%;
+  width: 50vw;
 
   margin: 0 auto;
   padding: 20px;
+
+  font-size: 1.2vw;
 
 }
 
@@ -919,7 +928,7 @@ ______ ____   ____ _______ ______ _____
 }
 
 .socialmedia_footer a {
-  display: block;
+  display: inline-block;
   height: 100%;
 }
 
@@ -1438,4 +1447,49 @@ Abschluss
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 975px)  { /* STYLES GO HERE */
+
+	body {
+		font-size: 1em;
+	}
+
+  .header_main {
+  }
+
+	.nav_main ul {
+		max-height: 0;
+
+	}
+
+
+	.showing {
+		max-height: 20em;
+
+
+	}
+
+	.nav_main ul li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 10px;
+		text-align: center;
+
+
+	}
+
+	.handle {
+		display: block;
+    text-align: right;
+
+	}
 }

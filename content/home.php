@@ -50,6 +50,9 @@
           <li>Julia Ulrike</li>
           <li>0664 555 555</li>
           <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
+          <p>
+             Hallo, mein Name ist Julia Ulrike. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </ul>
 
         <ul>
@@ -57,6 +60,9 @@
           <li>Lisbeth Thekla</li>
           <li>0664 555 555</li>
           <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
+          <p>
+             Hallo, mein Name ist Lisbeth Thekla. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </ul>
 
         <ul>
@@ -119,8 +125,8 @@
     Kurse
   </h2>
 
-    <section class="courses_main">
-      <h3 class="courses_headline">Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
+    <!-- <section class="courses_main">
+      <h3 class="courses_headline">Anfänger</h3>
       <section class="beginners-courses_main">
           <ul>
             <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
@@ -139,7 +145,7 @@
             <li><h5>tri yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
-      </section>
+      </section> -->
 
       <h3 class="courses_headline">Fortgeschrittener</h3> <!-- Anders stylen als Mitarbeiter H3 -->
       <section class="advanced-courses_main">
