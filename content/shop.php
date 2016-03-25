@@ -21,8 +21,27 @@
         <div class="shopitem">
             <ul>
                 <li><a href="index.php?page=Detailansicht&amp;item=2"><img src="img/shop-images/jumper-grau.png" alt="Pullover" /></a></li>
-                <li><a href="index.php?page=Detailansicht&amp;item=2">Pullover</a>
-                <li class="price">39,99€</li>
+                <li>
+                    <ul class="price-info_product">
+                        <li>
+                            <a href="#"><p>Pullover</p></a>
+                        </li>
+
+                        <li>
+                            <p>39,99€</p>
+                        </li>
+                    </ul> <!-- price-info_product / display: flex container -->
+                </li>
+                <li class="info-hover_product">
+                    <p>Lotus Yoga Tragetasche inklusive Yogamatte.
+                    </p>
+                    <a href="#"><p>
+                            Tasche &amp; Matte
+                        </p></a>
+                    <p>
+                        39,99€
+                    </p>
+                </li>
             </ul>
         </div>
 
@@ -52,6 +71,7 @@
                     <li><a href="index.php?page=Detailansicht&amp;item=2"><img src="img/shop-images/core-trainer.png" alt="Core Trainer" /></a></li>
                     <li><a href="index.php?page=Detailansicht&amp;item=2">Core Trainer</a>
                     <li class="price">29,99€</li>
+
                 </ul>
             </div>
 
