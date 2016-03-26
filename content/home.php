@@ -179,42 +179,202 @@
 
   <h2>Produkt Aktion</h2> <a name="saleproducts_main"></a>
 
-    <section class="saleproducts_main">
-      <ul>
+      <section class="saleproducts_main">
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="farben">
+                  <button type="radio" name="button">red</button>
+                  <button type="radio" name="button">black</button>
+                  <button type="radio" name="button">white</button>
+               </div>
+            </ul>
+            <ul>
+         </section>
+      </section>
+      <!-- <ul class="product">
         <li><a href="#"><img src="img/shop/jumper_black.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/jumper_white.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/tragetasche_yogamatte.png" alt="" /></a></li>
         <li><a href="#"><p>Tragetasche mit Yogamatte</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/tshirt_w_red.png" alt="" /></a></li>
         <li><a href="#"><p>Damen T-Shirt</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/notebook.png" alt="" /></a></li>
         <li><a href="#"><p>Notizbuch</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/yogaring.png" alt="" /></a></li>
         <li><a href="#"><p>Yoga-Ring</p></a></li>
         <li><p>24,99€</p></li>
-      </ul>
+      </ul> -->
 
     </section>
 
@@ -248,7 +408,7 @@
 
     <section class="contactform_main"> <a name="contactform_main"></a>
 
-      <form class="form_main" action="" method="post">
+      <form class="form_main" method="post">
 
         <div class="form-group">
           <input type="text" name="name" value="" required>
