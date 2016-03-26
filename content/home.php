@@ -15,8 +15,11 @@
 
   </div> -->
 
-<?php include ('content/landingpage.php');
- ?>
+
+
+<?php
+include ('content/landingpage.php');
+?>
 
 <main>
    <h2> <a name="about_us"></a>
@@ -191,10 +194,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -211,10 +214,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -231,10 +234,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -251,10 +254,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -271,10 +274,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -291,10 +294,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -311,10 +314,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
@@ -331,10 +334,10 @@
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="farben">
-                  <button type="radio" name="button">red</button>
-                  <button type="radio" name="button">black</button>
-                  <button type="radio" name="button">white</button>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
                </div>
             </ul>
             <ul>
