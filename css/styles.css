@@ -202,7 +202,7 @@ h5 {
   -ms-flex-pack: center;
           justify-content: space-around;
 
-  background-color: rgba(90, 142, 125, 1);
+  background-color: black;
 
 
   position: fixed;
@@ -1203,36 +1203,18 @@ li {
 /*###########
 Breadcrumbs
 ############*/
-
-.breadcrumbs-wrapper{
-  width: 100vw;
+/*
+.breadcrumbs-wrapper {
+  position: fixed;
+  border: 1px solid blue;
+  margin: 0 auto;
 }
+*/
 
-.breadcrumbs{
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px solid #b3b3b3;
-  margin-bottom: 5vw;
-}
 
-.breadcrumbs li{
-  margin-left: 5vw;
-  padding: 10px;
 
-}
 
-.visited_breadcrumb{
-  color: #000000;
-}
 
-.active_breadcrumb{
-  color: black;
-  border-bottom: 2px solid #486e5f;
-}
-
-.future_breadcrumb{
-  color: #b3b3b3;
-}
 
 
 /*########
@@ -1371,6 +1353,7 @@ Warenkorb
 
 .wrapper_card{
   width: 65vw;
+  margin-top: 70px;
 }
 
 .card-item{

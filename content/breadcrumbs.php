@@ -1,4 +1,4 @@
-<div class="breadcrumbs-wrapper">
+<!--<div class="breadcrumbs-wrapper">-->
 
     <ul class="breadcrumbs">
         <li class="visited_breadcrumb"><a href="index.php?page=Warenkorb">Warenkorb</a></li>
@@ -8,4 +8,4 @@
         <li class="future_breadcrumb"><a href="index.php?page=Zusammenfassung">Zusammenfassung</a></li>
     </ul>
 
-</div>
+<!--</div>-->
