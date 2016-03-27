@@ -7,6 +7,7 @@
 
 */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +17,6 @@
   font-family: 'roboto';
 
   box-sizing: border-box;
-
 }
 
 
@@ -152,29 +152,23 @@ h5 {
 .btn_landingpage:hover {
   transition: all ease-in 0.4s;
 
-  background-color: #262626;
+  background-color: #363636;
 
-  border: 1px solid #262626;
+  border: 1px solid #363636;
 
 }
 
 /* Header */
 
 .header_main {
-  height: 60px;
+  height: 80px;
   width: 100vw;
-
-  display: -webkit-box;
-
-  display: -webkit-flex;
-
-  display: -ms-flexbox;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  background-color: #383838;
+  background-color: #363636;
 
   position: fixed;
 
@@ -214,12 +208,9 @@ h5 {
 
 
 .nav_main ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 
-  color: white;
+  color: #fff;
 
 
   justify-content: space-around;
@@ -236,10 +227,8 @@ h5 {
 
 .nav_main li {
   display: flex;
-  font-size: 0.9em;
+  font-size: 0.8em;
   letter-spacing: 1px;
-
-  padding: 0vw 3vw;
 
   height: 100%;
 
@@ -248,15 +237,40 @@ h5 {
 
   justify-content: flex-end;
 
+  transform: translateZ(0);
+  position: relative;
+  overflow: hidden;
+
 }
 
 
-.nav_main li:hover {
-  background-color: #476d5e;
+.nav_main li a {
+  display: inline;
+  padding: 30px 0;
+}
 
 
-  transition: 1s;
+.nav_main li:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
 
+  z-index: -1;
+
+  background: #65a591;
+  height: 3px;
+
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+
+.nav_main li:hover:before, .nav_main li:focus:before, .nav_main li:active:before {
+  left: 0;
+  right: 0;
 }
 
 .handle {
@@ -339,13 +353,10 @@ _   _ ____  ______ _____    _    _ _   _  _____
   align-items: center;
 }
 
-
-
 .employees_main p {
   text-align: justify;
   border-right: 1px solid rgba(155, 155, 155, 0.5);
   padding: 20px;
-
 }
 
 .employees_main li {
@@ -430,13 +441,9 @@ _  ___    _ _____   _____ ______
 
 
 .beginners-courses_main, .advanced-courses_main  {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 
   text-align: center;
-
 }
 
 .courses_main ul {
@@ -936,7 +943,7 @@ ______ ____   ____ _______ ______ _____
   color: white;
   font-size: 2vh;
 
-  background-color: #383838;
+  background-color: #363636;
   background-attachment: fixed;
 }
 
@@ -976,12 +983,8 @@ ______ ____   ____ _______ ______ _____
 /*SOCIAL MEDIA */
 
 .socialmedia_footer {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-
   color: white;
-
+  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -1522,7 +1525,7 @@ Abschluss
 
 
 
-@media only screen and (max-width: 975px)  { /* STYLES GO HERE */
+@media only screen and (max-width: 500px)  { /* STYLES GO HERE */
 
 	body {
 		font-size: 1em;
