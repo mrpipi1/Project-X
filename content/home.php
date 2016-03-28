@@ -15,8 +15,11 @@
 
   </div> -->
 
-<?php include ('content/landingpage.php');
- ?>
+
+
+<?php
+include ('content/landingpage.php');
+?>
 
 <main>
    <h2> <a name="about_us"></a>
@@ -50,6 +53,9 @@
           <li>Julia Ulrike</li>
           <li>0664 555 555</li>
           <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
+          <p>
+             Hallo, mein Name ist Julia Ulrike. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </ul>
 
         <ul>
@@ -57,6 +63,9 @@
           <li>Lisbeth Thekla</li>
           <li>0664 555 555</li>
           <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
+          <p>
+             Hallo, mein Name ist Lisbeth Thekla. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </ul>
 
         <ul>
@@ -119,8 +128,8 @@
     Kurse
   </h2>
 
-    <section class="courses_main">
-      <h3 class="courses_headline">Anfänger</h3> <!-- Anders stylen als Mitarbeiter H3 -->
+    <!-- <section class="courses_main">
+      <h3 class="courses_headline">Anfänger</h3>
       <section class="beginners-courses_main">
           <ul>
             <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
@@ -139,7 +148,7 @@
             <li><h5>tri yoga</h5></li>
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
-      </section>
+      </section> -->
 
       <h3 class="courses_headline">Fortgeschrittener</h3> <!-- Anders stylen als Mitarbeiter H3 -->
       <section class="advanced-courses_main">
@@ -173,42 +182,202 @@
 
   <h2>Produkt Aktion</h2> <a name="saleproducts_main"></a>
 
-    <section class="saleproducts_main">
-      <ul>
+      <section class="saleproducts_main">
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+
+         <section class="product">
+            <ul class="product-img">
+               <li><img class="product-1" alt="" /></li>
+            </ul>
+            <ul class="info">
+               <li>Jumper</li>
+               <li>39,99€</li>
+            </ul>
+            <ul class="overlay" href="index.php?page=shop">
+               <li><h1>Jumper - Unisex</h1></li>
+               <li><p>39,99€</p></li>
+               <div class="colors">
+                  <li>RED</li>
+                  <li>RED</li>
+                  <li>RED</li>
+               </div>
+            </ul>
+            <ul>
+         </section>
+      </section>
+      <!-- <ul class="product">
         <li><a href="#"><img src="img/shop/jumper_black.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/jumper_white.png" alt="" /></a></li>
         <li><a href="#"><p>Pullover</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/tragetasche_yogamatte.png" alt="" /></a></li>
         <li><a href="#"><p>Tragetasche mit Yogamatte</p></a></li>
         <li><p>39,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/tshirt_w_red.png" alt="" /></a></li>
         <li><a href="#"><p>Damen T-Shirt</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/notebook.png" alt="" /></a></li>
         <li><a href="#"><p>Notizbuch</p></a></li>
         <li><p>19,99€</p></li>
       </ul>
 
-      <ul>
+      <ul class="product">
         <li><a href="#"><img src="img/shop/yogaring.png" alt="" /></a></li>
         <li><a href="#"><p>Yoga-Ring</p></a></li>
         <li><p>24,99€</p></li>
-      </ul>
+      </ul> -->
 
     </section>
 
@@ -242,7 +411,7 @@
 
     <section class="contactform_main"> <a name="contactform_main"></a>
 
-      <form class="form_main" action="" method="post">
+      <form class="form_main" method="post">
 
         <div class="form-group">
           <input type="text" name="name" value="" required>

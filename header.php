@@ -38,5 +38,14 @@
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#login";}else{echo "index.php?page=home#login";} ?>">Login</a></li>
         <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
   		</ul>
+      <div class="handle">&#9776;﻿</div> <!-- responsive burger icon -->
   	</nav>
   </header>
+
+  <script>
+
+		$('.handle').on('click', function(){
+			$('nav ul').toggleClass('showing');
+		});
+
+	</script>

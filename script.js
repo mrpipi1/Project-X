@@ -9,5 +9,3 @@ $(document).ready(function() {
         $('.zoomed-picture img').attr("src", $(".zoomed-picture img").attr("src"));
     })
 });
-
-
