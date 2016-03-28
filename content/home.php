@@ -53,9 +53,9 @@ include ('content/landingpage.php');
           <li>Julia Ulrike</li>
           <li>0664 555 555</li>
           <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
-          <p>
+          <li><p>
              Hallo, mein Name ist Julia Ulrike. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </p></li>
         </ul>
 
         <ul>
@@ -63,9 +63,9 @@ include ('content/landingpage.php');
           <li>Lisbeth Thekla</li>
           <li>0664 555 555</li>
           <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
-          <p>
+          <li><p>
              Hallo, mein Name ist Lisbeth Thekla. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+          </p></li>
         </ul>
 
         <ul>
@@ -171,8 +171,6 @@ include ('content/landingpage.php');
           </ul>
       </section>
 
-    </section>
-
 
   <div class="parallax parallax2">
     <div class="parallax_textoverlay">
@@ -183,6 +181,7 @@ include ('content/landingpage.php');
   <h2>Produkt Aktion</h2> <a name="saleproducts_main"></a>
 
       <section class="saleproducts_main">
+
          <section class="product">
             <ul class="product-img">
                <li><img class="product-1" alt="" /></li>
@@ -194,11 +193,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -214,11 +215,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -234,11 +237,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -254,11 +259,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -274,11 +281,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -294,11 +303,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                       <li>RED</li>
+                       <li>RED</li>
+                       <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -314,11 +325,13 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
@@ -334,52 +347,20 @@ include ('content/landingpage.php');
             <ul class="overlay" href="index.php?page=shop">
                <li><h1>Jumper - Unisex</h1></li>
                <li><p>39,99€</p></li>
-               <div class="colors">
-                  <li>RED</li>
-                  <li>RED</li>
-                  <li>RED</li>
-               </div>
+               <li>
+                   <ul class="colors">
+                      <li>RED</li>
+                      <li>RED</li>
+                      <li>RED</li>
+                   </ul>
+               </li>
             </ul>
             <ul>
          </section>
+
       </section>
-      <!-- <ul class="product">
-        <li><a href="#"><img src="img/shop/jumper_black.png" alt="" /></a></li>
-        <li><a href="#"><p>Pullover</p></a></li>
-        <li><p>39,99€</p></li>
-      </ul>
 
-      <ul class="product">
-        <li><a href="#"><img src="img/shop/jumper_white.png" alt="" /></a></li>
-        <li><a href="#"><p>Pullover</p></a></li>
-        <li><p>39,99€</p></li>
-      </ul>
-
-      <ul class="product">
-        <li><a href="#"><img src="img/shop/tragetasche_yogamatte.png" alt="" /></a></li>
-        <li><a href="#"><p>Tragetasche mit Yogamatte</p></a></li>
-        <li><p>39,99€</p></li>
-      </ul>
-
-      <ul class="product">
-        <li><a href="#"><img src="img/shop/tshirt_w_red.png" alt="" /></a></li>
-        <li><a href="#"><p>Damen T-Shirt</p></a></li>
-        <li><p>19,99€</p></li>
-      </ul>
-
-      <ul class="product">
-        <li><a href="#"><img src="img/shop/notebook.png" alt="" /></a></li>
-        <li><a href="#"><p>Notizbuch</p></a></li>
-        <li><p>19,99€</p></li>
-      </ul>
-
-      <ul class="product">
-        <li><a href="#"><img src="img/shop/yogaring.png" alt="" /></a></li>
-        <li><a href="#"><p>Yoga-Ring</p></a></li>
-        <li><p>24,99€</p></li>
-      </ul> -->
-
-    </section>
+  </section>
 
     <div class="btn">
       <a href="index.php?page=shop">Zum Shop</a>

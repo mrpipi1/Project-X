@@ -1062,7 +1062,7 @@ ______ ____   ____ _______ ______ _____
 
 .content-wrapper {
   position: relative;
-  padding: 60px 50px 20px 50px;
+  padding: 80px 50px 20px 50px;
   z-index: 50;
   background-color: #ffffff;
 }
@@ -1110,21 +1110,27 @@ a {
 .shop-categories {
   width: 100%;
   height: 50px;
-  border-bottom: 1px solid #b3b3b3;
+  /*border-bottom: 1px solid #b3b3b3;*/
   display: flex;
   flex-direction: column;
-  justify-content: center; }
-  .shop-categories ul {
-    display: flex;
-    justify-content: center; }
-  .shop-categories li {
-    padding-right: 5%; }
-  .shop-categories a {
-    color: #b3b3b3; }
-    .shop-categories a:hover {
-      color: black; }
-    .shop-categories a:active {
-      color: black; }
+  justify-content: center;
+}
+.shop-categories ul {
+  display: flex;
+  justify-content: center;
+}
+.shop-categories li {
+  padding-right: 5%;
+}
+.shop-categories a {
+  color: #b3b3b3;
+}
+.shop-categories a:hover {
+  color: black;
+}
+.shop-categories a:active {
+  color: black;
+}
 
 .line-wrapper_shop {
   display: flex;
@@ -1133,6 +1139,10 @@ a {
 
 li {
   list-style: none; }
+
+
+
+
 
 .shopitem {
   padding: 10px; }
@@ -1207,12 +1217,6 @@ li {
   background-color: #f8fafc;
 }
 
-/*.saleproducts_main ul:hover {
-
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  transition: all 0.5s ease-out;
-
-}*/
 
 .shopitem ul:hover .price-info_product {
   color: white;
