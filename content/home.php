@@ -398,21 +398,21 @@ include ('content/landingpage.php');
           <input type="text" name="name" value="" required>
           <span class="highlight"></span>
           <span class="form-bar"></span>
-          <label>Vorname | Nachname*</label>
+          <label class="label">Vorname | Nachname*</label>
         </div>
 
         <div class="form-group">
           <input type="text" name="tel" value="" required>
           <span class="highlight"></span>
           <span class="form-bar"></span>
-          <label>Telefonnumer*</label>
+          <label class="label">Telefonnumer*</label>
         </div>
 
         <div class="form-group">
           <input type="text" name="email" value="" required>
           <span class="highlight"></span>
           <span class="form-bar"></span>
-          <label>E-Mailadresse*</label>
+          <label class="label">E-Mailadresse*</label>
         </div>
 
         <div class="form-group">

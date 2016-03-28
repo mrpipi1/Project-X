@@ -13,14 +13,14 @@
                     <input type="text" name="email" value="" required>
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label>E-Mail oder Username*</label>
+                    <label class="label">E-Mail oder Username*</label>
                 </div>
 
                 <div class="form-group">
                     <input type="password" name="password" value="" required>
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label>Passwort*</label>
+                    <label class="label">Passwort*</label>
                 </div>
 
                 <div>
@@ -28,8 +28,8 @@
                 </div>
             </form>
 
-            <a href="#">Passwort vergessen</a>
-            <a href="#">Noch kein Kunde? Jetzt registrieren!</a>
+            <div><a href="#">Passwort vergessen?</a></div>
+            <div>Noch kein Kunde? <a href="index.php?page=Registrieren">Jetzt registrieren!</a></div>
 
         </section>
 
@@ -47,7 +47,7 @@
                     <input type="text" name="email" value="" required>
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label>E-Mailadresse*</label>
+                    <label class="label">E-Mailadresse*</label>
                 </div>
 
                 <div>

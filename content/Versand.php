@@ -1,7 +1,8 @@
-<?php
-include("breadcrumbs.php");
-?>
 <section class="content-wrapper wrapper_checkout">
+
+    <?php
+    include("breadcrumbs.php");
+    ?>
 
     <section class="shipping-info">
 
@@ -9,57 +10,56 @@ include("breadcrumbs.php");
 
         <form class="form_shipping" action="" method="post">
 
-            <p>
-                <input type="radio" id="post" name="shipping-type"/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="post" name="shipping-type" class="radiobutton"/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
             </p>
 
-            <p>
-                <input type="radio" id="DHL" name="shipping-type"/> <label for=DHL>DHL (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="DHL" name="shipping-type" class="radiobutton"/> <label for=DHL>DHL (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
             </p>
 
-            <p>
-                <input type="radio" id="express" name="shipping-type"/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="express" name="shipping-type" class="radiobutton"/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
             </p>
 
         </form>
 
     </section>
 
-    <section class="payment-info">
+    <section class="shipping-info">
 
         <h2>Zahlungsart:</h2>
 
         <form class="form_payment" action="" method="post">
 
-            <p>
-                <label for="vorkasse">Vorkasse</label>
-                <input type="radio" id="vorkasse" name="payment-type"/>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="vorkasse" name="payment-type" class="radiobutton"/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
             </p>
 
-            <p>
-                <input type="radio" id="rechnung" name="payment-type"/> <label for=rechnung>Rechnung</label>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="rechnung" name="payment-type" class="radiobutton" /> <label for=rechnung>Rechnung (Zahlung binnen 14 Tagen nach Erhat der Ware.)</label>
             </p>
 
-            <p>
-                <input type="radio" id="nachname" name="payment-type"/> <label for="nachname">Nachname</label>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="nachname" name="payment-type" class="radiobutton"/> <label for="nachname">Nachname (Bezahlung bei lieferung des Pakets.)</label>
             </p>
 
         </form>
 
     </section>
 
-        <section class="shipping-info">
+        <section class="form_cuopon">
 
-        <form class="form_cuopon" action="" method="post">
+        <form  action="" method="post">
 
-            <p>
+            <p class="form_cuopon-input">
                 <label for="coupon">Gutscheincode*:</label>
                 <input type="text" id="coupon" name="shipping-type"/>
             </p>
 
         </form>
 
-        <p>* Pro Person ist nur ein Gutscheincode einlösbar.</p>
+        <p><small>* Pro Person ist nur ein Gutscheincode einlösbar.</small></p>
 
     </section>
 

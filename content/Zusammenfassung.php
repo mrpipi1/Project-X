@@ -15,25 +15,25 @@ include("breadcrumbs.php");
                 <input type="text" name="name" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Vorname | Nachname*</label>
+                <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="tel" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Strasse | Hausnummer</label>
+                <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Postleitzahl | Stadt</label>
+                <label class="label">Postleitzahl | Stadt</label>
             </div>
 
             <div class="btn">
-                <input type="submit" name="address" value="Übernehmen">
+                <input type="submit" name="address" value="Ändern">
             </div>
 
         </form>
@@ -52,25 +52,25 @@ include("breadcrumbs.php");
                 <input type="text" name="name" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Vorname | Nachname*</label>
+                <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="tel" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Strasse | Hausnummer</label>
+                <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Postleitzahl | Stadt</label>
+                <label class="label">Postleitzahl | Stadt</label>
             </div>
 
             <div class="btn">
-                <input type="submit" name="address" value="Übernehmen">
+                <input type="submit" name="address" value="Ändern">
             </div>
 
         </form>
@@ -81,6 +81,16 @@ include("breadcrumbs.php");
 
     <!-- Versand und Bezahlung -->
     <section class="wrapper_card">
+
+        <div>
+            <ul class="card-header">
+                <li class="description">Artikel</li>
+                <li class="actions">Größe</li>
+                <li class="actions">Farbe</li>
+                <li class="actions">Menge</li>
+                <li class="actions_price">Preis</li>
+            </ul>
+        </div>
 
         <div class="card-item">
 
@@ -145,6 +155,12 @@ include("breadcrumbs.php");
     </section>
 
     <div class="sum_card_wrapper">
+
+        <ul class="versand-datum">
+            <li>Vorraussichtliche Lieferung:</li>
+            <li>Dienstag, 05.04.2016</li>
+        </ul>
+
         <ul class="sum_card">
             <li>Versandkosten: 5€</li>
             <li>Gesammtpreis: 48,97</li>
@@ -158,7 +174,7 @@ include("breadcrumbs.php");
 
         <p>
             <input type="checkbox" id="agbs" name="agb-confirmation"/>
-            <label for="agbs">Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
+            <label class="label_normal" for="agbs">Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
         </p>
 
     </form>

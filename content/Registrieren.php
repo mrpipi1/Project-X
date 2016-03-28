@@ -7,35 +7,35 @@
             <input type="text" name="firstname" value="" required>
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label>Vorname*</label>
+            <label class="label">Vorname*</label>
         </div>
 
         <div class="form-group">
             <input type="text" name="lastname" value="" required>
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label>Nachname*</label>
+            <label class="label">Nachname*</label>
         </div>
 
         <div class="form-group">
             <input type="text" name="email" value="" required>
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label>E-Mailadresse*</label>
+            <label class="label">E-Mailadresse*</label>
         </div>
 
         <div class="form-group">
             <input type="password" name="password" value="" required>
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label>Passwort*</label>
+            <label class="label">Passwort*</label>
         </div>
 
         <div class="form-group">
             <input type="password" name="password-wh" value="" required>
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label>Passwort wiederholen*</label>
+            <label class="label">Passwort wiederholen*</label>
         </div>
 
         <div>
