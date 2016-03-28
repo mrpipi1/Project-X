@@ -7,7 +7,6 @@ include("breadcrumbs.php");
     <section class="billing-address">
 
         <h2>Rechnungsadresse:</h2>
-        <a href="#">edit</a>
 
         <form class="form_billing-address" action="" method="post">
 
@@ -44,7 +43,6 @@ include("breadcrumbs.php");
     <section class="shipping-address">
 
         <h2>Lieferadresse:</h2>
-        <a href="#">edit</a>
 
         <form class="form_shipping-address" action="" method="post">
 
@@ -92,63 +90,70 @@ include("breadcrumbs.php");
             </ul>
         </div>
 
-        <div class="card-item">
 
-            <img src="img/shop-images/damen-tshirt_small.png" />
+        <div class="card-item card-item_first ">
+
+            <img src="img/shop-images/damen-tshirt_small.png" class="img_card" />
 
             <ul class="description_card-item">
                 <li>Damen T-Shirt</li>
                 <li>T-Shirt aus reiner Bio-Baumwolle, Lorem ipsum dolor sit amet.</li>
             </ul>
 
-            <ul class="description_card-item">
-                <li>Größe: M</li>
-                <li>Farbe: weiß</li>
-                <li>Menge: 1</li>
+            <ul class="actions_card-item">
+                <li>M</li>
+                <li class="farbe">Weiß</li>
+                <li>1</li>
             </ul>
 
-            <a href="#">delete</a>
-            <p>19,99€</p>
+
+            <div class="price_wrapper">19,99€</div>
+            <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
 
         </div>
 
         <div class="card-item">
 
-            <img src="img/shop-images/damen-tshirt_small.png" />
+            <img src="img/shop-images/notebook.png" class="img_card"/>
 
             <ul class="description_card-item">
                 <li>Notizblock</li>
                 <li>Notizblock mit Gummiband und Lesezeichen. Seiten kariert.</li>
             </ul>
 
-            <ul class="description_card-item">
-                <li>Größe: M</li>
-                <li>Farbe: weiß</li>
-                <li>Menge: 1</li>
+            <ul class="actions_card-item">
+                <li>M</li>
+                <li class="farbe">Weiß</li>
+                <li>1</li>
             </ul>
 
-            <a href="#">delete</a>
-            <p>19,99€</p>
+            <div class="price_wrapper">19,99€</div>
+            <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
 
         </div>
 
         <div class="card-item">
 
-            <img src="img/shop-images/damen-tshirt_small.png" />
+            <img src="img/shop-images/2er-band.png" class="img_card"/>
 
             <ul class="description_card-item">
                 <li>2 Gummiarmbänder</li>
-                <li>Bequeme Armbänder. Einheitsgröße.</li>
+                <li>Bequeme Armbänder.</li>
             </ul>
 
-            <ul class="description_card-item">
-                <li>Farbe 2: schwarz</li>
-                <li>Farbe 2: weiß</li>
-                <li>Menge: 1</li>
+            <ul class="actions_card-item">
+                <li>M</li>
+                <li class="farbe"><ul>
+                        <li>Schwarz</li>
+                        <li>Weiß</li>
+                    </ul>
+                </li>
+
+                <li>1</li>
             </ul>
 
-            <a href="#">delete</a>
-            <p>3,99€</p>
+            <div class="price_wrapper">3,99€</div>
+            <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
 
         </div>
 
@@ -172,17 +177,21 @@ include("breadcrumbs.php");
     <!-- AGB und Datenschutzbestimmungen akzeptieren -->
     <form class="form_confirmation" action="" method="post">
 
-        <p>
+        <p class="form_confirmation_content">
             <input type="checkbox" id="agbs" name="agb-confirmation"/>
             <label class="label_normal" for="agbs">Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
         </p>
 
     </form>
 
-
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Versand" class="btn_checkout">zurück</a>
-        <a href="index.php?page=Abschluss" class="btn_checkout">zahlungspflichtig bestellen</a>
+        <div  class="btn_checkout">
+            <a href="index.php?page=Detailansicht">zurück</a>
+        </div>
+
+        <div class="btn_checkout">
+            <a href="index.php?page=Anmelden" >zahlungspflichtig bestellen</a>
+        </div>
     </div>
 
 </section>

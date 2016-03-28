@@ -6,7 +6,6 @@
     <section class="billing-address">
 
         <h2>Rechnungsadresse:</h2>
-        <a href="#">edit</a>
 
         <form class="form_billing-address" action="" method="post">
 
@@ -43,7 +42,6 @@
     <section class="shipping-address">
 
         <h2>Lieferadresse:</h2>
-        <a href="#">edit</a>
 
         <form class="form_shipping-address" action="" method="post">
 
@@ -79,7 +77,13 @@
 
 
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Anmelden" class="btn_checkout">zurück</a>
-        <a href="index.php?page=Versand" class="btn_checkout">weiter</a>
+        <div  class="btn_checkout">
+            <a href="index.php?page=Detailansicht">zurück</a>
+        </div>
+
+        <div class="btn_checkout">
+            <a href="index.php?page=Anmelden" >weiter</a>
+        </div>
     </div>
+
 </section>

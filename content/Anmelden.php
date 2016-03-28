@@ -59,8 +59,13 @@
 
 
     <div class="btn-wrapper_checkout">
-        <a href="index.php?page=Warenkorb" class="btn_checkout">zurück</a>
-        <a href="index.php?page=Adressen" class="btn_checkout">weiter</a>
+        <div  class="btn_checkout">
+            <a href="index.php?page=Detailansicht">zurück</a>
+        </div>
+
+        <div class="btn_checkout">
+            <a href="index.php?page=Anmelden" >weiter</a>
+        </div>
     </div>
 
 </section>

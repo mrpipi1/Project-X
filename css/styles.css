@@ -1276,11 +1276,6 @@ li {
   justify-content: space-around;
 }
 
-.btn-wrapper_checkout{
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-}
 
 .small-text{
   font-size: small;
@@ -1376,6 +1371,42 @@ Breadcrumbs
  weiter und zurück Button
  ########*/
 
+.btn-wrapper_checkout{
+  width: 70vw;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn_checkout {
+  margin: 20px;
+}
+
+.btn_checkout a {
+
+  padding: 10px 15px;
+
+  margin: 0 auto;
+
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  background-color: #486d5f;
+  transition: all  0.5s linear;
+}
+
+.btn_checkout a:hover {
+  background-color: #5a8e7d;
+}
+
+/*
 .btn_checkout {
   height: 1vw;
 
@@ -1402,7 +1433,7 @@ Breadcrumbs
   color: #fff;
 }
 
-
+*/
 
 /*####################
 
@@ -1621,7 +1652,7 @@ Warenkorb
   background-image: url("../img/close.svg");
   background-size: contain;
 
-
+  margin-right: 2px;
 }
 
 /* Summe mit lieferdatum und Versandkosten */
@@ -1691,6 +1722,25 @@ Versand
 p.form_cuopon-input{
   margin: 0;
 }
+
+
+
+/*#################
+Zusammenfassung
+##################*/
+
+.form_confirmation_content{
+  width: 65vw;
+
+  display: flex;
+  align-items: baseline;
+
+}
+
+.form_confirmation_content input{
+  width: 30px;
+}
+
 
 /*#################
 Abschluss
