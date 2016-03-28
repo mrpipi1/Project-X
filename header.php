@@ -30,7 +30,7 @@
     <nav class="nav_main">
         <!-- mit php abfrage ob man gerade auf home.php (if) oder irgenwo anders (else) ist und der link wird dementsprechend mit einem echo "befüllt" -->
       <ul>
-    	   <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#about_us";}else{echo "index.php?page=home#about_us";} ?>">Über uns</a></li>
+    	  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#about_us";}else{echo "index.php?page=home#about_us";} ?>">Über uns</a></li>
     	  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#course";}else{echo "index.php?page=home#course";} ?>">Kurse</a></li>
   		  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#contact";}else{echo "index.php?page=home#contact";} ?>">Kontakt</a></li>
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#saleproducts_main";}else{echo "index.php?page=home#saleproducts_main";} ?>""#saleproducts_main">Aktionen</a></li>
@@ -42,7 +42,7 @@
   	</nav>
   </header>
 
-  <script>
+  <script> <!-- class .showing beim togggeln -->
 
 		$('.handle').on('click', function(){
 			$('nav ul').toggleClass('showing');
