@@ -32,7 +32,7 @@ include("breadcrumbs.php");
             </div>
 
             <div class="btn_checkout btn_big-checkout">
-                <input type="submit" name="address" value="Ändern" class="btn_big-checkout">
+                <input type="submit" name="address" value="Ändern" class="btn_big-checkout input">
             </div>
 
         </form>
@@ -68,7 +68,7 @@ include("breadcrumbs.php");
             </div>
 
             <div class="btn_checkout btn_big-checkout">
-                <input type="submit" name="address" value="Ändern" class="btn_big-checkout">
+                <input type="submit" name="address" value="Ändern" class="btn_big-checkout input">
             </div>
 
         </form>

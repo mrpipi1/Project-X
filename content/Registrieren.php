@@ -1,5 +1,5 @@
-
 <section class="content-wrapper">
+    <h2>Registrieren</h2>
 
     <form class="form_checkout form-register" action="" method="post">
 
@@ -52,8 +52,3 @@
     </form>
 
 </section>
-
-
-
-
-

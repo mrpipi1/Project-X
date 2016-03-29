@@ -1053,7 +1053,7 @@ ______ ____   ____ _______ ______ _____
   margin: 0 auto;
   padding: 20px;
 
-  font-size: 1.2vw;
+  font-size: 1vw;
 
 }
 
@@ -1871,7 +1871,7 @@ Registrieren
 
 .form-register{
   width: 500px;
-  margin: 50px auto 10px;
+  margin: 0 auto;
 
 }
 
