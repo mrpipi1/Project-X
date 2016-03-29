@@ -6,7 +6,7 @@
 
     <section class="shipping-info">
 
-        <h2>Versandart:</h2>
+        <h2 class="hl_checkout">Versandart:</h2>
 
         <form class="form_shipping" action="" method="post">
 
@@ -28,7 +28,7 @@
 
     <section class="shipping-info">
 
-        <h2>Zahlungsart:</h2>
+        <h2 class="hl_checkout">Zahlungsart:</h2>
 
         <form class="form_payment" action="" method="post">
 

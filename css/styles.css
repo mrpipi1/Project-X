@@ -214,7 +214,7 @@ h5 {
 
 
 
-.logo a{
+.logo a, .cart a{
   display: block;
   height: 100%;
 }
@@ -1111,8 +1111,7 @@ SHOP
 
 #############################################################
 #############################################################*/
-a {
-  text-decoration: none; }
+
 
 .shop-categories {
   width: 100%;
@@ -1142,6 +1141,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around; }
+
 
 
 /*####################
@@ -1198,6 +1198,10 @@ Abschluss
 
 .small-text{
   font-size: small;
+}
+
+h2.hl_checkout{
+  font-size: 1.6em;
 }
 
 /*###########
@@ -1284,7 +1288,6 @@ Breadcrumbs
   height: 1px;
   margin-top: 11px;
   width: 5vw;
-
 }
 
 .text{
@@ -1295,6 +1298,12 @@ Breadcrumbs
   justify-content: center;
 }
 
+
+
+.breadcrumb-item:hover .number{
+  background-color: #5a8e7d;
+  color: white;
+}
 
 
 /*########
@@ -1583,11 +1592,22 @@ Anmelden
 #######################*/
 
 
+
+
+.form-group_alsGast{
+  margin-bottom: 40px;
+}
+
+.form_checkout-text{
+  margin-top: 30px;
+}
+
+
 /*######################
 Adressen
 #######################*/
 
-.form_shipping-address .btn_adressen, .form_billing-address .btn_adressen{
+.form_checkout .btn_big-checkout{
   width: 100%;
   margin: 0;
   background-color: white;
@@ -1596,12 +1616,14 @@ Adressen
   transition: all  0.5s linear;
 }
 
-.form_shipping-address .btn_adressen:hover, .form_billing-address .btn_adressen:hover{
+.form_checkout .btn_big-checkout:hover{
   background-color: #5a8e7d;
   color:white;
 }
 
-
+.form_checkout_link:hover{
+  color: #5a8e7d;
+}
 
 
 
@@ -1720,14 +1742,10 @@ Abschluss
 
 	.nav_main ul {
 		max-height: 0;
-
 	}
-
-
+    
 	.showing {
 		max-height: 20em;
-
-
 	}
 
 	.nav_main ul li {
@@ -1735,8 +1753,6 @@ Abschluss
 		width: 100%;
 		padding: 10px;
 		text-align: center;
-
-
 	}
 
 	.handle {

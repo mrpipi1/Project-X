@@ -5,9 +5,9 @@
 
         <section class="wrapper_form_login">
 
-            <h2>Anmelden</h2>
+            <h2 class="hl_checkout">Anmelden</h2>
 
-            <form class="form_login" action="" method="post">
+            <form class="form_checkout" action="" method="post">
 
                 <div class="form-group">
                     <input type="text" name="email" value="" required>
@@ -23,35 +23,35 @@
                     <label class="label">Passwort*</label>
                 </div>
 
-                <div>
-                    <input type="submit" name="name" value="Registrieren"  class="btn_checkout">
+                <div class="btn_checkout btn_big-checkout">
+                    <input type="submit" name="name" value="Registrieren"   class="btn_big-checkout">
                 </div>
             </form>
 
-            <div><a href="#">Passwort vergessen?</a></div>
-            <div>Noch kein Kunde? <a href="index.php?page=Registrieren">Jetzt registrieren!</a></div>
+            <div class="form_checkout-text"><a href="#" class="form_checkout_link">Passwort vergessen?</a></div>
+            <div >Noch kein Kunde? <a href="index.php?page=Registrieren" class="form_checkout_link">Jetzt registrieren!</a></div>
 
         </section>
 
 
-    <p>oder</p>
+    <h2 class="hl_checkout">oder</h2>
 
 
         <section class="wrapper_form_login">
 
-            <h2>als Gast fortfahren</h2>
+            <h2 class="hl_checkout">als Gast fortfahren</h2>
 
-            <form class="form_loin" action="#" method="post">
+            <form class="form_checkout" action="#" method="post">
 
-                <div class="form-group_ckeckout">
+                <div class="form-group_ckeckout form-group_alsGast">
                     <input type="text" name="email" value="" required>
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">E-Mailadresse*</label>
                 </div>
 
-                <div>
-                    <input type="button" name="name" value="als Gast fortfahren" class="btn_checkout">
+                <div class="btn_checkout btn_big-checkout ">
+                    <input type="button" name="name" value="als Gast fortfahren"  class="btn_big-checkout ">
                 </div>
             </form>
 
