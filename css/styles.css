@@ -154,9 +154,9 @@ h5 {
 .btn_landingpage:hover {
   transition: all ease-in 0.4s;
 
-  background-color: #363636;
+  background-color: #5a8e7d;
 
-  border: 1px solid #363636;
+  border: 1px solid #5a8e7d;
 
 }
 
@@ -1743,7 +1743,7 @@ Abschluss
 	.nav_main ul {
 		max-height: 0;
 	}
-    
+
 	.showing {
 		max-height: 20em;
 	}
