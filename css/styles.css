@@ -1299,7 +1299,7 @@ Breadcrumbs
 
 .btn-wrapper_checkout{
   width: 70vw;
-  margin-top: 10px;
+  margin-top: 20px;
 
   display: flex;
   justify-content: flex-end;
@@ -1582,10 +1582,21 @@ Anmelden
 Adressen
 #######################*/
 
-.form_shipping-address .btn_adressen{
-  width: 500px;
-  margin: 20px 0;
+.form_shipping-address .btn_adressen, .form_billing-address .btn_adressen{
+  width: 100%;
+  margin: 0;
+  background-color: white;
+  border: 1px solid #5a8e7d;
+  color: #5a8e7d;
 }
+
+.form_shipping-address .btn_adressen:hover, .form_billing-address .btn_adressen:hover{
+  background-color: #5a8e7d;
+  color:white;
+}
+
+
+
 
 
 /*####################
