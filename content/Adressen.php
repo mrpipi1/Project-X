@@ -66,8 +66,8 @@
                 <label>Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn_checkout">
-                <input type="submit" name="address" value="Übernehmen">
+            <div class="btn_checkout btn_adressen">
+                <input type="submit" name="address" value="Übernehmen" >
             </div>
 
         </form>
@@ -78,11 +78,11 @@
 
     <div class="btn-wrapper_checkout">
         <div  class="btn_checkout">
-            <a href="index.php?page=Detailansicht">zurück</a>
+            <a href="index.php?page=Anmelden">zurück</a>
         </div>
 
         <div class="btn_checkout">
-            <a href="index.php?page=Anmelden" >weiter</a>
+            <a href="index.php?page=Versand" >weiter</a>
         </div>
     </div>
 

@@ -50,12 +50,14 @@
 
         <section class="form_cuopon">
 
-        <form  action="" method="post">
+        <form  action="" method="post" class="form_main">
 
-            <p class="form_cuopon-input">
-                <label for="coupon">Gutscheincode*:</label>
-                <input type="text" id="coupon" name="shipping-type"/>
-            </p>
+            <div class="form-group">
+                <input type="text" name="gutschein" value="" required>
+                <span class="highlight"></span>
+                <span class="form-bar"></span>
+                <label class="label">Gutscheincode</label>
+            </div>
 
         </form>
 
@@ -65,11 +67,11 @@
 
     <div class="btn-wrapper_checkout">
         <div  class="btn_checkout">
-            <a href="index.php?page=Detailansicht">zurück</a>
+            <a href="index.php?page=Adressen">zurück</a>
         </div>
 
         <div class="btn_checkout">
-            <a href="index.php?page=Anmelden" >weiter</a>
+            <a href="index.php?page=Zusammenfassung" >weiter</a>
         </div>
     </div>
 
