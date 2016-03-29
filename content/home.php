@@ -48,74 +48,132 @@ include ('content/landingpage.php');
     </h3>
 
       <section class="employees_main">
-        <ul>
-          <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
-          <li>Julia Ulrike</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
+               <li>Julia Ulrike</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
+             </ul>
+          </li>
           <li><p>
-             Hallo, mein Name ist Julia Ulrike. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+             Hallo, mein Name ist Julia Ulrike. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
-          <li>Lisbeth Thekla</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
+               <li>Lisbeth Thekla</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
+             </ul>
+          </li>
           <li><p>
-             Hallo, mein Name ist Lisbeth Thekla. Ich bin für die interne Leitung ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+             Hallo, mein Name ist Lisbeth Thekla. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
-          <li>Clara Augustine</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:c.augustine@lotusyoga.at?subject=lorem">c.augustine@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
+               <li>Clara Augustine</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:c.augustine@lotusyoga.at?subject=lorem">c.augustine@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Clara Augustine. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
-          <li>Leonie Barbara</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:l.barbara@lotusyoga.at?subject=lorem">l.barbara@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
+               <li>Leonie Barbara</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:l.barbara@lotusyoga.at?subject=lorem">l.barbara@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Lenoie Barbara. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
-          <li>Zella Kristiane</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:z.kristiane@lotusyoga.at?subject=lorem">z.kristiane@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
+               <li>Zella Kristiane</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:z.kristiane@lotusyoga.at?subject=lorem">z.kristiane@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Zella Kristiane. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
-          <li>Laurenz Luri</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:l.luri@lotusyoga.at?subject=lorem">l.luri@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
+               <li>Laurenz Luri</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:l.luri@lotusyoga.at?subject=lorem">l.luri@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Laurenz Luri. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
-          <li>Elli Sophie</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:e.sophie@lotusyoga.at?subject=lorem">e.sophie@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
+               <li>Elli Sophie</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:e.sophie@lotusyoga.at?subject=lorem">e.sophie@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Elli Sophie. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
-          <li>Lukas Bernhard</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:l.bernhard@lotusyoga.at?subject=lorem">l.bernhard@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
+               <li>Lukas Bernhard</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:l.bernhard@lotusyoga.at?subject=lorem">l.bernhard@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Lukas Bernhard. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
 
-        <ul>
-          <li><img src="img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
-          <li>Kathrin Antonia</li>
-          <li>0664 555 555</li>
-          <li><a href="mailto:k.antonia@lotusyoga.at?subject=lorem">k.antonia@lotusyoga.at</a></li>
+        <ul class="employees_main-info">
+          <li>
+             <ul class="employees_main-contact">
+               <li><img src="img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
+               <li>Katrin Antonia</li>
+               <li>0664 555 555</li>
+               <li><a href="mailto:k.antonia@lotusyoga.at?subject=lorem">k.antonia@lotusyoga.at</a></li>
+             </ul>
+          </li>
+          <li><p>
+             Hallo, mein Name ist Katrin Antonia. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p></li>
         </ul>
+
       </section>
 
   <div class="parallax parallax1">
@@ -128,8 +186,8 @@ include ('content/landingpage.php');
     Kurse
   </h2>
 
-    <!-- <section class="courses_main">
-      <h3 class="courses_headline">Anfänger</h3>
+   <section class="courses_main">
+      <!-- <h3 class="courses_headline">Anfänger</h3>
       <section class="beginners-courses_main">
           <ul>
             <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
@@ -150,7 +208,7 @@ include ('content/landingpage.php');
           </ul>
       </section> -->
 
-      <h3 class="courses_headline">Fortgeschrittener</h3> <!-- Anders stylen als Mitarbeiter H3 -->
+      <!-- <h3 class="courses_headline">Fortgeschrittener</h3> <! Anders stylen als Mitarbeiter H3 --> -->
       <section class="advanced-courses_main">
           <ul>
             <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
@@ -170,7 +228,7 @@ include ('content/landingpage.php');
             <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
           </ul>
       </section>
-
+   </section>
 
   <div class="parallax parallax2">
     <div class="parallax_textoverlay">
@@ -432,7 +490,7 @@ include ('content/landingpage.php');
 
 
         <div class="btn">
-          <input type="submit" name="name" value="Absenden">
+          <input type="submit" class="submit" name="name" value="Absenden">
         </div>
 
       </form>
