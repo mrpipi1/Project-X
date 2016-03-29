@@ -1315,7 +1315,7 @@ Breadcrumbs
 
   margin: 0 auto;
 
-  color: white;
+  color: #5a8e7d;
   font-size: 14px;
   text-align: center;
   text-transform: uppercase;
@@ -1324,12 +1324,13 @@ Breadcrumbs
 
   white-space: nowrap;
 
-  background-color: #486d5f;
+  border: 1px solid #5a8e7d;
   transition: all  0.5s linear;
 }
 
 .btn_checkout a:hover {
   background-color: #5a8e7d;
+  color: white;
 }
 
 
@@ -1588,6 +1589,7 @@ Adressen
   background-color: white;
   border: 1px solid #5a8e7d;
   color: #5a8e7d;
+  transition: all  0.5s linear;
 }
 
 .form_shipping-address .btn_adressen:hover, .form_billing-address .btn_adressen:hover{

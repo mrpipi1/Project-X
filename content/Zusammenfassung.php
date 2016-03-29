@@ -31,8 +31,8 @@ include("breadcrumbs.php");
                 <label class="label">Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn">
-                <input type="submit" name="address" value="Ändern">
+            <div class="btn_checkout btn_adressen">
+                <input type="submit" name="address" value="Ändern" class="btn_adressen">
             </div>
 
         </form>
@@ -67,8 +67,8 @@ include("breadcrumbs.php");
                 <label class="label">Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn">
-                <input type="submit" name="address" value="Ändern">
+            <div class="btn_checkout btn_adressen">
+                <input type="submit" name="address" value="Ändern" class="btn_adressen">
             </div>
 
         </form>
