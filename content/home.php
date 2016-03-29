@@ -182,181 +182,189 @@ include ('content/landingpage.php');
 
       <section class="saleproducts_main">
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                       <li>RED</li>
-                       <li>RED</li>
-                       <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
-         <section class="product">
-            <ul class="product-img">
-               <li><img class="product-1" alt="" /></li>
-            </ul>
-            <ul class="info">
-               <li>Jumper</li>
-               <li>39,99€</li>
-            </ul>
-            <ul class="overlay" href="index.php?page=shop">
-               <li><h1>Jumper - Unisex</h1></li>
-               <li><p>39,99€</p></li>
-               <li>
-                   <ul class="colors">
-                      <li>RED</li>
-                      <li>RED</li>
-                      <li>RED</li>
-                   </ul>
-               </li>
-            </ul>
-            <ul>
-         </section>
+          <section class="product">
+              <ul class="product-img">
+                  <li class="product-1"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
 
       </section>
 
