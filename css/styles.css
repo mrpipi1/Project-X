@@ -510,12 +510,12 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 .saleproducts_main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .product {
-  margin: 10px 50px;
-  padding: 0px;
+  margin: 10px 100px;
+  padding: 0;
   position: relative;
 
   overflow: hidden;
@@ -537,8 +537,24 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 
 }
 
-.product-1 {
-  background: url(../img/shop/jumper_black.png) no-repeat ;
+.jumper_black {
+  background: url(../img/shop/jumper_black.png) no-repeat;
+}
+
+.jumper_white {
+  background: url(../img/shop/jumper_white.png) no-repeat;
+}
+.yogabag-mat {
+  background: url(../img/shop/tragetasche_yogamatte.png) no-repeat;
+}
+.tshirt_w-red {
+  background: url(../img/shop/tshirt_w_red.png) no-repeat;
+}
+.notebook {
+  background: url(../img/shop/notebook.png) no-repeat;
+}
+.yogaring {
+  background: url(../img/shop/yogaring.png) no-repeat;
 }
 
 .product-img li:hover {
@@ -594,6 +610,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 
   top: 200px;
 }
+
 
 .product:hover .info {
   opacity: 0;
@@ -724,7 +741,7 @@ ______ ____  _____  __  __
 
   white-space: nowrap;
 
-  background-color: #383838;
+  background-color: #5a8e7d;
   transition: all  0.5s linear;
 
 }
@@ -798,11 +815,9 @@ ______ ____  _____  __  __
 
         */
 
-
-
 .label {
   color: #b3b3b3;
-  font-size: 18px;
+  font-size: 14px;
   font-style: italic;
   font-weight: 400;
 
@@ -812,9 +827,24 @@ ______ ____  _____  __  __
 
   pointer-events: none;
 
-  -webkit-transition: 0.5s ease all;
+  transition:all  0.5s ease;
+}
 
-  transition: 0.5s ease all;
+/*Vorzeitiger Fix*/
+::-webkit-input-placeholder {
+   font-size: 14px;
+}
+
+:-moz-placeholder {
+  font-size: 14px;
+}
+
+::-moz-placeholder {
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  font-size: 14px;
 }
 
 

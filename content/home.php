@@ -262,7 +262,7 @@ include ('content/landingpage.php');
 
           <section class="product">
               <ul class="product-img">
-                  <li class="product-1"></li>
+                  <li class="jumper_black"></li>
               </ul>
               <ul class="info">
                   <li>Jumper</li>
@@ -284,6 +284,121 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product">
+              <ul class="product-img">
+                  <li class="jumper_white"></li>
+              </ul>
+              <ul class="info">
+                  <li>Jumper</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Jumper - Unisex</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
+
+          <section class="product">
+              <ul class="product-img">
+                  <li class="yogabag-mat"></li>
+              </ul>
+              <ul class="info">
+                  <li>Yogabag &amp; Matte</li>
+                  <li>39,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Bag &amp; Matte</h1></li>
+                      <li><p>39,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
+
+          <section class="product">
+              <ul class="product-img">
+                  <li class="tshirt_w-red"></li>
+              </ul>
+              <ul class="info">
+                  <li>T-Shirt</li>
+                  <li>19,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>T-Shirt - Damen</h1></li>
+                      <li><p>19,99€</p></li>
+                      <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li>
+                  </ul>
+              </a>
+          </section>
+
+          <section class="product">
+              <ul class="product-img">
+                  <li class="notebook"></li>
+              </ul>
+              <ul class="info">
+                  <li>Notizbuch</li>
+                  <li>19,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Notizbuch</h1></li>
+                      <li><p>19,99€</p></li>
+                      <!-- <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li> -->
+                  </ul>
+              </a>
+          </section>
+
+          <section class="product">
+              <ul class="product-img">
+                  <li class="yogaring"></li>
+              </ul>
+              <ul class="info">
+                  <li>Yogaring</li>
+                  <li>24,99€</li>
+              </ul>
+              <a href="index.php?page=Detailansicht">
+                  <ul class="overlay overlay-checkout" >
+                      <li><h1>Yogaring</h1></li>
+                      <li><p>24,99€</p></li>
+                      <!-- <li>
+                          <ul class="colors colors-checkout">
+                              <li>RED</li>
+                              <li>RED</li>
+                              <li>RED</li>
+                          </ul>
+                      </li> -->
+                  </ul>
+              </a>
+          </section>
+
+          <!-- <section class="product">
               <ul class="product-img">
                   <li class="product-1"></li>
               </ul>
@@ -327,122 +442,7 @@ include ('content/landingpage.php');
                       </li>
                   </ul>
               </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
+          </section> -->
       </section>
 
   </section>
@@ -521,7 +521,7 @@ include ('content/landingpage.php');
   </main>
 
 
-  <script>
+  <script>  <!-- anker animation -->
 
       $(function() {
     $('a[href*="#"]:not([href="#"])').click(function() {
