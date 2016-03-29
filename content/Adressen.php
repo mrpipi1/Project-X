@@ -5,9 +5,9 @@
 
     <section class="billing-address">
 
-        <h2>Rechnungsadresse:</h2>
+        <h2 class="hl_checkout">Rechnungsadresse:</h2>
 
-        <form class="form_billing-address" action="" method="post">
+        <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required>
@@ -30,8 +30,8 @@
                 <label class="label">Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn_checkout btn_adressen">
-                <input type="submit" name="address" value="Übernehmen" class="btn_adressen">
+            <div class="btn_checkout btn_big-checkout">
+                <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout">
             </div>
 
         </form>
@@ -41,9 +41,9 @@
 
     <section class="shipping-address">
 
-        <h2>Lieferadresse:</h2>
+        <h2 class="hl_checkout">Lieferadresse:</h2>
 
-        <form class="form_shipping-address" action="" method="post">
+        <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required>
@@ -66,8 +66,8 @@
                 <label class="label">Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn_checkout btn_adressen">
-                <input type="submit" name="address" value="Übernehmen" class="btn_adressen">
+            <div class="btn_checkout btn_big-checkout">
+                <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout">
             </div>
 
         </form>

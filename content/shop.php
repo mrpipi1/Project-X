@@ -13,7 +13,6 @@
 
     <!-- &amp;item=2  2 steht für die id von dem item, die es später in der datenbank geben wird-->
 
-
     <section class="wrapper_shop">
     <h2 id="clothes" class="headline_shop">Bekleidung</h2>
 
