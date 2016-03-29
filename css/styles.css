@@ -1214,14 +1214,21 @@ Breadcrumbs
   display: flex;
 }
 
-
 .breadcrumb-item a{
+
+
+}
+
+.number_wrapper, .text_wrapper{
   display:flex;
   flex-direction: column;
   justify-content: center;
-
   text-align: center;
+}
 
+.text_a{
+  margin: 2vw 2vw;
+  display: inline;
 }
 
 .span-wrapper{
@@ -1277,8 +1284,11 @@ Breadcrumbs
 }
 
 .text{
-  margin-top: 2vw;
   font-size: 14px;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
