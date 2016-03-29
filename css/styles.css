@@ -515,6 +515,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 
 .product {
   margin: 10px 50px;
+
   padding: 0;
   position: relative;
 
@@ -524,6 +525,9 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
   height: 300px;
 }
 
+.product-main {
+  margin: 10px 100px;
+}
 .product-img li{
   width: 200px;
   height: 300px;

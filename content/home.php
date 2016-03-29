@@ -260,7 +260,7 @@ include ('content/landingpage.php');
 
       <section class="saleproducts_main">
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="jumper_black"></li>
               </ul>
@@ -283,7 +283,7 @@ include ('content/landingpage.php');
               </a>
           </section>
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="jumper_white"></li>
               </ul>
@@ -306,7 +306,7 @@ include ('content/landingpage.php');
               </a>
           </section>
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="yogabag-mat"></li>
               </ul>
@@ -329,7 +329,7 @@ include ('content/landingpage.php');
               </a>
           </section>
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="tshirt_w-red"></li>
               </ul>
@@ -352,7 +352,7 @@ include ('content/landingpage.php');
               </a>
           </section>
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="notebook"></li>
               </ul>
@@ -375,7 +375,7 @@ include ('content/landingpage.php');
               </a>
           </section>
 
-          <section class="product">
+          <section class="product product-main">
               <ul class="product-img">
                   <li class="yogaring"></li>
               </ul>
