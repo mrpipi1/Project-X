@@ -38,12 +38,12 @@
             <label class="label">Passwort wiederholen*</label>
         </div>
 
-        <div>
-            <input class="input" type="checkbox" name="agb-confirm" id="agb-confirm" value="Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*">
+        <div class="radio_datenschutz">
+            <input class="input_dateschutz" type="checkbox" name="agb-confirm" id="agb-confirm" /> <label>Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*"</label>
         </div>
 
 
-        <p>*Pflichtfelder</p>
+        <p class="pflichtfeld">*Pflichtfelder</p>
 
         <div class="btn_checkout btn_big-checkout">
             <input type="submit" name="register" value="Registrieren" class="btn_big-checkout input">

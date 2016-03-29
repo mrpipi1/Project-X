@@ -43,7 +43,7 @@
 
         <section class="product">
             <ul class="product-img">
-                <li class="product-1"></li>
+                <li class="jumper_black"></li>
             </ul>
             <ul class="info">
                 <li>Jumper</li>
