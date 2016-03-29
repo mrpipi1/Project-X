@@ -509,7 +509,7 @@ include ('content/landingpage.php');
 
 
         <div class="btn">
-          <input type="submit" class="submit" name="name" value="Absenden" class="input">
+          <input type="submit" class="submit_main" name="name" value="Absenden" class="input">
         </div>
 
       </form>

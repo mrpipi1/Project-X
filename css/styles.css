@@ -754,7 +754,7 @@ ______ ____  _____  __  __
   background-color: #486e5f;
 }
 
-.submit {
+.submit_main {
   width: 60%;
 
   display: inline-block;
@@ -768,6 +768,15 @@ ______ ____  _____  __  __
   background-color: #5a8e7d;
 
   padding: 1vw 3vw;
+
+  cursor: pointer;
+  border: none;
+  transition: all  0.5s linear;
+
+}
+
+.submit_main:hover {
+    background-color: #486e5f;
 
 }
 
