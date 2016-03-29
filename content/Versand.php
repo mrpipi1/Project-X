@@ -53,7 +53,7 @@
         <form  action="" method="post" class="form_main">
 
             <div class="form-group">
-                <input type="text" name="gutschein" value="" required>
+                <input type="text" name="gutschein" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Gutscheincode</label>

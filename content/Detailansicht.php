@@ -41,18 +41,12 @@
         </div>
 
 
-        <form>
+        <form class="quantity_big-wrapper">
 
-            <p>
-                <label for="menge">Menge:</label>
-                <select id="menge">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
-            </p>
+                <label for="content" class="light">Menge:</label>
+                <div class="quantity_wrapper">
+                    <a id="down" href="#" onclick="updateSpinner(this);">-</a><input id="content" min="0" max="10" value="0" type="text" class=" quantity"/><a id="up" href="#"  onclick="updateSpinner(this);">+</a>
+                </div>
 
         </form>
 

@@ -10,21 +10,21 @@
             <form class="form_checkout" action="" method="post">
 
                 <div class="form-group">
-                    <input type="text" name="email" value="" required>
+                    <input type="text" name="email" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">E-Mail oder Username*</label>
                 </div>
 
                 <div class="form-group">
-                    <input type="password" name="password" value="" required>
+                    <input type="password" name="password" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Passwort*</label>
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="name" value="Registrieren"   class="btn_big-checkout">
+                    <input type="submit" name="name" value="Registrieren"   class="btn_big-checkout input">
                 </div>
             </form>
 
@@ -44,14 +44,14 @@
             <form class="form_checkout" action="#" method="post">
 
                 <div class="form-group_ckeckout form-group_alsGast">
-                    <input type="text" name="email" value="" required>
+                    <input type="text" name="email" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">E-Mailadresse*</label>
                 </div>
 
                 <div class="btn_checkout btn_big-checkout ">
-                    <input type="button" name="name" value="als Gast fortfahren"  class="btn_big-checkout ">
+                    <input type="button" name="name" value="als Gast fortfahren"  class="btn_big-checkout input">
                 </div>
             </form>
 

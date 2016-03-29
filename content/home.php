@@ -461,28 +461,28 @@ include ('content/landingpage.php');
       <form class="form_main" method="post">
 
         <div class="form-group">
-          <input type="text" name="name" value="" required>
+          <input type="text" name="name" value="" required class="input">
           <span class="highlight"></span>
           <span class="form-bar"></span>
           <label class="label">Vorname | Nachname*</label>
         </div>
 
         <div class="form-group">
-          <input type="text" name="tel" value="" required>
+          <input type="text" name="tel" value="" required class="input">
           <span class="highlight"></span>
           <span class="form-bar"></span>
           <label class="label">Telefonnumer*</label>
         </div>
 
         <div class="form-group">
-          <input type="text" name="email" value="" required>
+          <input type="text" name="email" value="" required class="input">
           <span class="highlight"></span>
           <span class="form-bar"></span>
           <label class="label">E-Mailadresse*</label>
         </div>
 
         <div class="form-group">
-          <textarea type=" text" name="comment" rows="10" cols="100" require placeholder="Kommentar"></textarea>
+          <textarea type=" text" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
           <span class="highlight"></span>
           <span class="form-bar"></span>
 
@@ -490,7 +490,7 @@ include ('content/landingpage.php');
 
 
         <div class="btn">
-          <input type="submit" class="submit" name="name" value="Absenden">
+          <input type="submit" class="submit" name="name" value="Absenden" class="input">
         </div>
 
       </form>

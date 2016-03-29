@@ -11,21 +11,21 @@ include("breadcrumbs.php");
         <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
-                <input type="text" name="name" value="" required>
+                <input type="text" name="name" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
-                <input type="text" name="tel" value="" required>
+                <input type="text" name="tel" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
-                <input type="text" name="email" value="" required>
+                <input type="text" name="email" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Postleitzahl | Stadt</label>
@@ -47,21 +47,21 @@ include("breadcrumbs.php");
         <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
-                <input type="text" name="name" value="" required>
+                <input type="text" name="name" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
-                <input type="text" name="tel" value="" required>
+                <input type="text" name="tel" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
-                <input type="text" name="email" value="" required>
+                <input type="text" name="email" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">Postleitzahl | Stadt</label>

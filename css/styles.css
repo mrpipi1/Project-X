@@ -763,7 +763,7 @@ ______ ____  _____  __  __
 }
 
 
-input {
+.input {
   width: 500px;
 
   display: block;
@@ -777,7 +777,7 @@ input {
 }
 
 
-input:focus {
+.input:focus {
   outline: none;
 }
 
@@ -811,7 +811,7 @@ input:focus {
 }
 
 
-input:focus ~ .label, input:valid ~ .label {
+.input:focus ~ .label, .input:valid ~ .label {
   top: -20px;
 
   font-size: 14px;
@@ -861,7 +861,7 @@ input:focus ~ .label, input:valid ~ .label {
 }
 
 
-input:focus ~.form-bar:before, input:focus ~ .form-bar:after {
+.input:focus ~.form-bar:before, .input:focus ~ .form-bar:after {
   width: 50%;
 }
 
@@ -890,7 +890,7 @@ input:focus ~.form-bar:before, input:focus ~ .form-bar:after {
 }
 
 
-input:focus ~.highlight {
+.input:focus ~.highlight {
   -webkit-animation: inputHighlighter 0.2s ease;
           animation: inputHighlighter 0.2s ease;
 }
@@ -1460,6 +1460,40 @@ Detailseite
   background-color: #7a3b51;
 }
 
+/* Mengenauswahl */
+.quantity_wrapper{
+  border: 1px solid #b3b3b3;
+  width: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#down{
+  margin-left: 2px;
+  font-weight: 600;
+}
+
+#up{
+  margin-right: 2px;
+  font-weight: 600;
+}
+
+.quantity{
+  background-color: transparent;
+  border: 0px solid;
+  width: 30px;
+  text-align: center;
+}
+
+.quantity_big-wrapper{
+  display: flex;
+  margin-top: 20px;
+}
+
+.quantity_big-wrapper label{
+  margin-right: 10px;
+}
+
 
 /*################################
 
@@ -1779,3 +1813,13 @@ Abschluss
 
 	}
 }
+
+
+/*#####################
+Registrieren
+#####################*/
+
+.form-register{
+  width: 500px;
+}
+
