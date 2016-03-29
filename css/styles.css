@@ -514,7 +514,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 
 .product {
-  margin: 10px 100px;
+  margin: 10px 50px;
   padding: 0;
   position: relative;
 
@@ -1852,16 +1852,24 @@ Abschluss
 }
 
 
-<<<<<<< HEAD
 /*#####################
 Registrieren
 #####################*/
 
 .form-register{
   width: 500px;
+  margin: 50px auto 10px;
+
 }
 
-=======
+.radio_datenschutz{
+  display: flex;
+  align-items: baseline;
+}
+
+.input_dateschutz{
+  width: 15px;
+}
 
 
 /*
@@ -1883,4 +1891,8 @@ Registrieren
   color: #fff;
 
 }*/
->>>>>>> 403e0f2a9d7e7c5697c0b51315a6b8f8dd3f77ff
+
+p.pflichtfeld{
+  font-size: small;
+  margin-top: 20px;
+}
