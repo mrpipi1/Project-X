@@ -13,25 +13,25 @@
                 <input type="text" name="name" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Vorname | Nachname*</label>
+                <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="tel" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Strasse | Hausnummer</label>
+                <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Postleitzahl | Stadt</label>
+                <label class="label">Postleitzahl | Stadt</label>
             </div>
 
-            <div class="btn_checkout">
-                <input type="submit" name="address" value="Übernehmen">
+            <div class="btn_checkout btn_adressen">
+                <input type="submit" name="address" value="Übernehmen" class="btn_adressen">
             </div>
 
         </form>
@@ -49,25 +49,25 @@
                 <input type="text" name="name" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Vorname | Nachname*</label>
+                <label class="label">Vorname | Nachname*</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="tel" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Strasse | Hausnummer</label>
+                <label class="label">Strasse | Hausnummer</label>
             </div>
 
             <div class="form-group">
                 <input type="text" name="email" value="" required>
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
-                <label>Postleitzahl | Stadt</label>
+                <label class="label">Postleitzahl | Stadt</label>
             </div>
 
             <div class="btn_checkout btn_adressen">
-                <input type="submit" name="address" value="Übernehmen" >
+                <input type="submit" name="address" value="Übernehmen" class="btn_adressen">
             </div>
 
         </form>
