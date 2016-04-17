@@ -7,7 +7,7 @@
         <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
-                <input type="text" name="email" value="" required class="input">
+                <input type="text" name="uname" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">E-Mail oder Username*</label>
@@ -21,7 +21,7 @@
             </div>
 
             <div class="btn_checkout btn_big-checkout">
-                <input type="submit" name="name" value="Registrieren"   class="btn_big-checkout input">
+                <input type="submit" name="login" value="Registrieren"   class="btn_big-checkout input">
             </div>
         </form>
 

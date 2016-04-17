@@ -36,6 +36,9 @@
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#saleproducts_main";}else{echo "index.php?page=home#saleproducts_main";} ?>""#saleproducts_main">Aktionen</a></li>
         <li><a href="index.php?page=Shop">Shop</a></li>
         <li><a href="index.php?page=Registrieren">Login</a></li>
+        <?php if($admin) {
+            echo "<li><a href=\"backend/index.php?page=dashbord\">Backend</a></li>";
+          } ?>
         <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
   		</ul>
       <div class="handle">&#9776;﻿</div> <!-- responsive burger icon -->

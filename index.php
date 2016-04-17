@@ -3,6 +3,10 @@
 // content definieren
 $content = ('content/');
 
+$admin = '';
+
+include("db-connect.php");
+
 // header eingebunden
 include('header.php');
 
