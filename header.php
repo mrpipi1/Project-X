@@ -21,13 +21,13 @@
     <script src="script.js"></script>
 </head>
 <body>
-  <header class="header_main">
+  <header class="header">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">
   		  Logo
   		</a>
   	</h1>
-    <nav class="nav_main">
+    <nav class="nav nav_main">
         <!-- mit php abfrage ob man gerade auf home.php (if) oder irgenwo anders (else) ist und der link wird dementsprechend mit einem echo "befüllt" -->
       <ul>
     	  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#about_us";}else{echo "index.php?page=home#about_us";} ?>">Über uns</a></li>

@@ -24,19 +24,19 @@
     <link rel="icon" type="icon" href="" sizes="16x16">
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <!-- jQuery library (served from Google) -->
     <script src="jquery-1.12.2.min.js"></script>
     <script src="script.js"></script>
 </head>
 <body>
-<header class="header_backend">
+<header class="header">
     <h1 class="logo">
         <a href="index.php?=page=dashbord">
             Logo
         </a>
     </h1>
-    <nav class="nav_main">
+    <nav class="nav">
         <ul>
             <li><a href="index.php?page=users">Users</a></li>  <!-- + admins -->
             <li><a href="index.php?page=users">Content</a></li>
@@ -46,6 +46,6 @@
             <li><a href="index.php?page=users">Bestellungen</a></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
         </ul>
-       <!-- <div class="handle">&#9776;﻿</div>  responsive burger icon -->
+       <div class="handle">&#9776;﻿</div>
     </nav>
 </header>
