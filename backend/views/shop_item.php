@@ -10,8 +10,54 @@
 
 <section class="content-wrapper_backend">
 
-    <h3 class="main-hl_backend">Shop</h3>
-    <p class="hl_backend">Hallo</p>
+    <h3 class="main-hl_backend">Shop Items</h3>
+
+    <table class="table_backend">
+        <thead>
+        <tr>
+            <th><?php echo sort_table("reservations", "id", "ID") ?></th>
+            <th><?php echo sort_table("reservations", "product_name", "Name") ?></th>
+            <th><?php echo sort_table("reservations", "category_id", "Kategorie") ?></th>
+            <th><?php echo sort_table("reservations", "pic", "Bild") ?></th>
+            <th><?php echo sort_table("reservations", "thumbnail_1", "Thumbnail_1") ?></th>
+            <th><?php echo sort_table("reservations", "thumbnail_2", "Thumbnail_2") ?></th>
+            <th><?php echo sort_table("reservations", "thumbnail_3", "Thumbnail_3") ?></th>
+            <th><?php echo sort_table("reservations", "size", "Größe") ?></th>
+            <th><?php echo sort_table("reservations", "in_aktion", "in Aktion") ?></th>
+            <th><?php echo sort_table("reservations", "price_in_action", "Aktionspreis") ?></th>
+            <th><?php echo sort_table("reservations", "stock", "Stock") ?></th>
+            <th><?php echo sort_table("reservations", "is_active", "Aktiv") ?></th>
+            <th>Aktionen</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <?php foreach($items as $item): ?>
+            <tr>
+                <td><?php echo $item["id"]; ?></td>
+                <td><?php echo $item["product_name"]; ?></td>
+                <td><?php echo $item["category_id"]; ?></td>
+                <td><?php echo $item["description"]; ?></td>
+                <td><?php echo $item["pic"]; ?></td>
+                <td><?php echo $item["thumbnail_1"]; ?></td>
+                <td><?php echo $item["thumbnail_2"]; ?></td>
+                <td><?php echo $item["thumbnail_3"]; ?></td>
+                <td><?php echo $item["size"]; ?></td>
+                <td><?php echo $item["in_aktion"]; ?></td>
+                <td><?php echo $item["price_in_aktion"]; ?></td>
+                <td><?php echo $item["stock"]; ?></td>
+                <td><?php echo $item["is_active"]; ?></td>
+                <td>
+                    <a class="btn-default btn-xs" href="index.php?site=reservations&amp;action=edit&amp;id=<?php echo $reservation['id']; ?>">edit</a>
+                    <a class="btn-danger btn-xs" href="index.php?site=reservations&amp;action=delete&amp;id=<?php echo $reservation['id']; ?>">delete</a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+
+        </tbody>
+    </table>
+
+    <?php pagination_backend("reservations", $current_page, $total_pages); ?>
 
 
 
