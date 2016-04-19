@@ -29,23 +29,36 @@
     <script src="jquery-1.12.2.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
-<header class="header">
-    <h1 class="logo">
-        <a href="index.php?=page=dashbord">
-            Logo
-        </a>
-    </h1>
-    <nav class="nav">
-        <ul>
-            <li><a href="index.php?page=users">Users</a></li>  <!-- + admins -->
-            <li><a href="index.php?page=users">Content</a></li>
-            <li><a href="index.php?page=users">Mitarbeiter</a></li>
-            <li><a href="index.php?page=users">Kurse</a></li>
-            <li><a href="index.php?page=users">Shop</a></li>   <!-- category + item -->
-            <li><a href="index.php?page=users">Bestellungen</a></li>
+<body class="body_backend">
+<header class="header_backend">
+    <div class=" logo_wrapper">
+        <h1 class="logo">
+            <a href="index.php?page=dashboard">
+                Logo
+            </a>
+        </h1>
+    </div>
+
+        <ul class="nav_header_backend">
+            <li><a href="#">profil</a></li>
+            <li><a href="#">nochwas</a></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
         </ul>
        <div class="handle">&#9776;﻿</div>
-    </nav>
 </header>
+
+<div class="backend_wrapper">
+
+<nav class="nav_backend" >
+    <ul >
+        <li><a href="index.php?page=dashboard">Dashboard</a></li>
+        <li><a href="index.php?page=users">Users</a></li>  <!-- + admins -->
+        <li><a href="index.php?page=content">Content</a></li>
+        <li><a href="index.php?page=users">Mitarbeiter</a></li>
+        <li><a href="index.php?page=users">Kurse</a></li>
+        <li><a href="index.php?page=users">Shop</a></li>   <!-- category + item -->
+        <li><a href="index.php?page=users">Bestellungen</a></li>
+
+    </ul>
+</nav>
+

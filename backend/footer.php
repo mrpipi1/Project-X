@@ -7,13 +7,7 @@
  */
 ?>
 
-        <footer class="footer_main">
-            <h1 class="logo">
-                <a href="index.php?=page=dashbord">
-                    Logo
-                </a>
-            </h1>
-        </footer>
 
+        </div>
     </body>
 </html>

@@ -24,7 +24,7 @@ html {
   min-height: 100%;
 }
 
-body {
+.body {
   margin: 0px 0px 200px;
 }
 
@@ -1907,5 +1907,106 @@ p.pflichtfeld{
   font-size: small;
   margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+/*###########
+
+
+backend
+####################*/
+
+
+.body_backend{
+
+}
+
+.header_backend{
+  height: 50px;
+  width: 100%;
+  background-color: #363636;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_header_backend{
+  display: flex;
+}
+
+.nav_header_backend li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 300;
+
+  margin-right: 30px;
+}
+
+.nav_header_backend a{
+  color: white;
+}
+
+.nav_header_backend a:hover{
+  color: #5a8e7d;
+}
+
+.logo_wrapper{
+  width: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.backend_wrapper{
+  display: flex;
+  height: 100vw;
+}
+
+.nav_backend{
+  background-color: #363636;
+  height: 100%;
+  width: 180px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+
+
+
+}
+
+.nav_backend ul{
+  padding-top: 20px;
+}
+
+.nav_backend li{
+  padding: 10px 0 10px 30px;
+  border-bottom: 1px solid #515151;
+
+}
+
+.nav_backend a{
+  color: white;
+}
+
+.nav_backend a:hover{
+  color: #5a8e7d;
+}
+
+.content-wrapper_backend{
+  padding: 3em;
+
+}
+
+.main-hal_backend{
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+
 
 

@@ -20,7 +20,7 @@
     <script src="jquery-1.12.2.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
+<body class="body">
   <header class="header">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">
