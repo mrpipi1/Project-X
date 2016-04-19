@@ -27,7 +27,7 @@
             <tr>
                 <td><?php echo $kurs["id"]; ?></td>
                 <td><?php echo $kurs["kursname"]; ?></td>
-                <td><?php echo $kurs["beschreibung"]; ?></td>
+                <td><?php echo truncate($kurs["beschreibung"], $chars = 25); ?></td>
                 <td><?php echo $kurs["is_active"]; ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=kurse&amp;action=edit&amp;id=<?php echo $kurs['id']; ?>">edit</a>

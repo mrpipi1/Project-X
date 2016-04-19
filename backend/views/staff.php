@@ -35,7 +35,7 @@
                 <td><?php echo $guy["telno"]; ?></td>
                 <td><?php echo $guy["pic"]; ?></td>
                 <td><?php echo $guy["kurse_id"]; ?></td>
-                <td><?php echo $guy["description"]; ?></td>
+                <td><?php echo truncate($guy["description"], $chars = 25); ?></td>
                 <td><?php echo $guy["is_active"]; ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=staff&amp;action=edit&amp;id=<?php echo $guy['id']; ?>">edit</a>

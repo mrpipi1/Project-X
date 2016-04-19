@@ -39,9 +39,9 @@
                 <td><?php echo $item["category_id"]; ?></td>
                 <td><?php echo $item["description"]; ?></td>
                 <td><?php echo $item["pic"]; ?></td>
-                <td><?php echo $item["thumbnail_1"]; ?></td>
-                <td><?php echo $item["thumbnail_2"]; ?></td>
-                <td><?php echo $item["thumbnail_3"]; ?></td>
+                <td><?php echo truncate($item["thumbnail_1"], $chars = 25); ?></td>
+                <td><?php echo truncate($item["thumbnail_2"], $chars = 25); ?></td>
+                <td><?php echo truncate($item["thumbnail_3"], $chars = 25); ?></td>
                 <td><?php echo $item["size"]; ?></td>
                 <td><?php echo $item["in_aktion"]; ?></td>
                 <td><?php echo $item["price_in_aktion"]; ?></td>

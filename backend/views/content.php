@@ -26,7 +26,7 @@
             <tr>
                 <td><?php echo $content["id"]; ?></td>
                 <td><?php echo $content["headline"]; ?></td>
-                <td><?php echo $content["text"]; ?></td>
+                <td><?php echo truncate($content["text"], $chars = 25); ?></td>
                 <td><?php echo $content["is_active"]; ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=content&amp;action=edit&amp;id=<?php echo $content['id']; ?>">edit</a>
