@@ -9,7 +9,7 @@
 
 <section class="content-wrapper_backend">
 
-    <h3 class="main-hal_backend">Mitarbeiter</h3>
+    <h3 class="main-hl_backend">Mitarbeiter</h3>
     <p class="hl_backend">Hallo</p>
 
 

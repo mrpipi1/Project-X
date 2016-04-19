@@ -11,4 +11,3 @@ $total_reservations = total_users();
 
 $total_pages = floor($total_reservations / $entries_per_page);
 
-require("views/reservations.php");

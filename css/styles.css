@@ -1966,6 +1966,7 @@ backend
 .backend_wrapper{
   display: flex;
   height: 100vw;
+  width: 100vw;
 }
 
 .nav_backend{
@@ -2000,11 +2001,24 @@ backend
 .content-wrapper_backend{
   padding: 3em;
 
+
 }
 
-.main-hal_backend{
+.main-hl_backend{
   padding: 0;
   margin-bottom: 2em;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.table_backend{
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
+}
+
+.table_backend th, .table_backend td{
+  border: 1px solid #363636;
+  padding: 5px 10px 5px;
 }
 
 

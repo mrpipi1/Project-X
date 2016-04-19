@@ -10,11 +10,7 @@ function get_users($current_page, $entries_per_page, $order_by, $order_dir) {
     global $link;
 
     $limit_start = $current_page * $entries_per_page - $entries_per_page;
-    $sql = "SELECT *, DATE_FORMAT(deleted_at, '%d.%m.%Y %H:%i') AS deleted_at
-          FROM users
-          WHERE deleted_at IS NULL
-          ORDER BY $order_by $order_dir
-          LIMIT $limit_start, $entries_per_page";
+    $sql = "SELECT * FROM users WHERE deleted_at IS NULL ORDER BY $order_by $order_dir";
     $result = mysqli_query($link, $sql);
 
     if(!$result) {
@@ -24,11 +20,11 @@ function get_users($current_page, $entries_per_page, $order_by, $order_dir) {
     return $users;
 }
 
-function update_user($id, $fullname, $reservation_on, $smoking_area) {
+function update_user($id, $username, $email, $password_hash, $gender) {
     global $link;
 
     // sql update
-    $sql = "UPDATE users SET username = '$username', email = '$email', password_hash = $password_hash gender = $gender WHERE id = '$id'";
+    $sql = "UPDATE users SET username = '$username', email = '$email', gender = $gender WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
