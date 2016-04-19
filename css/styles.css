@@ -5,6 +5,9 @@
     Zweites     #5a8e7d
     Drittes     #486e5f
 
+    Footer      #363636
+    Footer 2    #262626
+
 */
 
 
@@ -163,23 +166,26 @@ h5 {
 /* Header */
 
 .header_main {
-  height: 80px;
+  height: 60px;
   width: 100vw;
 
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  background-color: #363636;
+  background-color: #ffffff;
 
   position: fixed;
 
   z-index: 200;
+
+  box-shadow: 1px 2px 1px 1px #eee;
 }
 
 .nav_main {
 
   height: 100%;
+  margin-right: 50px;
 
 }
 
@@ -192,11 +198,14 @@ h5 {
   background-position: center;
 
   text-indent: -99999px;
+
 }
 
 .logo {
   background-image: url(../img/logo.svg);
   background-size: cover;
+  margin-left: 50px;
+
 }
 .cart {
   background-image: url(../img/shop/cart.svg);
@@ -231,7 +240,6 @@ h5 {
 
   color: #fff;
 
-  justify-content: space-around;
   align-items: center;
   height: 100%;
 
@@ -240,23 +248,27 @@ h5 {
   padding: 0;
   margin: 0;
   transition: max-height 0.4s;
+
 }
 
 .nav_main li {
   display: flex;
   font-size: 0.8em;
-  letter-spacing: 1px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 500;
 
   height: 100%;
 
   align-items: center;
-  padding: 20px;
+  padding: 5px;
 
   justify-content: flex-end;
 
   transform: translateZ(0);
   position: relative;
   overflow: hidden;
+
 
 }
 
