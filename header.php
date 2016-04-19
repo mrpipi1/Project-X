@@ -20,14 +20,14 @@
     <script src="jquery-1.12.2.min.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
-  <header class="header_main">
+<body class="body">
+  <header class="header">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">
   		  Logo
   		</a>
   	</h1>
-    <nav class="nav_main">
+    <nav class="nav nav_main">
         <!-- mit php abfrage ob man gerade auf home.php (if) oder irgenwo anders (else) ist und der link wird dementsprechend mit einem echo "befüllt" -->
       <ul>
     	  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#about_us";}else{echo "index.php?page=home#about_us";} ?>">Über uns</a></li>
@@ -35,7 +35,10 @@
   		  <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#contact";}else{echo "index.php?page=home#contact";} ?>">Kontakt</a></li>
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#saleproducts_main";}else{echo "index.php?page=home#saleproducts_main";} ?>""#saleproducts_main">Aktionen</a></li>
         <li><a href="index.php?page=Shop">Shop</a></li>
-        <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#login";}else{echo "index.php?page=home#login";} ?>">Login</a></li>
+        <li><a href="index.php?page=Registrieren">Login</a></li>
+        <?php if($admin) {
+            echo "<li><a href=\"backend/index.php?page=dashbord\">Backend</a></li>";
+          } ?>
         <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
   		</ul>
       <div class="handle">&#9776;﻿</div> <!-- responsive burger icon -->
