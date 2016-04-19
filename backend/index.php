@@ -20,7 +20,7 @@ error_reporting(-1);
 
 
 include("../db-connect.php");
-include('../functions/functions.php');
+include('../functions/table_functions.php');
 
 include('header.php');
 
