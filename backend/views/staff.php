@@ -38,8 +38,8 @@
                 <td><?php echo $guy["description"]; ?></td>
                 <td><?php echo $guy["is_active"]; ?></td>
                 <td>
-                    <a class="btn-default btn-xs" href="index.php?site=reservations&amp;action=edit&amp;id=<?php echo $reservation['id']; ?>">edit</a>
-                    <a class="btn-danger btn-xs" href="index.php?site=reservations&amp;action=delete&amp;id=<?php echo $reservation['id']; ?>">delete</a>
+                    <a class="btn-default btn-xs" href="index.php?page=staff&amp;action=edit&amp;id=<?php echo $guy['id']; ?>">edit</a>
+                    <a class="btn-danger btn-xs" href="index.php?page=staff&amp;action=delete&amp;id=<?php echo $guy['id']; ?>">delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>

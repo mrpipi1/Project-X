@@ -45,8 +45,8 @@
                 <td><?php echo $user["created_at"]; ?></td>
                 <td><?php echo $user["is_active"]; ?></td>
                 <td>
-                    <a class="btn-default btn-xs" href="index.php?site=reservations&amp;action=edit&amp;id=<?php echo $reservation['id']; ?>">edit</a>
-                    <a class="btn-danger btn-xs" href="index.php?site=reservations&amp;action=delete&amp;id=<?php echo $reservation['id']; ?>">delete</a>
+                    <a class="btn-default btn-xs" href="index.php?page=users&amp;action=edit&amp;id=<?php echo $user['id']; ?>">edit</a>
+                    <a class="btn-danger btn-xs" href="index.php?page=users&amp;action=delete&amp;id=<?php echo $user['id']; ?>">delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>

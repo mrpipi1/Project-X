@@ -48,8 +48,8 @@
                 <td><?php echo $item["stock"]; ?></td>
                 <td><?php echo $item["is_active"]; ?></td>
                 <td>
-                    <a class="btn-default btn-xs" href="index.php?site=reservations&amp;action=edit&amp;id=<?php echo $reservation['id']; ?>">edit</a>
-                    <a class="btn-danger btn-xs" href="index.php?site=reservations&amp;action=delete&amp;id=<?php echo $reservation['id']; ?>">delete</a>
+                    <a class="btn-default btn-xs" href="index.php?page=shop_item&amp;action=edit&amp;id=<?php echo $item['id']; ?>">edit</a>
+                    <a class="btn-danger btn-xs" href="index.php?page=shop_item&amp;action=delete&amp;id=<?php echo $item['id']; ?>">delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>

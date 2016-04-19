@@ -22,13 +22,23 @@ function get_users($current_page, $entries_per_page, $order_by, $order_dir) {
     return $users;
 }
 
+function total_users() {
+    global $link;
+
+    $sql = "SELECT COUNT(*) as total_count FROM users WHERE deleted_at IS NULL";
+    $result = mysqli_query($link, $sql);
+
+    return mysqli_fetch_assoc($result)["total_count"];
+}
+
+
 
 
 function update_user($id, $username, $email, $gender) {
     global $link;
 
     // sql update
-    $sql = "UPDATE users SET username = '$username', email = '$email', gender = $gender WHERE id = '$id'";
+    $sql = "UPDATE users SET username = '$username', email = '$email', gender = '$gender' WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
@@ -262,6 +272,147 @@ function delete_guy($id) {
 
     return $result;
 }
+
+
+
+// Bestellungen
+
+function total_orders() {
+    global $link;
+
+    $sql = "SELECT COUNT(*) as total_count FROM bestellungen WHERE deleted_at IS NULL";
+    $result = mysqli_query($link, $sql);
+
+    return mysqli_fetch_assoc($result)["total_count"];
+}
+
+function get_orders($current_page, $entries_per_page, $order_by, $order_dir) {
+    global $link;       //limit ??
+
+    $limit_start = $current_page * $entries_per_page - $entries_per_page;
+    $sql = "SELECT * FROM bestellungen ORDER BY $order_by $order_dir";
+    $result = mysqli_query($link, $sql);
+
+    if(!$result) {
+        echo mysqli_error($link);
+    }
+    $kurse = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $kurse;
+}
+
+function update_order($id, $bestellnummer, $user_id, $created_at, $gutscheincode, $zahlungsart, $versandart, $lieferadresse, $rechnungsadesse, $price, $bestellstatus) {
+    global $link;
+
+    // sql update
+    $sql = "UPDATE bestellungen SET bestellnummer = '$bestellnummer', user_id = '$user_id', created_at ='$created_at', gutscheincode = '$gutscheincode', zahlungsart = '$zahlungsart', versandart = '$versandart', lieferadresse = '$lieferadresse', rechnungsadresse = '$rechnungsadesse', price = '$price', bestellstatus = '$bestellstatus' WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+function delete_order($id) {
+    global $link;
+    $sql = "UPDATE bestellungen SET is_active = 0 WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+
+// socialmedia
+
+function get_s_icons($current_page, $entries_per_page, $order_by, $order_dir) {
+    global $link;       //limit ??
+
+    $limit_start = $current_page * $entries_per_page - $entries_per_page;
+    $sql = "SELECT * FROM socialmedia WHERE deleted_at IS NULL ORDER BY $order_by $order_dir";
+    $result = mysqli_query($link, $sql);
+
+    if(!$result) {
+        echo mysqli_error($link);
+    }
+    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $users;
+}
+
+function total_s_icons() {
+    global $link;
+
+    $sql = "SELECT COUNT(*) as total_count FROM socialmedia WHERE deleted_at IS NULL";
+    $result = mysqli_query($link, $sql);
+
+    return mysqli_fetch_assoc($result)["total_count"];
+}
+
+function update_s_icon($id, $icon_name, $s_pic, $is_active) {
+    global $link;
+
+    // sql update
+    $sql = "UPDATE socialmedia SET icon_name = '$icon_name', pic = '$s_pic', is_active = '$is_active' WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+function delete_s_icon($id) {
+    global $link;
+    $sql = "UPDATE socialmedia SET is_active = 0 WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+
+// content
+
+function get_contents($current_page, $entries_per_page, $order_by, $order_dir) {
+    global $link;       //limit ??
+
+    $limit_start = $current_page * $entries_per_page - $entries_per_page;
+    $sql = "SELECT * FROM content WHERE deleted_at IS NULL ORDER BY $order_by $order_dir";
+    $result = mysqli_query($link, $sql);
+
+    if(!$result) {
+        echo mysqli_error($link);
+    }
+    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $users;
+}
+
+function total_contents() {
+    global $link;
+
+    $sql = "SELECT COUNT(*) as total_count FROM content WHERE deleted_at IS NULL";
+    $result = mysqli_query($link, $sql);
+
+    return mysqli_fetch_assoc($result)["total_count"];
+}
+
+
+
+
+function update_content($id, $headline, $text, $is_active) {
+    global $link;
+
+    // sql update
+    $sql = "UPDATE content SET headline = '$headline', text = '$text', is_active = '$is_active' WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+function delete_content($id) {
+    global $link;
+    $sql = "UPDATE content SET is_active = 0 WHERE id = '$id'";
+    $result = mysqli_query($link, $sql);
+
+    return $result;
+}
+
+
+
+
+
 
 
 
