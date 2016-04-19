@@ -46,7 +46,8 @@ function update_user($id, $username, $email, $gender) {
 
 function delete_user($id) {
     global $link;
-    $sql = "UPDATE users SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE users SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
@@ -92,7 +93,8 @@ function update_admin($id, $admin_name, $admin_email, $password_hash, $is_active
 
 function delete_admin($id) {
     global $link;
-    $sql = "UPDATE admin SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE admin SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
@@ -136,11 +138,13 @@ function update_categorie($id, $category_name, $is_active) {
 
 function delete_category($id) {
     global $link;
-    $sql = "UPDATE shop_category SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE category SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
+
 
 // shop items
 
@@ -179,11 +183,13 @@ function update_item($id, $product_name, $price, $category_id, $description, $pi
 
 function delete_item($id) {
     global $link;
-    $sql = "UPDATE shop_item SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE shop_items SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
+
 
 
 // kurse
@@ -223,11 +229,13 @@ function update_kurs($id, $kursname, $beschreibung, $is_active) {
 
 function delete_kurs($id) {
     global $link;
-    $sql = "UPDATE kurse SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE kurse SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
+
 
 
 // Mitarbeiter
@@ -267,11 +275,13 @@ function update_guy($id, $fullname, $email, $telno, $pic, $kurse_id, $descriptio
 
 function delete_guy($id) {
     global $link;
-    $sql = "UPDATE mitarbeiter SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE mitrbeiter SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
+
 
 
 
@@ -312,7 +322,8 @@ function update_order($id, $bestellnummer, $user_id, $created_at, $gutscheincode
 
 function delete_order($id) {
     global $link;
-    $sql = "UPDATE bestellungen SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE bestellungen SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
@@ -356,11 +367,13 @@ function update_s_icon($id, $icon_name, $s_pic, $is_active) {
 
 function delete_s_icon($id) {
     global $link;
-    $sql = "UPDATE socialmedia SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE socialmedia SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
+
 
 
 // content
@@ -388,9 +401,6 @@ function total_contents() {
     return mysqli_fetch_assoc($result)["total_count"];
 }
 
-
-
-
 function update_content($id, $headline, $text, $is_active) {
     global $link;
 
@@ -403,13 +413,12 @@ function update_content($id, $headline, $text, $is_active) {
 
 function delete_content($id) {
     global $link;
-    $sql = "UPDATE content SET is_active = 0 WHERE id = '$id'";
+    $timestamp = time();
+    $sql = "UPDATE content SET is_active = 0, deleted_at = $timestamp WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
 
     return $result;
 }
-
-
 
 
 
