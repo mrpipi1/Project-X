@@ -11,7 +11,7 @@ $views  = ('views/');
 include('header.php');
 
 if( ! isset($_GET['page']) ){
-    $page = "views/dasbord"; // Legt default-wert in die Variable $page
+    $page = "dasbord"; // Legt default-wert in die Variable $page
 }else{
     $page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }

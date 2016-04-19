@@ -52,13 +52,14 @@
 <nav class="nav_backend" >
     <ul >
         <li><a href="index.php?page=dashboard">Dashboard</a></li>
-        <li><a href="index.php?page=users">Users</a></li>  <!-- + admins -->
+        <li><a href="index.php?page=admins">Admin</a></li>
+        <li><a href="index.php?page=users">Users</a></li>
+        <li><a href="index.php?page=staff">Mitarbeiter</a></li>
+        <li><a href="index.php?page=shop">Shop</a></li>   <!-- category + item -->
+        <li><a href="index.php?page=orders">Bestellungen</a></li>
+        <li><a href="index.php?page=kurse">Kurse</a></li>
         <li><a href="index.php?page=content">Content</a></li>
-        <li><a href="index.php?page=users">Mitarbeiter</a></li>
-        <li><a href="index.php?page=users">Kurse</a></li>
-        <li><a href="index.php?page=users">Shop</a></li>   <!-- category + item -->
-        <li><a href="index.php?page=users">Bestellungen</a></li>
-
+        <li><a href="index.php?page=socialmedia">Social Media</a></li>
     </ul>
 </nav>
 
