@@ -22,7 +22,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($categories as $category): ?>
+        <?php foreach($contents['contents'] as $category): ?>
             <tr>
                 <td><?php echo $category["id"]; ?></td>
                 <td><?php echo $category["category_name"]; ?></td>
@@ -37,6 +37,6 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $total_pages); ?>
+    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
 
 </section>

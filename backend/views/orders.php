@@ -29,7 +29,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($orders as $order): ?>
+        <?php foreach($contents['contents'] as $order): ?>
             <tr>
                 <td><?php echo $order["id"]; ?></td>
                 <td><?php echo $order["bestellnummer"]; ?></td>
@@ -52,7 +52,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("kurse", $current_page, $total_pages); ?>
+    <?php pagination_backend("kurse", $current_page, $contents['total_pages']); ?>
 
 
 

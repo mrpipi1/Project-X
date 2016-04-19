@@ -31,7 +31,9 @@
         </thead>
 
         <tbody>
-        <?php foreach($users as $user): ?>
+        <?php
+
+        foreach($contents['contents'] as $user): ?>
             <tr>
                 <td><?php echo $user["id"]; ?></td>
                 <td><?php echo $user["username"]; ?></td>
@@ -54,7 +56,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $total_pages); ?>
+    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
 
 </section>
 

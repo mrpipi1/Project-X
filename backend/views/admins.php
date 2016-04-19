@@ -24,7 +24,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($admins as $admin): ?>
+        <?php foreach($contents['contents'] as $admin): ?>
             <tr>
                 <td><?php echo $admin["id"]; ?></td>
                 <td><?php echo $admin["admin_name"]; ?></td>
@@ -40,7 +40,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $total_pages); ?>
+    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
 
 
 </section>

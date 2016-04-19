@@ -24,7 +24,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($s_icons as $s_icon): ?>
+        <?php foreach($contents['contents'] as $s_icon): ?>
             <tr>
                 <td><?php echo $s_icon["id"]; ?></td>
                 <td><?php echo $s_icon["icon_name"]; ?></td>
@@ -40,7 +40,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("kurse", $current_page, $total_pages); ?>
+    <?php pagination_backend("kurse", $current_page, $contents['total_pages']); ?>
 
 
 

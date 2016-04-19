@@ -1,1 +1,1 @@
-<a href="?site=<?php echo $site; ?>&amp;page=<?php echo $total_pages; ?>">letzte Seite</a>
+<a href="?page=<?php echo $page; ?>&amp;site=<?php echo $total_pages; ?>">letzte Seite</a>

@@ -32,7 +32,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($items as $item): ?>
+        <?php foreach($contents['contents'] as $item): ?>
             <tr>
                 <td><?php echo $item["id"]; ?></td>
                 <td><?php echo $item["product_name"]; ?></td>
@@ -57,7 +57,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $total_pages); ?>
+    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
 
 
 

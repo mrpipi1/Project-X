@@ -27,7 +27,7 @@
         </thead>
 
         <tbody>
-        <?php foreach($staff as $guy): ?>
+        <?php foreach($contents['contents'] as $guy): ?>
             <tr>
                 <td><?php echo $guy["id"]; ?></td>
                 <td><?php echo $guy["fullname"]; ?></td>
@@ -47,7 +47,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("kurse", $current_page, $total_pages); ?>
+    <?php pagination_backend("kurse", $current_page, $contents['total_pages']); ?>
 
 
 
