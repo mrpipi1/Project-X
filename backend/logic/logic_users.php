@@ -7,7 +7,7 @@
  */
 
 $users = get_users($current_page, $entries_per_page, $order_by, $order_dir);
-$total_reservations = total_users();
+$total_users = total_users();
 
-$total_pages = floor($total_reservations / $entries_per_page);
+$total_pages = floor($total_users / $entries_per_page);
 

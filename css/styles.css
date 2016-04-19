@@ -2018,7 +2018,13 @@ backend
 
 .table_backend th, .table_backend td{
   border: 1px solid #363636;
-  padding: 5px 10px 5px;
+  padding: 5px;
+}
+
+.table_backend td{
+  font-weight: 300;
+  font-size: 0.8em;
+  text-align: center;
 }
 
 
