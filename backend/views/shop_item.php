@@ -15,18 +15,18 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("reservations", "id", "ID") ?></th>
-            <th><?php echo sort_table("reservations", "product_name", "Name") ?></th>
-            <th><?php echo sort_table("reservations", "category_id", "Kategorie") ?></th>
-            <th><?php echo sort_table("reservations", "pic", "Bild") ?></th>
-            <th><?php echo sort_table("reservations", "thumbnail_1", "Thumbnail_1") ?></th>
-            <th><?php echo sort_table("reservations", "thumbnail_2", "Thumbnail_2") ?></th>
-            <th><?php echo sort_table("reservations", "thumbnail_3", "Thumbnail_3") ?></th>
-            <th><?php echo sort_table("reservations", "size", "Größe") ?></th>
-            <th><?php echo sort_table("reservations", "in_aktion", "in Aktion") ?></th>
-            <th><?php echo sort_table("reservations", "price_in_action", "Aktionspreis") ?></th>
-            <th><?php echo sort_table("reservations", "stock", "Stock") ?></th>
-            <th><?php echo sort_table("reservations", "is_active", "Aktiv") ?></th>
+            <th><?php echo sort_table("shop_item", "id", "ID") ?></th>
+            <th><?php echo sort_table("shop_item", "product_name", "Name") ?></th>
+            <th><?php echo sort_table("shop_item", "category_id", "Kategorie") ?></th>
+            <th><?php echo sort_table("shop_item", "pic", "Bild") ?></th>
+            <th><?php echo sort_table("shop_item", "thumbnail_1", "Thumbnail_1") ?></th>
+            <th><?php echo sort_table("shop_item", "thumbnail_2", "Thumbnail_2") ?></th>
+            <th><?php echo sort_table("shop_item", "thumbnail_3", "Thumbnail_3") ?></th>
+            <th><?php echo sort_table("shop_item", "size", "Größe") ?></th>
+            <th><?php echo sort_table("shop_item", "in_aktion", "in Aktion") ?></th>
+            <th><?php echo sort_table("shop_item", "price_in_action", "Aktionspreis") ?></th>
+            <th><?php echo sort_table("shop_item", "stock", "Stock") ?></th>
+            <th><?php echo sort_table("shop_item", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -57,7 +57,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("shop_item", $current_page, $contents['total_pages']); ?>
 
 
 

@@ -15,17 +15,17 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("reservations", "id", "ID") ?></th>
-            <th><?php echo sort_table("reservations", "username", "Name") ?></th>
-            <th><?php echo sort_table("reservations", "email", "Email") ?></th>
-            <th><?php echo sort_table("reservations", "gender", "Gender") ?></th>
-            <th><?php echo sort_table("reservations", "birthday", "Geburtstag") ?></th>
-            <th><?php echo sort_table("reservations", "pref_delivery", "bev. Versand") ?></th>
-            <th><?php echo sort_table("reservations", "pref_payment", "bev. Bezahlung") ?></th>
-            <th><?php echo sort_table("reservations", "address", "Adresse") ?></th>
-            <th><?php echo sort_table("reservations", "zip_code", "PLZ") ?></th>
-            <th><?php echo sort_table("reservations", "created_at", "created_at") ?></th>
-            <th><?php echo sort_table("reservations", "is_active", "active") ?></th>
+            <th><?php echo sort_table("users", "id", "ID") ?></th>
+            <th><?php echo sort_table("users", "username", "Name") ?></th>
+            <th><?php echo sort_table("users", "email", "Email") ?></th>
+            <th><?php echo sort_table("users", "gender", "Gender") ?></th>
+            <th><?php echo sort_table("users", "birthday", "Geburtstag") ?></th>
+            <th><?php echo sort_table("users", "pref_delivery", "bev. Versand") ?></th>
+            <th><?php echo sort_table("users", "pref_payment", "bev. Bezahlung") ?></th>
+            <th><?php echo sort_table("users", "address", "Adresse") ?></th>
+            <th><?php echo sort_table("users", "zip_code", "PLZ") ?></th>
+            <th><?php echo sort_table("users", "created_at", "created_at") ?></th>
+            <th><?php echo sort_table("users", "is_active", "active") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -56,7 +56,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
+    <?php  pagination_backend("users", $current_page, $contents['total_pages']); ?>
 
 </section>
 

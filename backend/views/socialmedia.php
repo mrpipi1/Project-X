@@ -15,10 +15,10 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("staff", "id", "ID") ?></th>
-            <th><?php echo sort_table("staff", "icon_name", "Name") ?></th>
-            <th><?php echo sort_table("staff", "pic", "Bild") ?></th>
-            <th><?php echo sort_table("staff", "is_active", "Aktiv") ?></th>
+            <th><?php echo sort_table("socialmedia", "id", "ID") ?></th>
+            <th><?php echo sort_table("socialmedia", "icon_name", "Name") ?></th>
+            <th><?php echo sort_table("socialmedia", "pic", "Bild") ?></th>
+            <th><?php echo sort_table("socialmedia", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>

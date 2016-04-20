@@ -15,10 +15,10 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("reservations", "id", "ID") ?></th>
-            <th><?php echo sort_table("reservations", "admin_name", "Name") ?></th>
-            <th><?php echo sort_table("reservations", "admin_email", "Email") ?></th>
-            <th><?php echo sort_table("reservations", "is_active", "active") ?></th>
+            <th><?php echo sort_table("admins", "id", "ID") ?></th>
+            <th><?php echo sort_table("admins", "admin_name", "Name") ?></th>
+            <th><?php echo sort_table("admins", "admin_email", "Email") ?></th>
+            <th><?php echo sort_table("admins", "is_active", "active") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -40,7 +40,7 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("admins", $current_page, $contents['total_pages']); ?>
 
 
 </section>

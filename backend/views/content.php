@@ -13,10 +13,10 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("staff", "id", "ID") ?></th>
-            <th><?php echo sort_table("staff", "headline", "Headline") ?></th>
-            <th><?php echo sort_table("staff", "text", "Text") ?></th>
-            <th><?php echo sort_table("staff", "is_active", "Aktiv") ?></th>
+            <th><?php echo sort_table("content", "id", "ID") ?></th>
+            <th><?php echo sort_table("content", "headline", "Headline") ?></th>
+            <th><?php echo sort_table("content", "text", "Text") ?></th>
+            <th><?php echo sort_table("content", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>

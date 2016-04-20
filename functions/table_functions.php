@@ -214,7 +214,7 @@ function pagination_backend($site, $current_page, $total_pages) {
 function sort_table($site, $column, $anchor) {
     $order_dir = isset($_GET["order_dir"]) && $_GET["order_dir"] == "asc" ? "desc" : "asc";
     $output = <<<HEREDOC
-<a href="?site=$site&order_by=$column&order_dir=$order_dir">$anchor</a>
+<a href="?page=$site&order_by=$column&order_dir=$order_dir">$anchor</a>
 HEREDOC;
 
     return $output;

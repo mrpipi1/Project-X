@@ -14,16 +14,16 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("staff", "id", "ID") ?></th>
-            <th><?php echo sort_table("staff", "bestellnummer", "Bestellnummer") ?></th>
-            <th><?php echo sort_table("staff", "user_id", "User") ?></th>
-            <th><?php echo sort_table("staff", "created_at", "created at") ?></th>
-            <th><?php echo sort_table("staff", "gutscheincode", "Gutscheincode") ?></th>
-            <th><?php echo sort_table("staff", "zahlungsart", "Zahlung") ?></th>
-            <th><?php echo sort_table("staff", "lieferadresse", "Lieferadresse") ?></th>
-            <th><?php echo sort_table("staff", "rechnungsadresse", "Rechnungsadresse") ?></th>
-            <th><?php echo sort_table("staff", "price", "Preis") ?></th>
-            <th><?php echo sort_table("staff", "bestellstatus", "Bestellstatus") ?></th>
+            <th><?php echo sort_table("orders", "id", "ID") ?></th>
+            <th><?php echo sort_table("orders", "bestellnummer", "Bestellnummer") ?></th>
+            <th><?php echo sort_table("orders", "user_id", "User") ?></th>
+            <th><?php echo sort_table("orders", "created_at", "created at") ?></th>
+            <th><?php echo sort_table("orders", "gutscheincode", "Gutscheincode") ?></th>
+            <th><?php echo sort_table("orders", "zahlungsart", "Zahlung") ?></th>
+            <th><?php echo sort_table("orders", "lieferadresse", "Lieferadresse") ?></th>
+            <th><?php echo sort_table("orders", "rechnungsadresse", "Rechnungsadresse") ?></th>
+            <th><?php echo sort_table("orders", "price", "Preis") ?></th>
+            <th><?php echo sort_table("orders", "bestellstatus", "Bestellstatus") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>

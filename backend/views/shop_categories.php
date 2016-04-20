@@ -14,9 +14,9 @@
     <table class="table_backend">
         <thead>
         <tr>
-            <th><?php echo sort_table("categories", "id", "ID") ?></th>
-            <th><?php echo sort_table("categories", "category_name", "Name") ?></th>
-            <th><?php echo sort_table("categories", "is_active", "active") ?></th>
+            <th><?php echo sort_table("shop_categories", "id", "ID") ?></th>
+            <th><?php echo sort_table("shop_categories", "category_name", "Name") ?></th>
+            <th><?php echo sort_table("shop_categories", "is_active", "active") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -37,6 +37,6 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("reservations", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("shop_categories", $current_page, $contents['total_pages']); ?>
 
 </section>
