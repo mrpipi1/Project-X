@@ -167,13 +167,8 @@ h5 {
 
 /* Header */
 
-<<<<<<< HEAD
-.header_main {
-  height: 60px;
-=======
 .header {
-  height: 80px;
->>>>>>> 6ae1af4d3e72a256dbde696c1e0bce77d74a1b6b
+ height: 60px;
   width: 100vw;
 
   display: flex;
