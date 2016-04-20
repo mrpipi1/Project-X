@@ -299,7 +299,7 @@ h5 {
 }
 
 
-.nav li:hover:before, .nav li:focus:before, .nav li:active:before,{
+.nav li:hover:before, .nav li:focus:before, .nav li:active:before{
   left: 0;
   right: 0;
 }
@@ -2053,7 +2053,3 @@ backend
 .table_backend tr:nth-child(2n){
   background-color: #e0e0e0;
 }
-
-
-
-
