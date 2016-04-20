@@ -9,4 +9,4 @@
 
 # Ignore DB Connect
 
-.db-connect.php
+db-connect.php
