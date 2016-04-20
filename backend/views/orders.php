@@ -17,13 +17,12 @@
             <th><?php echo sort_table("orders", "id", "ID") ?></th>
             <th><?php echo sort_table("orders", "bestellnummer", "Bestellnummer") ?></th>
             <th><?php echo sort_table("orders", "user_id", "User") ?></th>
-            <th><?php echo sort_table("orders", "created_at", "created at") ?></th>
-            <th><?php echo sort_table("orders", "gutscheincode", "Gutscheincode") ?></th>
+            <th><?php echo sort_table("orders", "gutscheincode", "Gutschein") ?></th>
             <th><?php echo sort_table("orders", "zahlungsart", "Zahlung") ?></th>
             <th><?php echo sort_table("orders", "lieferadresse", "Lieferadresse") ?></th>
             <th><?php echo sort_table("orders", "rechnungsadresse", "Rechnungsadresse") ?></th>
             <th><?php echo sort_table("orders", "price", "Preis") ?></th>
-            <th><?php echo sort_table("orders", "bestellstatus", "Bestellstatus") ?></th>
+            <th><?php echo sort_table("orders", "bestellstatus", "Status") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -34,7 +33,6 @@
                 <td><?php echo $order["id"]; ?></td>
                 <td><?php echo $order["bestellnummer"]; ?></td>
                 <td><?php echo $order["user_id"]; ?></td>
-                <td><?php echo $order["created_at"]; ?></td>
                 <td><?php echo $order["gutscheincode"]; ?></td>
                 <td><?php echo $order["zahlungsart"]; ?></td>
                 <td><?php echo $order["lieferadresse"]; ?></td>

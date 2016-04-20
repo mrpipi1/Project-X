@@ -18,7 +18,7 @@
             <th><?php echo sort_table("admins", "id", "ID") ?></th>
             <th><?php echo sort_table("admins", "admin_name", "Name") ?></th>
             <th><?php echo sort_table("admins", "admin_email", "Email") ?></th>
-            <th><?php echo sort_table("admins", "is_active", "active") ?></th>
+            <th><?php echo sort_table("admins", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -29,7 +29,7 @@
                 <td><?php echo $admin["id"]; ?></td>
                 <td><?php echo $admin["admin_name"]; ?></td>
                 <td><?php echo $admin["admin_email"]; ?></td>
-                <td><?php echo $admin["is_active"]; ?></td>
+                <td><?php echo bool_to_word($admin["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=admins&amp;action=edit&amp;id=<?php echo $admin['id']; ?>">edit</a>
                     <a class="btn-danger btn-xs" href="index.php?page=admins&amp;action=delete&amp;id=<?php echo $admin['id']; ?>">delete</a>

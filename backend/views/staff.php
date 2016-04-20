@@ -21,7 +21,7 @@
             <th><?php echo sort_table("staff", "pic", "Bild") ?></th>
             <th><?php echo sort_table("staff", "kurse_id", "Kurs") ?></th>
             <th><?php echo sort_table("staff", "description", "Beschreibung") ?></th>
-            <th><?php echo sort_table("staff", "is_active", "active") ?></th>
+            <th><?php echo sort_table("staff", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -34,9 +34,9 @@
                 <td><?php echo $guy["email"]; ?></td>
                 <td><?php echo $guy["telno"]; ?></td>
                 <td><?php echo $guy["pic"]; ?></td>
-                <td><?php echo $guy["kurse_id"]; ?></td>
-                <td><?php echo truncate($guy["description"], $chars = 25); ?></td>
-                <td><?php echo $guy["is_active"]; ?></td>
+                <td><?php echo get_name_by_id($guy["kurse_id"], "kurse", "kursname"); ?></td>
+                <td><?php echo truncate($guy["description"]); ?></td>
+                <td><?php echo bool_to_word($guy["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=staff&amp;action=edit&amp;id=<?php echo $guy['id']; ?>">edit</a>
                     <a class="btn-danger btn-xs" href="index.php?page=staff&amp;action=delete&amp;id=<?php echo $guy['id']; ?>">delete</a>

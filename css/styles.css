@@ -2014,17 +2014,28 @@ backend
 .table_backend{
   border-spacing: 0.5rem;
   border-collapse: collapse;
+  margin-bottom: 2em;
 }
 
 .table_backend th, .table_backend td{
-  border: 1px solid #363636;
-  padding: 5px;
+  padding: 6px 10px 6px ;
+  font-size: 0.8em;
+}
+
+.table_backend th{
+  border-bottom: 1px solid #959595;
+  text-align: left;
 }
 
 .table_backend td{
   font-weight: 300;
-  font-size: 0.8em;
-  text-align: center;
+
+
+}
+
+
+.table_backend tr:nth-child(2n){
+  background-color: #e0e0e0;
 }
 
 

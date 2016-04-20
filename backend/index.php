@@ -13,7 +13,7 @@ $entries_per_page = 10;
 $current_page = isset($_GET['site']) ? $_GET["site"] : 1;
 $page = isset($_GET["page"]) ? $_GET["page"] : "";
 $order_by = isset($_GET['order_by']) ? $_GET["order_by"] : "id";
-$order_dir = isset($_GET['order_dir']) ? $_GET["order_dir"] : "DESC";
+$order_dir = isset($_GET['order_dir']) ? $_GET["order_dir"] : "ASC";
 
 session_start();
 error_reporting(-1);

@@ -180,8 +180,25 @@ function update_content($id, $headline, $text, $is_active) {
 
 
 
+function bool_to_word($bool){
+    if($bool == 1){
+        $word = 'Ja';
+    }else{
+        $word = 'Nein';
+    }
+    return $word;
+}
 
-function truncate($text, $chars = 25) {
+function get_name_by_id($id, $table_name, $col_name){
+    global $link;
+    $sql = "SELECT * FROM " .$table_name ." WHERE id = " .$id;
+    $result = mysqli_query($link, $sql);
+
+    $result_name = mysqli_fetch_assoc($result);
+    return $result_name[$col_name];
+}
+
+function truncate($text, $chars = 20) {
     $text = $text." ";
     $text = substr($text,0,$chars);
     $text = substr($text,0,strrpos($text,' '));
@@ -212,7 +229,7 @@ function pagination_backend($site, $current_page, $total_pages) {
 }
 
 function sort_table($site, $column, $anchor) {
-    $order_dir = isset($_GET["order_dir"]) && $_GET["order_dir"] == "asc" ? "desc" : "asc";
+    $order_dir = isset($_GET["order_dir"]) && $_GET["order_dir"] == "desc" ? "asc" : "desc";
     $output = <<<HEREDOC
 <a href="?page=$site&order_by=$column&order_dir=$order_dir">$anchor</a>
 HEREDOC;

@@ -17,7 +17,7 @@
             <th><?php echo sort_table("kurse", "id", "ID") ?></th>
             <th><?php echo sort_table("lurse", "kursname", "Name") ?></th>
             <th><?php echo sort_table("kurse", "beschreibung", "Beschreibung") ?></th>
-            <th><?php echo sort_table("kurse", "is_active", "active") ?></th>
+            <th><?php echo sort_table("kurse", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -27,8 +27,8 @@
             <tr>
                 <td><?php echo $kurs["id"]; ?></td>
                 <td><?php echo $kurs["kursname"]; ?></td>
-                <td><?php echo truncate($kurs["beschreibung"], $chars = 25); ?></td>
-                <td><?php echo $kurs["is_active"]; ?></td>
+                <td><?php echo truncate($kurs["beschreibung"]); ?></td>
+                <td><?php echo bool_to_word($kurs["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=kurse&amp;action=edit&amp;id=<?php echo $kurs['id']; ?>">edit</a>
                     <a class="btn-danger btn-xs" href="index.php?page=kurse&amp;action=delete&amp;id=<?php echo $kurs['id']; ?>">delete</a>

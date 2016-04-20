@@ -16,7 +16,7 @@
         <tr>
             <th><?php echo sort_table("shop_categories", "id", "ID") ?></th>
             <th><?php echo sort_table("shop_categories", "category_name", "Name") ?></th>
-            <th><?php echo sort_table("shop_categories", "is_active", "active") ?></th>
+            <th><?php echo sort_table("shop_categories", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
         </thead>
@@ -26,7 +26,7 @@
             <tr>
                 <td><?php echo $category["id"]; ?></td>
                 <td><?php echo $category["category_name"]; ?></td>
-                <td><?php echo $category["is_active"]; ?></td>
+                <td><?php echo bool_to_word($category["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=shop_categories&amp;action=edit&amp;id=<?php echo $category['id']; ?>">edit</a>
                     <a class="btn-danger btn-xs" href="index.php?page=shop_categories&amp;action=delete&amp;id=<?php echo $category['id']; ?>">delete</a>

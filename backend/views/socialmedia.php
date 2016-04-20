@@ -29,7 +29,7 @@
                 <td><?php echo $s_icon["id"]; ?></td>
                 <td><?php echo $s_icon["icon_name"]; ?></td>
                 <td><?php echo $s_icon["pic"]; ?></td>
-                <td><?php echo $s_icon["is_active"]; ?></td>
+                <td><?php echo bool_to_word($s_icon["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=socialmedia&amp;action=edit&amp;id=<?php echo $s_icon['id']; ?>">edit</a>
                     <a class="btn-danger btn-xs" href="index.php?page=socialmedia&amp;action=delete&amp;id=<?php echo $s_icon['id']; ?>">delete</a>
