@@ -49,18 +49,83 @@
 
 <div class="backend_wrapper">
 
-<nav class="nav_backend" >
-    <ul >
-        <li><a href="index.php?page=dashboard">Dashboard</a></li>
-        <li><a href="index.php?page=admins">Admin</a></li>
-        <li><a href="index.php?page=users">Users</a></li>
-        <li><a href="index.php?page=staff">Mitarbeiter</a></li>
-        <li><a href="index.php?page=shop_categories">Shop Kategorien</a></li>
-        <li><a href="index.php?page=shop_item">Shop Items</a></li>
-        <li><a href="index.php?page=orders">Bestellungen</a></li>
-        <li><a href="index.php?page=kurse">Kurse</a></li>
-        <li><a href="index.php?page=content">Content</a></li>
-        <li><a href="index.php?page=socialmedia">Social Media</a></li>
+<!-- <nav class="nav_backend" >
+    <ul>
+        <li>
+            <a href="index.php?page=dashboard"><span>Dashboard</span></a>
+            <a href="index.php?page=admins">Admin</a>
+            <a href="index.php?page=users">Users</a>
+            <a href="index.php?page=staff">Mitarbeiter</a>
+            <a href="index.php?page=shop_categories">Shop Kategorien</a>
+            <a href="index.php?page=shop_item">Shop Items</a>
+            <a href="index.php?page=orders"><span>Bestellungen</span></a>
+            <ul>
+                <li><a href='#'><span>TEST</span></a></li>
+            </ul>
+            <a href="index.php?page=kurse">Kurse</a></li>
+            <a href="index.php?page=content">Content</a></li>
+            <a href="index.php?page=socialmedia">Social Media</a>
+        </li>
     </ul>
-</nav>
+</nav> -->
 
+    <nav class='nav_backend'>
+        <ul>
+             <li>
+                 <a href="index.php?page=dashboard"><span>Dashboard</span></a>
+             </li>
+             <li>
+                 <a href="index.php?page=admins">Admin</a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=users">Users</a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=staff">Mitarbeiter</a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=shop_categories">Shop Kategorien</a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=shop_item">Shop Items</a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=orders"><span>Bestellungen</span></a>
+                 <ul>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                   <li><a href='#'><span>Lorem</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=kurse"><span>Kurse</span></a>
+                 <ul>
+                   <li><a href='#'><span>Neue Kurse</span></a></li>
+                </ul>
+             </li>
+             <li>
+                 <a href="index.php?page=content">Content</a></li>
+             </li>
+             <li>
+                 <a href="index.php?page=socialmedia">Social Media</a>
+             </li>
+        </ul>
+    </nav>

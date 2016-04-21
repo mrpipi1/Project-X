@@ -4,13 +4,11 @@
     Erstes      #65a591
     Zweites     #5a8e7d
     Drittes     #486e5f
-<<<<<<< HEAD
 
     Footer      #363636
     Footer 2    #262626
 
-=======
->>>>>>> 6ae1af4d3e72a256dbde696c1e0bce77d74a1b6b
+
 */
 
 * {
@@ -1991,11 +1989,59 @@ backend
 
 .backend_wrapper{
   display: flex;
-  height: 100vw;
   width: 100vw;
 }
 
-.nav_backend{
+/* Backend Flyout */
+
+
+.nav_backend li {
+  background: #363636;
+  white-space: nowrap;
+}
+
+
+.nav_backend li:hover {
+   background: #5a8e7d;
+   transition: all 0.2s ease-in-out;
+}
+
+.nav_backend a {
+    color: #FFF;
+    padding: 20px;
+    width: 150px;
+}
+
+.nav_backend ul li.hover,
+.nav_backend ul li:hover {
+	position: relative;
+  z-index: 200;
+}
+
+.nav_backend ul ul{
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+}
+
+.nav_backend ul li:hover > ul {
+  visibility: visible;
+}
+
+.nav_backend ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav_backend span, .nav_backend a {
+	display: inline-block;
+	font-size: 0.8vw;
+  text-align: center;
+}
+
+/*.nav_backend{
   background-color: #363636;
   height: 100%;
   width: 180px;
@@ -2022,7 +2068,7 @@ backend
 
 .nav_backend a:hover{
   background-color: #5a8e7d;
-}
+}*/
 
 .content-wrapper_backend{
   padding: 3em;
