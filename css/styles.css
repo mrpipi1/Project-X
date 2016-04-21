@@ -2041,6 +2041,7 @@ backend
 .table_backend th{
   border-bottom: 1px solid #959595;
   text-align: left;
+  font-weight: 400;
 }
 
 .table_backend td{
@@ -2051,7 +2052,7 @@ backend
 
 
 .table_backend tr:nth-child(2n){
-  background-color: #e0e0e0;
+  background-color: #eaeaea;
 }
 
 

@@ -21,11 +21,12 @@
             </div>
 
             <div class="btn_checkout btn_big-checkout">
-                <input type="submit" name="login" value="Registrieren"   class="btn_big-checkout input">
+                <input type="submit" name="login" value="Einloggen"   class="btn_big-checkout input">
             </div>
         </form>
 
         <div class="form_checkout-text"><a href="#" class="form_checkout_link">Passwort vergessen?</a></div>
+        <p class="pflichtfeld">*Pflichtfelder</p>
 
     </section>
 
