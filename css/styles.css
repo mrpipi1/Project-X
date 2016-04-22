@@ -1976,9 +1976,9 @@ backend
 }
 
  /* zentriert das Logo */
-.logo {
+/*.logo {
   margin: 0;
-}
+}*/
 
 .logo_wrapper{
   width: 180px;
@@ -1995,7 +1995,7 @@ backend
 /* Backend Flyout */
 
 
-.nav_backend li {
+/*.nav_backend li {
   background: #363636;
   white-space: nowrap;
 }
@@ -2039,9 +2039,12 @@ backend
 	display: inline-block;
 	font-size: 0.8vw;
   text-align: center;
-}
+}*/
 
-/*.nav_backend{
+
+/*--------------- FLYOUT END -------------*/
+
+.nav_backend{
   background-color: #363636;
   height: 100%;
   width: 180px;
@@ -2068,7 +2071,7 @@ backend
 
 .nav_backend a:hover{
   background-color: #5a8e7d;
-}*/
+}
 
 .content-wrapper_backend{
   padding: 3em;
