@@ -15,7 +15,7 @@
         <thead>
         <tr>
             <th><?php echo sort_table("kurse", "id", "ID") ?></th>
-            <th><?php echo sort_table("kurse", "title", "Name") ?></th>
+            <th><?php echo sort_table("kurse", "k_name", "Name") ?></th>
             <th><?php echo sort_table("kurse", "beschreibung", "Beschreibung") ?></th>
             <th><?php echo sort_table("kurse", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
@@ -26,7 +26,7 @@
         <?php foreach($contents['contents'] as $kurs): ?>
             <tr>
                 <td><?php echo $kurs["id"]; ?></td>
-                <td><?php echo $kurs["title"]; ?></td>
+                <td><?php echo $kurs["k_name"]; ?></td>
                 <td><?php echo truncate($kurs["beschreibung"]); ?></td>
                 <td><?php echo bool_to_word($kurs["is_active"]); ?></td>
                 <td>

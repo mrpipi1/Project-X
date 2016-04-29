@@ -29,10 +29,13 @@
         ?>
     </h2>
 
-    <form class="form_backend" action="<?php echo "index.php?page=" .$_GET['page'] ."&amp;action=update&amp;id=" .$_GET['id'] ?>" method="post" enctype="multipart/form-data">
+    <form class="form_backend" action="index.php?page=<?php echo $_GET['page']?>&amp;action=<?php if($_GET['action'] == 'edit'){echo "update&amp;id=" .$_GET['id'];}elseif($_GET['action'] == 'new'){echo "insert";}?>" method="post" enctype="multipart/form-data">
 
         <?php
-            echo addInput(get_col_data($_GET['page']));
+            if(!isset($_GET['id'])){
+                $_GET['id'] = NULL;
+            }
+            echo addInput(get_col_data($_GET['page']), $_GET['action'], $_GET['id']);
         ?>
 
         <div class="btn_backend">

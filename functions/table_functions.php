@@ -29,6 +29,13 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
             $tablename = $_GET['page'];
             $updated = update_contents($tablename, $id, $array);
             $return['updated'] =  $updated;
+        }elseif($_GET['action'] == 'new') {
+            include('views/form_backend.php');
+        }elseif($_GET['action'] == 'insert'){
+            $array = $_POST;
+            $tablename = $_GET['page'];
+            $insert = insert_contents($tablename, $array);
+            $return['insert'] =  $insert;
         }
     }
     return $return;
@@ -67,11 +74,11 @@ function delete_contents($table_name, $id) {
     return $result;
 }
 
-
+// zum editieren von db einträgen:
 function update_contents($tablename, $id, $content_array) {
     global $link;
     $insert_string = "";
-
+    // vom $_POST column name + wert auslesen und in string speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
     $i = 0;
     foreach($content_array as $col => $wert){
         $i++;
@@ -87,13 +94,49 @@ function update_contents($tablename, $id, $content_array) {
             }
         }
     }
-    echo $insert_string;
 
-    // sql update
+    // sql update zusammenbauen:
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
 
     $result = mysqli_query($link, $sql);
+    if(!$result) {
+        echo "konnte nicht erstellt werden!";
+    }else{
+        echo "erstellen war erfolgreich!";
+    }
+    return $result;
+}
 
+// zum erstellen von neuen db einträgen:
+function insert_contents($tablename, $content_array) {
+    global $link;
+    $insert_col = "";
+    $insert_wert = "";
+    // vom $_POST column name + wert auslesen und in strings speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
+    $i = 0;
+    foreach($content_array as $col => $wert){
+        $i++;
+        if($wert != "erstellen"){
+            if($wert == "on"){
+                $wert = 1;
+            }elseif($wert == "off"){
+                $wert = 0;
+            }
+            if($col == "created_at"){
+                $wert = time();
+            }
+            $insert_col .= $col;
+            $insert_wert .= "'" .$wert ."'";
+            if( $i != count($content_array) -1 ){
+                $insert_col .= " , ";
+                $insert_wert .= ", ";
+            }
+        }
+    }
+
+    // sql insert zusammenbauen:
+    $sql = "INSERT INTO " .$tablename ." (" .$insert_col ." )" ." VALUES (" .$insert_wert ." )";
+    $result = mysqli_query($link, $sql);
     if(!$result) {
         echo "konnte nicht erstellt werden!";
     }else{

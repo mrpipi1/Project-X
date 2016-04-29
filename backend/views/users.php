@@ -16,7 +16,7 @@
         <thead>
         <tr>
             <th><?php echo sort_table("users", "id", "ID") ?></th>
-            <th><?php echo sort_table("users", "username", "Name") ?></th>
+            <th><?php echo sort_table("users", "u_name", "Name") ?></th>
             <th><?php echo sort_table("users", "email", "Email") ?></th>
             <th><?php echo sort_table("users", "gender", "Gender") ?></th>
             <th><?php echo sort_table("users", "birthday", "Geburtstag") ?></th>
@@ -35,7 +35,7 @@
         foreach($contents['contents'] as $user): ?>
             <tr>
                 <td><?php echo $user["id"]; ?></td>
-                <td><?php echo $user["username"]; ?></td>
+                <td><?php echo $user["u_name"]; ?></td>
                 <td><?php echo $user["email"]; ?></td>
                 <td><?php echo $user["gender"]; ?></td>
                 <td><?php echo $user["birthday"]; ?></td>

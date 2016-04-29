@@ -11,12 +11,14 @@
 
     <h3 class="main-hl_backend">Bestellungen</h3>
 
+    <a class="btn-default btn-xs" href="index.php?page=orders&amp;action=new">neue Bestellung</a>
+
     <table class="table_backend">
         <thead>
         <tr>
             <th><?php echo sort_table("orders", "id", "ID") ?></th>
             <th><?php echo sort_table("orders", "bestellnummer", "Bestellnummer") ?></th>
-            <th><?php echo sort_table("orders", "user_id", "User") ?></th>
+            <th><?php echo sort_table("orders", "users_id", "User") ?></th>
             <th><?php echo sort_table("orders", "gutscheincode", "Gutschein") ?></th>
             <th><?php echo sort_table("orders", "zahlungsart", "Zahlung") ?></th>
             <th><?php echo sort_table("orders", "lieferadresse", "Lieferadresse") ?></th>
@@ -32,7 +34,7 @@
             <tr>
                 <td><?php echo $order["id"]; ?></td>
                 <td><?php echo $order["bestellnummer"]; ?></td>
-                <td><?php echo $order["user_id"]; ?></td>
+                <td><?php echo $order["users_id"]; ?></td>
                 <td><?php echo $order["gutscheincode"]; ?></td>
                 <td><?php echo $order["zahlungsart"]; ?></td>
                 <td><?php echo $order["lieferadresse"]; ?></td>
