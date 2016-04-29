@@ -4,13 +4,11 @@
     Erstes      #65a591
     Zweites     #5a8e7d
     Drittes     #486e5f
-<<<<<<< HEAD
 
     Footer      #363636
     Footer 2    #262626
 
-=======
->>>>>>> 6ae1af4d3e72a256dbde696c1e0bce77d74a1b6b
+
 */
 
 * {
@@ -299,7 +297,7 @@ h5 {
 }
 
 
-.nav li:hover:before, .nav li:focus:before, .nav li:active:before,{
+.nav li:hover:before, .nav li:focus:before, .nav li:active:before{
   left: 0;
   right: 0;
 }
@@ -1953,6 +1951,7 @@ backend
 
 .nav_header_backend{
   display: flex;
+  align-items: center;
 }
 
 .nav_header_backend li{
@@ -1960,17 +1959,26 @@ backend
   flex-direction: column;
   justify-content: center;
   font-weight: 300;
+  text-transform: uppercase;
 
   margin-right: 30px;
 }
 
 .nav_header_backend a{
   color: white;
+  transition: all 0.2s ease-in-out;
+  padding: 15px;
+  height: 100%;
 }
 
 .nav_header_backend a:hover{
-  color: #5a8e7d;
+  background-color: #5a8e7d;
 }
+
+ /* zentriert das Logo */
+/*.logo {
+  margin: 0;
+}*/
 
 .logo_wrapper{
   width: 180px;
@@ -1981,9 +1989,60 @@ backend
 
 .backend_wrapper{
   display: flex;
-  height: 100vw;
   width: 100vw;
 }
+
+/* Backend Flyout */
+
+
+/*.nav_backend li {
+  background: #363636;
+  white-space: nowrap;
+}
+
+
+.nav_backend li:hover {
+   background: #5a8e7d;
+   transition: all 0.2s ease-in-out;
+}
+
+.nav_backend a {
+    color: #FFF;
+    padding: 20px;
+    width: 150px;
+}
+
+.nav_backend ul li.hover,
+.nav_backend ul li:hover {
+	position: relative;
+  z-index: 200;
+}
+
+.nav_backend ul ul{
+	visibility: hidden;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 100;
+}
+
+.nav_backend ul li:hover > ul {
+  visibility: visible;
+}
+
+.nav_backend ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav_backend span, .nav_backend a {
+	display: inline-block;
+	font-size: 0.8vw;
+  text-align: center;
+}*/
+
+
+/*--------------- FLYOUT END -------------*/
 
 .nav_backend{
   background-color: #363636;
@@ -1991,9 +2050,6 @@ backend
   width: 180px;
   font-weight: 300;
   letter-spacing: 0.5px;
-
-
-
 }
 
 .nav_backend ul{
@@ -2001,17 +2057,20 @@ backend
 }
 
 .nav_backend li{
-  padding: 10px 0 10px 30px;
   border-bottom: 1px solid #515151;
-
 }
 
 .nav_backend a{
   color: white;
+  transition: all 0.4s linear;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+
 }
 
 .nav_backend a:hover{
-  color: #5a8e7d;
+  background-color: #5a8e7d;
 }
 
 .content-wrapper_backend{
@@ -2063,5 +2122,4 @@ backend
 .form_backend{
 
 }
-
 

@@ -6,3 +6,7 @@
 # Ignore from PHP Storm
 
 .idea
+
+# Ignore DB Connect
+
+db-connect.php
