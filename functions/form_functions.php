@@ -15,12 +15,11 @@ function get_col_data($table_name){
     return $column_data;
 }
 
-// erstellt das form fürs backend, $column_data kommt von get_col_data(),
-// $attribute = [] ist optional, falls man bei einem input andere parameter zusätzlich braucht
+// erstellt das form fürs backend, $column_data kommt von get_col_data(), $attribute = [] ist optional, falls man bei einem input andere parameter zusätzlich braucht
 function addInput($column_data, $attribute = []){
 
-    $output = "";               // hier wird dann alles rein gespeichert das dann ausgegeben werden soll, \n und |r sollten überall sein wo norm. eine neue zeile ist.
-    $ende = "</div> \n \r";     // default wenns keine checkbox ist, siehe zeile 56
+    $output = "";              // hier wird dann alles rein gespeichert das dann ausgegeben werden soll, \n und |r sollten überall sein wo norm. eine neue zeile ist.
+    $ende = "</div> \n \r";    // default wenns keine checkbox ist, siehe  comment in "if ($type == "checkbox") {"
 
     foreach($column_data as $col_num => $col_data) {
 
@@ -75,7 +74,7 @@ function addInput($column_data, $attribute = []){
                         $output .=  "<option>" .$option['title'] ."</option>";  // $option['title'] weil es ein mehrdimensionales array ist.
                 }
                 $output .= "</select>";
-            }else {     // "norm" input, $type wurde in zeile 40 - 50 mit dem richtigen type befüllt.
+            }else {     // "norm" input, $type wurde mit "if für jeden datentyp" mit dem richtigen type befüllt.
                 $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name\" $attr";
 
                 // falls man der funktion attribute mitgegeben hat werden sie hier in das input geschrieben.
@@ -84,7 +83,6 @@ function addInput($column_data, $attribute = []){
                 }
                 $output .= "> \n \r";   // schließt input.
             }
-
             // zum stylen:
             $output .= "<span class='highlight_backend'></span> \n \r<span class='form-bar_backend'></span> \n \r";
             // closing tag vom wrapper (p oder div):

@@ -15,7 +15,7 @@
         <thead>
         <tr>
             <th><?php echo sort_table("shop_categories", "id", "ID") ?></th>
-            <th><?php echo sort_table("shop_categories", "category_name", "Name") ?></th>
+            <th><?php echo sort_table("shop_categories", "title", "Name") ?></th>
             <th><?php echo sort_table("shop_categories", "is_active", "Aktiv") ?></th>
             <th>Aktionen</th>
         </tr>
@@ -25,7 +25,7 @@
         <?php foreach($contents['contents'] as $category): ?>
             <tr>
                 <td><?php echo $category["id"]; ?></td>
-                <td><?php echo $category["category_name"]; ?></td>
+                <td><?php echo $category["title"]; ?></td>
                 <td><?php echo bool_to_word($category["is_active"]); ?></td>
                 <td>
                     <a class="btn-default btn-xs" href="index.php?page=shop_categories&amp;action=edit&amp;id=<?php echo $category['id']; ?>">edit</a>
@@ -37,8 +37,6 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("shop_categories", $current_page, $contents['total_pages']);
-    include('form_backend.php');
-    ?>
+    <?php pagination_backend("shop_categories", $current_page, $contents['total_pages']); ?>
 
 </section>

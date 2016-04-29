@@ -21,6 +21,9 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
             $id = (int)$_GET["id"];
             $deleted = delete_contents($table_name, $id);
             $return['deleted'] =  $deleted;
+        }elseif($_GET['action'] == 'edit'){
+            $id = (int)$_GET["id"];
+            include('views/form_backend.php');
         }
     }
     return $return;

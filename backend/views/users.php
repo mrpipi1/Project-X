@@ -54,9 +54,7 @@
         </tbody>
     </table>
 
-    <?php  pagination_backend("users", $current_page, $contents['total_pages']);
-    include('form_backend.php');
-    ?>
+    <?php  pagination_backend("users", $current_page, $contents['total_pages']); ?>
 
 </section>
 
