@@ -10,7 +10,7 @@
 
 <section class="content-wrapper_backend">
 
-    <h3 class="main-hl_backend">Shop Items</h3>
+    <h3 class="main-hl_backend">Produkte</h3>
 
     <table class="table_backend">
         <thead>

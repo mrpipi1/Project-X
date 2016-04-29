@@ -1992,6 +1992,12 @@ backend
   width: 100vw;
 }
 
+.hl_form_backend{
+  padding: 2vw 0 2vw 0;
+  font-size: 2em;
+  font-weight: 200;
+}
+
 /* Backend Flyout */
 
 
@@ -2074,8 +2080,8 @@ backend
 }
 
 .content-wrapper_backend{
+  width: 100%;
   padding: 3em;
-
 
 }
 
@@ -2116,8 +2122,13 @@ backend
 
 
 
+/*########################
+Form
+########################*/
 
-
+.wrapper_form_backend{
+  width: 60vw;
+}
 
 .form_backend{
 

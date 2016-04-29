@@ -56,7 +56,7 @@
             <li><a href="index.php?page=users">Users</a></li>
             <li><a href="index.php?page=staff">Mitarbeiter</a></li>
             <li><a href="index.php?page=shop_categories">Shop Kategorien</a></li>
-            <li><a href="index.php?page=shop_item">Shop Items</a></li>
+            <li><a href="index.php?page=shop_item">Produkte</a></li>
             <li><a href="index.php?page=orders">Bestellungen</a></li>
             <li><a href="index.php?page=kurse">Kurse</a></li>
             <li><a href="index.php?page=content">Content</a></li>

@@ -22,37 +22,36 @@ function addInput($table_name, $attribute = []){
         $label = ucfirst($input_name);
         $d_type = $col_data['Type'];
         $type = "";
+        $attr = "";
 
         if($col_num != 0 && $input_name != 'deleted_at') {
 
-            $output .= "<label for=\"f-$input_name\" class=\"label_backend\">$label</label>\n\r";
-
-            if (strpos($d_type, 'varchar') >= 0) {
-                $type = "text";
-            } elseif ($d_type == "tinyint(1)") {
-                $type = "radio";
-            } elseif ($d_type == "date") {
+            if ($d_type == "tinyint(1)") {
+                $type = "checkbox";
+                if($input_name == "is_active"){
+                    $attr = "checked";
+                }
+            }elseif ($d_type == "date") {
                 $type = "date";
-            } elseif (strpos($input_name, "pic")) {
+            }elseif (strpos($input_name, "pic")) {
                 $type = "file";
+            }elseif (strpos($d_type, 'varchar') >= 0) {
+                $type = "text";
             }
 
-            // if ($type == "button") {      // brauchen wir den button? ich glaub nicht?
-            //   $output .= "<div class=\"btn_backend\">";
-            //  }
-
-            if ($type == "radio") {
+            if ($type == "checkbox") {
                 $output .= "<p class=\"radiobutton_wrapper_backend\">";
                 $ende = "</p> \n \r";
             } else {
                 $output .= "<div class=\"form-group_backend\">";
             }
 
+            $output .= "<label for=\"f-$input_name\" class=\"label_backend\">$label</label>\n\r";
+
             if ($input_name == "beschreibung") {
                 $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name\" ></textarea>";
             }else {
-                $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name\"";
-
+                $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name\" $attr";
 
                 foreach ($attribute as $key => $val) {
                     $output .= " $key=\"$val\"";
