@@ -36,7 +36,7 @@
             <tr>
                 <td><?php echo $item["id"]; ?></td>
                 <td><?php echo $item["product_name"]; ?></td>
-                <td><?php echo get_name_by_id($item["category_id"], "shop_categories", "category_name"); ?></td>
+                <td><?php echo get_name_by_id($item["category_id"], "shop_categories", "title"); ?></td>
                 <td><?php echo $item["description"]; ?></td>
                 <td><?php echo $item["pic"]; ?></td>
                 <td><?php echo truncate($item["thumbnail_1"]); ?></td>

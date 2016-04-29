@@ -6,14 +6,17 @@
  * Time: 17:22
  */
 
-
-
-function addInput($table_name, $attribute = []){
+function get_col_data($table_name){
     global $link;
-    $output = "";
     $sql = "SHOW COLUMNS FROM " .$table_name;
     $result = mysqli_query($link, $sql);
     $column_data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $column_data;
+}
+
+function addInput($column_data, $attribute = []){
+
+    $output = "";
     $ende = "</div> \n \r";
 
     foreach($column_data as $col_num => $col_data) {
@@ -23,9 +26,11 @@ function addInput($table_name, $attribute = []){
         $d_type = $col_data['Type'];
         $type = "";
         $attr = "";
+        $is_other_table = substr($input_name, -3, 3);
+        $second_table_name = substr($input_name, 0, -3);
+
 
         if($col_num != 0 && $input_name != 'deleted_at') {
-
             if ($d_type == "tinyint(1)") {
                 $type = "checkbox";
                 if($input_name == "is_active"){
@@ -33,12 +38,11 @@ function addInput($table_name, $attribute = []){
                 }
             }elseif ($d_type == "date") {
                 $type = "date";
-            }elseif (strpos($input_name, "pic")) {
+            }elseif ( $input_name == "pic" || substr($input_name, 0, 9) == "thumbnail" ) {
                 $type = "file";
-            }elseif (strpos($d_type, 'varchar') >= 0) {
+            }else  {
                 $type = "text";
             }
-
             if ($type == "checkbox") {
                 $output .= "<p class=\"radiobutton_wrapper_backend\">";
                 $ende = "</p> \n \r";
@@ -50,6 +54,22 @@ function addInput($table_name, $attribute = []){
 
             if ($input_name == "beschreibung") {
                 $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name\" ></textarea>";
+            }elseif ($is_other_table == "_id") {
+                $output .= "<select>";
+
+                global $link;
+                $sql1 = "SELECT title FROM " .$second_table_name;
+                $result1 = mysqli_query($link, $sql1);
+                $options = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+
+
+                foreach($options as $option){
+                    if($option != "id" && $option!= "deleted_at"){
+                        $output .=  "<option>" .$option['title'] ."</option>";
+                    }
+                }
+
+                $output .= "</select>";
             }else {
                 $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name\" $attr";
 

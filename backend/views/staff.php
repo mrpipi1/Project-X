@@ -34,7 +34,7 @@
                 <td><?php echo $guy["email"]; ?></td>
                 <td><?php echo $guy["telno"]; ?></td>
                 <td><?php echo $guy["pic"]; ?></td>
-                <td><?php echo get_name_by_id($guy["kurse_id"], "kurse", "kursname"); ?></td>
+                <td><?php echo get_name_by_id($guy["kurse_id"], "kurse", "title"); ?></td>
                 <td><?php echo truncate($guy["description"]); ?></td>
                 <td><?php echo bool_to_word($guy["is_active"]); ?></td>
                 <td>

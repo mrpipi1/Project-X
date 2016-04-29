@@ -33,12 +33,12 @@
 
         <?php
 
-            echo addInput($_GET['page']);
+            echo addInput(get_col_data($_GET['page']));
 
         ?>
 
         <div class="btn_backend">
-            <input type="submit" name= $_GET['page]."_form" value="erstellen"   class="btn_admin_backend">
+            <input type="submit" name= "<?php echo  $_GET['page'] ."_form"?>" value="erstellen"   class="btn_admin_backend">
         </div>
 
     </form>

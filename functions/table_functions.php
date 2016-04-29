@@ -20,7 +20,7 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
     if(isset($_GET['action'])){
         if($_GET['action'] == 'delete' ){
             $id = (int)$_GET["id"];
-            $deleted = delete_content($table_name, $id);
+            $deleted = delete_contents($table_name, $id);
             $return['deleted'] =  $deleted;
         }
     }
@@ -29,7 +29,7 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
 }
 
 function get_contents($table_name, $current_page, $entries_per_page, $order_by, $order_dir) {
-    global $link;       //limit ??
+    global $link;       //  order by " " ??
 
     $table_name = mysqli_real_escape_string($link, $table_name );
     $limit_start = $current_page * $entries_per_page - $entries_per_page;
@@ -52,7 +52,7 @@ function total_contents($table_name) {
     return mysqli_fetch_assoc($result)["total_count"];
 }
 
-function delete_content($table_name, $id) {
+function delete_contents($table_name, $id) {
     global $link;
     $timestamp = time();
     $sql = "UPDATE " .$table_name ." SET is_active = 0, deleted_at = " .$timestamp ." WHERE id = " .$id;
@@ -64,7 +64,7 @@ function delete_content($table_name, $id) {
 
 // user
 
-function update_user($id, $username, $email, $gender) {
+function update_users($id, $username, $email, $gender) {
     global $link;
 
     // sql update
@@ -77,7 +77,7 @@ function update_user($id, $username, $email, $gender) {
 
 // admin
 
-function update_admin($id, $admin_name, $admin_email, $password_hash, $is_active) {
+function update_admins($id, $admin_name, $admin_email, $password_hash, $is_active) {
     global $link;
 
     // sql update
@@ -90,7 +90,7 @@ function update_admin($id, $admin_name, $admin_email, $password_hash, $is_active
 
 //shop categories
 
-function update_categorie($id, $category_name, $is_active) {
+function update_shop_categories($id, $category_name, $is_active) {
     global $link;
 
     // sql update
@@ -103,7 +103,7 @@ function update_categorie($id, $category_name, $is_active) {
 
 // shop items
 
-function update_item($id, $product_name, $price, $category_id, $description, $pic, $thumbnail_1, $thumbnail_2, $thumbnail_3, $size, $in_aktion, $price_in_aktion, $stock, $is_active) {
+function update_shop_item($id, $product_name, $price, $category_id, $description, $pic, $thumbnail_1, $thumbnail_2, $thumbnail_3, $size, $in_aktion, $price_in_aktion, $stock, $is_active) {
     global $link;
 
     // sql update
@@ -116,7 +116,7 @@ function update_item($id, $product_name, $price, $category_id, $description, $pi
 
 // kurse
 
-function update_kurs($id, $kursname, $beschreibung, $is_active) {
+function update_kurse($id, $kursname, $beschreibung, $is_active) {
     global $link;
 
     // sql update
@@ -129,7 +129,7 @@ function update_kurs($id, $kursname, $beschreibung, $is_active) {
 
 // Mitarbeiter
 
-function update_guy($id, $fullname, $email, $telno, $pic, $kurse_id, $description, $is_active) {
+function update_staff($id, $fullname, $email, $telno, $pic, $kurse_id, $description, $is_active) {
     global $link;
 
     // sql update
@@ -142,7 +142,7 @@ function update_guy($id, $fullname, $email, $telno, $pic, $kurse_id, $descriptio
 
 // Bestellungen
 
-function update_order($id, $bestellnummer, $user_id, $created_at, $gutscheincode, $zahlungsart, $versandart, $lieferadresse, $rechnungsadesse, $price, $bestellstatus) {
+function update_orders($id, $bestellnummer, $user_id, $created_at, $gutscheincode, $zahlungsart, $versandart, $lieferadresse, $rechnungsadesse, $price, $bestellstatus) {
     global $link;
 
     // sql update
@@ -155,7 +155,7 @@ function update_order($id, $bestellnummer, $user_id, $created_at, $gutscheincode
 
 // socialmedia
 
-function update_s_icon($id, $icon_name, $s_pic, $is_active) {
+function update_socialmedia($id, $icon_name, $s_pic, $is_active) {
     global $link;
 
     // sql update
