@@ -16,7 +16,6 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
 
     $return = ['contents' => $contents, 'total_contents' => $total_contents, 'total_pages' => $total_pages];
 
-
     if(isset($_GET['action'])){
         if($_GET['action'] == 'delete' ){
             $id = (int)$_GET["id"];
@@ -24,7 +23,6 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
             $return['deleted'] =  $deleted;
         }
     }
-
     return $return;
 }
 
