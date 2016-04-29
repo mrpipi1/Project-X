@@ -82,7 +82,7 @@ function update_contents($tablename, $id, $content_array) {
     $i = 0;
     foreach($content_array as $col => $wert){
         $i++;
-        if($wert != "erstellen"){
+        if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
             }elseif($wert == "off"){
@@ -97,7 +97,6 @@ function update_contents($tablename, $id, $content_array) {
 
     // sql update zusammenbauen:
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
-
     $result = mysqli_query($link, $sql);
     if(!$result) {
         echo "konnte nicht erstellt werden!";
@@ -116,7 +115,7 @@ function insert_contents($tablename, $content_array) {
     $i = 0;
     foreach($content_array as $col => $wert){
         $i++;
-        if($wert != "erstellen"){
+        if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
             }elseif($wert == "off"){

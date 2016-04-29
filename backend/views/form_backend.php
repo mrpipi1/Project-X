@@ -11,21 +11,40 @@
 
     <h2 class="hl_form_backend">
         <?php
-        if($_GET['page'] == "staff"){
-            echo "neuer Mitarbeiter";
-        }elseif($_GET['page'] == "orders"){
-            echo "neue Bestellung";
-        }elseif($_GET['page'] == "shop_categories"){
-            echo "neue Kategorie";
-        }elseif($_GET['page'] == "shop_item"){
-            echo "neues Produkt";
-        }elseif($_GET['page'] == "content"){
-            echo "neuer " .ucfirst($_GET['page']);
-        }elseif($_GET['page'] == "socialmedia"){
-            echo "neues Icon";
-        }else{
-            echo "neuer " .ucfirst(substr($_GET['page'], 0, -1));
+        if($_GET['action'] == 'edit'){
+            if($_GET['page'] == "staff"){
+                echo "Mitarbeiter aktuaiesieren";
+            }elseif($_GET['page'] == "orders"){
+                echo "Bestellung aktuaiesieren";
+            }elseif($_GET['page'] == "shop_categories"){
+                echo "Kategorie aktuaiesieren";
+            }elseif($_GET['page'] == "shop_item"){
+                echo "Produkt aktuaiesieren";
+            }elseif($_GET['page'] == "content"){
+                echo ucfirst($_GET['page']) ." aktuaiesieren";
+            }elseif($_GET['page'] == "socialmedia"){
+                echo "Icon aktuaiesieren";
+            }else{
+                echo ucfirst(substr($_GET['page'], 0, -1)) ." aktuaiesieren";
+            }
+        }elseif($_GET['action'] == 'new'){
+            if($_GET['page'] == "staff"){
+                echo "neuer Mitarbeiter";
+            }elseif($_GET['page'] == "orders"){
+                echo "neue Bestellung";
+            }elseif($_GET['page'] == "shop_categories"){
+                echo "neue Kategorie";
+            }elseif($_GET['page'] == "shop_item"){
+                echo "neues Produkt";
+            }elseif($_GET['page'] == "content"){
+                echo "neuer " .ucfirst($_GET['page']);
+            }elseif($_GET['page'] == "socialmedia"){
+                echo "neues Icon";
+            }else{
+                echo "neuer " .ucfirst(substr($_GET['page'], 0, -1));
+            }
         }
+
         ?>
     </h2>
 
@@ -39,7 +58,7 @@
         ?>
 
         <div class="btn_backend">
-            <input type="submit" name= "<?php echo  $_GET['page'] ."_form"?>" value="erstellen"   class="btn_admin_backend">
+            <input type="submit" name= "<?php echo  $_GET['page'] ."_form"?>" value="<?php if($_GET['action'] == 'new'){ echo "erstellen";}else{ echo "updaten";} ?>" class="btn_admin_backend">
         </div>
 
     </form>

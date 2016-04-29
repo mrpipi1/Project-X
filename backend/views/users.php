@@ -45,8 +45,8 @@
                 <td><?php echo $user["zip_code"]; ?></td>
                 <td><?php echo bool_to_word($user["is_active"]); ?></td>
                 <td>
-                    <a class="btn-default btn-xs" href="index.php?page=users&amp;action=edit&amp;id=<?php echo $user['id']; ?>">edit</a>
-                    <a class="btn-danger btn-xs" href="index.php?page=users&amp;action=delete&amp;id=<?php echo $user['id']; ?>">delete</a>
+                    <a class="btn_table" href="index.php?page=users&amp;action=edit&amp;id=<?php echo $user['id']; ?>">edit</a>
+                    <a class="btn_table" href="index.php?page=users&amp;action=delete&amp;id=<?php echo $user['id']; ?>">delete</a>
                 </td>
             </tr>
         <?php endforeach; ?>

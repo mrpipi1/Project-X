@@ -43,9 +43,8 @@ function addInput($column_data, $action, $id, $attribute = [] ){
 
             $sql = "SELECT * FROM " .$table_name ." WHERE id = '$id' ";
             $result = mysqli_query($link, $sql);
-            $value = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            $value = mysqli_fetch_assoc($result);
         }
-
 
         // ich will die id und die deleted_ at spalten nicht anzeigen, weil man die so nicht bearbeiten können soll.
         if($col_num != 0 && $input_name != 'deleted_at') {
@@ -53,7 +52,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
             if ($d_type == "tinyint(1)") {
                 $type = "checkbox";
                 if($input_name == "is_active" && $value = "" || $value["is_active"] == 1){
-                    $attr = "checked";      // damit is_active immer vorausgewählt is und man nicht was erstellt und es inaktiv is.
+                    $attr = "checked ";      // damit is_active immer vorausgewählt is und man nicht was erstellt und es inaktiv is.
                 }
             }elseif ($d_type == "date") {
                 $type = "date";
