@@ -29,12 +29,10 @@
         ?>
     </h2>
 
-    <form class="form_backend" action="" method="post" enctype="multipart/form-data">
+    <form class="form_backend" action="<?php echo "index.php?page=" .$_GET['page'] ."&amp;action=update&amp;id=" .$_GET['id'] ?>" method="post" enctype="multipart/form-data">
 
         <?php
-
             echo addInput(get_col_data($_GET['page']));
-
         ?>
 
         <div class="btn_backend">

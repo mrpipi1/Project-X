@@ -22,8 +22,13 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
             $deleted = delete_contents($table_name, $id);
             $return['deleted'] =  $deleted;
         }elseif($_GET['action'] == 'edit'){
-            $id = (int)$_GET["id"];
             include('views/form_backend.php');
+        }elseif($_GET['action'] == 'update'){
+            $id = $_GET['id'];
+            $array = $_POST;
+            $tablename = $_GET['page'];
+            $updated = update_contents($tablename, $id, $array);
+            $return['updated'] =  $updated;
         }
     }
     return $return;
@@ -63,121 +68,41 @@ function delete_contents($table_name, $id) {
 }
 
 
-// user
-
-function update_users($id, $username, $email, $gender) {
+function update_contents($tablename, $id, $content_array) {
     global $link;
+    $insert_string = "";
+
+    $i = 0;
+    foreach($content_array as $col => $wert){
+        $i++;
+        if($wert != "erstellen"){
+            if($wert == "on"){
+                $wert = 1;
+            }elseif($wert == "off"){
+                $wert = 0;
+            }
+            $insert_string .= $col ." = " . "'" .$wert ."'";
+            if( $i != count($content_array) -1 ){
+                $insert_string .= ", ";
+            }
+        }
+    }
+    echo $insert_string;
 
     // sql update
-    $sql = "UPDATE users SET username = '$username', email = '$email', gender = '$gender' WHERE id = '$id'";
+    $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
+
     $result = mysqli_query($link, $sql);
 
+    if(!$result) {
+        echo "konnte nicht erstellt werden!";
+    }else{
+        echo "erstellen war erfolgreich!";
+    }
     return $result;
 }
 
 
-// admin
-
-function update_admins($id, $admin_name, $admin_email, $password_hash, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE admins SET admin_name = '$admin_name', admin_email = '$admin_email', password_hash = $password_hash, is_active = $is_active WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-//shop categories
-
-function update_shop_categories($id, $category_name, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE shop_category SET category_name = '$category_name', is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// shop items
-
-function update_shop_item($id, $product_name, $price, $category_id, $description, $pic, $thumbnail_1, $thumbnail_2, $thumbnail_3, $size, $in_aktion, $price_in_aktion, $stock, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE shop_item SET product_name = '$product_name', price = '$price', category_id = '$category_id', description = '$description', pic = '$pic', thumbnail_1 = '$thumbnail_1', thumbnail_2 = '$thumbnail_2', thumbnail_3 = '$thumbnail_3', size = '$size', in_action = '$in_aktion', price_in_action = '$price_in_aktion', stock = '$stock', is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// kurse
-
-function update_kurse($id, $kursname, $beschreibung, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE kurse SET kursname = '$kursname', beschreibung = '$beschreibung' is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// Mitarbeiter
-
-function update_staff($id, $fullname, $email, $telno, $pic, $kurse_id, $description, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE staff SET fullname = '$fullname', email = '$email', telno ='$telno', pic = '$pic', kurse_id = '$kurse_id', description = '$description', is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// Bestellungen
-
-function update_orders($id, $bestellnummer, $user_id, $created_at, $gutscheincode, $zahlungsart, $versandart, $lieferadresse, $rechnungsadesse, $price, $bestellstatus) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE orders SET bestellnummer = '$bestellnummer', user_id = '$user_id', created_at ='$created_at', gutscheincode = '$gutscheincode', zahlungsart = '$zahlungsart', versandart = '$versandart', lieferadresse = '$lieferadresse', rechnungsadresse = '$rechnungsadesse', price = '$price', bestellstatus = '$bestellstatus' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// socialmedia
-
-function update_socialmedia($id, $icon_name, $s_pic, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE socialmedia SET icon_name = '$icon_name', pic = '$s_pic', is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
-
-
-// content
-
-function update_content($id, $headline, $text, $is_active) {
-    global $link;
-
-    // sql update
-    $sql = "UPDATE content SET headline = '$headline', text = '$text', is_active = '$is_active' WHERE id = '$id'";
-    $result = mysqli_query($link, $sql);
-
-    return $result;
-}
 
 
 
@@ -237,6 +162,13 @@ HEREDOC;
 
     return $output;
 }
+
+
+
+
+
+
+
 
 
 
