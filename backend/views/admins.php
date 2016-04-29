@@ -7,10 +7,10 @@
  */
 ?>
 
-
 <section class="content-wrapper_backend">
 
     <h3 class="main-hl_backend">Admins</h3>
+    <div class="btn_show_form">neuer Admin</div>
 
     <table class="table_backend">
         <thead>
@@ -40,7 +40,9 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("admins", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("admins", $current_page, $contents['total_pages']);
+    include('form_backend.php');
+    ?>
 
 
 </section>

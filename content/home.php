@@ -501,7 +501,7 @@ include ('content/landingpage.php');
         </div>
 
         <div class="form-group">
-          <textarea type=" text" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
+          <textarea type=" text" class="textarea" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
           <span class="highlight"></span>
           <span class="form-bar"></span>
 

@@ -51,7 +51,7 @@
                 </div>
 
                 <div class="btn_checkout btn_big-checkout ">
-                    <input type="button" name="name" value="als Gast fortfahren"  class="btn_big-checkout input">
+                    <input type="button" name="gast" value="als Gast fortfahren"  class="btn_big-checkout input">
                 </div>
             </form>
 

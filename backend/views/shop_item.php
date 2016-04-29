@@ -57,7 +57,9 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("shop_item", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("shop_item", $current_page, $contents['total_pages']);
+    include('form_backend.php');
+    ?>
 
 
 

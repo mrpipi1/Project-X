@@ -6,7 +6,7 @@ $content = ('content/');
 $admin = '';
 
 include("db-connect.php");
-include('functions/functions.php');
+include('functions/form_functions.php');
 // header eingebunden
 include('header.php');
 

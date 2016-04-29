@@ -970,7 +970,7 @@ ______ ____  _____  __  __
 }
 
 
-textarea {
+.textarea {
   font-size: 18px;
   padding: 10px 10px 10px 5px;
   display: block;
@@ -979,18 +979,18 @@ textarea {
   border: 1px solid #5a8e7d;
 }
 
-textarea:focus {
+.textarea:focus {
   outline: none;
 }
 
 
-textarea:focus  {
+.textarea:focus  {
   top: -20px;
   font-size: 16px;
 
 }
 
-textarea:focus ~.form-bar:before, textarea:focus ~ .form-bar:after {
+.textarea:focus ~.form-bar:before, .textarea:focus ~ .form-bar:after {
   width: 50%;
 }
 
@@ -2056,5 +2056,12 @@ backend
 }
 
 
+
+
+
+
+.form_backend{
+
+}
 
 

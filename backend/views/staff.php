@@ -47,7 +47,9 @@
         </tbody>
     </table>
 
-    <?php pagination_backend("staff", $current_page, $contents['total_pages']); ?>
+    <?php pagination_backend("staff", $current_page, $contents['total_pages']);
+    include('form_backend.php');
+    ?>
 
 
 

@@ -27,3 +27,7 @@ function updateSpinner(obj)
     }
     contentObj.value = value;
 }
+
+
+
+

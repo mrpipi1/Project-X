@@ -19,8 +19,8 @@ session_start();
 error_reporting(-1);
 
 include("../db-connect.php");
-include('../functions/table_functions.php');
-
+include("../functions/table_functions.php");
+include("../functions/form_functions.php");
 
 include('header.php');
 
