@@ -43,26 +43,39 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
 }
 
 function create_table($table_name){
-    echo $table_name;
     global $link;
     $sql = "SELECT * FROM " .$table_name;
     $result = mysqli_query($link, $sql);
-    $content_array = mysqli_fetch_assoc($result);
+    $content_array = mysqli_fetch_all($result, MYSQLI_ASSOC);
     $ths = "";
     $tds = "";
-    foreach($content_array as $col => $wert){
-        $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
-        if($wert == 'is_active'){
-            $tds .= "<td>" .bool_to_word($wert) ."</td>";
-        }elseif(strlen($wert) > 30) {
-            $tds .= "<td>" .truncate($wert) ."</td>";
-        }else {
-            $tds .= "<td>" .$wert ."</td>";
-        }
+    for($i = 0; $i < count($content_array); $i++){
+        $tds .= "<tr>";
 
+        foreach($content_array[$i] as $col => $wert){
+            if($i == 0){
+                $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
+            }
+            if($wert == 'is_active'){
+                $tds .= "<td>" .bool_to_word($wert) ."</td>";
+            }elseif(strlen($wert) > 30) {
+                $tds .= "<td>" .truncate($wert) ."</td>";
+            }else {
+                $tds .= "<td>" .$wert ."</td>";
+            }
+        }
+        $tds .= "<td>";
+        $tds .= "<a class=\"btn_table\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=edit&amp;id=" .$content_array[$i]['id'] ."\">edit</a>";
+        $tds .= "<a class=\"btn_table\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
+        $tds .= "</td>";
+        $tds .= "</tr>";
+        $return = ['ths' => $ths, 'tds' => $tds];
+
+        if($i == count($content_array) -1){
+            return $return;
+        }
     }
-    $return = ['ths' => $ths, 'tds' => $tds];
-    return $return;
+
 }
 
 function get_contents($table_name, $current_page, $entries_per_page, $order_by, $order_dir) {

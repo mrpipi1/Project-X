@@ -40,16 +40,10 @@
         </thead>
 
         <tbody>
-        <?php
-        foreach($contents as $content): ?>
-        <tr>
-                <?php echo $table['tds']; ?>
-                <td>
-                    <a class="btn_table" href="index.php?page=users&amp;action=edit&amp;id=<?php echo $user['id']; ?>">edit</a>
-                    <a class="btn_table" href="index.php?page=users&amp;action=delete&amp;id=<?php echo $user['id']; ?>">delete</a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
+
+        <?php echo $table['tds']; ?>
+
+
         </tbody>
 
     </table>
