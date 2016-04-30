@@ -14,7 +14,7 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
     $total_contents = total_contents($table_name);
     $total_pages = floor($total_contents / $entries_per_page);
 
-    $return = ['contents' => $contents, 'total_contents' => $total_contents, 'total_pages' => $total_pages];
+    $return = ['contents' => $contents, 'total_contents' => $total_contents, 'total_pages' => $total_pages ];
 
     if(isset($_GET['action'])){
         if($_GET['action'] == 'delete' ){
@@ -38,6 +38,30 @@ function table_logic($table_name, $current_page, $entries_per_page, $order_by, $
             $return['insert'] =  $insert;
         }
     }
+    include('views/table.php');
+    return $return;
+}
+
+function create_table($table_name){
+    echo $table_name;
+    global $link;
+    $sql = "SELECT * FROM " .$table_name;
+    $result = mysqli_query($link, $sql);
+    $content_array = mysqli_fetch_assoc($result);
+    $ths = "";
+    $tds = "";
+    foreach($content_array as $col => $wert){
+        $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
+        if($wert == 'is_active'){
+            $tds .= "<td>" .bool_to_word($wert) ."</td>";
+        }elseif(strlen($wert) > 30) {
+            $tds .= "<td>" .truncate($wert) ."</td>";
+        }else {
+            $tds .= "<td>" .$wert ."</td>";
+        }
+
+    }
+    $return = ['ths' => $ths, 'tds' => $tds];
     return $return;
 }
 
@@ -144,35 +168,6 @@ function insert_contents($tablename, $content_array) {
     return $result;
 }
 
-
-
-
-
-function bool_to_word($bool){
-    if($bool == 1){
-        $word = 'Ja';
-    }else{
-        $word = 'Nein';
-    }
-    return $word;
-}
-
-function get_name_by_id($id, $table_name, $col_name){
-    global $link;
-    $sql = "SELECT * FROM " .$table_name ." WHERE id = " .$id;
-    $result = mysqli_query($link, $sql);
-
-    $result_name = mysqli_fetch_assoc($result);
-    return $result_name[$col_name];
-}
-
-function truncate($text, $chars = 20) {
-    $text = $text." ";
-    $text = substr($text,0,$chars);
-    $text = substr($text,0,strrpos($text,' '));
-    $text = $text."...";
-    return $text;
-}
 
 
 function pagination_backend($site, $current_page, $total_pages) {

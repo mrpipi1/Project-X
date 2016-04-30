@@ -23,24 +23,25 @@ function addInput($column_data, $action, $id, $attribute = [] ){
     $output = "";              // hier wird dann alles rein gespeichert das dann ausgegeben werden soll, \n und |r sollten überall sein wo norm. eine neue zeile ist.
     $ende = "</div> \n \r";    // default wenns keine checkbox ist, siehe  comment in "if ($type == "checkbox") {"
 
+    // durchläuft die $column_data und speichert alles in variablen:
     foreach($column_data as $col_num => $col_data) {
 
-        // durchläuft die $column_data und speichert alles in variablen:
-
         $input_name = $col_data['Field'];   // ['Field'] und ['Type'] sind wegen dem query in get_col_data().
-        $label = ucfirst($input_name);
         $d_type = $col_data['Type'];
         $type = "";
         $attr = "";
         $value = "";
         $is_selected = "";
         $is_other_table = substr($input_name, -3, 3);
-        $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
+        $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ich ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
         $col_name = substr($second_table_name, 0, 1) ."_name";
         $table_name = $_GET['page'];
+        $input_name_space = underscore_to_space($input_name);
+        $label = ucfirst($input_name_space);
 
+
+        // holt die sachen aus der db damit man sie als value in die inputs geben kann wenn die action edit ist:
         if($action == 'edit'){
-
             $sql = "SELECT * FROM " .$table_name ." WHERE id = '$id' ";
             $result = mysqli_query($link, $sql);
             $value = mysqli_fetch_assoc($result);
@@ -58,9 +59,16 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 $type = "date";
             }elseif ( $input_name == "pic" || substr($input_name, 0, 9) == "thumbnail" ) { // das is iwie mit strpos() nicht gegangen also hab ich das so hingebogen :)
                 $type = "file";
+            }elseif(stristr($input_name, 'mail') !== false){
+                $type = 'email';
+            }elseif(stristr($input_name, 'passwor') !== false){
+                $type = 'password';
+                ;
             }else  {
                 $type = "text";
             }
+
+
 
             // bei den checkboxen im frontend hab ich aus irg einem grund ps statt divs ich glaub das war wegen irg einem styling also hab ich das da auch gemacht, kann man ws ändern.
             if ($type == "checkbox") {
@@ -74,7 +82,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
 
             // die beschreibungen brauchen eine textarea.
             if ($input_name == "beschreibung") {
-                $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name\" value=\"$value[$input_name]\" ></textarea>";
+                $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name_space\" value=\"$value[$input_name]\" ></textarea>";
             }elseif ($is_other_table == "_id") {        // das ist wenn man etwas von einer anderen tabelle "auswählen" kann (zb mitarbeiter kursname).
                 if($action == 'edit'){
                     $is_selected = "selected";
@@ -83,7 +91,6 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 $output .= "<select " .$is_selected  .">";
 
                 // ich hol nur die spalte die mich interessiert und befülle die options
-
                 $sql1 = "SELECT " .$col_name ." FROM " .$second_table_name;
                 $result1 = mysqli_query($link, $sql1);
                 $options = mysqli_fetch_all($result1, MYSQLI_ASSOC);
@@ -92,7 +99,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 }
                 $output .= "</select>";
             }else {     // "norm" input, $type wurde mit "if für jeden datentyp" mit dem richtigen type befüllt.
-                $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name\" $attr" ;
+                $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name_space\" $attr" ;
                 if($value != ""){
                     $output .= "value=\"$value[$input_name]\" " ;
                 }

@@ -13,19 +13,19 @@
         <?php
         if($_GET['action'] == 'edit'){
             if($_GET['page'] == "staff"){
-                echo "Mitarbeiter aktuaiesieren";
+                echo "Mitarbeiter aktualiesieren";
             }elseif($_GET['page'] == "orders"){
-                echo "Bestellung aktuaiesieren";
+                echo "Bestellung aktualiesieren";
             }elseif($_GET['page'] == "shop_categories"){
-                echo "Kategorie aktuaiesieren";
+                echo "Kategorie aktualiesieren";
             }elseif($_GET['page'] == "shop_item"){
-                echo "Produkt aktuaiesieren";
+                echo "Produkt aktualiesieren";
             }elseif($_GET['page'] == "content"){
-                echo ucfirst($_GET['page']) ." aktuaiesieren";
+                echo ucfirst($_GET['page']) ." aktualiesieren";
             }elseif($_GET['page'] == "socialmedia"){
-                echo "Icon aktuaiesieren";
+                echo "Icon aktualiesieren";
             }else{
-                echo ucfirst(substr($_GET['page'], 0, -1)) ." aktuaiesieren";
+                echo ucfirst(substr($_GET['page'], 0, -1)) ." aktualiesieren";
             }
         }elseif($_GET['action'] == 'new'){
             if($_GET['page'] == "staff"){

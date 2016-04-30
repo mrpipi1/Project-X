@@ -21,25 +21,22 @@ error_reporting(-1);
 include("../db-connect.php");
 include("../functions/table_functions.php");
 include("../functions/form_functions.php");
+include('../functions/helpers.php');
 
 include('header.php');
 
 if( ! isset($_GET['page']) ){
     $page = "dasboard"; // Legt default-wert in die Variable $page
+    $views .= $page .".php";
+    include($views);
 }else{
     $page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
     if($page != 'dashboard'){
         include('logic/logic.php');
+
     }
 
 }
 
-if($page){
-    $views .= $page .".php";
-}
-include($views);
-
-
-//include($logic);
 
 include('footer.php');
