@@ -51,12 +51,9 @@
 
     <nav class="nav_backend" >
         <ul >
-
-            <li><a href="index.php?page=dashboard">Dashboard</a></li>
-            <li><a href="index.php?page=statistik">Statistik</a></li>
             <?php
 
-            create_menu_items(); ?>
+            echo create_menu_items(); ?>
         </ul>
     </nav>
 

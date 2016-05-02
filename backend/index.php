@@ -27,7 +27,7 @@ include('../functions/backend_functions.php');
 include('header.php');
 
 if( ! isset($_GET['page']) ){
-    $page = "dasboard"; // Legt default-wert in die Variable $page
+    $page = "dashboard"; // Legt default-wert in die Variable $page
     $views .= $page .".php";
     include($views);
 }elseif($page == "statistik"){
