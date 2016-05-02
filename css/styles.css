@@ -2134,3 +2134,20 @@ Form
 
 }
 
+
+
+
+
+
+/*#######################
+pie chart
+#######################*/
+
+.pie-chart_wrapper{
+  width: 30vw;
+}
+
+.pie-chart_hl{
+  text-align: left;
+}
+

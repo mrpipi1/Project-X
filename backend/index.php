@@ -6,6 +6,8 @@
  * Time: 15:30
  */
 
+date_default_timezone_set('UTC');
+// variablen für später, va für pagination
 $views  = ('views/');
 $logic = ('logic/');
 $errors = [];

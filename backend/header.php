@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- jQuery library (served from Google) -->
     <script src="jquery-1.12.2.min.js"></script>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
 </head>
 <body class="body_backend">
 <header class="header_backend">

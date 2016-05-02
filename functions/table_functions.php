@@ -18,13 +18,17 @@ function create_table($table_name){
         $tds .= "<tr>";
 
         foreach($content_array[$i] as $col => $wert){
-            if($i == 0){
+            //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
+            if($i == 0 && $col != 'deleted_at' && $col != 'created_at'){
                 $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
             }
+            // <td> elemente zusammenbauen
             if($wert == 'is_active'){
                 $tds .= "<td>" .bool_to_word($wert) ."</td>";
             }elseif(strlen($wert) > 30) {
                 $tds .= "<td>" .truncate($wert) ."</td>";
+            }elseif($col == 'deleted_at' || $col == 'created_at') {
+                $tds .= " ";
             }else {
                 $tds .= "<td>" .$wert ."</td>";
             }
@@ -177,8 +181,6 @@ HEREDOC;
 
     return $output;
 }
-
-
 
 
 
