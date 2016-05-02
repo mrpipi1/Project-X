@@ -26,7 +26,7 @@ include('../functions/backend_functions.php');
 
 include('header.php');
 
-if( ! isset($_GET['page']) ){
+if( ! isset($_GET['page']) || $_GET['page'] == 'dashboard' ){
     $page = "dashboard"; // Legt default-wert in die Variable $page
     $views .= $page .".php";
     include($views);
