@@ -27,7 +27,7 @@
                     $new_item = "neues Produkt";
                 }elseif($_GET['page'] == "socialmedia"){
                     echo "Icons";
-                    $new_item ="neues Icon;";
+                    $new_item ="neues Icon";
                 }else{
                     $page_name = ucfirst($_GET['page']);
                     echo $page_name;

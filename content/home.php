@@ -21,7 +21,7 @@
 include ('content/landingpage.php');
 ?>
 
-<main>
+<main class="main">
    <h2> <a name="about_us"></a>
      Über uns
    </h2>

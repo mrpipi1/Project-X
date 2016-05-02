@@ -23,6 +23,7 @@ include("../functions/table_functions.php");
 include("../functions/form_functions.php");
 include('../functions/helpers.php');
 include('../functions/backend_functions.php');
+include('../functions/statistik_functions.php');
 
 include('header.php');
 
