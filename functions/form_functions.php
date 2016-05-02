@@ -30,7 +30,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
         $d_type = $col_data['Type'];
         $type = "";
         $attr = "";
-        $value = "";
+        $value = NULL;
         $is_selected = "";
         $is_other_table = substr($input_name, -3, 3);
         $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ich ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
@@ -52,7 +52,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
             // if für jeden datentyp, damit immer das richtige input kommt  (tinyint = bool, wird in der db auf tinyint geändert)
             if ($d_type == "tinyint(1)") {
                 $type = "checkbox";
-                if($input_name == "is_active" && $value = "" || $value["is_active"] == 1){
+                if($input_name == "is_active" && $value = NULL || $value["is_active"] == 1){
                     $attr = "checked ";      // damit is_active immer vorausgewählt is und man nicht was erstellt und es inaktiv is.
                 }
             }elseif ($d_type == "date") {

@@ -11,22 +11,35 @@
 <section class="content-wrapper_backend">
 
     <h3 class="main-hl_backend">
-     <?php
-        if($_GET['page'] == "staff"){
-        echo "Mitarbeiter";
-        }elseif($_GET['page'] == "orders"){
-        echo "Bestellungen";
-        }elseif($_GET['page'] == "shop_categories"){
-        echo "Kategorien";
-        }elseif($_GET['page'] == "shop_item"){
-        echo "Produkte";
-        }elseif($_GET['page'] == "socialmedia"){
-        echo "Icons";
-        }else{
-        echo ucfirst($_GET['page']);
-        }
-    ?>
+        <a href="index.php?page=<?php echo $_GET['page'] ?>">
+             <?php
+                if($_GET['page'] == "staff"){
+                    echo "Mitarbeiter";
+                    $new_item = "neuer Mitarbeiter";
+                }elseif($_GET['page'] == "orders"){
+                    echo "Bestellungen";
+                    $new_item = "neue Bestellung";
+                }elseif($_GET['page'] == "shop_categories"){
+                    echo "Kategorien";
+                    $new_item = "neue Kategorie";
+                }elseif($_GET['page'] == "shop_item"){
+                    echo "Produkte";
+                    $new_item = "neues Produkt";
+                }elseif($_GET['page'] == "socialmedia"){
+                    echo "Icons";
+                    $new_item ="neues Icon;";
+                }else{
+                    $page_name = ucfirst($_GET['page']);
+                    echo $page_name;
+                    $new_item = "neuer " .substr($page_name, 0, -1);
+                }
+            ?>
+        </a>
     </h3>
+
+
+    <a class="btn_table" href="index.php?page=<?php echo $_GET['page'] ?>&amp;action=new"><?php echo $new_item ?></a>
+
 
     <table class="table_backend">
         <thead>
@@ -47,6 +60,6 @@
         </tbody>
 
     </table>
-    <?php  pagination_backend($_GET['page'], $current_page, $contents['total_pages']); ?>
+    <?php  pagination_backend($_GET['page'], $current_page, $total_pages); ?>
 </section>
 

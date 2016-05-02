@@ -6,43 +6,8 @@
  * Time: 09:51
  */
 
-// allg. table functions
-
-function table_logic($table_name, $current_page, $entries_per_page, $order_by, $order_dir){
-
-    $contents = get_contents($table_name, $current_page, $entries_per_page, $order_by, $order_dir);
-    $total_contents = total_contents($table_name);
-    $total_pages = floor($total_contents / $entries_per_page);
-
-    $return = ['contents' => $contents, 'total_contents' => $total_contents, 'total_pages' => $total_pages ];
-
-    if(isset($_GET['action'])){
-        if($_GET['action'] == 'delete' ){
-            $id = (int)$_GET["id"];
-            $deleted = delete_contents($table_name, $id);
-            $return['deleted'] =  $deleted;
-        }elseif($_GET['action'] == 'edit'){
-            include('views/form_backend.php');
-        }elseif($_GET['action'] == 'update'){
-            $id = $_GET['id'];
-            $array = $_POST;
-            $tablename = $_GET['page'];
-            $updated = update_contents($tablename, $id, $array);
-            $return['updated'] =  $updated;
-        }elseif($_GET['action'] == 'new') {
-            include('views/form_backend.php');
-        }elseif($_GET['action'] == 'insert'){
-            $array = $_POST;
-            $tablename = $_GET['page'];
-            $insert = insert_contents($tablename, $array);
-            $return['insert'] =  $insert;
-        }
-    }
-    include('views/table.php');
-    return $return;
-}
-
 function create_table($table_name){
+
     global $link;
     $sql = "SELECT * FROM " .$table_name;
     $result = mysqli_query($link, $sql);

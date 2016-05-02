@@ -30,6 +30,9 @@ if( ! isset($_GET['page']) ){
     $page = "dasboard"; // Legt default-wert in die Variable $page
     $views .= $page .".php";
     include($views);
+}elseif($page == "statistik"){
+    $views .= $page .".php";
+    include($views);
 }else{
     $page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
     if($page != 'dashboard'){
