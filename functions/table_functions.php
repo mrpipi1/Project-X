@@ -109,7 +109,7 @@ function update_contents($tablename, $id, $content_array) {
             if(stristr($col, 'passwor') !== false && $wert == ""){
                 $insert_string .= "";
             }else{
-                $insert_string .= $col ." = " . "'" .$wert ."'";
+                $insert_string .= $col ." = " . "'" .mysqli_real_escape_string($link, $wert) ."'";
                 if( $i != count($content_array) -1 ){
                     $insert_string .= ", ";
                 }

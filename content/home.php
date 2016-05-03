@@ -22,11 +22,11 @@ include ('content/landingpage.php');
 ?>
 
 <main class="main">
-   <h2> <a name="about_us"></a>
-     Über uns
-   </h2>
 
-     <section class="about_us">
+     <section class="about_us section_main" id="about_us">
+         <h2>
+             Über uns
+         </h2>
        <p>
          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -43,11 +43,10 @@ include ('content/landingpage.php');
        </p>
      </section>
 
-    <h3 class="employees_headline">  <!-- spezieller stylen als andere H3 -->
-      Mitarbeiter
-    </h3>
-
-      <section class="employees_main">
+      <section class="employees_main section_main">
+          <h3 class="employees_headline ">  <!-- spezieller stylen als andere H3 -->
+              Mitarbeiter
+          </h3>
         <ul class="employees_main-info">
           <li>
              <ul class="employees_main-contact">
@@ -200,11 +199,14 @@ include ('content/landingpage.php');
     </div>
   </div>
 
-  <h2> <a name="course"></a>
-    Kurse
-  </h2>
 
-   <section class="courses_main">
+
+   <section class="courses_main section_main" id="course">
+
+       <h2> <!--<a name="course"></a>-->
+           Kurse
+       </h2>
+
       <!-- <h3 class="courses_headline">Anfänger</h3>
       <section class="beginners-courses_main">
           <ul>
@@ -256,9 +258,11 @@ include ('content/landingpage.php');
     </div>
   </div>
 
-  <h2>Produkt Aktion</h2> <a name="saleproducts_main"></a>
 
-      <section class="saleproducts_main">
+
+      <section class="saleproducts_main section_main" id="saleproducts_main">
+
+          <h2>Produkt Aktion</h2>
 
           <section class="product product-main">
               <ul class="product-img">
@@ -451,9 +455,10 @@ include ('content/landingpage.php');
       <a href="index.php?page=shop">Zum Shop</a>
     </div>
 
-  <h2>Kontakt</h2> <a name="contact"></a>
-    <section class="contact_main">
-      <p>
+    <section class="contact_main section_main" id="contact">
+        <h2>Kontakt</h2>
+
+        <p>
         Siebensterngasse 2, 1070 Wien
       </p>
       <p>
@@ -473,9 +478,9 @@ include ('content/landingpage.php');
 
     </section>
 
-  <h2>Kontaktformular</h2>
-
     <section class="contactform_main"> <a name="contactform_main"></a>
+
+        <h2>Kontaktformular</h2>
 
       <form class="form_main" method="post">
 
