@@ -7,7 +7,6 @@
  */
 global $link;
 
-$contents = get_contents($_GET['page'], $current_page, $entries_per_page, $order_by, $order_dir);
 $total_contents = total_contents($_GET['page']);
 $total_pages = floor($total_contents / $entries_per_page);
 

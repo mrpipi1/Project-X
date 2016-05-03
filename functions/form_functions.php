@@ -80,7 +80,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
 
             // die beschreibungen brauchen eine textarea.
             if ($input_name == "beschreibung" || $input_name == "text") {
-                $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name_space\" value=\"$value[$input_name]\" id=\"f-$input_name_space\"></textarea>";
+                $output .= "<textarea type=\" text\" name=\"$input_name\" id=\"f-$input_name_space\">$value[$input_name]</textarea>";
             }elseif ($input_name == "gender") {
                 $output .= "<input type=\"radio\" name=\"$input_name\"  value=\"male\"  id=\"male\"/><label for=\"male\">male</label>";
                 $output .= "<input type=\"radio\" name=\"$input_name\"  value=\"female\"  id=\"female\"/><label for=\"female\">female</label>";
@@ -101,7 +101,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 $output .= "</select>";
             }else {     // "norm" input, $type wurde mit "if für jeden datentyp" mit dem richtigen type befüllt.
                 $output .= "<input type=\"$type\" name=\"$input_name\" id=\"f-$input_name_space\" $attr" ;
-                if($value != ""){
+                if($value != "" && $type != 'password'){
                     $output .= "value=\"$value[$input_name]\" " ;
                 }
                 // falls man der funktion attribute mitgegeben hat werden sie hier in das input geschrieben.

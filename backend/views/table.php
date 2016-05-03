@@ -12,13 +12,12 @@
         if($_GET['page'] == 'users'){
             echo " <th>Orders</th>";
         }
-
         echo $table['tds'];
         echo "</tbody>\n\r</table>";
 
-
      pagination_backend($_GET['page'], $current_page, $total_pages);
 
+// table mit orders zu user anzeigen
     if(isset($_GET['action']) && $_GET['action'] == 'show_orders'){
         $orders = 'orders';
         $users_id = 'users_id';
@@ -31,11 +30,6 @@
         echo $table_orders['tds'];
         echo "</tbody>\n\r</table>";
     }
-
-
-
-
-
 
     ?>
 

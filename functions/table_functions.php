@@ -20,11 +20,9 @@ function create_table($content_array){
     $table_name = $_GET['page'];
     $ths = "";
     $tds = "";
-
     $ths .= "<table class=\"table_backend\">";
     $ths .= "<thead>";
     $ths .= "<tr>";
-
     $tds .= " <th>Actions</th>\n\r";
     $tds .= " </tr>\n\r";
     $tds .= " </thead>\n\r";
@@ -32,7 +30,6 @@ function create_table($content_array){
 
     for($i = 0; $i < count($content_array); $i++){
         $tds .= "<tr>";
-
         foreach($content_array[$i] as $col => $wert){
             //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
             if($i == 0 && $col != 'deleted_at'){
@@ -57,7 +54,6 @@ function create_table($content_array){
             }else {
                 $tds .= "<td>" .$wert ."</td>";
             }
-
         }
         if($table_name == 'users'){
             $tds .= "<td>";
@@ -76,26 +72,6 @@ function create_table($content_array){
         }
     }
 }
-
-
-
-function get_contents($table_name, $current_page, $entries_per_page, $order_by, $order_dir) {
-    global $link;       //  order by " " ??
-
-    $table_name = mysqli_real_escape_string($link, $table_name );
-    $limit_start = $current_page * $entries_per_page - $entries_per_page;
-    $sql = "SELECT * FROM " .$table_name ." WHERE deleted_at IS NULL ORDER BY " .$order_by ." " .$order_dir ." LIMIT " .$limit_start .", " .$entries_per_page;
-    $result = mysqli_query($link, $sql);
-
-    if(!$result) {
-        echo mysqli_error($link);
-    }
-    $contents = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    return $contents;
-}
-
-
-
 
 function total_contents($table_name) {
     global $link;
@@ -129,9 +105,14 @@ function update_contents($tablename, $id, $content_array) {
             }elseif($wert == "off"){
                 $wert = 0;
             }
-            $insert_string .= $col ." = " . "'" .$wert ."'";
-            if( $i != count($content_array) -1 ){
-                $insert_string .= ", ";
+            // passwort soll nur gespeichert werden, wenn es ausgefüllt ist => man muss es nicht anzeigen und kann aber ein neues erstellen
+            if(stristr($col, 'passwor') !== false && $wert == ""){
+                $insert_string .= "";
+            }else{
+                $insert_string .= $col ." = " . "'" .$wert ."'";
+                if( $i != count($content_array) -1 ){
+                    $insert_string .= ", ";
+                }
             }
         }
     }
