@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 03, 2016 at 12:41 PM
+-- Generation Time: May 03, 2016 at 12:43 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -260,7 +260,7 @@ CREATE TABLE `products` (
   `products_name` varchar(150) NOT NULL,
   `price` float NOT NULL,
   `shop_categories_id` int(10) NOT NULL,
-  `description` varchar(300) NOT NULL,
+  `beschreibung` varchar(300) NOT NULL,
   `pic` varchar(150) NOT NULL,
   `thumb_1` varchar(500) NOT NULL,
   `thumb_2` varchar(500) NOT NULL,
@@ -277,7 +277,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `products_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `size`, `in_aktion`, `price_in_aktion`, `stock`, `is_active`, `deleted_at`) VALUES
+INSERT INTO `products` (`id`, `products_name`, `price`, `shop_categories_id`, `beschreibung`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `size`, `in_aktion`, `price_in_aktion`, `stock`, `is_active`, `deleted_at`) VALUES
 (7, 'test', 12, 3, 'jkjnjk', 'test', 'rbtbtb', 'tbtbtb', 'rtbtb', 'm', 0, 0, 4, 1, NULL);
 
 -- --------------------------------------------------------

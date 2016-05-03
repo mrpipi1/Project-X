@@ -6,12 +6,18 @@
  * Time: 09:51
  */
 
-function create_table($table_name){
-
+function sql_query($table_name, $current_page, $entries_per_page, $order_by, $order_dir){
     global $link;
-    $sql = "SELECT * FROM " .$table_name;
+    $limit_start = $current_page * $entries_per_page - $entries_per_page;
+    $sql = "SELECT * FROM " .$table_name ." WHERE deleted_at IS NULL ORDER BY " .$order_by ." " .$order_dir ." LIMIT " .$limit_start .", " .$entries_per_page;
     $result = mysqli_query($link, $sql);
     $content_array = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $content_array;
+}
+
+function create_table($content_array){
+    global $link;
+    $table_name = $_GET['page'];
     $ths = "";
     $tds = "";
     for($i = 0; $i < count($content_array); $i++){
@@ -20,7 +26,7 @@ function create_table($table_name){
         foreach($content_array[$i] as $col => $wert){
             //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
             if($i == 0 && $col != 'deleted_at'){
-                $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
+                $ths .= "<th>" .sort_table($table_name, $col, underscore_to_space($col)) ."</th>";
             }
             // <td> elemente zusammenbauen
             if(substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_'){
@@ -43,6 +49,11 @@ function create_table($table_name){
             }
 
         }
+        if($table_name == 'users'){
+            $tds .= "<td>";
+            $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=show_orders&amp;id=" .$content_array[$i]['id'] ."\">show orders</a>";
+            $tds .= "</td>";
+        }
         $tds .= "<td>";
         $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=edit&amp;id=" .$content_array[$i]['id'] ."\">edit</a>";
         $tds .= "<a class=\"delete small_delete\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
@@ -54,8 +65,9 @@ function create_table($table_name){
             return $return;
         }
     }
-
 }
+
+
 
 function get_contents($table_name, $current_page, $entries_per_page, $order_by, $order_dir) {
     global $link;       //  order by " " ??
@@ -71,6 +83,9 @@ function get_contents($table_name, $current_page, $entries_per_page, $order_by, 
     $contents = mysqli_fetch_all($result, MYSQLI_ASSOC);
     return $contents;
 }
+
+
+
 
 function total_contents($table_name) {
     global $link;

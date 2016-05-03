@@ -20,7 +20,7 @@ function create_menu_items(){
 
     foreach($items as $item){
         $menu_item = ucfirst($item['item_name']);
-        $list_item .= "<li><a href=\"index.php?page=" .$item['item_name'] ."\">" .$menu_item ."</a></li>\n\r";
+        $list_item .= "<li><a href=\"index.php?page=" .$item['item_name'] ."\">" .underscore_to_space($menu_item) ."</a></li>\n\r";
     }
 
     return $list_item;
