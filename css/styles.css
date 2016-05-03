@@ -2019,7 +2019,7 @@ backend
 /* Backend Flyout */
 
 
-/*.nav_backend li {
+.nav_backend li {
   background: #363636;
   white-space: nowrap;
 }
@@ -2057,13 +2057,15 @@ backend
 .nav_backend ul ul {
   top: 0;
   left: 100%;
+  font-size: 0.9vw;
+
 }
 
 .nav_backend span, .nav_backend a {
 	display: inline-block;
-	font-size: 0.8vw;
+	font-size: 1vw;
   text-align: center;
-}*/
+}
 
 
 /*--------------- FLYOUT END -------------*/
@@ -2174,7 +2176,7 @@ pie chart
 #######################*/
 
 .pie-chart_wrapper{
-  width: 30vw;
+  width: 350px;
 }
 
 .pie-chart_hl{

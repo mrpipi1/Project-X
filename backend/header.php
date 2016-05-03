@@ -53,9 +53,35 @@
 
     <nav class="nav_backend" >
         <ul >
-            <?php
+            <li><a href="index.php?page=dashboard"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Dashboard</span></a></li>
+            <li><a href="index.php?page=statistik"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Statistik</span></a></li>
+            <li><a href="#">" <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Users</span></a>
+                <ul>
+                    <li><a href="index.php?page=admins"> <span class="text-wrapper">Admin</span></a></li>
+                    <li><a href="index.php?page=users"> <span class="text-wrapper">Users</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#">" <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Content</span></a>
+                <ul>
+                    <li><a href="index.php?page=contents"> <span class="text-wrapper">Content</span></a></li>
+                    <li><a href="index.php?page=courses"> <span class="text-wrapper">Courses</span></a></li>
+                    <li><a href="index.php?page=header_items"> <span class="text-wrapper">Header Items</span></a></li>
+                    <li><a href="index.php?page=employees"> <span class="text-wrapper">Employees</span></a></li>
+                    <li><a href="index.php?page=socialmedia_icons"> <span class="text-wrapper">Social Media Icons</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Shop</span></a>
+                <ul>
+                    <li><a href="index.php?page=shop_categories"> <span class="text-wrapper">Categories</span></a></li>
+                    <li><a href="index.php?page=products"> <span class="text-wrapper">Products</span></a></li>
+                    <li><a href="index.php?page=orders"> <span class="text-wrapper">Orders</span></a></li>
+                    <li><a href="index.php?page=bestell_items"> <span class="text-wrapper">Order Icons</span></a></li>
+                </ul>
+            </li>
+            <li><a href="index.php?page=user_messages"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">User Messages</span></a></li>
+            <li><a href="index.php?page=log"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Log</span></a></li>
 
-            echo create_menu_items(); ?>
+
         </ul>
     </nav>
 
