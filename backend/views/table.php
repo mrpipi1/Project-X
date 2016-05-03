@@ -13,26 +13,12 @@
     <h3 class="main-hl_backend">
         <a href="index.php?page=<?php echo $_GET['page'] ?>">
              <?php
-                if($_GET['page'] == "staff"){
-                    echo "Mitarbeiter";
-                    $new_item = "neuer Mitarbeiter";
-                }elseif($_GET['page'] == "orders"){
-                    echo "Bestellungen";
-                    $new_item = "neue Bestellung";
-                }elseif($_GET['page'] == "shop_categories"){
-                    echo "Kategorien";
-                    $new_item = "neue Kategorie";
-                }elseif($_GET['page'] == "shop_item"){
-                    echo "Produkte";
-                    $new_item = "neues Produkt";
-                }elseif($_GET['page'] == "socialmedia"){
-                    echo "Icons";
-                    $new_item ="neues Icon";
-                }else{
+             $new_item ="new ";
+
                     $page_name = ucfirst($_GET['page']);
                     echo $page_name;
-                    $new_item = "neuer " .substr($page_name, 0, -1);
-                }
+                    $new_item .= substr($page_name, 0, -1);
+
             ?>
         </a>
     </h3>
@@ -48,7 +34,7 @@
             $table = create_table($_GET['page']);
             echo $table['ths'];
             ?>
-            <th>Aktionen</th>
+            <th>Actions</th>
         </tr>
         </thead>
 

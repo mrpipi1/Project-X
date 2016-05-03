@@ -32,9 +32,9 @@ function addInput($column_data, $action, $id, $attribute = [] ){
         $attr = "";
         $value = NULL;
         $is_selected = "";
-        $is_other_table = substr($input_name, -3, 3);
+        $is_other_table = substr($input_name, -3, 3); // = _id
         $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ich ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
-        $col_name = substr($second_table_name, 0, 1) ."_name";
+        $col_name = $second_table_name ."_name";
         $table_name = $_GET['page'];
         $input_name_space = underscore_to_space($input_name);
         $label = ucfirst($input_name_space);
@@ -78,11 +78,14 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 $output .= "<div class=\"form-group_backend\">";
             }
 
-            $output .= "<label for=\"f-$input_name\" class=\"label_backend\">$label</label>\n\r";
+            $output .= "<label for=\"f-$input_name\" class=\"label_backend\">$label </label>\n\r";
 
             // die beschreibungen brauchen eine textarea.
-            if ($input_name == "beschreibung") {
-                $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name_space\" value=\"$value[$input_name]\" ></textarea>";
+            if ($input_name == "beschreibung" || $input_name == "text") {
+                $output .= "<textarea type=\" text\" name=\"$input_name\" placeholder=\"$input_name_space\" value=\"$value[$input_name]\" id=\"f-$input_name_space\"></textarea>";
+            }elseif ($input_name == "gender") {
+                $output .= "<input type=\"radio\" name=\"$input_name\"  value=\"male\"  id=\"male\"/><label for=\"male\">male</label>";
+                $output .= "<input type=\"radio\" name=\"$input_name\"  value=\"female\"  id=\"female\"/><label for=\"female\">female</label>";
             }elseif ($is_other_table == "_id") {        // das ist wenn man etwas von einer anderen tabelle "auswählen" kann (zb mitarbeiter kursname).
                 if($action == 'edit'){
                     $is_selected = "selected";

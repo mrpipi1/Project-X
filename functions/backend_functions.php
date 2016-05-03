@@ -11,7 +11,7 @@ function create_menu_items(){
 
     global $link;
     $item_name = 'item_name';
-    $table_name = 'menu_backend';
+    $table_name = 'menu_backend_items';
     $list_item = "";
 
     $sql = "SELECT " .$item_name ." FROM " .$table_name ;

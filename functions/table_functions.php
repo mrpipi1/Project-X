@@ -19,15 +19,19 @@ function create_table($table_name){
 
         foreach($content_array[$i] as $col => $wert){
             //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
-            if($i == 0 && $col != 'deleted_at' && $col != 'created_at'){
+            if($i == 0 && $col != 'deleted_at'){
                 $ths .= "<th>" .sort_table("$table_name", "$col", "$col") ."</th>";
             }
             // <td> elemente zusammenbauen
-            if($wert == 'is_active'){
+            if(substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_'){
                 $tds .= "<td>" .bool_to_word($wert) ."</td>";
+            }elseif(substr($col, -3, 3) == '_at' && $col != 'deleted_at'){
+                $tds .= "<td>" .date_to_better_date(substr($wert, 0, -8)) ."</td>";
             }elseif(strlen($wert) > 30) {
                 $tds .= "<td>" .truncate($wert) ."</td>";
-            }elseif($col == 'deleted_at' || $col == 'created_at') {
+            }elseif($col == 'birthday') {
+                $tds .= "<td>" .date_to_better_date($wert)."</td>";
+            }elseif($col == 'deleted_at') {
                 $tds .= " ";
             }else {
                 $tds .= "<td>" .$wert ."</td>";
@@ -181,9 +185,6 @@ HEREDOC;
 
     return $output;
 }
-
-
-
 
 
 

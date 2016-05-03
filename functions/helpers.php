@@ -34,8 +34,19 @@ function truncate($text, $chars = 20) {
     return $text;
 }
 
+// names of table cols without _
 function underscore_to_space($input_name){
     $input_name_space = str_replace('_', ' ', $input_name);
     return $input_name_space;
 }
+
+
+// weil weder date() noch date_format() geht wenn das kein timestamp ist sondern ein date und ich will aba dass es ein date is.
+function date_to_better_date($date){
+
+    $date_arr = explode("-", $date );
+    $new_date = implode(array_reverse($date_arr), ".");
+    return $new_date;
+}
+
 
