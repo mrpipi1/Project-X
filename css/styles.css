@@ -1667,7 +1667,7 @@ Warenkorb
   justify-content: center;
 }
 
-.delete{
+.delete, .edit{
   width: 20px;
   height: 20px;
 
@@ -1675,10 +1675,23 @@ Warenkorb
   background-position: center;
 
   text-indent: -99999px;
-  background-image: url("../img/close.svg");
   background-size: contain;
 
   margin-right: 2px;
+}
+
+.delete{
+  background-image: url("../img/close.svg");
+}
+
+.edit{
+  background-image: url("../img/wrench75.svg");
+  margin-right: 1em;
+}
+
+.small_delete, .small_edit{
+  width: 15px;
+  height: 15px;
 }
 
 /* Summe mit lieferdatum und Versandkosten */

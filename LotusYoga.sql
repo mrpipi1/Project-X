@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 03, 2016 at 11:53 AM
+-- Generation Time: May 03, 2016 at 12:41 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -103,7 +103,7 @@ INSERT INTO `contents` (`id`, `headline`, `text`, `is_active`, `deleted_at`) VAL
 
 CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
-  `course_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `beschreibung` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -113,7 +113,7 @@ CREATE TABLE `courses` (
 -- Dumping data for table `courses`
 --
 
-INSERT INTO `courses` (`id`, `course_name`, `beschreibung`, `is_active`, `deleted_at`) VALUES
+INSERT INTO `courses` (`id`, `_name`, `beschreibung`, `is_active`, `deleted_at`) VALUES
 (3, 'yin yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
 (4, 'ashtanga yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
 (5, 'tri yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL);
@@ -130,7 +130,7 @@ CREATE TABLE `employees` (
   `email` varchar(60) NOT NULL,
   `telno` varchar(20) NOT NULL,
   `pic` varchar(150) NOT NULL,
-  `kurse_id` int(11) NOT NULL,
+  `courses_id` int(11) NOT NULL,
   `beschreibung` varchar(700) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
@@ -140,7 +140,7 @@ CREATE TABLE `employees` (
 -- Dumping data for table `employees`
 --
 
-INSERT INTO `employees` (`id`, `fullname`, `email`, `telno`, `pic`, `kurse_id`, `beschreibung`, `is_active`, `deleted_at`) VALUES
+INSERT INTO `employees` (`id`, `fullname`, `email`, `telno`, `pic`, `courses_id`, `beschreibung`, `is_active`, `deleted_at`) VALUES
 (1, '', '', '', 'img/mitarbeiter/1.png', 3, '', 1, NULL),
 (2, 'Lisbeth Thekla', 'l.thekla@lotusyoga.at', '0664 555 555', 'img/mitarbeiter/2.png', 4, 'Hallo, mein Name ist Lisbeth Thekla. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
 (3, 'Clara Augustine', 'c.augustine@lotusyoga.at', '0664 555 555', 'img/mitarbeiter/3.png', 5, 'Hallo, mein Name ist Clara Augustine. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
@@ -262,9 +262,9 @@ CREATE TABLE `products` (
   `shop_categories_id` int(10) NOT NULL,
   `description` varchar(300) NOT NULL,
   `pic` varchar(150) NOT NULL,
-  `thumbnail_1` varchar(500) NOT NULL,
-  `thumbnail_2` varchar(500) NOT NULL,
-  `thumbnail_3` varchar(500) NOT NULL,
+  `thumb_1` varchar(500) NOT NULL,
+  `thumb_2` varchar(500) NOT NULL,
+  `thumb_3` varchar(500) NOT NULL,
   `size` varchar(10) NOT NULL,
   `in_aktion` tinyint(1) NOT NULL DEFAULT '0',
   `price_in_aktion` float NOT NULL,
@@ -277,7 +277,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `products_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumbnail_1`, `thumbnail_2`, `thumbnail_3`, `size`, `in_aktion`, `price_in_aktion`, `stock`, `is_active`, `deleted_at`) VALUES
+INSERT INTO `products` (`id`, `products_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `size`, `in_aktion`, `price_in_aktion`, `stock`, `is_active`, `deleted_at`) VALUES
 (7, 'test', 12, 3, 'jkjnjk', 'test', 'rbtbtb', 'tbtbtb', 'rtbtb', 'm', 0, 0, 4, 1, NULL);
 
 -- --------------------------------------------------------
@@ -288,7 +288,7 @@ INSERT INTO `products` (`id`, `products_name`, `price`, `shop_categories_id`, `d
 
 CREATE TABLE `shop_categories` (
   `id` int(11) NOT NULL,
-  `shop_category_name` varchar(100) NOT NULL,
+  `_name` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -297,7 +297,7 @@ CREATE TABLE `shop_categories` (
 -- Dumping data for table `shop_categories`
 --
 
-INSERT INTO `shop_categories` (`id`, `shop_category_name`, `is_active`, `deleted_at`) VALUES
+INSERT INTO `shop_categories` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 (1, 'Bekleidung', 1, NULL),
 (2, 'Zubehör', 1, NULL),
 (3, 'Sonstiges', 1, NULL),
@@ -332,7 +332,8 @@ INSERT INTO `socialmedia_icons` (`id`, `icon_name`, `pic`, `is_active`, `deleted
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `user_name` varchar(50) NOT NULL,
+  `_name` varchar(50) NOT NULL,
+  `fullname` varchar(100) NOT NULL,
   `email` varchar(70) NOT NULL,
   `password_hash` varchar(100) NOT NULL,
   `gender` varchar(10) NOT NULL,
@@ -350,15 +351,15 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `email`, `password_hash`, `gender`, `birthday`, `pref_delivery`, `pref_payment`, `address`, `zip_code`, `created_at`, `is_active`, `deleted_at`) VALUES
-(2, 'alex', 'alex@bla.at', 'hallo', 'female', '1992-08-30', 'Post', 'Rechnung', 'Blagasse 42/13', 1210, '2016-04-19 09:19:59', 1, NULL),
-(3, 'Babsi', 'babsi.babsi@babsi.at', 'pw123', 'female', '2016-04-11', 'DHL', 'Rechnung', 'Schönbrunn 4/44', 1010, '2016-04-19 10:06:27', 0, '0000-00-00 00:00:00'),
-(4, 'berni', 'berni@bla.at', 'pw123', 'male', '1989-06-15', 'dhl', 'vorkasse', 'zuhause 123', 1220, '0000-00-00 00:00:00', 1, NULL),
-(5, 'test', 'test@test', 'test', 'male', '1998-06-18', 'post', 'rechnung', 'bla 1234', 1010, '2016-05-02 11:35:50', 0, NULL),
-(6, 'ferdi', 'ferdi@ferdi.at', 'ferdi123', 'male', '1987-09-16', 'post', 'vorkasse', 'siebenbrunnenplatz 1', 1050, '0000-00-00 00:00:00', 1, NULL),
-(7, '', '', '', '', '0000-00-00', '', '', '', 0, '2016-05-02 11:37:13', 1, NULL),
-(8, 'gusi', 'gusi@bla.bla', 'hallo', 'male', '1991-05-27', 'dpd', 'rechnung', 'Siebenbrunnengasse 88/13', 1050, '0000-00-00 00:00:00', 1, NULL),
-(9, '', '', '', '', '0000-00-00', '', '', '', 0, '2016-05-02 16:02:47', 1, NULL);
+INSERT INTO `users` (`id`, `_name`, `fullname`, `email`, `password_hash`, `gender`, `birthday`, `pref_delivery`, `pref_payment`, `address`, `zip_code`, `created_at`, `is_active`, `deleted_at`) VALUES
+(2, 'alex', '', 'alex@bla.at', 'hallo', 'female', '1992-08-30', 'Post', 'Rechnung', 'Blagasse 42/13', 1210, '2016-04-19 09:19:59', 1, NULL),
+(3, 'Babsi', '', 'babsi.babsi@babsi.at', 'pw123', 'female', '2016-04-11', 'DHL', 'Rechnung', 'Schönbrunn 4/44', 1010, '2016-04-19 10:06:27', 0, '0000-00-00 00:00:00'),
+(4, 'berni', '', 'berni@bla.at', 'pw123', 'male', '1989-06-15', 'dhl', 'vorkasse', 'zuhause 123', 1220, '0000-00-00 00:00:00', 1, NULL),
+(5, 'test', '', 'test@test', 'test', 'male', '1998-06-18', 'post', 'rechnung', 'bla 1234', 1010, '2016-05-02 11:35:50', 0, NULL),
+(6, 'ferdi', '', 'ferdi@ferdi.at', 'ferdi123', 'male', '1987-09-16', 'post', 'vorkasse', 'siebenbrunnenplatz 1', 1050, '0000-00-00 00:00:00', 1, NULL),
+(7, '', '', '', '', '', '0000-00-00', '', '', '', 0, '2016-05-02 11:37:13', 1, NULL),
+(8, 'gusi', '', 'gusi@bla.bla', 'hallo', 'male', '1991-05-27', 'dpd', 'rechnung', 'Siebenbrunnengasse 88/13', 1050, '0000-00-00 00:00:00', 1, NULL),
+(9, '', '', '', '', '', '0000-00-00', '', '', '', 0, '2016-05-02 16:02:47', 1, NULL);
 
 -- --------------------------------------------------------
 

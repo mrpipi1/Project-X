@@ -34,7 +34,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
         $is_selected = "";
         $is_other_table = substr($input_name, -3, 3); // = _id
         $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ich ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
-        $col_name = $second_table_name ."_name";
+        $col_name = "_name";
         $table_name = $_GET['page'];
         $input_name_space = underscore_to_space($input_name);
         $label = ucfirst($input_name_space);
@@ -57,7 +57,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 }
             }elseif ($d_type == "date") {
                 $type = "date";
-            }elseif ( $input_name == "pic" || substr($input_name, 0, 9) == "thumbnail" ) { // das is iwie mit strpos() nicht gegangen also hab ich das so hingebogen :)
+            }elseif ( $input_name == "pic" || substr($input_name, 0, 9) == "thumb" ) { // das is iwie mit strpos() nicht gegangen also hab ich das so hingebogen :)
                 $type = "file";
             }elseif(stristr($input_name, 'mail') !== false){
                 $type = 'email';
@@ -67,8 +67,6 @@ function addInput($column_data, $action, $id, $attribute = [] ){
             }else  {
                 $type = "text";
             }
-
-
 
             // bei den checkboxen im frontend hab ich aus irg einem grund ps statt divs ich glaub das war wegen irg einem styling also hab ich das da auch gemacht, kann man ws ändern.
             if ($type == "checkbox") {

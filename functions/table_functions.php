@@ -27,6 +27,11 @@ function create_table($table_name){
                 $tds .= "<td>" .bool_to_word($wert) ."</td>";
             }elseif(substr($col, -3, 3) == '_at' && $col != 'deleted_at'){
                 $tds .= "<td>" .date_to_better_date(substr($wert, 0, -8)) ."</td>";
+            }elseif(substr($col, -3, 3) == '_id'){
+                $sql1 = "SELECT " .'_name' ." FROM " .substr($col, 0, -3) ." WHERE id = " .$wert;
+                $result1 = mysqli_query($link, $sql1);
+                $col_name = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+                $tds .= "<td>" .$col_name[0]['_name'] ."</td>";
             }elseif(strlen($wert) > 30) {
                 $tds .= "<td>" .truncate($wert) ."</td>";
             }elseif($col == 'birthday') {
@@ -36,10 +41,11 @@ function create_table($table_name){
             }else {
                 $tds .= "<td>" .$wert ."</td>";
             }
+
         }
         $tds .= "<td>";
-        $tds .= "<a class=\"btn_table\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=edit&amp;id=" .$content_array[$i]['id'] ."\">edit</a>";
-        $tds .= "<a class=\"btn_table\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
+        $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=edit&amp;id=" .$content_array[$i]['id'] ."\">edit</a>";
+        $tds .= "<a class=\"delete small_delete\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
         $tds .= "</td>";
         $tds .= "</tr>";
         $return = ['ths' => $ths, 'tds' => $tds];
