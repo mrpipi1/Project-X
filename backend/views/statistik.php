@@ -16,8 +16,7 @@
 
     <section class="pie-chart_wrapper">
         <h3 class ="pie-chart_hl">Gender</h3>
-        <div class="pie-chart"><?php echo get_gender()['male'] ?></div>
-        <div class="pie-chart"><?php echo get_gender()['female'] ?></div>
+
     </section>
 
 <script>
@@ -27,11 +26,8 @@
     function drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['gender', 'anzahl'],
-            ['male',     <?php echo get_gender()['male'] ?>],
-            ['female',    <?php echo get_gender()['female'] ?>]
-            // ['Commute',  2],
-            //  ['Watch TV', 2],
-            //  ['Sleep',    7]
+            ['male',     <?php echo get_count_data('users', 'gender', 'male', 'female')['first'] ?>],
+            ['female',    <?php echo get_count_data('users', 'gender', 'male', 'female')['second'] ?>]
         ]);
 
         var options = {
