@@ -7,10 +7,9 @@
  */
 
 
-function get_gender(){
+function get_gender($table_name, $col_name){
     global $link;
-    $table_name = 'users';
-    $col_name = 'gender';
+
     $count_female = 0;
     $count_male = 0;
     $sql = "SELECT " .$col_name ." FROM " .$table_name;

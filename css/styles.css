@@ -261,7 +261,7 @@ a {
   height: 100%;
 
   align-items: center;
-  padding: 5px;
+  padding: 5px 10px;
 
   justify-content: flex-end;
 
@@ -1685,11 +1685,11 @@ Warenkorb
 }
 
 .delete{
-  background-image: url("../img/close.svg");
+  background-image: url("../img/icons/close.svg");
 }
 
 .edit{
-  background-image: url("../img/wrench75.svg");
+  background-image: url("../img/icons/wrench75.svg");
   margin-right: 1em;
 }
 
@@ -2015,6 +2015,7 @@ backend
   font-weight: 200;
 }
 
+
 /* Backend Flyout */
 
 
@@ -2070,9 +2071,10 @@ backend
 .nav_backend{
   background-color: #363636;
   height: 100%;
-  width: 180px;
+  min-width: 180px;
   font-weight: 300;
   letter-spacing: 0.5px;
+  font-size: 0.9em;
 }
 
 .nav_backend ul{
@@ -2088,8 +2090,19 @@ backend
   transition: all 0.4s linear;
   padding: 15px;
   width: 100%;
-  text-align: center;
+  padding-right: 10px;
+  display: flex;
 
+
+}
+
+.icon{
+  width: 15px;
+  height:15px;
+}
+
+.text-wrapper{
+  margin-left: 5px;
 }
 
 .nav_backend a:hover{
