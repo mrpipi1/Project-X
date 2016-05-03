@@ -6,30 +6,40 @@
  * Time: 15:31
  */
 
-?>
 
-    <table class="table_backend">
-        <thead>
-        <tr>
-            <?php
-            $table = create_table(sql_query($_GET['page'], $current_page, $entries_per_page, $order_by, $order_dir));
-            echo $table['ths'];
-            if($_GET['page'] == 'users'){
-                echo " <th>Orders</th>";
-            }
-            ?>
-            <th>Actions</th>
-        </tr>
-        </thead>
+        $table = create_table(sql_query($_GET['page'], $current_page, $entries_per_page, $order_by, $order_dir));
+        echo $table['ths'];
+        if($_GET['page'] == 'users'){
+            echo " <th>Orders</th>";
+        }
 
-        <tbody>
-
-        <?php echo $table['tds']; ?>
+        echo $table['tds'];
+        echo "</tbody>\n\r</table>";
 
 
-        </tbody>
+     pagination_backend($_GET['page'], $current_page, $total_pages);
 
-    </table>
-    <?php  pagination_backend($_GET['page'], $current_page, $total_pages); ?>
+    if(isset($_GET['action']) && $_GET['action'] == 'show_orders'){
+        $orders = 'orders';
+        $users_id = 'users_id';
+        $sql = "SELECT * FROM " .$orders ." WHERE  " .$users_id ." = " .$_GET['id'];
+        $result = mysqli_query($link, $sql);
+        $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        $table_orders = create_table($orders);
+
+        echo $table_orders['ths'];
+        echo $table_orders['tds'];
+        echo "</tbody>\n\r</table>";
+    }
+
+
+
+
+
+
+    ?>
+
+
+
 
 

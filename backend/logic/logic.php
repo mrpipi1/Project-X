@@ -31,13 +31,6 @@ if(isset($_GET['action'])){
         $tablename = $_GET['page'];
         $insert = insert_contents($_GET['page'], $array);
         $return['insert'] =  $insert;
-    }elseif($_GET['action'] == 'show_orders'){
-        $orders = 'orders';
-        $users_id = 'users_id';
-        $sql = "SELECT * FROM " .$orders ." WHERE  " .$users_id ." = " .$_GET['id'];
-        $result = mysqli_query($link, $sql);
-        $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
-        $table = create_table($orders);
     }
 }
 include('views/site_backend.php');

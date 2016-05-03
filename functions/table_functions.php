@@ -20,6 +20,16 @@ function create_table($content_array){
     $table_name = $_GET['page'];
     $ths = "";
     $tds = "";
+
+    $ths .= "<table class=\"table_backend\">";
+    $ths .= "<thead>";
+    $ths .= "<tr>";
+
+    $tds .= " <th>Actions</th>\n\r";
+    $tds .= " </tr>\n\r";
+    $tds .= " </thead>\n\r";
+    $tds .= " <tbody>\n\r";
+
     for($i = 0; $i < count($content_array); $i++){
         $tds .= "<tr>";
 
@@ -59,8 +69,8 @@ function create_table($content_array){
         $tds .= "<a class=\"delete small_delete\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
         $tds .= "</td>";
         $tds .= "</tr>";
-        $return = ['ths' => $ths, 'tds' => $tds];
 
+        $return = ['ths' => $ths, 'tds' => $tds];
         if($i == count($content_array) -1){
             return $return;
         }
