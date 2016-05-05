@@ -7,8 +7,10 @@ $content = ('content/');
 $admin = '';
 
 include("db-connect.php");
+include('functions/helpers.php');
 include('functions/form_functions.php');
-// header eingebunden
+include('functions/user_functions.php');
+include('logic/user_logic.php');
 include('header.php');
 
 // Überprüft ob der GET-Parameter "page" nicht existiert

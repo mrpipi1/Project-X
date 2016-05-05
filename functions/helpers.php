@@ -49,4 +49,15 @@ function date_to_better_date($date){
     return $new_date;
 }
 
+function redirect_to($location, $message = "") {
+    $_SESSION["flash"] = $message;
+    header("location: $location");
+    exit();
+}
+
+function is_post_request($type) {
+    return (strtolower($_SERVER["REQUEST_METHOD"]) == "post" && !empty($_POST) && isset($_POST[$type]));
+}
+
+
 

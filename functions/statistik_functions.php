@@ -7,7 +7,7 @@
  */
 
 
-function get_count_data($table_name, $col_name, $first_case, $second_case){
+function get_count_data($table_name, $col_name, $first_case, $second_case){     // lieber array mit cases
     global $link;
 
     $count_first = 0;

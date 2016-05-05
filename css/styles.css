@@ -2114,7 +2114,6 @@ backend
 .content-wrapper_backend{
   width: 100%;
   padding: 3em;
-
 }
 
 .main-hl_backend{
@@ -2163,7 +2162,6 @@ Form
 }
 
 .form_backend{
-
 }
 
 
@@ -2177,6 +2175,7 @@ pie chart
 
 .pie-chart_wrapper{
   width: 350px;
+  display: flex;
 }
 
 .pie-chart_hl{

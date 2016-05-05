@@ -27,8 +27,10 @@
     <link rel="stylesheet" href="../css/styles.css">
     <!-- jQuery library (served from Google) -->
     <script src="../jquery-1.12.2.min.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> <!-- charts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script src="d3pie.min.js"></script>
     <script src="../script.js"></script>
+    <script src="statistic.js"></script>
 
 </head>
 <body class="body_backend">
@@ -43,8 +45,8 @@
 
         <ul class="nav_header_backend">
             <li><a href="#">profil</a></li>
-            <li><a href="#">nochwas</a></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
+            <li><a href="#">logout</a></li>
         </ul>
        <div class="handle">&#9776;﻿</div>
 </header>
@@ -55,13 +57,13 @@
         <ul >
             <li><a href="index.php?page=dashboard"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Dashboard</span></a></li>
             <li><a href="index.php?page=statistik"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Statistik</span></a></li>
-            <li><a href="#">" <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Users</span></a>
+            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Users</span></a>
                 <ul>
                     <li><a href="index.php?page=admins"> <span class="text-wrapper">Admin</span></a></li>
                     <li><a href="index.php?page=users"> <span class="text-wrapper">Users</span></a></li>
                 </ul>
             </li>
-            <li><a href="#">" <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Content</span></a>
+            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Content</span></a>
                 <ul>
                     <li><a href="index.php?page=contents"> <span class="text-wrapper">Content</span></a></li>
                     <li><a href="index.php?page=courses"> <span class="text-wrapper">Courses</span></a></li>
@@ -84,6 +86,8 @@
 
         </ul>
     </nav>
+
+
 
     <!-- FLYOUT -->
 
