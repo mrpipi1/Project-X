@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="name" value="Registrieren"   class="btn_big-checkout input">
+                    <input type="submit" name="login" value="Registrieren"   class="btn_big-checkout input">
                 </div>
             </form>
 
