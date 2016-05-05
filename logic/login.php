@@ -6,6 +6,8 @@
  * Time: 14:49
  */
 
+global $link;
+
 
 if(is_logged_in() && !isset ($_SESSION['is_admin'])){
     redirect_to("index.php");

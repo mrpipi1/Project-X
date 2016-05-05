@@ -108,6 +108,8 @@ function update_contents($tablename, $id, $content_array) {
             // passwort soll nur gespeichert werden, wenn es ausgefüllt ist => man muss es nicht anzeigen und kann aber ein neues erstellen
             if(stristr($col, 'passwor') !== false && $wert == ""){
                 $insert_string .= "";
+            }elseif(stristr($col, 'passwor') !== false && $wert !== ""){
+                $insert_string .= password_hash($wert, PASSWORD_DEFAULT);
             }else{
                 $insert_string .= $col ." = " . "'" .mysqli_real_escape_string($link, $wert) ."'";
                 if( $i != count($content_array) -1 ){

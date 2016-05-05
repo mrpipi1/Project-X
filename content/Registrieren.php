@@ -7,7 +7,7 @@
         <form class="form_checkout" action="" method="post">
 
             <div class="form-group">
-                <input type="text" name="uname" value="" required class="input">
+                <input type="text" name="_name" value="" required class="input">
                 <span class="highlight"></span>
                 <span class="form-bar"></span>
                 <label class="label">E-Mail oder Username*</label>
