@@ -447,81 +447,127 @@ include ('content/landingpage.php');
                   </ul>
               </a>
           </section> -->
-      </section>
+     </section>
 
-  </section>
-
-    <div class="btn">
-      <a href="index.php?page=shop">Zum Shop</a>
-    </div>
-
-    <section class="contact_main section_main" id="contact">
-        <h2>Kontakt</h2>
-
-        <p>
-        Siebensterngasse 2, 1070 Wien
-      </p>
-      <p>
-        <a href="mailto:office@lotusyoga.at?subject=Kontaktformular Website">office@lotusyoga.at</a>
-      </p>
-      <p>
-        01 555 555 55
-      </p>
-
-      <div class="googlemaps_main">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.190637284797!2d16.3546382153168!3d48.202943854585484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0791ce1d98c7%3A0x32086b0132d85ba!2sSiebensterngasse+2%2C+1070+Wien!5e0!3m2!1sde!2sat!4v1457053354124"></iframe>
-      </div>
-
-      <div class="btn">
-        <a href="#contactform_main">Zum Kontaktformular</a>
-      </div>
-
-    </section>
-
-    <section class="contactform_main"> <a name="contactform_main"></a>
-
-        <h2>Kontaktformular</h2>
-
-      <form class="form_main" method="post">
-
-        <div class="form-group">
-          <input type="text" name="name" value="" required class="input">
-          <span class="highlight"></span>
-          <span class="form-bar"></span>
-          <label class="label">Vorname | Nachname*</label>
-        </div>
-
-        <div class="form-group">
-          <input type="text" name="tel" value="" required class="input">
-          <span class="highlight"></span>
-          <span class="form-bar"></span>
-          <label class="label">Telefonnumer*</label>
-        </div>
-
-        <div class="form-group">
-          <input type="text" name="email" value="" required class="input">
-          <span class="highlight"></span>
-          <span class="form-bar"></span>
-          <label class="label">E-Mailadresse*</label>
-        </div>
-
-        <div class="form-group">
-          <textarea type=" text" class="textarea" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
-          <span class="highlight"></span>
-          <span class="form-bar"></span>
-
-        </div>
+     <div class="btn">
+          <a href="index.php?page=shop">Zum Shop</a>
+     </div>
 
 
-        <div class="btn">
-          <input type="submit" class="submit_main" name="name" value="Absenden" class="input">
-        </div>
+     <section class="wrapper-h2" id="contact">
 
-      </form>
+          <h2>Kontakt</h2>
+               <p>
+                    Du hast Fragen ?
+               </p>
+               <p>
+                    Kontaktiere uns doch einfach und wir melden uns unverzüglich.
+               </p>
 
-    </section>
+     </section>
 
 
+     <section class="contact">
+
+         <!-- <section class="contact_main section_main" id="contact"> -->
+
+          <section class="contactinfo">
+             <h2>Unser Studio</h2>
+
+               <p>
+                    01 555 555 55
+
+               </p>
+
+               <p>
+                   <a href="mailto:office@lotusyoga.at?subject=Kontaktformular Website">office@lotusyoga.at</a>
+              </p> <br>
+
+               <p>
+                    Siebensterngasse 2
+               </p>
+
+               <p>
+                    Stock 1 | Tür 13
+               </p>
+
+               <p>
+                    Österreich, Wien
+               </p>
+
+               <p>
+                    1070
+               </p>
+
+
+
+           <!-- <div class="googlemaps_main">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.190637284797!2d16.3546382153168!3d48.202943854585484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0791ce1d98c7%3A0x32086b0132d85ba!2sSiebensterngasse+2%2C+1070+Wien!5e0!3m2!1sde!2sat!4v1457053354124"></iframe>
+           </div> -->
+
+           <!-- <div class="btn">
+             <a href="#contactform_main">Zum Kontaktformular</a>
+           </div> -->
+
+         </section>
+
+         <section class="contactform_main"> <a name="contactform_main"></a>
+
+             <h2>Schreibe uns</h2>
+
+           <form class="form_main" method="post">
+
+             <div class="form-group">
+               <input type="text" name="name" value="" required class="input">
+               <span class="highlight"></span>
+               <span class="form-bar"></span>
+               <label class="label">Vorname | Nachname*</label>
+             </div>
+
+             <div class="form-group">
+               <input type="text" name="tel" value="" required class="input">
+               <span class="highlight"></span>
+               <span class="form-bar"></span>
+               <label class="label">Telefonnumer*</label>
+             </div>
+
+             <div class="form-group">
+               <input type="text" name="email" value="" required class="input">
+               <span class="highlight"></span>
+               <span class="form-bar"></span>
+               <label class="label">E-Mailadresse*</label>
+             </div>
+
+             <div class="form-group">
+               <textarea type=" text" class="textarea" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
+               <span class="highlight"></span>
+               <span class="form-bar"></span>
+
+             </div>
+
+
+             <div class="btn">
+               <input type="submit" class="submit_main" name="name" value="Absenden" class="input">
+             </div>
+
+           </form>
+
+         </section>
+
+
+
+         <section class="socialmedia_main">
+              <h2>Bleib in Kontakt</h2>
+
+                   <ul>
+                        <li class="instagram"><a href="#">Instagram</a> <img src="img/socialmedia/fb.png" alt="" /></li>
+                        <li class="facebook"><a href="#">Facebook</a></li>
+                        <li class="youtube"><a href="#">Youtube</a></li>
+                  </ul>
+
+         </section>
+
+     </section>
 
   </main>
 
