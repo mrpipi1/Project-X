@@ -15,7 +15,7 @@ if(is_logged_in() && !isset ($_SESSION['is_admin'])){
     if(is_post_request("login")) {
         $email = mysqli_real_escape_string($link, $_POST["email"]);
         $password = mysqli_real_escape_string($link, $_POST["password"]);
-        $sql = "SELECT id, email, _name, password_hash, is_active FROM users WHERE email = '$email' OR username = '$email'";
+        $sql = "SELECT id, email, _name, password_hash, is_active FROM users WHERE email = '$email' OR _name = '$email'";
         $result = mysqli_query($link, $sql);
         if(mysqli_num_rows($result) === 1) {
             $user = mysqli_fetch_assoc($result);
@@ -26,13 +26,8 @@ if(is_logged_in() && !isset ($_SESSION['is_admin'])){
 
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["username"], 'user_id' => $user["id"]);
+                    redirect_to("index.php", "Erfolgreich eingeloggt!");
 
-                    if ($user["is_admin"] == 1) {
-                        $_SESSION['is_admin'] = true;
-                        redirect_to("backend/index.php", "Erfolgreich eingeloggt!");
-                    } else {
-                        redirect_to("index.php", "Erfolgreich eingeloggt!");
-                    }
                 } else {
                     $error = 1;
                 }
@@ -41,6 +36,12 @@ if(is_logged_in() && !isset ($_SESSION['is_admin'])){
             }
         } else {
             $error = 1;
+            $sql = "SELECT id, email, _name, password_hash, is_active FROM admins WHERE email = '$email' OR _name = '$email'";
+            $result = mysqli_query($link, $sql);
+            if(mysqli_num_rows($result) === 1) {
+                $_SESSION['is_admin'] = true;
+                redirect_to("backend/index.php", "Erfolgreich eingeloggt!");
+            }
         }
 
         if($error == 1) {
