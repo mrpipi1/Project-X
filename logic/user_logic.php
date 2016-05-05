@@ -25,7 +25,7 @@ if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
 
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO users (email, _name, password_hash) VALUES ('$email', '$username', '$password_hash')";
+            $sql = "INSERT INTO users ( " ."email, " ."_name, " ."password_hash" .") VALUES ('$email', '$username', '$password_hash')";
             $result = mysqli_query($link, $sql);
             $_SESSION['logged_in'] = true;
             redirect_to("index.php#about_us", "Erfolgreich eingeloggt!");

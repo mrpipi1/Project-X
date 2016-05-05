@@ -46,7 +46,7 @@
         <ul class="nav_header_backend">
             <li><a href="#">profil</a></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
-            <li><a href="#">logout</a></li>
+            <li><a href="../index.php?page=home&amp;action=logout">logout</a></li>
         </ul>
        <div class="handle">&#9776;﻿</div>
 </header>

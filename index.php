@@ -12,6 +12,9 @@ include('functions/form_functions.php');
 include('functions/user_functions.php');
 include('logic/user_logic.php');
 include('header.php');
+if(isset($_GET['action']) && $_GET['action'] == 'login'){
+	include('logout.php');
+}
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
 if( ! isset($_GET['page']) ){
