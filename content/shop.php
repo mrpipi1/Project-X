@@ -18,6 +18,8 @@
 
     <section class="line-wrapper_shop">
 
+
+
         <section class="product">
             <ul class="product-img">
                 <li class="jumper_white"></li>
@@ -26,7 +28,7 @@
                 <li>Jumper</li>
                 <li>39,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
+            <a href="index.php?page=Detailansicht&amp;product=jumper_white">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Jumper - Unisex</h1></li>
                     <li><p>39,99€</p></li>
@@ -40,6 +42,10 @@
                 </ul>
             </a>
         </section>
+
+
+
+
 
         <section class="product">
             <ul class="product-img">
