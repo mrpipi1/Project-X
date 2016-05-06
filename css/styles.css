@@ -50,7 +50,7 @@ a {
 
 .main h2 {
   padding: 5vw 0 2vw 0;
-  font-size: 2.2em;
+  font-size: 1.8em;
   font-weight: 200;
 }
 
@@ -505,9 +505,9 @@ _  ___    _ _____   _____ ______
   width: 50%;
 }
 
-.section_main{
+/*.section_main{
   padding-top: 50px;
-}
+}*/
 
 /*#############################################################
 #############################################################
@@ -683,12 +683,14 @@ _____ ____  _   _ _______       _____ _______
 #############################################################
 #############################################################*/
 
-.contact_main {
+/*.contact_main {
   text-align: center;
   line-height: 2;
-}
 
-.googlemaps_main {
+  border: 1px solid green;
+}*/
+
+/*.googlemaps_main {
   height: 0;
 
   position: relative;
@@ -711,7 +713,56 @@ iframe {
   border: none;
 
   pointer-events: none;
+}*/
+
+/***  NEW ALIGNMENT  ***/
+
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+
+  background-color: #65a591;
+
+  color: white;
+
+
 }
+
+.contact h2 {
+  margin-bottom: 1.25em;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.wrapper-h2 {
+  background-color: #65a591;
+  color: white;
+  text-align: left;
+  padding: 0 3em;
+}
+
+.contactinfo {
+}
+
+
+.socialmedia_main ul li {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.socialmedia_main img {
+  width: 30px;
+  height: 30px;
+
+  margin-left: 20px;
+}
+
+.contactinfo, .contactform_main, .socialmedia_main {
+  flex-basis: 20%;
+  text-align: left;
+}
+
 
 
 /*#############################################################
@@ -729,14 +780,10 @@ ______ ____  _____  __  __
 #############################################################*/
 
 .contactform_main {
-  display: block;
-
-  text-align: center;
-
 }
 
 .form_main {
-  display: inline-block;;
+  display: inline-block;
 }
 
 .btn {
@@ -817,7 +864,7 @@ ______ ____  _____  __  __
 
 
 .input {
-  width: 500px;
+  width: 100%;
 
   display: block;
 
@@ -878,10 +925,10 @@ ______ ____  _____  __  __
 
 
 .input:focus ~ .label, .input:valid ~ .label {
-  top: -20px;
+  top: -25px;
 
   font-size: 14px;
-  color: #5a8e7d;
+  color: #fff;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -944,7 +991,7 @@ ______ ____  _____  __  __
 
 .highlight {
   height: 50%;
-  width: 100px;
+  width: 100%;
 
   position: absolute;
   top: 25%;
@@ -1142,8 +1189,16 @@ ______ ____   ____ _______ ______ _____
 .youtube:hover {
   background-position: -111px -71px;
   background-color: rgba(0, 0, 0, 0.3);
+}
 
 
+
+.links_footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 
@@ -2181,4 +2236,3 @@ pie chart
 .pie-chart_hl{
   text-align: left;
 }
-
