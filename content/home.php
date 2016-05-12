@@ -16,10 +16,10 @@
   </div> -->
 
 
-
+<!-- 
 <?php
 include ('content/landingpage.php');
-?>
+?> -->
 
 <main class="main">
 
@@ -458,10 +458,10 @@ include ('content/landingpage.php');
 
           <h2>Kontakt</h2>
                <p>
-                    Du hast Fragen ?
+                    Du hast Fragen ? <br> Kontaktiere uns doch einfach und wir melden uns unverzüglich.
+
                </p>
                <p>
-                    Kontaktiere uns doch einfach und wir melden uns unverzüglich.
                </p>
 
      </section>
@@ -472,7 +472,7 @@ include ('content/landingpage.php');
          <!-- <section class="contact_main section_main" id="contact"> -->
 
           <section class="contactinfo">
-             <h2>Unser Studio</h2>
+             <h3>Unser Studio</h3>
 
                <p>
                     01 555 555 55
@@ -513,7 +513,7 @@ include ('content/landingpage.php');
 
          <section class="contactform_main"> <a name="contactform_main"></a>
 
-             <h2>Schreibe uns</h2>
+             <h3>Schreibe uns</h3>
 
            <form class="form_main" method="post">
 
@@ -557,7 +557,7 @@ include ('content/landingpage.php');
 
 
          <section class="socialmedia_main">
-              <h2>Bleib in Kontakt</h2>
+              <h3>Bleib in Kontakt</h3>
 
                    <ul>
                         <li class="instagram"><a href="#">Instagram</a> <img src="img/socialmedia/fb.png" alt="" /></li>

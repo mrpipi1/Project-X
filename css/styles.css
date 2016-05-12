@@ -41,7 +41,7 @@ p {
 
 a {
   color: inherit;
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
 .main h2, h3 {
@@ -50,12 +50,12 @@ a {
 
 .main h2 {
   padding: 5vw 0 2vw 0;
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: 200;
 }
 
 .main h3 {
-  padding: 50px 0;
+  padding: 50px 0 20px 0;
 
 }
 
@@ -166,20 +166,30 @@ a {
 /* Header */
 
 .header {
- height: 60px;
+  height: 100px;
   width: 100vw;
+
+  top: 0;
+  left: 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background-color: #ffffff;
+  background-color: transparent;
 
   position: fixed;
 
   z-index: 200;
 
   box-shadow: 1px 2px 1px 1px #eee;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.header.tiny {
+    height:60px;
+    background-color: #ffffff;
 }
 
 .nav {
@@ -612,8 +622,6 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
   align-items: center;
 }
 
-
-
 .overlay h1 {
   margin-top: 10px;
   font-weight: 500;
@@ -729,10 +737,13 @@ iframe {
 
 }
 
-.contact h2 {
-  margin-bottom: 1.25em;
+.contact h3 {
+  margin-bottom: 2em;
   text-align: left;
   border-bottom: 1px solid #eee;
+  font-weight: lighter;
+  font-size: 1.3em;
+  letter-spacing: 1px;
 }
 
 .wrapper-h2 {
@@ -742,26 +753,33 @@ iframe {
   padding: 0 3em;
 }
 
-.contactinfo {
+.contactinfo  p {
+  font-size: 0.9em;
+  line-height: 4vh;
 }
 
 
 .socialmedia_main ul li {
   padding: 10px;
   margin: 10px 0;
+  position: relative;
 }
 
 .socialmedia_main img {
-  width: 30px;
   height: 30px;
 
-  margin-left: 20px;
+  position: absolute;;
+  top: 0;
+  bottom: 0;
+  right: 10px;
 }
 
 .contactinfo, .contactform_main, .socialmedia_main {
   flex-basis: 20%;
   text-align: left;
 }
+
+
 
 
 
@@ -789,6 +807,7 @@ ______ ____  _____  __  __
 .btn {
   margin: 50px;
   display: block;
+  text-align: center;
 }
 
 .btn a {
@@ -1077,7 +1096,7 @@ ______ ____   ____ _______ ______ _____
 
 
 .footer_main {
-  height: 150px;
+  height: 200px;
   width: 100%;
 
   display: block;
@@ -1109,7 +1128,7 @@ ______ ____   ____ _______ ______ _____
   font-weight: 500;
   letter-spacing: 0.5px;
 
-  border-bottom: 1px solid rgba( 255, 255, 255, 0.4);
+  border-top: 1px solid rgba( 255, 255, 255, 0.4);
 
   width: 50vw;
 
@@ -1120,6 +1139,16 @@ ______ ____   ____ _______ ______ _____
 
 }
 
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.links_footer {
+  margin-bottom: 50px;
+}
 
 .active_footer {
   color: #486e5f;
@@ -1198,9 +1227,14 @@ ______ ____   ____ _______ ______ _____
   justify-content: space-around;
   margin-top: 20px;
   line-height: 1.6;
-  font-style: italic;
+  font-weight: 100;
 }
 
+.links_footer h4 {
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
 
 
 /*---------------------------------------------*/

@@ -47,8 +47,15 @@
 
   <script>
 
+    <!-- class .showing beim togggeln -->
 		$('.handle').on('click', function(){
 			$('nav ul').toggleClass('showing');
 		});
+
+
+    <!-- class .tiny für den header -->
+    $(window).on("scroll touchmove", function () {
+      $('.header').toggleClass('tiny', $(document).scrollTop() > 0);
+    });
 
 	</script>
