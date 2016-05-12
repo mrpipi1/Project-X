@@ -6,7 +6,7 @@
  * Time: 20:15
  */
 
-$link = mysqli_connect("localhost", "root", "root", "LotusYoga");
+$link = mysqli_connect("localhost", "root", "", "LotusYoga");
 
 if (!$link) {
     die('Verbindungsfehler: (' . mysqli_connect_errno() . ') '

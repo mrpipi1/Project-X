@@ -45,7 +45,7 @@
   	</nav>
   </header>
 
-  <script> <!-- class .showing beim togggeln -->
+  <script>
 
 		$('.handle').on('click', function(){
 			$('nav ul').toggleClass('showing');
