@@ -47,7 +47,7 @@
 
   <script>
 
-    <!-- class .showing beim togggeln -->
+     //class .showing beim togggeln
 		$('.handle').on('click', function(){
 			$('nav ul').toggleClass('showing');
 		});
