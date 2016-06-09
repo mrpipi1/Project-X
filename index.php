@@ -23,9 +23,7 @@ if( ! isset($_GET['page']) ){
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
 
-<<<<<<< Updated upstream
 // GET-Abfrage:
-=======
 // GET-Abfrage
 //if( $page == "home" ){
 //	$content .= "home.php";
@@ -38,7 +36,6 @@ if( ! isset($_GET['page']) ){
 
 // GET-Abfrage verkürzt:
 
->>>>>>> Stashed changes
 if($page){
 	$content .= $page .".php";
 }

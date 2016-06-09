@@ -1,23 +1,3 @@
-
-
-
-<<<<<<< Updated upstream
-=======
-    <div class="btn_wrapper">
-      <div class="btn_landingpage">
-        <a href="#h1">Klick Mich</a>
-      </div>
-
-      <div class="btn_landingpage">
-        <a href="#shop">Zum Shop</a>
-      </div>
-    </div>
-
-  </div> -->
-
-
-
->>>>>>> Stashed changes
 <?php
 include ('content/landingpage.php');
 ?>
