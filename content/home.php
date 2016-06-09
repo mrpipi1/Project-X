@@ -1,25 +1,7 @@
 
-  <!-- <div class="landingpage">
-
-    <h4>Willkommen <br> bei <br>Lotus Yoga</h4>
-
-    <div class="btn_wrapper">
-      <div class="btn_landingpage">
-        <a href="#h1">Klick Mich</a>
-      </div>
-
-      <div class="btn_landingpage">
-        <a href="#shop">Zum Shop</a>
-      </div>
-    </div>
-
-  </div> -->
-
-
-<!--
 <?php
 include ('content/landingpage.php');
-?> -->
+?>
 
 <main class="main">
 
@@ -483,7 +465,7 @@ include ('content/landingpage.php');
                </p>
 
                <p>
-                   <a href="mailto:office@lotusyoga.at?subject=Kontaktformular Website">office@lotusyoga.at</a>
+                   <a href="mailto:office@lotusyoga.at?subject=Kontaktformular-Website">office@lotusyoga.at</a>
               </p> <br>
 
                <p>
@@ -542,22 +524,23 @@ include ('content/landingpage.php');
              </div>
 
              <div class="form-group">
-               <textarea type=" text" class="textarea" name="comment" rows="10" cols="100" require placeholder="Kommentar" ></textarea>
+               <textarea class="textarea" name="comment" rows="10" cols="100" placeholder="Kommentar" ></textarea>
                <span class="highlight"></span>
                <span class="form-bar"></span>
 
              </div>
 
-
              <div class="btn">
+<<<<<<< HEAD
                <input type="submit input" class="submit_main" name="name" value="Absenden" >
+=======
+               <input type="submit" class="submit_main input" name="name" value="Absenden">
+>>>>>>> 892d119377e28540495b59469622e2584d7ac11a
              </div>
 
            </form>
 
          </section>
-
-
 
          <section class="socialmedia_main">
               <h3>Bleib in Kontakt</h3>
@@ -573,23 +556,3 @@ include ('content/landingpage.php');
      </section>
 
   </main>
-
-
-  <script>  <!-- anker animation -->
-
-      $(function() {
-    $('a[href*="#"]:not([href="#"])').click(function() {
-      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-        if (target.length) {
-          $('html, body').animate({
-            scrollTop: target.offset().top
-          }, 2000);
-          return false;
-        }
-      }
-    });
-    });
-
-  </script>

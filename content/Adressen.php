@@ -7,7 +7,7 @@
 
         <h2 class="hl_checkout">Rechnungsadresse:</h2>
 
-        <form class="form_checkout" action="" method="post">
+        <form class="form_checkout" action="#" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required class="input">
@@ -43,7 +43,7 @@
 
         <h2 class="hl_checkout">Lieferadresse:</h2>
 
-        <form class="form_checkout" action="" method="post">
+        <form class="form_checkout" action="#" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required class="input">

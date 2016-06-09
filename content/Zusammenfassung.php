@@ -8,7 +8,7 @@ include("breadcrumbs.php");
 
         <h2 class="hl_checkout">Rechnungsadresse:</h2>
 
-        <form class="form_checkout" action="" method="post">
+        <form class="form_checkout" action="#" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required class="input">
@@ -44,7 +44,7 @@ include("breadcrumbs.php");
 
         <h2 class="hl_checkout">Lieferadresse:</h2>
 
-        <form class="form_checkout" action="" method="post">
+        <form class="form_checkout" action="#" method="post">
 
             <div class="form-group">
                 <input type="text" name="name" value="" required class="input">
@@ -93,7 +93,7 @@ include("breadcrumbs.php");
 
         <div class="card-item card-item_first ">
 
-            <img src="img/shop-images/damen-tshirt_small.png" class="img_card" />
+            <img src="img/shop-images/damen-tshirt_small.png" class="img_card" alt="Damen T-Shirt" />
 
             <ul class="description_card-item">
                 <li>Damen T-Shirt</li>
@@ -114,7 +114,7 @@ include("breadcrumbs.php");
 
         <div class="card-item">
 
-            <img src="img/shop-images/notebook.png" class="img_card"/>
+            <img src="img/shop-images/notebook.png" class="img_card" alt="Notizbuch"/>
 
             <ul class="description_card-item">
                 <li>Notizblock</li>
@@ -134,7 +134,7 @@ include("breadcrumbs.php");
 
         <div class="card-item">
 
-            <img src="img/shop-images/2er-band.png" class="img_card"/>
+            <img src="img/shop-images/2er-band.png" class="img_card" alt="Armband"/>
 
             <ul class="description_card-item">
                 <li>2 Gummiarmbänder</li>
@@ -175,7 +175,7 @@ include("breadcrumbs.php");
 
 
     <!-- AGB und Datenschutzbestimmungen akzeptieren -->
-    <form class="form_confirmation" action="" method="post">
+    <form class="form_confirmation" action="#" method="post">
 
         <p class="form_confirmation_content">
             <input type="checkbox" id="agbs" name="agb-confirmation"/>

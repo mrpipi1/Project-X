@@ -18,7 +18,7 @@
 
     <div class="card-item card-item_first ">
 
-        <img src="img/shop-images/damen-tshirt_small.png" class="img_card" />
+        <img src="img/shop-images/damen-tshirt_small.png" class="img_card" alt="lorem" />
 
         <ul class="description_card-item">
             <li>Damen T-Shirt</li>
@@ -39,7 +39,7 @@
 
     <div class="card-item">
 
-        <img src="img/shop-images/notebook.png" class="img_card"/>
+        <img src="img/shop-images/notebook.png" class="img_card" alt="lorem" />
 
         <ul class="description_card-item">
             <li>Notizblock</li>
@@ -59,7 +59,7 @@
 
     <div class="card-item">
 
-        <img src="img/shop-images/2er-band.png" class="img_card"/>
+        <img src="img/shop-images/2er-band.png" class="img_card" alt="lorem" />
 
         <ul class="description_card-item">
             <li>2 Gummiarmbänder</li>
