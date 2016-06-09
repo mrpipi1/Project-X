@@ -16,6 +16,8 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="font/fontawesome/css/fontello.css">
     <!-- jQuery library (served from Google) -->
     <script src="jquery-1.12.2.min.js"></script>
     <script src="script.js"></script>
@@ -52,8 +54,7 @@
 			$('nav ul').toggleClass('showing');
 		});
 
-
-    <!-- class .tiny für den header -->
+    // class .tiny für den header
     $(window).on("scroll touchmove", function () {
       $('.header').toggleClass('tiny', $(document).scrollTop() > 0);
     });

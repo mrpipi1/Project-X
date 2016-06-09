@@ -16,7 +16,7 @@
   </div> -->
 
 
-<!-- 
+<!--
 <?php
 include ('content/landingpage.php');
 ?> -->
@@ -53,8 +53,8 @@ include ('content/landingpage.php');
           <li>
              <ul class="employees_main-contact">
                <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a></li>
+               <li>0664 555 555<i class="fa icon-mobile"></i></li>
+               <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a><i class="fa icon-mail"></i></li>
              </ul>
           </li>
           <li>
@@ -550,7 +550,7 @@ include ('content/landingpage.php');
 
 
              <div class="btn">
-               <input type="submit" class="submit_main" name="name" value="Absenden" class="input">
+               <input type="submit input" class="submit_main" name="name" value="Absenden" >
              </div>
 
            </form>
