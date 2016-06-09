@@ -7,7 +7,7 @@
 
             <h2 class="hl_checkout">Anmelden</h2>
 
-            <form class="form_checkout" action="" method="post">
+            <form class="form_checkout" action="#" method="post">
 
                 <div class="form-group">
                     <input type="text" name="email" value="" required class="input">

@@ -8,7 +8,7 @@
 
         <h2 class="hl_checkout">Versandart:</h2>
 
-        <form class="form_shipping" action="" method="post">
+        <form class="form_shipping" action="#" method="post">
 
             <p class="radiobutton_wrapper">
                 <input type="radio" id="post" name="shipping-type" class="radiobutton"/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
@@ -30,7 +30,7 @@
 
         <h2 class="hl_checkout">Zahlungsart:</h2>
 
-        <form class="form_payment" action="" method="post">
+        <form class="form_payment" action="#" method="post">
 
             <p class="radiobutton_wrapper">
                 <input type="radio" id="vorkasse" name="payment-type" class="radiobutton"/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
@@ -50,7 +50,7 @@
 
         <section class="form_cuopon">
 
-        <form  action="" method="post" class="form_main">
+        <form  action="#" method="post" class="form_main">
 
             <div class="form-group">
                 <input type="text" name="gutschein" value="" required class="input">

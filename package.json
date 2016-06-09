@@ -1,0 +1,28 @@
+{
+  "name": "lotus_yoga",
+  "version": "3.0.0",
+  "description": "Zwischen Projekt Alex & Chris ",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpipi1/Project-X.git"
+  },
+  "author": "Alex & Chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrpipi1/Project-X/issues"
+  },
+  "homepage": "https://github.com/mrpipi1/Project-X#readme",
+  "devDependencies": {
+    "csscomb": "^3.1.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-csscomb-lint": "0.0.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-util": "^3.0.7"
+  }
+}

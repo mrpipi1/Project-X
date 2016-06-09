@@ -5,8 +5,7 @@ date_default_timezone_set('UTC');
 $content = ('content/');
 
 $admin = '';
-
-include("db-connect.php");
+// include("db-connect.php");
 include('functions/helpers.php');
 include('functions/form_functions.php');
 include('functions/user_functions.php');
@@ -24,7 +23,22 @@ if( ! isset($_GET['page']) ){
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
 
+<<<<<<< Updated upstream
 // GET-Abfrage:
+=======
+// GET-Abfrage
+//if( $page == "home" ){
+//	$content .= "home.php";
+//	$title = "Lotus Yoga - Ihr Yogastudio";
+//}elseif( $page == "AGB" ){
+//	$content .= "agb.php";
+//	$title = "Lotus Yoga - Allgemeine Geschäftsbedingungen";
+//}
+
+
+// GET-Abfrage verkürzt:
+
+>>>>>>> Stashed changes
 if($page){
 	$content .= $page .".php";
 }
