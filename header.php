@@ -39,7 +39,7 @@
     <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body class="body">
+<body onload="load()" onunload="GUnload()" class="body">
   <header class="header">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">

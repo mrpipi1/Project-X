@@ -59,6 +59,9 @@
   <script src="js/jquery-1.12.2.min.js"></script>
   <!-- Main JS File -->
   <script src="js/main.js"></script>
+  <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDIkCPnQjJCYkt0fCqvvec7rBEaU9645A&callback=initMap">
+    </script>
 
 </body>
 </html>

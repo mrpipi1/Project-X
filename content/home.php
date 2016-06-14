@@ -480,7 +480,7 @@ include ('content/landingpage.php');
                     1070
                </p>
 
-
+               <div id='map'></div>
 
            <!-- <div class="googlemaps_main">
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.190637284797!2d16.3546382153168!3d48.202943854585484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0791ce1d98c7%3A0x32086b0132d85ba!2sSiebensterngasse+2%2C+1070+Wien!5e0!3m2!1sde!2sat!4v1457053354124"></iframe>
