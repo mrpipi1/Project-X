@@ -10,3 +10,8 @@
 # Ignore DB Connect
 
 db-connect.php
+
+
+# Ignore node_modules
+
+node_modules/

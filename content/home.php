@@ -1,4 +1,3 @@
-
 <?php
 include ('content/landingpage.php');
 ?>
