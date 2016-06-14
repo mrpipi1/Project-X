@@ -531,11 +531,7 @@ include ('content/landingpage.php');
              </div>
 
              <div class="btn">
-<<<<<<< HEAD
-               <input type="submit input" class="submit_main" name="name" value="Absenden" >
-=======
-               <input type="submit" class="submit_main input" name="name" value="Absenden">
->>>>>>> 892d119377e28540495b59469622e2584d7ac11a
+               <input type="submit" class="submit_main input" name="name" value="Absenden" >
              </div>
 
            </form>
