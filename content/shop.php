@@ -21,6 +21,7 @@
 
 
         <section class="product">
+            <a href="index.php?page=Detailansicht&amp;product=jumper_white">
             <ul class="product-img">
                 <li class="jumper_white"></li>
             </ul>
@@ -28,7 +29,6 @@
                 <li>Jumper</li>
                 <li>39,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht&amp;product=jumper_white">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Jumper - Unisex</h1></li>
                     <li><p>39,99€</p></li>
@@ -43,11 +43,8 @@
             </a>
         </section>
 
-
-
-
-
         <section class="product">
+            <a href="index.php?page=Detailansicht">
             <ul class="product-img">
                 <li class="jumper_black"></li>
             </ul>
@@ -55,7 +52,6 @@
                 <li>Jumper</li>
                 <li>39,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Jumper - Unisex</h1></li>
                     <li><p>39,99€</p></li>
@@ -71,6 +67,7 @@
         </section>
 
         <section class="product">
+            <a href="index.php?page=Detailansicht">
             <ul class="product-img">
                 <li class="tshirt_w-red"></li>
             </ul>
@@ -78,7 +75,6 @@
                 <li>T-Shirt</li>
                 <li>19,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>T-Shirt - Damen</h1></li>
                     <li><p>19,99€</p></li>
@@ -92,16 +88,14 @@
                 </ul>
             </a>
         </section>
-
     </section>
-
-
 
     <h2 id="accessories" class="headline_shop">Zubehör</h2>
 
     <section class="line-wrapper_shop">
 
         <section class="product">
+            <a href="index.php?page=Detailansicht">
             <ul class="product-img">
                 <li class="yogabag-mat"></li>
             </ul>
@@ -109,7 +103,6 @@
                 <li>Yogabag &amp; Matte</li>
                 <li>39,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Yogabag &amp; Matte</h1></li>
                     <li><p>39,99€</p></li>
@@ -125,6 +118,7 @@
         </section>
 
         <section class="product">
+            <a href="index.php?page=Detailansicht">
             <ul class="product-img">
                 <li class="yogaring"></li>
             </ul>
@@ -132,7 +126,6 @@
                 <li>Yogaring</li>
                 <li>24,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Yogaring</h1></li>
                     <li><p>24,99€</p></li>
@@ -148,6 +141,7 @@
         </section>
 
         <section class="product">
+            <a href="index.php?page=Detailansicht">
             <ul class="product-img">
                 <li class="product-1"></li>
             </ul>
@@ -155,7 +149,6 @@
                 <li>Jumper</li>
                 <li>39,99€</li>
             </ul>
-            <a href="index.php?page=Detailansicht">
                 <ul class="overlay overlay-checkout" >
                     <li><h1>Jumper - Unisex</h1></li>
                     <li><p>39,99€</p></li>
@@ -169,13 +162,11 @@
                 </ul>
             </a>
         </section>
-
     </section>
 
-
         <section class="line-wrapper_shop">
-
             <section class="product">
+                <a href="index.php?page=Detailansicht">
                 <ul class="product-img">
                     <li class="notebook"></li>
                 </ul>
@@ -183,7 +174,6 @@
                     <li>Notizbuch</li>
                     <li>19,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Notizbuch</h1></li>
                         <li><p>19,99€</p></li>
@@ -199,6 +189,7 @@
             </section>
 
             <section class="product">
+                <a href="index.php?page=Detailansicht">
                 <ul class="product-img">
                     <li class="product-1"></li>
                 </ul>
@@ -206,7 +197,6 @@
                     <li>Jumper</li>
                     <li>39,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Jumper - Unisex</h1></li>
                         <li><p>39,99€</p></li>
@@ -222,6 +212,7 @@
             </section>
 
             <section class="product">
+                <a href="index.php?page=Detailansicht">
                 <ul class="product-img">
                     <li class="notebook"></li>
                 </ul>
@@ -229,7 +220,6 @@
                     <li>Notizbuch</li>
                     <li>19,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Notizbuch</h1></li>
                         <li><p>19,99€</p></li>
@@ -249,7 +239,7 @@
         <h2 id="others" class="headline_shop">Sonstiges</h2>
 
         <section class="line-wrapper_shop">
-
+            <a href="index.php?page=Detailansicht">
             <section class="product">
                 <ul class="product-img">
                     <li class="notebook"></li>
@@ -258,7 +248,6 @@
                     <li>Notizbuch</li>
                     <li>19,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Notizbuch</h1></li>
                         <li><p>19,99€</p></li>
@@ -274,6 +263,7 @@
             </section>
 
             <section class="product">
+                <a href="index.php?page=Detailansicht">
                 <ul class="product-img">
                     <li class="product-1"></li>
                 </ul>
@@ -281,7 +271,6 @@
                     <li>Jumper</li>
                     <li>39,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Jumper - Unisex</h1></li>
                         <li><p>39,99€</p></li>
@@ -297,6 +286,7 @@
             </section>
 
             <section class="product">
+                <a href="index.php?page=Detailansicht">
                 <ul class="product-img">
                     <li class="product-1"></li>
                 </ul>
@@ -304,7 +294,6 @@
                     <li>Jumper</li>
                     <li>39,99€</li>
                 </ul>
-                <a href="index.php?page=Detailansicht">
                     <ul class="overlay overlay-checkout" >
                         <li><h1>Jumper - Unisex</h1></li>
                         <li><p>39,99€</p></li>
@@ -318,7 +307,6 @@
                     </ul>
                 </a>
             </section>
-
         </section>
 
     </section>

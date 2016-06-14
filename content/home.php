@@ -246,6 +246,7 @@ include ('content/landingpage.php');
           <h2>Produkt Aktion</h2>
 
           <section class="product product-main">
+               <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="jumper_black"></li>
               </ul>
@@ -253,7 +254,6 @@ include ('content/landingpage.php');
                   <li>Jumper</li>
                   <li>39,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Jumper - Unisex</h1></li>
                       <li><p>39,99€</p></li>
@@ -269,6 +269,7 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product product-main">
+            <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="jumper_white"></li>
               </ul>
@@ -276,7 +277,6 @@ include ('content/landingpage.php');
                   <li>Jumper</li>
                   <li>39,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Jumper - Unisex</h1></li>
                       <li><p>39,99€</p></li>
@@ -292,6 +292,7 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product product-main">
+               <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="yogabag-mat"></li>
               </ul>
@@ -299,7 +300,6 @@ include ('content/landingpage.php');
                   <li>Yogabag &amp; Matte</li>
                   <li>39,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Bag &amp; Matte</h1></li>
                       <li><p>39,99€</p></li>
@@ -315,6 +315,7 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product product-main">
+               <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="tshirt_w-red"></li>
               </ul>
@@ -322,7 +323,6 @@ include ('content/landingpage.php');
                   <li>T-Shirt</li>
                   <li>19,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>T-Shirt - Damen</h1></li>
                       <li><p>19,99€</p></li>
@@ -338,6 +338,7 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product product-main">
+               <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="notebook"></li>
               </ul>
@@ -345,7 +346,6 @@ include ('content/landingpage.php');
                   <li>Notizbuch</li>
                   <li>19,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Notizbuch</h1></li>
                       <li><p>19,99€</p></li>
@@ -361,6 +361,7 @@ include ('content/landingpage.php');
           </section>
 
           <section class="product product-main">
+               <a href="index.php?page=Detailansicht">
               <ul class="product-img">
                   <li class="yogaring"></li>
               </ul>
@@ -368,7 +369,6 @@ include ('content/landingpage.php');
                   <li>Yogaring</li>
                   <li>24,99€</li>
               </ul>
-              <a href="index.php?page=Detailansicht">
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Yogaring</h1></li>
                       <li><p>24,99€</p></li>
