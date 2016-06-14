@@ -23,7 +23,6 @@ if( ! isset($_GET['page']) ){
 	$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
 }
 
-// GET-Abfrage:
 // GET-Abfrage
 //if( $page == "home" ){
 //	$content .= "home.php";

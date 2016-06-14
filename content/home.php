@@ -29,6 +29,8 @@ include ('content/landingpage.php');
               Mitarbeiter
           </h3>
         <ul class="employees_main-info">
+
+
           <li>
              <ul class="employees_main-contact">
                <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
@@ -42,6 +44,7 @@ include ('content/landingpage.php');
              Hallo, mein Name ist Julia Ulrike. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
          </li>
+
         </ul>
 
         <ul class="employees_main-info">
@@ -527,7 +530,7 @@ include ('content/landingpage.php');
              </div>
 
              <div class="btn">
-               <input type="submit" class="submit_main input" name="name" value="Absenden">
+               <input type="submit" class="submit_main input" name="name" value="Absenden" >
              </div>
 
            </form>
