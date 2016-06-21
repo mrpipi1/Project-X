@@ -51,7 +51,7 @@ a {
 }
 
 .main h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 200;
 
   padding: 5vw 0 2vw 0;
@@ -97,7 +97,7 @@ a {
 }
 
 .employees_headline {
-  font-size: 2.2vw;
+  font-size: 1.75em;
   font-weight: 200;
 }
 
@@ -408,7 +408,7 @@ _   _ ____  ______ _____    _    _ _   _  _____
 
 .employees_main p {
   padding: 0 3vw;
-
+  line-height: 1.7;
   text-align: justify;
 }
 
@@ -545,22 +545,19 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 #############################################################
 #############################################################*/
 
-.saleproducts_main {
+.saleproducts_main .product{
   display: flex;
-
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .product {
   position: relative;
-
   overflow: hidden;
-
   width: 200px;
   height: 300px;
   margin: 10px 50px;
   padding: 0;
+  flex-basis: 200px;
 }
 
 
@@ -711,109 +708,35 @@ _____ ____  _   _ _______       _____ _______
 #############################################################
 #############################################################*/
 
-/*.contact_main {
+.contact_main {
   text-align: center;
   line-height: 2;
 
-  border: 1px solid green;
-}*/
-
-/*.googlemaps_main {
-  height: 0;
-
-  position: relative;
-
-  padding-bottom: 56.25%;
-  padding-top: 30px;
-  margin-top: 20px;
-
-  overflow: hidden;
 }
-
-iframe {
-  width: 100%;
-  height: 60%;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  border: none;
-
-  pointer-events: none;
-}*/
 
 
 #map {
     height:400px;
-    width:550px;
+    width: 100%;
+    margin: auto;
 }
 
+.socialmedia_main {
+  height: 40vh;
+}
 
-/***  NEW ALIGNMENT  ***/
-
-
-.contact {
+.socialmedia_main ul {
   display: flex;
-
-  color: white;
-  background-color: #65a591;
-
   justify-content: space-around;
 }
 
-.contact h3 {
-  font-size: 1.3em;
-  font-weight: lighter;
-
-  margin-bottom: 2em;
-
-  text-align: left;
-  letter-spacing: 1px;
-
-  border-bottom: 1px solid #eee;
+.instagram {
+  color: blue;
 }
 
-.wrapper-h2 {
-  padding: 0 3em;
-
-  text-align: left;
-
-  color: white;
-  background-color: #65a591;
+.youtube {
+  color: red;
 }
-
-.contactinfo  p {
-  font-size: 0.9em;
-  line-height: 4vh;
-}
-
-
-.socialmedia_main ul li {
-  position: relative;
-
-  margin: 10px 0;
-  padding: 10px;
-}
-
-.socialmedia_main img {
-  position: absolute;
-  top: 0;
-  right: 10px;
-  bottom: 0;
-
-  height: 30px;;
-}
-
-.contactinfo, .contactform_main, .socialmedia_main {
-  text-align: left;
-
-  flex-basis: 20%;
-}
-
-
-
-
 
 /*#############################################################
 #############################################################
@@ -975,7 +898,7 @@ ______ ____  _____  __  __
 
   top: -25px;
 
-  color: #fff;
+  color: #5a8e7d;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -1162,7 +1085,7 @@ ______ ____   ____ _______ ______ _____
   height: 200px;
 
   color: white;
-  background-color: #363636;
+  background-color: #486e5f;
   background-attachment: fixed;
 }
 
@@ -2359,7 +2282,6 @@ backend
 }
 
 
-
 /*########################
 Form
 ########################*/
@@ -2367,13 +2289,6 @@ Form
 .wrapper_form_backend {
   width: 60vw;
 }
-
-
-
-
-
-
-
 
 /*#######################
 pie chart

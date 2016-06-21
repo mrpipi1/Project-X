@@ -1,6 +1,4 @@
-<?php
-include ('content/landingpage.php');
-?>
+<?php include ('content/landingpage.php');?>
 
 <main class="main">
 
@@ -438,29 +436,17 @@ include ('content/landingpage.php');
      </div>
 
 
-     <section class="wrapper-h2" id="contact">
-
+     <section class="contact_main section_main" id="contact">
+          <section class="contact_question">
           <h2>Kontakt</h2>
                <p>
                     Du hast Fragen ? <br> Kontaktiere uns doch einfach und wir melden uns unverzüglich.
-
                </p>
-               <p>
-               </p>
-
-     </section>
-
-
-     <section class="contact">
-
-         <!-- <section class="contact_main section_main" id="contact"> -->
-
+          </section>
           <section class="contactinfo">
              <h3>Unser Studio</h3>
-
                <p>
                     01 555 555 55
-
                </p>
 
                <p>
@@ -485,15 +471,11 @@ include ('content/landingpage.php');
 
                <div id='map'></div>
 
-           <!-- <div class="googlemaps_main">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.190637284797!2d16.3546382153168!3d48.202943854585484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d0791ce1d98c7%3A0x32086b0132d85ba!2sSiebensterngasse+2%2C+1070+Wien!5e0!3m2!1sde!2sat!4v1457053354124"></iframe>
-           </div> -->
-
-           <!-- <div class="btn">
+           <div class="btn">
              <a href="#contactform_main">Zum Kontaktformular</a>
-           </div> -->
+           </div>
 
-         </section>
+          </section>
 
          <section class="contactform_main"> <a name="contactform_main"></a>
 
@@ -535,18 +517,16 @@ include ('content/landingpage.php');
 
            </form>
 
-         </section>
+          </section>
 
-         <section class="socialmedia_main">
+         <!-- <section class="socialmedia_main">
               <h3>Bleib in Kontakt</h3>
-
                    <ul>
-                        <li class="instagram"><a href="#">Instagram</a> <img src="img/socialmedia/fb.png" alt="" /></li>
-                        <li class="facebook"><a href="#">Facebook</a></li>
-                        <li class="youtube"><a href="#">Youtube</a></li>
+                        <li class="instagram"><a href="#"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a></li>
+                        <li class="facebook"><a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a></li>
+                        <li class="youtube"><a href="#"><i class="fa fa-youtube-play fa-4x" aria-hidden="true"></i></a></li>
                   </ul>
-
-         </section>
+         </section> -->
 
      </section>
 

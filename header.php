@@ -16,7 +16,7 @@
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- font awesome -->
-    <link rel="stylesheet" href="font/fontawesome/css/fontello.css">
+    <link rel="stylesheet" href="font/fontawesome/css/font-awesome.min.css">
     <!-- FAVICONS -->
     <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
