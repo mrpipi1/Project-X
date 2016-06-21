@@ -179,21 +179,22 @@ a {
   display: flex;
 
   width: 100vw;
-  height: 100px;
+  height: 150px;
 
   transition: all 0.5s ease-in-out;
 
   background-color: transparent;
-  box-shadow: 1px 2px 1px 1px #eee;
 
   align-items: center;
   justify-content: space-between;
 }
 
 .header.tiny {
-  height: 60px;
+  height: 80px;
+  color: #000;
 
   background-color: #fff;
+  box-shadow: 0 0 10px #eee;
 }
 
 .nav {

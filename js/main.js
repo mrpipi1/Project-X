@@ -8,7 +8,7 @@ $('.handle').on('click', function(){
 
 // class .tiny für den header
 $(window).on("scroll touchmove", function () {
-  $('.header').toggleClass('tiny', $(document).scrollTop() > 0);
+  $('.header').toggleClass('tiny', $(document).scrollTop() > 730);
 });
 
 
