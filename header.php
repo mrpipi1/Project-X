@@ -60,6 +60,5 @@
           } ?>
         <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
   		</ul>
-      <div class="handle">&#9776;﻿</div> <!-- responsive burger icon -->
   	</nav>
   </header>
