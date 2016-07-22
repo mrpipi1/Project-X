@@ -6,9 +6,9 @@
  * Time: 14:41
  */
 
-if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
+/*if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
     redirect_to("backend/index.php");
-} else {
+} else {*/
 
     if (is_post_request("register")) {
         global $link;
@@ -45,4 +45,4 @@ if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
             $errors["pw"] = "Die eingegebenen Passwörter stimmen nicht überein.";
         }
     }
-}
+//}

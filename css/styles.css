@@ -158,7 +158,7 @@ a {
 }
 .cart {
     transition: 0.3s;
-    background-image: url(../img/shop/cart.svg);
+    background-image: url(../img/shop-images/cart.svg);
     background-size: contain;
 }
 .cart a {
@@ -178,7 +178,6 @@ a {
 }
 .nav ul {
     display: flex;
-    align-items:
 }
 .nav ul li {
     transition: all 0.5s ease-in-out;
@@ -194,6 +193,16 @@ a {
 .nav ul li:hover {
     color: #fff;
     background-color: #65a591;
+}
+
+.logout {
+    font-size: 200% !important;
+    color: #5a8e7d;
+}
+
+.logout:hover {
+    font-size: 200% !important;
+    color: #ffffff;
 }
 
 /*.nav li:before {

@@ -9,11 +9,11 @@
 global $link;
 
 
-if(is_logged_in() && !isset ($_SESSION['is_admin'])){
+/*if(is_logged_in() && !isset ($_SESSION['is_admin'])){
     redirect_to("index.php");
 }elseif(is_logged_in() && isset ($_SESSION['is_admin'])){
     redirect_to("backend/index.php");
-}else {
+}else {*/
     if(is_post_request("login")) {
         $email = mysqli_real_escape_string($link, $_POST["_name"]);
         $password = mysqli_real_escape_string($link, $_POST["password"]);
@@ -47,6 +47,7 @@ if(is_logged_in() && !isset ($_SESSION['is_admin'])){
                 if($is_active == 1) {
                     if (password_verify($password, $pw)) {
                         $_SESSION['is_admin'] = true;
+                        $_SESSION['logged_in'] = true;
                         redirect_to("backend/index.php", "Erfolgreich eingeloggt!");
                     }
                 }
@@ -65,4 +66,4 @@ if(is_logged_in() && !isset ($_SESSION['is_admin'])){
         }
     }
 
-}
+//}

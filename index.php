@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 date_default_timezone_set('UTC');
 // content definieren
 $content = ('content/');
@@ -14,8 +14,13 @@ include('functions/shop_functions.php');
 include('logic/login.php');
 include('logic/register_logic.php');
 include('header.php');
+//session_destroy();
 if(isset($_GET['action']) && $_GET['action'] == 'login'){
 	include('logout.php');
+}
+
+if(isset($_GET['action']) && $_GET['action'] == 'logout'){
+	session_destroy();
 }
 
 

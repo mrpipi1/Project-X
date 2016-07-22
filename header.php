@@ -39,7 +39,7 @@
     <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body onload="load()" onunload="GUnload()" class="body">
+<body onunload="GUnload()" class="body">
   <header class="header">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">
@@ -54,11 +54,17 @@
         <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#saleproducts_main";}else{echo "index.php?page=home#saleproducts_main";} ?>">Aktionen</a></li>
           <li><a href="<?php if( !isset($_GET["page"]) || $_GET["page"] == "home" ){echo "#contact";}else{echo "index.php?page=home#contact";} ?>">Kontakt</a></li>
           <li><a href="index.php?page=Shop">Shop</a></li>
-        <li><a href="index.php?page=Registrieren">Login</a></li>
+        <li>
+            <?php if( !is_logged_in() && !isset($_SESSION["is_admin"])){ echo "<a href='index.php?page=Registrieren'>Login</a>"; } ?>
+            <?php if( is_logged_in() && !isset ($_SESSION['is_admin'])){ echo "<a href='index.php?page=profile&user_id=".$_SESSION["user"]["user_id"]."'>Profile</a>"; } ?>
+            <?php if( is_logged_in() && isset ($_SESSION['is_admin'])){ echo "<a href='backend/index.php'>Backend</a>"; }?>
+
+        </li>
         <?php if($admin) {
             echo "<li><a href=\"backend/index.php?page=dashbord\">Backend</a></li>";
           } ?>
         <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
+        <?php if( is_logged_in()){ echo '<li><a href=\'index.php?action=logout\'><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>'; }; ?>
   		</ul>
   	</nav>
   </header>
