@@ -5,7 +5,8 @@ date_default_timezone_set('UTC');
 $content = ('content/');
 
 $admin = '';
-// include("db-connect.php");
+include("db-connect.php");
+include('functions/load_content.php');
 include('functions/helpers.php');
 include('functions/form_functions.php');
 include('functions/user_functions.php');
@@ -15,6 +16,7 @@ include('header.php');
 if(isset($_GET['action']) && $_GET['action'] == 'login'){
 	include('logout.php');
 }
+
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
 if( ! isset($_GET['page']) ){
