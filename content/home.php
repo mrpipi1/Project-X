@@ -10,7 +10,7 @@
           while( $row = mysqli_fetch_assoc($about_us) ){
           ?>
        <p>
-        <?php echo $row['text']; ?>
+        <?php echo $row['content']; ?>
          <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -246,7 +246,7 @@
       <section class="advanced-courses_main">
          <?php
           while( $row = mysqli_fetch_assoc($courses) ){
-            $img = str_replace(' ', '_', $row['kursname']);
+            $img = str_replace(' ', '_', $row['_name']);
           ?>
           <ul>
             <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>

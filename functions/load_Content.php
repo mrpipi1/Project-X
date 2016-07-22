@@ -13,7 +13,7 @@ function get_specific_content_data($table_name, $where, $equals){
 	return $res;
 }
 
-$employees = get_content_data('mitarbeiter');
-$courses = get_content_data('kurse');
-$about_us = get_specific_content_data('content', 'id', 3);
+$employees = get_content_data('employees');
+$courses = get_content_data('courses');
+$about_us = get_specific_content_data('contents', 'id', 3);
 ?>
