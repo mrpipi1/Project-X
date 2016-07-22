@@ -29,8 +29,12 @@ if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
 
             $sql = "INSERT INTO users ( _name, fullname,  email, password_hash, gender, birthday, address, zip_code) VALUES ( '$username', '$fullname', '$email', '$password_hash', '$gender', '$birthday', '$address', '$zip')";
             $result = mysqli_query($link, $sql);
-            $_SESSION['logged_in'] = true;
-            redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+            if($result){
+                $_SESSION['logged_in'] = true;
+                redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+            }else{
+                $error = 1;
+            }
 
         } else {
             $error = 1;

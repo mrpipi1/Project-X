@@ -11,6 +11,7 @@ include('functions/helpers.php');
 include('functions/form_functions.php');
 include('functions/user_functions.php');
 include('functions/shop_functions.php');
+include('logic/login.php');
 include('logic/register_logic.php');
 include('header.php');
 if(isset($_GET['action']) && $_GET['action'] == 'login'){

@@ -44,7 +44,7 @@
         </div>
 
         <div class="form-group">
-            <input type="text" name="fullnmae" value="" required class="input">
+            <input type="text" name="fullname" value="" required class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Fullname*</label>
