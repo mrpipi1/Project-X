@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.42)
 # Database: lotusyoga
-# Generation Time: 2016-07-22 13:57:28 +0000
+# Generation Time: 2016-07-22 15:24:25 +0000
 # ************************************************************
 
 
@@ -115,7 +115,7 @@ DROP TABLE IF EXISTS `courses`;
 CREATE TABLE `courses` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `beschreibung` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -124,7 +124,7 @@ CREATE TABLE `courses` (
 LOCK TABLES `courses` WRITE;
 /*!40000 ALTER TABLE `courses` DISABLE KEYS */;
 
-INSERT INTO `courses` (`id`, `_name`, `beschreibung`, `is_active`, `deleted_at`)
+INSERT INTO `courses` (`id`, `_name`, `description`, `is_active`, `deleted_at`)
 VALUES
 	(3,'yin yoga','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',1,NULL),
 	(4,'ashtanga yoga','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',1,NULL),
