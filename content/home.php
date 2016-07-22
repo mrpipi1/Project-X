@@ -285,6 +285,35 @@
 
           <h2>Produkt Aktion</h2>
 
+          <?php
+          while( $row = mysqli_fetch_assoc($products) ){
+          ?>
+          <a class="product product-main" href="index.php?page=Detailansicht&product_id=<?php echo $row['id'] ?>">
+            <img class="product-img" src="<?php echo $row['pic'] ?>" alt="<?php echo $row['products_name'] ?>"/>
+            <ul class="info">
+                <li><?php echo $row['products_name'] ?></li>
+                <li><?php echo $row['price'] ?></li>
+            </ul>
+            <ul class="overlay overlay-checkout" >
+                <li><h1><?php echo $row['products_name'] ?></h1></li>
+                <li><p><?php echo $row['price'] ?></p></li>
+                <li>
+                    <ul class="colors colors-checkout">
+                        <li>RED</li>
+                        <li>RED</li>
+                        <li>RED</li>
+                    </ul>
+                </li>
+            </ul>
+          </a>
+          <?php
+        }
+        ?>
+
+
+
+
+<!--
           <section class="product product-main">
                <a href="index.php?page=Detailansicht">
               <ul class="product-img">
@@ -294,17 +323,17 @@
                   <li>Jumper</li>
                   <li>39,99€</li>
               </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
+              <ul class="overlay overlay-checkout" >
+                  <li><h1>Jumper - Unisex</h1></li>
+                  <li><p>39,99€</p></li>
+                  <li>
+                      <ul class="colors colors-checkout">
+                          <li>RED</li>
+                          <li>RED</li>
+                          <li>RED</li>
+                      </ul>
+                  </li>
+              </ul>
               </a>
           </section>
 
@@ -389,13 +418,13 @@
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Notizbuch</h1></li>
                       <li><p>19,99€</p></li>
-                      <!-- <li>
+                      <li>
                           <ul class="colors colors-checkout">
                               <li>RED</li>
                               <li>RED</li>
                               <li>RED</li>
                           </ul>
-                      </li> -->
+                      </li>
                   </ul>
               </a>
           </section>
@@ -412,16 +441,17 @@
                   <ul class="overlay overlay-checkout" >
                       <li><h1>Yogaring</h1></li>
                       <li><p>24,99€</p></li>
-                      <!-- <li>
+                      <li>
                           <ul class="colors colors-checkout">
                               <li>RED</li>
                               <li>RED</li>
                               <li>RED</li>
                           </ul>
-                      </li> -->
+                      </li>
                   </ul>
               </a>
           </section>
+        -->
 
           <!-- <section class="product">
               <ul class="product-img">
@@ -469,6 +499,8 @@
               </a>
           </section> -->
      </section>
+
+
 
      <div class="btn">
           <a href="index.php?page=shop">Zum Shop</a>
