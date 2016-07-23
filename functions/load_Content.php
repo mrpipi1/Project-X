@@ -16,6 +16,8 @@ function get_specific_content_data($table_name, $where, $equals){
 $employees = get_content_data('employees');
 $courses = get_content_data('courses');
 $about_us = get_specific_content_data('contents', 'id', 3);
+$impressum = get_specific_content_data('contents', 'id', 15);
 $products = get_content_data('products');
+
 
 ?>
