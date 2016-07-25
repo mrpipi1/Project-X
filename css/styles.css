@@ -1,12 +1,23 @@
 /*
-    COLORS
 
-    Erstes      #65a591
-    Zweites     #5a8e7d
-    Drittes     #486e5f
+###    COLORS    ###
 
+    ### FRONTEND ###
+    I.      #65a591
+    II.     #5a8e7d
+    III.     #486e5f
+
+    ### BACKEND ###
     Footer      #363636
     Footer 2    #262626
+
+    ____             _____  ______   __  __   ____   _____   _    _  _       ______
+   |  _ \    /\     / ____||  ____| |  \/  | / __ \ |  __ \ | |  | || |     |  ____|
+   | |_) |  /  \   | (___  | |__    | \  / || |  | || |  | || |  | || |     | |__
+   |  _ <  / /\ \   \___ \ |  __|   | |\/| || |  | || |  | || |  | || |     |  __|
+   | |_) |/ ____ \  ____) || |____  | |  | || |__| || |__| || |__| || |____ | |____
+   |____//_/    \_\|_____/ |______| |_|  |_| \____/ |_____/  \____/ |______||______|
+
 
 
 */
@@ -35,18 +46,7 @@ a {
     color: inherit;
     /*display: inline-block;*/
 }
-.main h2, h3 {
-    text-align: center;
-}
-.main h2 {
-    font-size: 1.5em;
-    font-weight: 200;
-    padding: 5vw 0 2vw 0;
-}
-.main h3 {
-    padding: 50px 0 20px 0;
-}
-.main h4, .landingpage h4 {
+.main h2, .landingpage_headline {
     font-size: 8vw;
     font-weight: 500;
     margin: 2%;
@@ -54,13 +54,27 @@ a {
     text-transform: uppercase;
     color: #fff;
 }
-.main h5 {
-    font-size: 1.9vw;
-    font-weight: 300;
-    margin: 40px 0;
+
+.main h3, .main h4  {
+    border: 1px solid green;
+    font-size: 2em;
+    font-weight: 200;
+    padding: 1em 0;
     text-align: center;
-    letter-spacing: 2px;
 }
+
+.main h4 {
+    border: 1px solid blue;
+    font-size: 1.5em;
+}
+
+.main h5 {
+    font-size: 1.25em;
+    font-weight: 300;
+    border: 1px solid fuchsia;
+    text-align: right;
+}
+
 .main h6 {
     font-size: 1vw;
 }
@@ -69,17 +83,6 @@ a {
 }
 .landingpage_headline {
     border-bottom: 2px solid #fff;
-}
-.employees_headline {
-    font-size: 1.75em;
-    font-weight: 200;
-}
-.courses_headline {
-    font-size: 2vw;
-    font-weight: 200;
-    font-style: italic;
-    padding: 10px 0;
-    color: #b3b3b3;
 }
 
 /* Landing Page */
@@ -98,7 +101,7 @@ a {
     align-items: center;
     justify-content: center;
 }
-.btn_wrapper {
+/*.btn_wrapper {
     display: flex;
 }
 .btn_landingpage {
@@ -121,13 +124,13 @@ a {
     transition: all ease-in 0.4s;
     border: 1px solid #5a8e7d;
     background-color: #5a8e7d;
-}
+}*/
 
 /* Header */
 
 .header {
     position: fixed;
-    z-index: 200;
+    z-index: 500;
     top: 0;
     left: 0;
     display: flex;
@@ -233,7 +236,7 @@ __  __          _____ _   _
 main {
     position: relative;
     z-index: 100;
-    padding-top: 50px;
+    padding: 4em 0;
     background-color: white;
 }
 
