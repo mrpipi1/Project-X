@@ -56,7 +56,7 @@
           <li><a href="index.php?page=Shop">Shop</a></li>
         <li>
             <?php if( !is_logged_in() && !isset($_SESSION["is_admin"])){ echo "<a href='index.php?page=Registrieren'>Login</a>"; } ?>
-            <?php if( is_logged_in() && !isset ($_SESSION['is_admin'])){ echo "<a href='index.php?page=profile&user_id=".$_SESSION["user"]["user_id"]."'>Profile</a>"; } ?>
+            <?php if( is_logged_in() && !isset ($_SESSION['is_admin']) && isset($_SESSION["user"]["user_id"])){ echo "<a href='index.php?page=profile&user_id=".$_SESSION["user"]["user_id"]."'>Profile</a>"; } ?>
             <?php if( is_logged_in() && isset ($_SESSION['is_admin'])){ echo "<a href='backend/index.php'>Backend</a>"; }?>
 
         </li>

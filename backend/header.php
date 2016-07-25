@@ -8,7 +8,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="html_backend">
 <head>
     <meta charset="UTF-8">
     <!-- mobile initial -->
@@ -25,11 +25,12 @@
 
     <!-- stylesheet -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../font/fontawesome/css/font-awesome.min.css">
     <!-- jQuery library (served from Google) -->
-    <script src="../jquery-1.12.2.min.js"></script>
+    <script src="../js/jquery-1.12.2.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
     <script src="d3pie.min.js"></script>
-    <script src="../script.js"></script>
+    <script src="script.js"></script>
     <script src="statistic.js"></script>
 
 </head>
@@ -44,9 +45,9 @@
     </div>
 
         <ul class="nav_header_backend">
-            <li><a href="#">profil</a></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
-            <li><a href="../index.php?page=home&amp;action=logout">logout</a></li>
+            <li><a href="#">Username</a></li>
+            <li><a href="../index.php?page=home&amp;action=logout"><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>
         </ul>
        <div class="handle">&#9776;﻿</div>
 </header>
@@ -54,35 +55,108 @@
 <div class="backend_wrapper">
 
     <nav class="nav_backend" >
-        <ul >
-            <li><a href="index.php?page=dashboard"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Dashboard</span></a></li>
-            <li><a href="index.php?page=statistik"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Statistik</span></a></li>
-            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Users</span></a>
-                <ul>
-                    <li><a href="index.php?page=admins"> <span class="text-wrapper">Admin</span></a></li>
-                    <li><a href="index.php?page=users"> <span class="text-wrapper">Users</span></a></li>
+        <ul class="sidebar">
+            <li>
+                    <a href="index.php?page=dashboard">
+                        <i class="fa fa-pie-chart"></i><span class="title">Dashboard</span>
+                        <span class="selected"></span>
+                    </a>
+            </li>
+            <li>
+                <a href="index.php?page=statistik">
+                    <i class="fa fa-bar-chart"></i><span class="title">Statistik</span>
+                    <span class="selected"></span>
+                </a>
+            <li>
+                <a href="">
+                    <i class="fa fa-users"></i><span class="title">Users</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="index.php?page=admins">
+                            <i class="fa fa-star"></i><span class="title">Admin</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=users">
+                            <i class="fa fa-user"></i><span class="title">Users</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Content</span></a>
-                <ul>
-                    <li><a href="index.php?page=contents"> <span class="text-wrapper">Content</span></a></li>
-                    <li><a href="index.php?page=courses"> <span class="text-wrapper">Courses</span></a></li>
-                    <li><a href="index.php?page=header_items"> <span class="text-wrapper">Header Items</span></a></li>
-                    <li><a href="index.php?page=employees"> <span class="text-wrapper">Employees</span></a></li>
-                    <li><a href="index.php?page=socialmedia_icons"> <span class="text-wrapper">Social Media Icons</span></a></li>
+            <li>
+                <a href="">
+                    <i class="fa fa-sitemap"></i><span class="title">Content</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="index.php?page=contents">
+                            <i class="fa fa-file"></i><span class="title">Content</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=courses">
+                            <i class="fa fa-graduation-cap"></i><span class="title">Courses</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=header_items">
+                            <i class="fa fa-anchor"></i><span class="title">Header Items</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=employees">
+                            <i class="fa fa-user-md"></i><span class="title">Employees</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=socialmedia_icons">
+                            <i class="fa fa-twitter"></i><span class="title">Social Media Icons</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="#"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Shop</span></a>
-                <ul>
-                    <li><a href="index.php?page=shop_categories"> <span class="text-wrapper">Categories</span></a></li>
-                    <li><a href="index.php?page=products"> <span class="text-wrapper">Products</span></a></li>
-                    <li><a href="index.php?page=orders"> <span class="text-wrapper">Orders</span></a></li>
-                    <li><a href="index.php?page=bestell_items"> <span class="text-wrapper">Order Icons</span></a></li>
+            <li>
+                <a href="">
+                    <i class="fa fa-shopping-basket"></i><span class="title">Shop</span>
+                    <span class="arrow"></span>
+                </a>
+                <ul class="sub_menu">
+                    <li><a href="index.php?page=shop_categories">
+                            <i class="fa fa-file"></i><span class="title">Categories</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=products">
+                            <i class="fa fa-gift"></i><span class="title">Products</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=orders">
+                            <i class="fa fa-credit-card-alt"></i><span class="title">Orders</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
+                    <li><a href="index.php?page=bestell_items">
+                            <i class="fa fa-user-md"></i><span class="title">Order Icons</span>
+                            <span class="selected"></span>
+                        </a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="index.php?page=user_messages"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">User Messages</span></a></li>
-            <li><a href="index.php?page=log"> <img class="icon" src=" ../img/icons/statistik.svg" /><span class="text-wrapper">Log</span></a></li>
-
+            <li>
+                <a href="index.php?page=statistik">
+                    <i class="fa fa-commenting-o"></i><span class="title">User Messages</span>
+                    <span class="selected"></span>
+                </a>
+            <li>
+                <a href="index.php?page=log">
+                    <i class="fa fa-database"></i><span class="title">Log</span>
+                    <span class="selected"></span>
+                </a>
+            </li>
 
         </ul>
     </nav>

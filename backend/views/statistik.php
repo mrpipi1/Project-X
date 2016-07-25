@@ -5,12 +5,8 @@
  * Date: 30/04/16
  * Time: 14:07
  */
+include('backend_crumbs.php');
 ?>
-
-
-<section class="content-wrapper_backend">
-    <h2 class="main-hl_backend">Statistik</h2>
-
 
     <section class="pie-chart_wrapper">
 

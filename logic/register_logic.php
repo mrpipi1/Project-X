@@ -26,12 +26,27 @@
         if($password === $password_wh){
 
             $password_hash = password_hash($password, PASSWORD_DEFAULT);
-
-            $sql = "INSERT INTO users ( _name, fullname,  email, password_hash, gender, birthday, address, zip_code) VALUES ( '$username', '$fullname', '$email', '$password_hash', '$gender', '$birthday', '$address', '$zip')";
+            //Check if username or email already exists in database
+            $sql = "SELECT * FROM users WHERE _name = '$username' OR email = '$email'";
             $result = mysqli_query($link, $sql);
-            if($result){
-                $_SESSION['logged_in'] = true;
-                redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+            if(mysqli_num_rows($result) === 0) {
+                $sql = "INSERT INTO users ( _name, fullname,  email, password_hash, gender, birthday, address, zip_code) VALUES ( '$username', '$fullname', '$email', '$password_hash', '$gender', '$birthday', '$address', '$zip')";
+                $result = mysqli_query($link, $sql);
+                if($result){
+                    //Register successful load data from db to set Session data
+                    $sql = "SELECT * FROM users WHERE _name = '$username' OR email = '$email'";
+                    $result = mysqli_query($link, $sql);
+                    if(mysqli_num_rows($result) === 1) {
+                        $user = mysqli_fetch_assoc($result);
+                        $_SESSION['logged_in'] = true;
+                        $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
+                        redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+                    }else{
+                        $error = 1;
+                    }
+                }else{
+                    $error = 1;
+                }
             }else{
                 $error = 1;
             }
