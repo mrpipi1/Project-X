@@ -11,15 +11,24 @@ $('.handle').on('click', function(){
 
 // ### SHRINKY HEADER ###
 $(window).on("scroll touchmove", function () {
-  var headerOffSet = 610;
+  var headerOffSet = 650;
   $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
 });
 
-
+// ### FIXED HEADER onScroll
+$(window).scroll(function(){
+  var headerOffSetTop = 530;
+    if ($(window).scrollTop() >= headerOffSetTop) {
+       $('.header').addClass('fixed');
+    }
+    else {
+       $('.header').removeClass('fixed');
+    }
+});
 
 // ### SMOOTH SCROOL TO ANCHOR ###
 $('a').click(function(){
-  var scrollOffSet = 50;
+  var scrollOffSet = 43;
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset() .top - scrollOffSet
     }, 1200);

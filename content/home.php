@@ -1,5 +1,4 @@
 <?php include ('content/landingpage.php');?>
-<?php include ('../header.php'); ?>
 
 <main class="main">
 
