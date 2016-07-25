@@ -46,7 +46,6 @@ if( ! isset($_GET['page']) ){
 if($page){
 	$content .= $page .".php";
 }
-echo "<div><a href=''><i class=\"fa fa-sign-out logout\" aria-hidden=\"true\"></i> home</a>";
 // content eingebunden
 include($content);
 // footer eingebunden
