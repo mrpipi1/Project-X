@@ -4,13 +4,13 @@
 console.log();
 $(document).ready(function(){
     //needs to be fixed so only 1 a is active at a time
-    $('.sidebar li a').click(function(e){
+    $('.sidebar li a').click(function(event){
+
     if($(this).attr("href") != "") {
         window.location.href = $(this).attr("href");
     }
     $(this).addClass('active');
 
-    console.log(e);
     var menu = $('.sidebar');
 
     var parent = $(this).parent().parent();
@@ -39,6 +39,7 @@ $(document).ready(function(){
 
         });
     }
-    e.preventDefault();
+        event.preventDefault();
+        event.stopPropagation();
     });
 });
