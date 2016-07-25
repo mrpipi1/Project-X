@@ -205,28 +205,10 @@ a {
     color: #ffffff;
 }
 
-/*.nav li:before {
-  position: absolute;
-  z-index: -1;
-  right: 50%;
-  bottom: 0;
-  left: 50%;
-
-  height: 3px;
-
-  content: '';
-  transition-timing-function: ease-out;
-  transition-duration: 0.3s;
-  transition-property: left, right;
-
-  background: #65a591;
+.active_nav {
+    color: #fff;
+    background-color: #65a591;
 }
-
-
-.nav li:hover:before, .nav li:focus:before, .nav li:active:before {
-  right: 0;
-  left: 0;
-}*/
 
 .cart a {
     display: block;
