@@ -49,7 +49,7 @@
             <li><a href="#">Username</a></li>
             <li><a href="../index.php?page=home&amp;action=logout"><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>
         </ul>
-       <div class="handle">&#9776;﻿</div>
+       <!--<div class="handle">&#9776;﻿</div>-->
 </header>
 
 <div class="backend_wrapper">
