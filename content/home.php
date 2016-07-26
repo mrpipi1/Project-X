@@ -1,5 +1,4 @@
 <?php include ('content/landingpage.php');?>
-
 <main class="main">
 
      <section class="about_us section_main" id="about_us">
@@ -602,5 +601,4 @@
          </section> -->
 
      </section>
-
   </main>

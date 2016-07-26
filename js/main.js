@@ -8,13 +8,6 @@ $('.handle').on('click', function(){
   $('nav ul').toggleClass('showing');
 });
 
-
-// ### SHRINKY HEADER ###
-$(window).on("scroll touchmove", function () {
-  var headerOffSet = 650;
-  $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
-});
-
 // ### FIXED HEADER onScroll
 $(window).scroll(function(){
   var headerOffSetTop = 530;
@@ -24,6 +17,12 @@ $(window).scroll(function(){
     else {
        $('.header').removeClass('fixed');
     }
+});
+
+// ### SHRINKY HEADER ###
+$(window).on("scroll touchmove", function () {
+  var headerOffSet = 650;
+  $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
 });
 
 // ### SMOOTH SCROOL TO ANCHOR ###
@@ -83,10 +82,7 @@ function onScroll(event){
      contentObj.value = value;
  }
 
-
 // ### GOOGLE MAPS API - VIEW CONFIGS ###
-
-
 function initMap() {
   var myLatLng = {lat: 48.20294029999999, lng: 16.356826899999987};
 

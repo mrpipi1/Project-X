@@ -13,6 +13,9 @@ include('functions/user_functions.php');
 include('functions/shop_functions.php');
 include('logic/login.php');
 include('logic/register_logic.php');
+include('header.php');
+
+
 //session_destroy();
 if(isset($_GET['action']) && $_GET['action'] == 'login'){
 	include('logout.php');
@@ -39,6 +42,11 @@ if( ! isset($_GET['page']) ){
 //	$title = "Lotus Yoga - Allgemeine Geschäftsbedingungen";
 //}
 
+
+
+
+$current_page = 'contact';
+include('inc_header.php');
 
 // GET-Abfrage verkürzt:
 
