@@ -20,8 +20,11 @@ include('backend_crumbs.php');
 </a>
 </h3>
 
-
-<a class="btn_table" href="index.php?page=<?php echo $_GET['page'] ?>&amp;action=new"><?php echo $new_item ?></a>
+<?php
+if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
+echo "<a class=\"btn_table\" href=\"index.php?page=".$_GET['page']."&amp;action=new\">".$new_item."</a>";
+}
+?>
 
     <?php include('table.php'); ?>
 

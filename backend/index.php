@@ -35,7 +35,8 @@ if(isset($_GET['action']) && $_GET['action'] == 'login'){
 if( ! isset($_GET['page']) || $_GET['page'] == 'dashboard' ){
     $page = "dashboard"; // Legt default-wert in die Variable $page
     $views .= $page .".php";
-    include($views);
+    //include($views);
+    include('logic/logic.php');
 }elseif($page == "statistik"){
     $views .= $page .".php";
     include($views);

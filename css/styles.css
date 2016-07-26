@@ -1828,6 +1828,11 @@ backend
     border-spacing: 0.5rem;
     border-collapse: collapse;
 }
+.table_dashboard {
+    width:45%;
+    float:left;
+    margin: 2em 2em;
+}
 .table_backend th, .table_backend td {
     font-size: 0.8em;
     padding: 6px 10px 6px;

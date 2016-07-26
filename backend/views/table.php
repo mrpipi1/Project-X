@@ -6,9 +6,21 @@
  * Time: 15:31
  */
 
+        if($_GET['page'] == 'dashboard'){
+            $dashboard_tables = array('users', 'orders', 'products', 'content', 'employees');
+            for($i = 0; $i<count($dashboard_tables); $i++){
+                $query = sql_query($dashboard_tables[$i], $current_page, 5, $order_by, $order_dir);
+                if($query && mysqli_num_rows($query) > 0){
+                    create_table($query, $current_page, $total_pages, false);
+                }
 
-        $query = sql_query($_GET['page'], $current_page, $entries_per_page, $order_by, $order_dir);
-        $table_name = $_GET['page'];
+            }
+
+        }else{
+            $query = sql_query($_GET['page'], $current_page, $entries_per_page, $order_by, $order_dir);
+            create_table($query, $current_page, $total_pages, true);
+        }
+        /*$table_name = $_GET['page'];
         $ths = "";
         $tds = "";
         $ths .= "<table class=\"table_backend\">";
@@ -33,14 +45,14 @@
                         if (substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_') {
                             $tds .= "<td>" . bool_to_word($wert) . "</td>";
                         } elseif (substr($col, -3, 3) == '_at' && $col != 'deleted_at') {
-                            $tds .= "<td>" . date_to_better_date(substr($wert, 0, -8)) . "</td>";
+                            $tds .= "<td>" . date_to_better_date(substr($wert, 0, -8)) . "</td>";*/
                             /*} elseif (substr($col, -3, 3) == '_id') {
                                 $sql1 = "SELECT " . '_name' . " FROM " . substr($col, 0, -3) . " WHERE id = " . $wert;
                                 $result1 = mysqli_query($link, $sql1);
                                 $col_name = mysqli_fetch_row($result1);
                                 $tds .= "<td>" . $col_name['_name'] . "</td>";*/
 
-                        } elseif (strlen($wert) > 30) {
+                       /* } elseif (strlen($wert) > 30) {
                             $tds .= "<td>" . truncate($wert) . "</td>";
                         } elseif ($col == 'birthday') {
                             $tds .= "<td>" . date_to_better_date($wert) . "</td>";
@@ -77,7 +89,7 @@
             echo $return['tds'];
             echo "</tbody>\n\r</table>";
 
-            pagination_backend($_GET['page'], $current_page, $total_pages);
+            pagination_backend($_GET['page'], $current_page, $total_pages);*/
 
 // table mit orders zu user anzeigen
             /*if (isset($_GET['action']) && $_GET['action'] == 'show_orders') {
@@ -92,9 +104,9 @@
                 echo $table_orders['tds'];
                 echo "</tbody>\n\r</table>";
             }*/
-        }else{
+        /*}else{
             echo "<h4 class='zero-entries'>Derzeit keine Einträge vorhanden!</h4>";
-        }
+        }*/
 
     ?>
 
