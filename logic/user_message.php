@@ -23,7 +23,7 @@ global $link;
         $sql = "INSERT INTO user_messages ( fullname, telno,  email, comment) VALUES ( '$name', '$tel', '$email', '$comment')";
         $result = mysqli_query($link, $sql);
         if($result){
-            echo 'Nachricht erfolgreich gesendet! Danke dass Sie uns kontaktiert haben;
+            echo "Nachricht erfolgreich gesendet! Danke dass Sie uns kontaktiert haben";
         }
 
         if($error == 1) {
