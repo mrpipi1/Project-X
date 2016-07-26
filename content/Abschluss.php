@@ -12,12 +12,10 @@
            <a href="index.php?page=Shop" class="#">Zum Shop</a>
       </div>
 
-     <div class="btn_special">
+      <div class="btn_special">
          <a href="index.php?page=home#about_us" class="#">Zur Startseite</a>
      </div>
+
     </div>
-
-
   </section>
-
 </section>

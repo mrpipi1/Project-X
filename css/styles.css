@@ -107,30 +107,7 @@ a {
     left: 0;
     transition: all 0.4s ease-in-out;
 }
-/*.btn_wrapper {
-    display: flex;
-}
-.btn_landingpage {
-    font-size: 1.1vw;
-    font-weight: 500;
-    position: relative;
-    display: flex;
-    height: 1vw;
-    min-height: 20px;
-    margin: 2vw;
-    padding: 1.8vw 4vw;
-    letter-spacing: 0.1vw;
-    text-transform: uppercase;
-    color: white;
-    border: 1px solid #fff;
-    align-items: center;
-    min-font-size: 15px;
-}
-.btn_landingpage:hover {
-    transition: all ease-in 0.4s;
-    border: 1px solid #5a8e7d;
-    background-color: #5a8e7d;
-}*/
+
 
 /* Header */
 
@@ -985,18 +962,32 @@ Abschluss
 
 ############################*/
 
-.wrapper_checkout {
+.wrapper_form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 4em;
+}
+
+.wrapper_form_login {
 }
 .small-text {
     font-size: small;
 }
 h2.hl_checkout {
     font-size: 1.6em;
+    margin: 0 0 4em 0;
 }
 
+
+.form_checkout-sectionsheadline {
+    font-weight: 500;
+    margin-top: 2em;
+}
+
+.form_checkout_text-link {
+    line-height: 2;
+}
 /*###########
 Breadcrumbs
 ############*/
@@ -1075,8 +1066,8 @@ Breadcrumbs
 
 .btn-wrapper_checkout {
     display: flex;
-    width: 70vw;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 4em;
     justify-content: flex-end;
 }
 .btn_checkout {
@@ -1211,7 +1202,7 @@ Warenkorb
 ################################*/
 
 .wrapper_card {
-    width: 65vw;
+    width: 100%;
     margin-top: 80px;
 }
 
@@ -1300,6 +1291,7 @@ Warenkorb
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex-grow: 0.1;
 }
 .delete, .edit {
     width: 20px;
@@ -1335,7 +1327,7 @@ Warenkorb
 
 .sum_card_wrapper {
     display: flex;
-    width: 65vw;
+    width: 100%;
     margin-top: 1.8vw;
     justify-content: space-between;
 }
@@ -1383,6 +1375,12 @@ Adressen
 Versand
 #####################*/
 
+.wrapper_shipping-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .radiobutton_wrapper {
     display: flex;
     align-items: center;
@@ -1422,13 +1420,34 @@ Versand
 Zusammenfassung
 ##################*/
 
-.form_confirmation_content {
+.wrapper-order-sum {
     display: flex;
-    width: 65vw;
-    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.wrapper-form-order-sum {
+    margin: 4em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.form_confirmation_content {
+    margin-top: 4em;
+    width: 100%;
 }
 .form_confirmation_content input {
     width: 30px;
+}
+
+.form_checkout {
+    width: 400px;
+    min-width: 400px;
+    max-width: 600px;
+
 }
 
 /*#################
@@ -1441,46 +1460,26 @@ Abschluss
     justify-content: center;
 }
 .btn_special {
-    font-size: 1vw;
-    font-weight: 500;
-    display: flex;
-    height: 1vw;
-    margin: 1.8vw;
-    padding: 1.8vw 3vw;
-    letter-spacing: 0.1vw;
+
+    margin: 0 2em;
+}
+
+.btn_special a {
+    border: 1px solid #fff;
+    padding: 1em 2em;
+    display: block;
+    min-width: 220px;
+    max-width: 250px;
     text-transform: uppercase;
-    color: white;
-    border: 1px solid white;
-    align-items: center;
+    letter-spacing: 1.5px;
+    font-weight: 200;
+    transition: all 0.4s ease-in-out;
 }
-.btn_special:hover {
-    transition: 0.3s;
-    transform: scale(1.1);
-    color: #5a8e7d;
-    border-color: #5a8e7d;
-}
-@media only screen and (max-width: 500px) {
-    /* STYLES GO HERE */
-    body {
-        font-size: 1em;
-    }
-    .header {}
-    .nav ul {
-        max-height: 0;
-    }
-    .showing {
-        max-height: 20em;
-    }
-    .nav ul li {
-        box-sizing: border-box;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-    }
-    .handle {
-        display: block;
-        text-align: right;
-    }
+
+.btn_special a:hover {
+    color: #fff;
+    border-color: #65a591;
+    background-color: #65a591;
 }
 
 /*#####################
@@ -1499,35 +1498,20 @@ Registrieren
     width: 15px;
 }
 
-/*
-.btn_main {
-  margin: 20px;
-  border-bottom: 1px solid #5a8e7d;
-  padding: 10px 20px;
-  text-transform: uppercase;
-
-  letter-spacing: 1px;
-
-  transition: all 0.4s linear;
-}
-
-
-
-.btn_main:hover {
-  background-color: #5a8e7d;
-  color: #fff;
-
-}*/
-
 p.pflichtfeld {
     font-size: small;
     margin-top: 20px;
 }
 
 /*###########
+____            _____  _  __ ______  _   _  _____
+|  _ \    /\    / ____|| |/ /|  ____|| \ | ||  __ \
+| |_) |  /  \  | |     | ' / | |__   |  \| || |  | |
+|  _ <  / /\ \ | |     |  <  |  __|  | . ` || |  | |
+| |_) |/ ____ \| |____ | . \ | |____ | |\  || |__| |
+|____//_/    \_\\_____||_|\_\|______||_| \_||_____/
 
 
-backend
 ####################*/
 
 .header_backend {
@@ -1805,7 +1789,7 @@ backend
 
 .page-breadcrumb {
     display:flex;
-    padding:10px;
+    padding: 10px;
 }
 
 .page-breadcrumb li i {
