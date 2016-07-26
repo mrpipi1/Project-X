@@ -15,7 +15,6 @@ include('logic/login.php');
 include('logic/register_logic.php');
 include('header.php');
 
-
 //session_destroy();
 if(isset($_GET['action']) && $_GET['action'] == 'login'){
 	include('logout.php');
