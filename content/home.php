@@ -250,8 +250,8 @@
           ?>
           <ul>
             <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
-            <li><h5><?php echo $row['kursname'] ?></h5></li>
-            <li><p><?php echo $row['beschreibung'] ?>.</p></li>
+            <li><h5><?php echo $row['_name'] ?></h5></li>
+            <li><p><?php echo $row['description'] ?>.</p></li>
             <!-- <a class="btn_main"href="#">Erfahren Sie mehr</a> -->
           </ul>
           <?php
