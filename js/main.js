@@ -1,35 +1,61 @@
-// ***  MAIN JavaScript *** //
+// ###*****************###
+//    *** MAIN JS ***
+// ###*****************###
 
-// class .showing beim togggeln
+
+// ### TOGGLE .SHOWING CLASS ON CLICK - 'MOBILE-NAV' ###
 $('.handle').on('click', function(){
   $('nav ul').toggleClass('showing');
 });
 
-
-// class .tiny für den header
-$(window).on("scroll touchmove", function () {
-  $('.header').toggleClass('tiny', $(document).scrollTop() > 30);
+// ### FIXED HEADER onScroll
+$(window).scroll(function(){
+  var headerOffSetTop = 530;
+    if ($(window).scrollTop() >= headerOffSetTop) {
+       $('.header').addClass('fixed');
+    }
+    else {
+       $('.header').removeClass('fixed');
+    }
 });
 
+// ### SHRINKY HEADER ###
+$(window).on("scroll touchmove", function () {
+  var headerOffSet = 650;
+  $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
+});
 
-// anker animation
-$(function() {
- $('a[href*="#"]:not([href="#"])').click(function() {
-   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-     var target = $(this.hash);
-     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-     if (target.length) {
-       $('html, body').animate({
-         scrollTop: target.offset().top
-       }, 2000);
-       return false;
+// ### SMOOTH SCROOL TO ANCHOR ###
+$('a').click(function(){
+  var scrollOffSet = 43;
+    $('html, body').animate({
+        scrollTop: $( $(this).attr('href') ).offset() .top - scrollOffSet
+    }, 1200);
+    return false;
+});
+
+// ### SET ACTIVE CLASS TO NAV DURING SCROLL ###
+$(document).ready(function () {
+	$(document).on("scroll", onScroll);
+});
+
+function onScroll(event){
+	var scrollPosition = $(document).scrollTop();
+   $('.nav_main a').each(function () {
+     var currentLink = $(this);
+     var refElement = $(currentLink.attr("href"));
+     if (refElement.position().top <= scrollPosition
+         && refElement.position().top + refElement.height() > scrollPosition) {
+       $('.nav_main ul li a').removeClass("active_nav");
+       currentLink.addClass("active_nav");
      }
-   }
- });
- });
+     else{
+       currentLink.removeClass("active_nav");
+     }
+   });
+}
 
-
-// Produktansicht Hover
+// ### PRODUCTVIEW HOVER ###
  $(document).ready(function() {
      $(".img-container").hover(function () {
          $('.zoomed-picture img').attr("src", $(this).attr("src"));
@@ -56,9 +82,7 @@ $(function() {
      contentObj.value = value;
  }
 
-
-// Google Maps
-
+// ### GOOGLE MAPS API - VIEW CONFIGS ###
 function initMap() {
   var myLatLng = {lat: 48.20294029999999, lng: 16.356826899999987};
 

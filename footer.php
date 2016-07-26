@@ -50,7 +50,7 @@
     </ul> -->
 
     <small class="copyright">
-      <a href="index.php?=page=Home#about_us">&copy; Lotus Yoga</a>
+      &copy; Lotus Yoga
     </small>
 
   </footer>

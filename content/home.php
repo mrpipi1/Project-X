@@ -1,11 +1,10 @@
 <?php include ('content/landingpage.php');?>
-
 <main class="main">
 
      <section class="about_us section_main" id="about_us">
-         <h2>
+         <h3>
              Über uns
-         </h2>
+         </h3>
          <?php
           while( $row = mysqli_fetch_assoc($about_us) ){
           ?>
@@ -30,9 +29,9 @@
      </section>
 
       <section class="employees_main section_main">
-          <h3 class="employees_headline ">  <!-- spezieller stylen als andere H3 -->
+          <h4 class="employees_headline ">  <!-- spezieller stylen als andere H3 -->
               Mitarbeiter
-          </h3>
+         </h4>
           <?php
           while( $row = mysqli_fetch_assoc($employees) ){
           ?>
@@ -48,7 +47,7 @@
              </ul>
           </li>
           <li>
-             <h2><?php echo $row['fullname']; ?></h2>
+             <h5><?php echo $row['fullname']; ?></h5>
              <p>
               <?php echo $row['description']; ?>
             </p>
@@ -69,7 +68,7 @@
              </ul>
           </li>
           <li>
-             <h2>Julia Ulrike</h2>
+             <h3>Julia Ulrike</h3>
              <p>
              Hallo, mein Name ist Julia Ulrike. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -86,7 +85,7 @@
              </ul>
           </li>
           <li>
-             <h2>Lisbeth Thekla</h2>
+             <h3>Lisbeth Thekla</h3>
              <p>
              Hallo, mein Name ist Lisbeth Thekla. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -102,7 +101,7 @@
              </ul>
           </li>
           <li>
-             <h2>Clara Augustine</h2>
+             <h3>Clara Augustine</h3>
              <p>
              Hallo, mein Name ist Clara Augustine. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -118,7 +117,7 @@
              </ul>
           </li>
           <li>
-             <h2>Leonie Barbara</h2>
+             <h3>Leonie Barbara</h3>
              <p>
              Hallo, mein Name ist Lenoie Barbara. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -134,7 +133,7 @@
              </ul>
           </li>
           <li>
-             <h2>Zella Kristiane</h2>
+             <h3>Zella Kristiane</h3>
              <p>
              Hallo, mein Name ist Zella Kristiane. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -150,7 +149,7 @@
              </ul>
           </li>
           <li>
-             <h2>Laurenz Luri</h2>
+             <h3>Laurenz Luri</h3>
              <p>
              Hallo, mein Name ist Laurenz Luri. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -166,7 +165,7 @@
              </ul>
           </li>
           <li>
-             <h2>Elli Sophie</h2>
+             <h3>Elli Sophie</h3>
              <p>
              Hallo, mein Name ist Elli Sophie. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -182,7 +181,7 @@
              </ul>
           </li>
           <li>
-             <h2>Lukas Bernhard</h2>
+             <h3>Lukas Bernhard</h3>
              <p>
              Hallo, mein Name ist Lukas Bernhard. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -198,7 +197,7 @@
              </ul>
           </li>
           <li>
-             <h2>Katrin Antonia</h2>
+             <h3>Katrin Antonia</h3>
              <p>
              Hallo, mein Name ist Katrin Antonia. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
@@ -209,7 +208,7 @@
 
   <div class="parallax parallax1">
     <div class="parallax_textoverlay">
-      <h4>Zufriedenheit</h4>
+      <h2>Zufriedenheit</h2>
     </div>
   </div>
 
@@ -217,9 +216,9 @@
 
    <section class="courses_main section_main" id="course">
 
-       <h2> <!--<a name="course"></a>-->
+       <h3> <!--<a name="course"></a>-->
            Kurse
-       </h2>
+       </h3>
 
       <!-- <h3 class="courses_headline">Anfänger</h3>
       <section class="beginners-courses_main">
@@ -275,7 +274,7 @@
 
   <div class="parallax parallax2">
     <div class="parallax_textoverlay">
-      <h4>Gelassenheit</h4>
+      <h2>Gelassenheit</h2>
     </div>
   </div>
 
@@ -283,7 +282,7 @@
 
       <section class="saleproducts_main section_main" id="saleproducts_main">
 
-          <h2>Produkt Aktion</h2>
+          <h3>Produkt Aktion</h3>
 
           <?php
           while( $row = mysqli_fetch_assoc($products) ){
@@ -303,7 +302,7 @@
                         <li>RED</li>
                         <li>RED</li>
 
-                        
+
                     </ul>
                 </li>
             </ul>
@@ -511,7 +510,7 @@
 
      <section class="contact_main section_main" id="contact">
           <section class="contact_question">
-          <h2>Kontakt</h2>
+          <h3>Kontakt</h3>
                <p>
                     Du hast Fragen ? <br> Kontaktiere uns doch einfach und wir melden uns unverzüglich.
                </p>
@@ -602,5 +601,4 @@
          </section> -->
 
      </section>
-
   </main>
