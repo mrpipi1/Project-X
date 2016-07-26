@@ -7,15 +7,22 @@
  */
 
 function sql_query($table_name, $current_page, $entries_per_page, $order_by, $order_dir){
+
+
     global $link;
+    //echo $link;
     $limit_start = $current_page * $entries_per_page - $entries_per_page;
     $sql = "SELECT * FROM " .$table_name ." WHERE deleted_at IS NULL ORDER BY " .$order_by ." " .$order_dir ." LIMIT " .$limit_start .", " .$entries_per_page;
     $result = mysqli_query($link, $sql);
-    $content_array = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    return $content_array;
+    return $result;
+   /* pr($result);
+    //$content_array = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    for ($content_array = array(); $tmp = $result->fetch_array(MYSQLI_ASSOC);) $content_array[] = $tmp;
+    return $content_array;*/
 }
 
 function create_table($content_array){
+    echo $content_array;
     global $link;
     $table_name = $_GET['page'];
     $ths = "";
@@ -84,11 +91,28 @@ function total_contents($table_name) {
 
 function delete_contents($table_name, $id) {
     global $link;
-    $timestamp = time();
-    $sql = "UPDATE " .$table_name ." SET is_active = 0, deleted_at = " .$timestamp ." WHERE id = " .$id;
+    $sql = "SELECT * FROM " .$table_name ." WHERE id = " .$id;
     $result = mysqli_query($link, $sql);
-
-    return $result;
+    $row = mysqli_fetch_assoc($result);
+    if($row['deleted_at'] === NULL) {
+        $timestamp = time();
+        $sql = "UPDATE " . $table_name . " SET is_active = 0, deleted_at = " . $timestamp . " WHERE id = " . $id;
+        $result = mysqli_query($link, $sql);
+        if (!$result) {
+            echo '<script type="text/javascript">'
+            , 'notification("error", "Konnte nicht gelöscht werden!");'
+            , '</script>';
+        } else {
+            echo '<script type="text/javascript">'
+            , 'notification("success", "Wurde erfolgreich gelöscht");'
+            , '</script>';
+        }
+        return $result;
+    }else{
+        echo '<script type="text/javascript">'
+        , 'notification("error", "Eintrag wurde bereits gelöscht!");'
+        , '</script>';
+    }
 }
 
 // zum editieren von db einträgen:
@@ -123,9 +147,13 @@ function update_contents($tablename, $id, $content_array) {
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
     if(!$result) {
-        echo "konnte nicht erstellt werden!";
+        echo '<script type="text/javascript">'
+                , 'notification("error", "Konnte nicht aktualisiert werden!");'
+                , '</script>';
     }else{
-        echo "erstellen war erfolgreich!";
+        echo '<script type="text/javascript">'
+                , 'notification("success", "Wurde erfolgreich aktualisiert");'
+                , '</script>';
     }
     return $result;
 }
@@ -161,9 +189,13 @@ function insert_contents($tablename, $content_array) {
     $sql = "INSERT INTO " .$tablename ." (" .$insert_col ." )" ." VALUES (" .$insert_wert ." )";
     $result = mysqli_query($link, $sql);
     if(!$result) {
-        echo "konnte nicht erstellt werden!";
+        echo '<script type="text/javascript">'
+        , 'notification("error", "Konnte nicht erstellt werden!");'
+        , '</script>';
     }else{
-        echo "erstellen war erfolgreich!";
+        echo '<script type="text/javascript">'
+        , 'notification("success", "Wurde erfolgreich erstellt");'
+        , '</script>';
     }
     return $result;
 }
@@ -176,6 +208,8 @@ function pagination_backend($site, $current_page, $total_pages) {
 
     if($total_pages > 0) {
         if($current_page != 1) {
+            $before = $current_page-1;
+            //echo '<i class="fa fa-chevron-left pagination" aria-hidden="true"></i>';
             include("views/pagination/pagination_first_link.php");
         }
 
@@ -185,6 +219,8 @@ function pagination_backend($site, $current_page, $total_pages) {
 
 
         if($current_page != $total_pages) {
+            $next = $current_page+1;
+            //echo '<i class="fa fa-chevron-right pagination" aria-hidden="true"></i>';
             include("views/pagination/pagination_last_link.php");
         }
     }

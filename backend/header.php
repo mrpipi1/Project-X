@@ -35,6 +35,7 @@
 
 </head>
 <body class="body_backend">
+<div class="notification"><h4>Notificationtext</h4></div>
 <header class="header_backend">
     <div class=" logo_wrapper">
         <h1 class="logo">

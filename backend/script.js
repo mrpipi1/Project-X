@@ -1,8 +1,8 @@
 /**
  * Created by Giusti on 25.07.2016.
  */
-console.log();
 $(document).ready(function(){
+
     //needs to be fixed so only 1 a is active at a time
     $('.sidebar li a').click(function(event){
 
@@ -42,4 +42,27 @@ $(document).ready(function(){
         event.preventDefault();
         event.stopPropagation();
     });
+
+
 });
+
+function notification(type, message){
+    if(type === 'success'){
+        $('.notification').css("background-color", "#5cb85c");
+        $('.notification h4').html(message);
+        $('.notification').slideDown('slow', function(){
+            setTimeout(function(){
+                $('.notification').slideUp('slow', function(){});
+            }, 3000);
+        });
+    }else if (type === 'error'){
+        $('.notification').css("background-color", "#8e0000");
+        $('.notification h4').html(message);
+        $('.notification').slideDown('slow', function(){
+            setTimeout(function(){
+                $('.notification').slideUp('slow', function(){});
+            }, 3000);
+        });
+    }
+
+}

@@ -19,7 +19,7 @@ $order_dir = isset($_GET['order_dir']) ? $_GET["order_dir"] : "ASC";
 
 session_start();
 error_reporting(-1);
-
+include('header.php');
 include("../db-connect.php");
 include("../functions/table_functions.php");
 include("../functions/form_functions.php");
@@ -30,7 +30,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'login'){
     include('../logout.php');
 }
 
-include('header.php');
+
 
 if( ! isset($_GET['page']) || $_GET['page'] == 'dashboard' ){
     $page = "dashboard"; // Legt default-wert in die Variable $page

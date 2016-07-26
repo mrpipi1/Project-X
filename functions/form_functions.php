@@ -11,8 +11,8 @@ function get_col_data($table_name){
     global $link;
     $sql = "SHOW COLUMNS FROM " .$table_name;
     $result = mysqli_query($link, $sql);
-    $column_data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-    return $column_data;
+    //$column_data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $result;
 }
 
 // erstellt das form fürs backend, $column_data kommt von get_col_data(), $action damit man unterscheiden kann ob man was
@@ -22,12 +22,13 @@ function addInput($column_data, $action, $id, $attribute = [] ){
     global $link;
     $output = "";              // hier wird dann alles rein gespeichert das dann ausgegeben werden soll, \n und |r sollten überall sein wo norm. eine neue zeile ist.
     $ende = "</div> \n \r";    // default wenns keine checkbox ist, siehe  comment in "if ($type == "checkbox") {"
-
+    $cnt = 0;
     // durchläuft die $column_data und speichert alles in variablen:
-    foreach($column_data as $col_num => $col_data) {
+    while( $row = mysqli_fetch_assoc($column_data) ) {
+    //foreach($column_data as $col_num => $col_data) {
 
-        $input_name = $col_data['Field'];   // ['Field'] und ['Type'] sind wegen dem query in get_col_data().
-        $d_type = $col_data['Type'];
+        $input_name = $row['Field'];   // ['Field'] und ['Type'] sind wegen dem query in get_col_data().
+        $d_type = $row['Type'];
         $type = "";
         $attr = "";
         $value = NULL;
@@ -48,7 +49,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
         }
 
         // ich will die id und die deleted_ at spalten nicht anzeigen, weil man die so nicht bearbeiten können soll.
-        if($col_num != 0 && $input_name != 'deleted_at') {
+        if($cnt != 0 && $input_name != 'deleted_at') {
             // if für jeden datentyp, damit immer das richtige input kommt  (tinyint = bool, wird in der db auf tinyint geändert)
             if ($d_type == "tinyint(1)") {
                 $type = "checkbox";
@@ -94,9 +95,9 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 // ich hol nur die spalte die mich interessiert und befülle die options
                 $sql1 = "SELECT " .$col_name ." FROM " .$second_table_name;
                 $result1 = mysqli_query($link, $sql1);
-                $options = mysqli_fetch_all($result1, MYSQLI_ASSOC);
-                foreach($options as $option){
-                        $output .=  "<option>" .$option[$col_name] ."</option>";  // $option['title'] weil es ein mehrdimensionales array ist.
+                //$options = mysqli_fetch_all($result1, MYSQLI_ASSOC);
+                while( $row = mysqli_fetch_assoc($result1) ) {
+                        $output .=  "<option>" .$row[$col_name] ."</option>";  // $option['title'] weil es ein mehrdimensionales array ist.
                 }
                 $output .= "</select>";
             }else {     // "norm" input, $type wurde mit "if für jeden datentyp" mit dem richtigen type befüllt.
@@ -115,6 +116,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
             // closing tag vom wrapper (p oder div):
             $output .= $ende;
         }
+        $cnt++;
     }
     return $output;
 }

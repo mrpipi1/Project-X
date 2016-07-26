@@ -1276,17 +1276,26 @@ Warenkorb
     width: 20px;
     height: 20px;
     margin-right: 2px;
-    text-indent: -99999px;
+    //text-indent: -99999px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
 }
 .delete {
-    background-image: url('../img/icons/close.svg');
+    //background-image: url('../img/icons/close.svg');
 }
 .edit {
     margin-right: 1em;
-    background-image: url('../img/icons/wrench75.svg');
+    //background-image: url('../img/icons/wrench75.svg');
+}
+.edit i{
+   color:#5a8e7d;
+    font-size:16px;
+}
+
+.delete i{
+    color:#5a8e7d;
+    font-size:16px;
 }
 .small_delete, .small_edit {
     width: 15px;
@@ -1586,6 +1595,7 @@ backend
 }*/
 
 /*--------------- FLYOUT END -------------*/
+
 .body_backend, .html_backend {
     height: 100%;
     padding: 0;
@@ -1599,9 +1609,24 @@ backend
     letter-spacing: 0.5px;
     background-color: #363636;
 }
+.body_backend .notification {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    position:absolute;
+    display:none;
+    top:0;
+    width:100%;
+    z-index:999;
+
+}
 .nav_backend .sidebar{
    margin-top:3.3em;
 }
+
+
 .nav_backend li {
 
     display: block;
@@ -1749,8 +1774,8 @@ backend
     padding:10px;
 }
 
-.page-breadcrumb li {
-    padding:0 6px;
+.page-breadcrumb li i {
+    padding:0 8px;
 }
 
 .page-bar i {
@@ -1761,6 +1786,9 @@ backend
 
 
 .table_backend {
+    border: 1px solid #dddddd;
+    margin-top:30px;
+    width:99%;
     margin-bottom: 2em;
     border-spacing: 0.5rem;
     border-collapse: collapse;
@@ -1770,15 +1798,70 @@ backend
     padding: 6px 10px 6px;
 }
 .table_backend th {
-    font-weight: 400;
+    //font-weight: 400;
+    font-size: 14px;
+    font-weight: 600;
     text-align: left;
-    border-bottom: 1px solid #959595;
+    height:40px;
 }
 .table_backend td {
     font-weight: 300;
 }
 .table_backend tr:nth-child(2n) {
-    background-color: #eaeaea;
+    background-color: #f5f5f5;
+}
+
+.table_backend tr {
+    border: 1px solid #dddddd;
+    height:40px;
+}
+
+.content-wrapper_backend .fa-chevron-right {
+    padding: 10px 13px 11px 14px !important;
+}
+
+.content-wrapper_backend .fa-chevron-left {
+    padding: 10px 14px 11px 13px !important;
+}
+
+.btn_table {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+/*zero entries message when loading table*/
+.content-wrapper_backend .zero-entries {
+    text-align: center;
+    font-weight: 400;
+}
+/*pagination*/
+.pagination {
+    padding: 10px 15px;
+    border-color: #dddddd;
+    color:black;
+    background-color:#ddd;
+}
+
+.current {
+    background:#5cb85c;
+    color:white;
 }
 
 /*########################
