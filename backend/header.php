@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 16/04/16
- * Time: 15:35
- */
-?>
-
 <!DOCTYPE html>
 <html lang="de" class="html_backend">
 <head>
@@ -47,7 +38,7 @@
 
         <ul class="nav_header_backend">
             <li><a href="../index.php?page=home">Frontend</a></li>
-            <li><a href="#">Username</a></li>
+            <li><a href="#">Blöde SeSSIOn</a></li>
             <li><a href="../index.php?page=home&amp;action=logout"><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>
         </ul>
        <!--<div class="handle">&#9776;﻿</div>-->
@@ -141,14 +132,14 @@
                         </a>
                     </li>
                     <li><a href="index.php?page=bestell_items">
-                            <i class="fa fa-user-md"></i><span class="title">Order Icons</span>
+                            <i class="fa fa-user-md"></i><span class="title">Order Items</span>
                             <span class="selected"></span>
                         </a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="index.php?page=statistik">
+                <a href="index.php?page=user_messages">
                     <i class="fa fa-commenting-o"></i><span class="title">User Messages</span>
                     <span class="selected"></span>
                 </a>

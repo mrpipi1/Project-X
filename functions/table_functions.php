@@ -8,9 +8,9 @@
 
 function sql_query($table_name, $current_page, $entries_per_page, $order_by, $order_dir){
 
-
     global $link;
     //echo $link;
+
     $limit_start = $current_page * $entries_per_page - $entries_per_page;
     $sql = "SELECT * FROM " .$table_name ." WHERE deleted_at IS NULL ORDER BY " .$order_by ." " .$order_dir ." LIMIT " .$limit_start .", " .$entries_per_page;
     $result = mysqli_query($link, $sql);
@@ -21,13 +21,16 @@ function sql_query($table_name, $current_page, $entries_per_page, $order_by, $or
     return $content_array;*/
 }
 
-function create_table($query, $current_page, $total_pages, $pagination){
-    $table_name = $_GET['page'];
+function create_table($query, $current_page, $total_pages, $pagination, $dashboard_tablename){
+    global $page;
+    $table_name = $page;
 
     $ths = "";
     $tds = "";
-    if(!isset($_GET['page']) || $_GET['page'] == 'dashboard') {
+    if((!isset($_GET['page']) || $_GET['page'] == 'dashboard') && $dashboard_tablename != NULL) {
+        //$ths .= "<h3 class='dashboard_tnames'>".$dashboard_tablename."</h3>";
         $ths .= "<table class=\"table_backend table_dashboard\">";
+
     }else{
         $ths .= "<table class=\"table_backend\">";
     }
@@ -48,14 +51,14 @@ function create_table($query, $current_page, $total_pages, $pagination){
 
             foreach ($row as $col => $wert) {
                 //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
-                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $_GET['page'] == 'dashboard' )) {
+                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $page == 'dashboard' )) {
 
                     $ths .= "<th>" . sort_table($table_name, $col, underscore_to_space($col)) . "</th>";
                 }
-                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $_GET['page'] != 'dashboard' ) {
+                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $page != 'dashboard' ) {
                     $ths .= "<th>" . sort_table($table_name, $col, underscore_to_space($col)) . "</th>";
                 }
-                if(($col != 'id' && $col != 'deleted_at' && $_GET['page'] != 'dashboard') || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $_GET['page'] == 'dashboard' )) ) {
+                if(($col != 'id' && $col != 'deleted_at' && $page != 'dashboard') || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $page == 'dashboard' )) ) {
                     // <td> elemente zusammenbauen
                     if (substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_') {
                         $tds .= "<td>" . bool_to_word($wert) . "</td>";
@@ -98,11 +101,12 @@ function create_table($query, $current_page, $total_pages, $pagination){
 
         // $table = create_table($query);
         echo $return['ths'];
-        if ($_GET['page'] == 'users') {
+        if ($page == 'users') {
             echo " <th>Orders</th>";
         }
         echo $return['tds'];
         echo "</tbody>\n\r</table>";
+
 
         if($pagination === true){
             pagination_backend($_GET['page'], $current_page, $total_pages);
@@ -126,62 +130,6 @@ function create_table($query, $current_page, $total_pages, $pagination){
     }else{
         echo "<h4 class='zero-entries'>Derzeit keine Einträge vorhanden!</h4>";
     }
-   /* echo $content_array;
-    global $link;
-    $table_name = $_GET['page'];
-    $ths = "";
-    $tds = "";
-    $ths .= "<table class=\"table_backend\">";
-    $ths .= "<thead>";
-    $ths .= "<tr>";
-    $tds .= " <th>Actions</th>\n\r";
-    $tds .= " </tr>\n\r";
-    $tds .= " </thead>\n\r";
-    $tds .= " <tbody>\n\r";
-
-    for($i = 0; $i < count($content_array); $i++){
-        $tds .= "<tr>";
-        foreach($content_array[$i] as $col => $wert){
-            //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
-            if($i == 0 && $col != 'deleted_at'){
-                $ths .= "<th>" .sort_table($table_name, $col, underscore_to_space($col)) ."</th>";
-            }
-            // <td> elemente zusammenbauen
-            if(substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_'){
-                $tds .= "<td>" .bool_to_word($wert) ."</td>";
-            }elseif(substr($col, -3, 3) == '_at' && $col != 'deleted_at'){
-                $tds .= "<td>" .date_to_better_date(substr($wert, 0, -8)) ."</td>";
-            }elseif(substr($col, -3, 3) == '_id'){
-                $sql1 = "SELECT " .'_name' ." FROM " .substr($col, 0, -3) ." WHERE id = " .$wert;
-                $result1 = mysqli_query($link, $sql1);
-                $col_name = mysqli_fetch_all($result1, MYSQLI_ASSOC);
-                $tds .= "<td>" .$col_name[0]['_name'] ."</td>";
-            }elseif(strlen($wert) > 30) {
-                $tds .= "<td>" .truncate($wert) ."</td>";
-            }elseif($col == 'birthday') {
-                $tds .= "<td>" .date_to_better_date($wert)."</td>";
-            }elseif($col == 'deleted_at') {
-                $tds .= " ";
-            }else {
-                $tds .= "<td>" .$wert ."</td>";
-            }
-        }
-        if($table_name == 'users'){
-            $tds .= "<td>";
-            $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=show_orders&amp;id=" .$content_array[$i]['id'] ."\">show orders</a>";
-            $tds .= "</td>";
-        }
-        $tds .= "<td>";
-        $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=edit&amp;id=" .$content_array[$i]['id'] ."\">edit</a>";
-        $tds .= "<a class=\"delete small_delete\" href=\"index.php?page=" .$_GET['page'] ."&amp;action=delete&amp;id=" .$content_array[$i]['id'] ."\">delete</a>";
-        $tds .= "</td>";
-        $tds .= "</tr>";
-
-        $return = ['ths' => $ths, 'tds' => $tds];
-        if($i == count($content_array) -1){
-            return $return;
-        }
-    }*/
 }
 
 function total_contents($table_name) {
@@ -189,7 +137,6 @@ function total_contents($table_name) {
     if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
         $sql = "SELECT COUNT(*) as total_count FROM " . $table_name . " WHERE deleted_at IS NULL";
         $result = mysqli_query($link, $sql);
-
         return mysqli_fetch_assoc($result)["total_count"];
     }
 }
@@ -334,6 +281,7 @@ function pagination_backend($site, $current_page, $total_pages) {
 
 function sort_table($site, $column, $anchor) {
     $order_dir = isset($_GET["order_dir"]) && $_GET["order_dir"] == "desc" ? "asc" : "desc";
+    $anchor = ucfirst($anchor);
     $output = <<<HEREDOC
 <a href="?page=$site&order_by=$column&order_dir=$order_dir">$anchor</a>
 HEREDOC;

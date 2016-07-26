@@ -15,6 +15,7 @@ global $link;
     redirect_to("backend/index.php");
 }else {*/
     if(is_post_request("login")) {
+        $error = 0;
         $email = mysqli_real_escape_string($link, $_POST["_name"]);
         $password = mysqli_real_escape_string($link, $_POST["password"]);
         $sql = "SELECT id, _name, password_hash, email, is_active FROM users WHERE email = '$email' OR _name = '$email'";
@@ -30,6 +31,7 @@ global $link;
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
                     redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+                    //exit();
 
                 } else {
                     $error = 1;
@@ -49,6 +51,7 @@ global $link;
                         $_SESSION['is_admin'] = true;
                         $_SESSION['logged_in'] = true;
                         redirect_to("backend/index.php", "Erfolgreich eingeloggt!");
+                        //exit();
                     }
                 }
             } else {

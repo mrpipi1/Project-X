@@ -1847,11 +1847,11 @@ backend
 .table_backend td {
     font-weight: 300;
 }
-
-.table_backend td:nth-child(5) {
+/*wozu???? cg 27.07*/
+/*.table_backend td:nth-child(5) {
     color: transparent;
 
-}
+}*/
 .table_backend tr:nth-child(2n) {
     background-color: #f5f5f5;
 }
@@ -1867,6 +1867,13 @@ backend
 
 .content-wrapper_backend .fa-chevron-left {
     padding: 10px 14px 11px 13px !important;
+}
+
+.dashboard_tnames {
+    margin-left: 30px;
+    width: 45%;
+    border: 1px solid #eee;
+    padding: 10px;
 }
 
 .btn_table {
