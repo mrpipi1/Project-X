@@ -145,7 +145,7 @@ a {
     justify-content: space-around;
     color: #fff;
     position: absolute;
-    top: 550px;
+    top: calc(100vh - 100px);
 }
 
 .header .logo, .header .cart {
