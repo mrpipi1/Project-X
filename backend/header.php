@@ -37,8 +37,9 @@
     </div>
 
         <ul class="nav_header_backend">
+            <li>Welcome <?php echo $_SESSION['user']['username']; ?></li>
             <li><a href="../index.php?page=home">Frontend</a></li>
-            <li><a href="#">Blöde SeSSIOn</a></li>
+
             <li><a href="../index.php?page=home&amp;action=logout"><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>
         </ul>
        <!--<div class="handle">&#9776;﻿</div>-->

@@ -1539,13 +1539,14 @@ ____            _____  _  __ ______  _   _  _____
     margin-right: 30px;
     text-transform: uppercase;
     justify-content: center;
+    color: white;
 }
 
 .nav_header_backend a {
     height: 100%;
     padding: 1em 2em;
     transition: all 0.2s ease-in-out;
-    color: white;
+
 }
 .nav_header_backend li:last-child a {
   padding: 0.75em 1.5em;
