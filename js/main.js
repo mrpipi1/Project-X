@@ -28,7 +28,8 @@ if($('.header').hasClass('header_home')){
 
 // ### SHRINKY HEADER ###
 $(window).on("scroll touchmove", function () {
-  var headerOffSet = 650;
+  var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+  var headerOffSetTop = height - 150;
   $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
 });
 
