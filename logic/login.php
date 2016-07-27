@@ -31,7 +31,7 @@ global $link;
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
                     redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
-                    //exit();
+                    session_write_close();
 
                 } else {
                     $error = 1;
@@ -50,8 +50,9 @@ global $link;
                     if (password_verify($password, $pw)) {
                         $_SESSION['is_admin'] = true;
                         $_SESSION['logged_in'] = true;
-                        redirect_to("backend/index.php", "Erfolgreich eingeloggt!");
-                        //exit();
+                        $_SESSION['user'] = array('username' => $user["admin_name"], 'user_id' => $user["id"]);
+                        redirect_to("http://localhost/lotusyoga/backend/index.php", "Erfolgreich eingeloggt!");
+                        session_write_close();
                     }
                 }
             } else {

@@ -28,7 +28,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
     $ths = "";
     $tds = "";
     if((!isset($_GET['page']) || $_GET['page'] == 'dashboard') && $dashboard_tablename != NULL) {
-        //$ths .= "<h3>".$dashboard_tablename."</h3>";
+        $ths .= "<h3>".$dashboard_tablename."</h3>";
         $ths .= "<table class=\"table_backend table_dashboard\">";
 
     }else{

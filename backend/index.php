@@ -6,7 +6,9 @@ session_start();
  * Date: 16/04/16
  * Time: 15:30
  */
-
+if(!isset($_SESSION['is_admin'])){
+    header("location: ../index.php?page=home");
+}
 date_default_timezone_set('UTC');
 // variablen für später, va für pagination
 $views  = ('views/');
