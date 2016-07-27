@@ -1159,6 +1159,11 @@ Detailseite
     border: 1px solid #b3b3b3;
     background-color: white;
 }
+
+.colorpicker-gray {
+    border: 1px solid #b3b3b3;
+    background-color: gray;
+}
 .colorpicker-black {
     background-color: black;
 }
