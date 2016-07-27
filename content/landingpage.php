@@ -1,8 +1,9 @@
 <?php
 
-if (isset($_GET['page']) && $_GET['page'] == 'home') {
-  include ('./header.php');
-}
+// if ($_GET['page'] == 'home') {
+//   include ('./header.php');
+// }
+
 
 ?>
 
