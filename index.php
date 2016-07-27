@@ -3,7 +3,13 @@ session_start();
 date_default_timezone_set('UTC');
 // content definieren
 $content = ('content/');
+if(isset($_GET['action']) && $_GET['action'] == 'login'){
+	//include('logout.php');
+}
 
+if(isset($_GET['action']) && $_GET['action'] == 'logout' && isset($_SESSION)){
+	session_destroy();
+}
 $admin = '';
 include("db-connect.php");
 include('functions/load_content.php');
@@ -13,16 +19,9 @@ include('functions/user_functions.php');
 include('functions/shop_functions.php');
 include('logic/login.php');
 include('logic/register_logic.php');
+include('logic/user_message.php');
 include('header.php');
 
-//session_destroy();
-if(isset($_GET['action']) && $_GET['action'] == 'login'){
-	include('logout.php');
-}
-
-if(isset($_GET['action']) && $_GET['action'] == 'logout'){
-	session_destroy();
-}
 
 
 // Überprüft ob der GET-Parameter "page" nicht existiert
@@ -45,7 +44,7 @@ if( ! isset($_GET['page']) ){
 
 
 $current_page = 'contact';
-include('inc_header.php');
+//include('inc_header.php');
 
 // GET-Abfrage verkürzt:
 

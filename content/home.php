@@ -553,7 +553,7 @@
 
              <h3>Schreibe uns</h3>
 
-           <form class="form_main" method="post">
+           <form class="form_main" action="#" method="post">
 
              <div class="form-group">
                <input type="text" name="name" value="" required class="input">
@@ -584,12 +584,13 @@
              </div>
 
              <div class="btn">
-               <input type="submit" class="submit_main input" name="name" value="Absenden" >
+               <input type="submit" class="submit_main input" name="user_message" value="Absenden" >
              </div>
 
            </form>
 
           </section>
+          
 
          <!-- <section class="socialmedia_main">
               <h3>Bleib in Kontakt</h3>

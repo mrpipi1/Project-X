@@ -7,8 +7,10 @@
  */
 global $link;
 
-$total_contents = total_contents($_GET['page']);
-$total_pages = floor($total_contents / $entries_per_page);
+$total_contents = total_contents($page);
+
+
+$total_pages = ceil($total_contents / $entries_per_page);
 
 if(isset($_GET['action'])){
     if($_GET['action'] == 'delete' ){

@@ -36,7 +36,14 @@ function truncate($text, $chars = 20) {
 
 // names of table cols without _
 function underscore_to_space($input_name){
-    $input_name_space = str_replace('_', ' ', $input_name);
+    $parts = explode("_", $input_name);
+    if(count($parts) >= 2 && $parts[0] != "") {
+        $input_name_space = str_replace('_', ' ', $input_name);
+    }else if (count($parts) == 2 && $parts[0] == ""){
+        $input_name_space = substr($input_name,1);
+    }else{
+        $input_name_space = $input_name;
+    }
     return $input_name_space;
 }
 
@@ -51,6 +58,7 @@ function date_to_better_date($date){
 
 function redirect_to($location, $message = "") {
     $_SESSION["flash"] = $message;
+    echo $_SESSION;
     header("location: $location");
     exit();
 }

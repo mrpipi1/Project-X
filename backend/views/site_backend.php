@@ -11,8 +11,11 @@ include('backend_crumbs.php');
 
 
 
-
-                    $page_name = ucfirst($_GET['page']);
+if(isset($_GET['page'])) {
+    $page_name = ucfirst($_GET['page']);
+}else{
+    $page_name = ucfirst('dashboard');
+}
                     $new_item = substr($page_name, 0, -1);
                     $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 
