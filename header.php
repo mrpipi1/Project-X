@@ -40,7 +40,14 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body onunload="GUnload()" class="body">
-  <header class="header">
+  <?php
+  if($_GET['page'] == 'home' || !$_GET['page']){
+    $class = 'header_home';
+  }else{
+    $class = '';
+  }
+  ?>
+  <header class="header <?php echo $class;?>">
     <h1 class="logo">
   	  <a href="index.php?=page=home#about_us">
   		  Logo

@@ -9,17 +9,22 @@ $('.handle').on('click', function(){
 });
 
 // ### FIXED HEADER onScroll
-$(window).scroll(function(){
-  //var headerOffSetTop = 530;
-  var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-  var headerOffSetTop = height - 100;
-    if ($(window).scrollTop() >= headerOffSetTop) {
-       $('.header').addClass('fixed');
-    }
-    else {
-       $('.header').removeClass('fixed');
-    }
-});
+if($('.header').hasClass('header_home')){
+  $(window).scroll(function(){
+    //var headerOffSetTop = 530;
+      var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+      var headerOffSetTop = height - 100;
+        if ($(window).scrollTop() >= headerOffSetTop) {
+           $('.header').addClass('fixed');
+        }
+        else {
+           $('.header').removeClass('fixed');
+        }
+
+  });
+}else{
+  $('.header').addClass('fixed');
+}
 
 // ### SHRINKY HEADER ###
 $(window).on("scroll touchmove", function () {
