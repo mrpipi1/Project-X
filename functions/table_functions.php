@@ -28,7 +28,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
     $ths = "";
     $tds = "";
     if((!isset($_GET['page']) || $_GET['page'] == 'dashboard') && $dashboard_tablename != NULL) {
-        //$ths .= "<h3 class='dashboard_tnames'>".$dashboard_tablename."</h3>";
+        //$ths .= "<h3>".$dashboard_tablename."</h3>";
         $ths .= "<table class=\"table_backend table_dashboard\">";
 
     }else{
@@ -258,7 +258,7 @@ function pagination_backend($site, $current_page, $total_pages) {
     $start = max($current_page-2, 1);
     $end = min($current_page+2, $total_pages);
 
-    if($total_pages > 0) {
+    if($total_pages > 1) {
         if($current_page != 1) {
             $before = $current_page-1;
             //echo '<i class="fa fa-chevron-left pagination" aria-hidden="true"></i>';
