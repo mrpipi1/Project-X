@@ -74,8 +74,12 @@ a {
 .main h5 {
     font-size: 1.25em;
     font-weight: 300;
-    border: 1px solid fuchsia;
     text-align: right;
+}
+.main .advanced-courses_main h5{
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
 }
 
 .main h6 {
