@@ -13,25 +13,29 @@ if($('.header').hasClass('header_home')){
   $(window).scroll(function(){
     //var headerOffSetTop = 530;
       var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-      var headerOffSetTop = height - 100;
-        if ($(window).scrollTop() >= headerOffSetTop) {
-           $('.header').addClass('fixed');
-        }
-        else {
-           $('.header').removeClass('fixed');
-        }
+      var headerOffSetTop = height - 65;
+      var headerOffSet = height - 1;
+      if ($(window).scrollTop() >= headerOffSetTop) {
+         $('.header').addClass('fixed');
+      }
+      else {
+         $('.header').removeClass('fixed');
+      }
+      if($(document).scrollTop() > headerOffSet){
+        $('.header').addClass('tiny');
+      }else{
+        $('.header').removeClass('tiny');
+      }
 
   });
 }else{
   $('.header').addClass('fixed');
+  $('.header').addClass('tiny');
+
 }
 
 // ### SHRINKY HEADER ###
-$(window).on("scroll touchmove", function () {
-  var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
-  var headerOffSetTop = height - 150;
-  $('.header').toggleClass('tiny', $(document).scrollTop() > headerOffSet);
-});
+
 
 // ### SMOOTH SCROOL TO ANCHOR ###
 $('a').click(function(){
