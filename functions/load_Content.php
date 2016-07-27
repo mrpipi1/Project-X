@@ -13,12 +13,19 @@ function get_specific_content_data($table_name, $where, $equals){
     return $res;
 }
 
-function get_specific_join_content_data($table_name, $join_table, $join_id, $where, $equals){
+
+function get_specific_stock_content_data($table_name, $table_name2, $where, $where2, $equals){
     global $link;
-    $sql = "SELECT * FROM " .$table_name. " LEFT JOIN ". $join_table. " ON " .$table_name.".id = " .$join_table.".".$join_id;
-    echo $sql;
+    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals;
+
+    $sql2 = "SELECT * FROM " .$table_name2. " WHERE ". $where2 . " = " . $equals;
+
     $res = mysqli_query($link, $sql);
-    return $res;
+
+    $res2 = mysqli_query($link, $sql2);
+
+    $return = array($res, $res2);
+    return $return;
 }
 
 $employees = get_content_data('employees');
@@ -29,7 +36,13 @@ $agb = get_specific_content_data('contents', 'id', 16);
 $products = get_content_data('products');
 
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
-    $detail_product = get_specific_join_content_data('products', 'stock', 'product_id', 'id', $_GET['product_id']);
+    $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
+
+    $detail_product = $data[0];
+
+    $stock_color = $data[1];
+
+
 }
 
 
