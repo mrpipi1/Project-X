@@ -443,6 +443,12 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     background-position: center;
     background-size: contain;
 }
+
+.product-img img {
+    width: 200px;
+    height: 300px;
+
+}
 .jumper_black {
     background: url(../img/shop/jumper_black.png) no-repeat;
 }
@@ -515,8 +521,9 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     height: 15px;
     margin: 0 2px 2px;
     transition: all 0.2s ease-in-out;
+    border:1px solid white;
 }
-.colors li:first-child {
+/*.colors li:first-child {
     background-color: black;
 }
 .colors li:nth-child(2) {
@@ -524,7 +531,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 .colors li:nth-child(3) {
     background-color: #7a3b51;
-}
+}*/
 .colors li:hover {
     transform: scale(1.1);
 }
