@@ -1330,15 +1330,18 @@ Warenkorb
     margin-right: 1em;
     //background-image: url('../img/icons/wrench75.svg');
 }
-.edit i{
-   color:#5a8e7d;
+.edit i, .delete i{
+   color:#65a591;
     font-size:16px;
 }
 
-.delete i{
+.delete i:hover, .edit i:hover{
     color:#5a8e7d;
     font-size:16px;
 }
+/*I.      #65a591
+II.     #5a8e7d
+III.     #486e5f*/
 .small_delete, .small_edit {
     width: 15px;
     height: 15px;
@@ -1564,7 +1567,7 @@ ____            _____  _  __ ______  _   _  _____
 
 }
 .nav_header_backend li:last-child a {
-  padding: 0.75em 1.5em;
+  padding: 0.5em 0.5em;
 }
 .nav_header_backend li:last-child:hover a .logout{
   color: #FFFFFF;
@@ -1572,6 +1575,9 @@ ____            _____  _  __ ______  _   _  _____
 
 .nav_header_backend a:hover {
     background-color: #5a8e7d;
+}
+.nav_header_backend li:last-child a:hover{
+  background-color: transparent;
 }
 
 /* zentriert das Logo */
@@ -1640,7 +1646,6 @@ ____            _____  _  __ ______  _   _  _____
 /*--------------- FLYOUT END -------------*/
 
 .body_backend, .html_backend {
-    height: 100%;
     padding: 0;
     margin: 0;
 }
@@ -1648,12 +1653,11 @@ ____            _____  _  __ ______  _   _  _____
     font-size: 0.9em;
     font-weight: 300;
     min-width: 215px;
-    height: 100%;
     letter-spacing: 0.5px;
     background-color: #363636;
 }
 .body_backend .notification {
-    background-color: #5cb85c;
+    background-color: #65a591;
     color: white;
     text-align: center;
     height: 60px;
@@ -1873,7 +1877,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 .content-wrapper_backend .fa-chevron-right {
-    padding: 10px 13px 11px 14px !important;
+    padding: 11px 13px 12px 14.5px;
 }
 
 .content-wrapper_backend .fa-chevron-left {
@@ -1889,8 +1893,8 @@ ____            _____  _  __ ______  _   _  _____
 
 .btn_table {
     color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
+    background-color: #65a591;
+    border-color: #65a591;
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
@@ -1909,6 +1913,12 @@ ____            _____  _  __ ______  _   _  _____
     border: 1px solid transparent;
     border-radius: 4px;
 }
+.btn_table:hover{
+  background-color: #5a8e7d;
+  border-color: #5a8e7d;
+}
+
+
 /*zero entries message when loading table*/
 .content-wrapper_backend .zero-entries {
     text-align: center;
@@ -1921,18 +1931,24 @@ ____            _____  _  __ ______  _   _  _____
     color:black;
     background-color:#ddd;
 }
-
-.current {
-    background:#5cb85c;
-    color:white;
+.pagination:hover{
+  border-color: #cecece;
+  background-color:#cecece;
 }
 
-/*########################
-Form
-########################*/
+.current {
+    background:#65a591;
+    color:white;
+}
+.current:hover {
+    background:#65a591;
+}
 
-.wrapper_form_backend {
+.wrapper-form-backend {
     width: 60vw;
+}
+.form_backend .form-group_backend{
+  width:300px;
 }
 
 /*#######################

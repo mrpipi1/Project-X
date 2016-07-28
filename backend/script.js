@@ -48,7 +48,7 @@ $(document).ready(function(){
 
 function notification(type, message){
     if(type === 'success'){
-        $('.notification').css("background-color", "#5cb85c");
+        $('.notification').css("background-color", "#65a591");
         $('.notification h4').html(message);
         $('.notification').slideDown('slow', function(){
             setTimeout(function(){

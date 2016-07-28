@@ -111,8 +111,6 @@ function addInput($column_data, $action, $id, $attribute = [] ){
                 }
                 $output .= "> \n \r";   // schließt input.
             }
-            // zum stylen:
-            $output .= "<span class='highlight_backend'></span> \n \r<span class='form-bar_backend'></span> \n \r";
             // closing tag vom wrapper (p oder div):
             $output .= $ende;
         }
