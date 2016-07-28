@@ -47,7 +47,7 @@
              </ul>
           </li>
           <li>
-             <h5><?php echo $row['fullname']; ?></h5>
+             <h6><?php echo $row['fullname']; ?></h6>
              <p>
               <?php echo $row['description']; ?>
             </p>
@@ -242,15 +242,15 @@
       </section> -->
 
       <!-- <h3 class="courses_headline">Fortgeschrittener</h3> <! Anders stylen als Mitarbeiter H3 -->
-      <section class="advanced-courses_main">
+      <section class="courses_main-all">
          <?php
           while( $row = mysqli_fetch_assoc($courses) ){
             $img = str_replace(' ', '_', $row['_name']);
           ?>
           <ul>
-            <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
             <li><h5><?php echo $row['_name'] ?></h5></li>
-            <li><p><?php echo $row['description'] ?>.</p></li>
+            <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
+            <li><p><?php echo $row['beschreibung'] ?>.</p></li>
             <!-- <a class="btn_main"href="#">Erfahren Sie mehr</a> -->
           </ul>
           <?php
@@ -516,7 +516,7 @@
                </p>
           </section>
           <section class="contactinfo">
-             <h3>Unser Studio</h3>
+             <h4>Unser Studio</h4>
                <p>
                     01 555 555 55
                </p>
@@ -551,7 +551,7 @@
 
          <section class="contactform_main"> <a name="contactform_main"></a>
 
-             <h3>Schreibe uns</h3>
+             <h4>Schreibe uns</h4>
 
            <form class="form_main" action="#" method="post">
 
@@ -590,7 +590,7 @@
            </form>
 
           </section>
-          
+
 
          <!-- <section class="socialmedia_main">
               <h3>Bleib in Kontakt</h3>
