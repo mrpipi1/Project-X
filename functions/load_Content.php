@@ -6,6 +6,13 @@ function get_content_data($table_name){
 	return $res;
 }
 
+function get_distinct_content_data($table_name, $value){
+    global $link;
+    $sql = "SELECT DISTINCT " . $value . " FROM " .$table_name;
+    $res = mysqli_query($link, $sql);
+    return $res;
+}
+
 function get_specific_content_data($table_name, $where, $equals){
     global $link;
     $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals;
@@ -34,7 +41,10 @@ $about_us = get_specific_content_data('contents', 'id', 3);
 $impressum = get_specific_content_data('contents', 'id', 15);
 $agb = get_specific_content_data('contents', 'id', 16);
 $products = get_content_data('products');
-
+$sale_products = get_specific_content_data('products', 'in_aktion', 1);
+$shop = get_content_data('products');
+$categories = get_content_data('shop_categories');
+$color = get_distinct_content_data('stock', 'product_id, color');
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
     $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
 

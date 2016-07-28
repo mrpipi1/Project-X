@@ -58,32 +58,36 @@ a {
     padding-top: 1em;
 }
 
+/*    ## sections h3 - every H inside section => inside section h4 ##    */
+
 .main h3, .main h4  {
-    border: 1px solid green;
     font-size: 2em;
     font-weight: 200;
-    padding: 1em 0;
+    padding: 1.65em 0;
     text-align: center;
 }
 
+/*    ## inside sections ##    */
+
 .main h4 {
-    border: 1px solid blue;
     font-size: 1.5em;
 }
 
+/*    ## courses ##    */
+
 .main h5 {
-    font-size: 1.25em;
+    font-size: 1.6vw;
     font-weight: 300;
     text-align: right;
-}
-.main .advanced-courses_main h5{
-  font-size: 1.5em;
-  font-weight: 400;
-  text-align: center;
+    padding: 0.5em 0;
+    text-transform: uppercase;
 }
 
+/*    ## employees ##    */
 .main h6 {
-    font-size: 1vw;
+    font-size: 1.25vw;
+    border: 1px solid purple;
+    font-weight: 300;
 }
 
 .light {
@@ -105,14 +109,6 @@ a {
     top: 0;
 }
 
-.landingpage .header {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transition: all 0.4s ease-in-out;
-}
-
-
 /* Header */
 
 .header {
@@ -121,10 +117,9 @@ a {
     width: 100%;
     height: 120px;
     transition: background-color 0.3s ease-in-out;
-    transition: height 0.3s ease-in-out;
     background-color: transparent;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     color: #fff;
     position: absolute;
     top: calc(100vh - 100px);
@@ -132,7 +127,7 @@ a {
 
 .header .logo, .header .cart {
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .header.fixed .logo, .header.fixed .cart {
@@ -180,7 +175,9 @@ a {
     height: 100% !important;
     padding: 0 !important;
 }
-
+.cart:hover {
+    transform: scale(1.2);
+}
 .nav li:last-child:before {
     visibility: hidden;
 }
@@ -210,31 +207,18 @@ a {
     transition: all 0.5s ease-in-out;
 
 }
-.nav ul li:last-child a{
-  padding: 1em 1em;
-}
 .nav ul li a:hover {
     color: #fff;
     background-color: #65a591;
 }
-.nav ul li.cart:hover {
-    transform: scale(1.2);
-}
-.nav ul li.cart a:hover {
-    background-color: transparent;
-}
 
 .logout {
-    font-size: 180% !important;
+    font-size: 200% !important;
     color: #5a8e7d;
 }
 
 .logout:hover {
-    font-size: 180% !important;
-    color: #ffffff;
-}
-.nav ul li:last-child:hover i{
-  font-size: 180% !important;
+    font-size: 200% !important;
     color: #ffffff;
 }
 
@@ -384,21 +368,30 @@ _  ___    _ _____   _____ ______
 #############################################################
 #############################################################*/
 
-.beginners-courses_main, .advanced-courses_main {
+.courses_main p {
+    text-align: justify;
+    font-weight: 300;
+}
+.courses_main-all {
+    padding-bottom: 4em;
+}
+.courses_main-all ul  {
     display: flex;
-    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.courses_main ul {
-    line-height: 2;
-    padding: 3vw 2vw;
+
+.courses_main-all ul li {
+    flex-basis: 80%;
+    margin: 0.3vw;
 }
-.beginners-courses_main img {
-    width: 50%;
-    opacity: 0.5;
+
+
+
+.courses_main-all img {
+    width: 20%;
 }
-.advanced-courses_main img {
-    width: 50%;
-}
+
 
 /*.section_main{
   padding-top: 50px;
@@ -442,6 +435,12 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     transform: scale(1.1);
     background-position: center;
     background-size: contain;
+}
+
+.product-img img {
+    width: 200px;
+    height: 300px;
+
 }
 .jumper_black {
     background: url(../img/shop/jumper_black.png) no-repeat;
@@ -515,8 +514,9 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     height: 15px;
     margin: 0 2px 2px;
     transition: all 0.2s ease-in-out;
+    border:1px solid white;
 }
-.colors li:first-child {
+/*.colors li:first-child {
     background-color: black;
 }
 .colors li:nth-child(2) {
@@ -524,7 +524,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 .colors li:nth-child(3) {
     background-color: #7a3b51;
-}
+}*/
 .colors li:hover {
     transform: scale(1.1);
 }
@@ -583,12 +583,14 @@ ______ ____  _____  __  __
 .contactform_main {
    min-width: 200px;
    text-align: center;
+
 }
 .form_main {
     display: block;
     width: 40%;
     margin: 4em auto;
     min-width: 200px;
+    max-width: 500px;
 }
 
 .btn {
@@ -1174,11 +1176,6 @@ Detailseite
     border: 1px solid #b3b3b3;
     background-color: white;
 }
-
-.colorpicker-gray {
-    border: 1px solid #b3b3b3;
-    background-color: gray;
-}
 .colorpicker-black {
     background-color: black;
 }
@@ -1557,7 +1554,6 @@ ____            _____  _  __ ______  _   _  _____
     margin-right: 30px;
     text-transform: uppercase;
     justify-content: center;
-    color: white;
 }
 
 .nav_header_backend a {
@@ -1571,6 +1567,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 .nav_header_backend li:last-child:hover a .logout{
   color: #FFFFFF;
+
 }
 
 .nav_header_backend a:hover {

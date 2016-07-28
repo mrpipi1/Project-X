@@ -47,7 +47,7 @@
              </ul>
           </li>
           <li>
-             <h5><?php echo $row['fullname']; ?></h5>
+             <h6><?php echo $row['fullname']; ?></h6>
              <p>
               <?php echo $row['description']; ?>
             </p>
@@ -57,152 +57,6 @@
         <?php
       }
       ?>
-        <!--<ul class="employees_main-info">
-
-
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/1.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555<i class="fa icon-mobile"></i></li>
-               <li><a href="mailto:j.ulrike@lotusyoga.at?subject=lorem">j.ulrike@lotusyoga.at</a><i class="fa icon-mail"></i></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Julia Ulrike</h3>
-             <p>
-             Hallo, mein Name ist Julia Ulrike. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/2.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:l.thekla@lotusyoga.at?subject=lorem">l.thekla@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Lisbeth Thekla</h3>
-             <p>
-             Hallo, mein Name ist Lisbeth Thekla. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/3.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:c.augustine@lotusyoga.at?subject=lorem">c.augustine@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Clara Augustine</h3>
-             <p>
-             Hallo, mein Name ist Clara Augustine. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/4.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:l.barbara@lotusyoga.at?subject=lorem">l.barbara@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Leonie Barbara</h3>
-             <p>
-             Hallo, mein Name ist Lenoie Barbara. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/5.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:z.kristiane@lotusyoga.at?subject=lorem">z.kristiane@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Zella Kristiane</h3>
-             <p>
-             Hallo, mein Name ist Zella Kristiane. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/6.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:l.luri@lotusyoga.at?subject=lorem">l.luri@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Laurenz Luri</h3>
-             <p>
-             Hallo, mein Name ist Laurenz Luri. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/7.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:e.sophie@lotusyoga.at?subject=lorem">e.sophie@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Elli Sophie</h3>
-             <p>
-             Hallo, mein Name ist Elli Sophie. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/8.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:l.bernhard@lotusyoga.at?subject=lorem">l.bernhard@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Lukas Bernhard</h3>
-             <p>
-             Hallo, mein Name ist Lukas Bernhard. Ich bin  ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>
-
-        <ul class="employees_main-info">
-          <li>
-             <ul class="employees_main-contact">
-               <li><img src="img/mitarbeiter/9.png" alt="lorem ipsum"/></li>
-               <li>0664 555 555</li>
-               <li><a href="mailto:k.antonia@lotusyoga.at?subject=lorem">k.antonia@lotusyoga.at</a></li>
-             </ul>
-          </li>
-          <li>
-             <h3>Katrin Antonia</h3>
-             <p>
-             Hallo, mein Name ist Katrin Antonia. Ich bin ... Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-         </li>
-        </ul>-->
 
       </section>
 
@@ -220,36 +74,15 @@
            Kurse
        </h3>
 
-      <!-- <h3 class="courses_headline">Anfänger</h3>
-      <section class="beginners-courses_main">
-          <ul>
-            <li><img src="img/kurse/yin_yoga.svg" alt="" /></li>
-            <li><h5>yin yoga</h5></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-          </ul>
-
-          <ul>
-            <li><img src="img/kurse/ashtanga_yoga.svg" alt="" /></li>
-            <li><h5>ashtanga yoga</h5></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-          </ul>
-
-          <ul>
-            <li><img src="img/kurse/tri_yoga.svg" alt="" /></li>
-            <li><h5>tri yoga</h5></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-          </ul>
-      </section> -->
-
       <!-- <h3 class="courses_headline">Fortgeschrittener</h3> <! Anders stylen als Mitarbeiter H3 -->
-      <section class="advanced-courses_main">
+      <section class="courses_main-all">
          <?php
           while( $row = mysqli_fetch_assoc($courses) ){
             $img = str_replace(' ', '_', $row['_name']);
           ?>
           <ul>
-            <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
             <li><h5><?php echo $row['_name'] ?></h5></li>
+            <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
             <li><p><?php echo $row['description'] ?>.</p></li>
             <!-- <a class="btn_main"href="#">Erfahren Sie mehr</a> -->
           </ul>
@@ -258,17 +91,7 @@
         ?>
 
 
-          <!--<ul>
-            <li><img src="img/kurse/ashtanga_yoga.svg" alt="" /></li>
-            <li><h5>ashtanga yoga</h5></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-          </ul>
 
-          <ul>
-            <li><img src="img/kurse/tri_yoga.svg" alt="" /></li>
-            <li><h5>tri yoga</h5></li>
-            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></li>
-          </ul>-->
       </section>
    </section>
 
@@ -285,28 +108,38 @@
           <h3>Produkt Aktion</h3>
 
           <?php
-          while( $row = mysqli_fetch_assoc($products) ){
+          while( $row = mysqli_fetch_assoc($sale_products) ){
           ?>
-          <a class="product product-main" href="index.php?page=Detailansicht&product_id=<?php echo $row['id'] ?>">
-            <img class="product-img" src="<?php echo $row['pic'] ?>" alt="<?php echo $row['products_name'] ?>"/>
-            <ul class="info">
-                <li><?php echo $row['products_name'] ?></li>
-                <li><?php echo $row['price'] ?></li>
-            </ul>
-            <ul class="overlay overlay-checkout" >
-                <li><h1><?php echo $row['products_name'] ?></h1></li>
-                <li><p><?php echo $row['price'] ?></p></li>
-                <li>
-                    <ul class="colors colors-checkout">
-                        <li>RED</li>
-                        <li>RED</li>
-                        <li>RED</li>
-
-
-                    </ul>
-                </li>
-            </ul>
-          </a>
+              <section class="product">
+                  <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
+                      <ul class="product-img">
+                          <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
+                      </ul>
+                      <ul class="info">
+                          <li><?php echo $row['_name'] ?></li>
+                          <li><?php echo $row['price_in_aktion'] ?></li>
+                      </ul>
+                      <ul class="overlay overlay-checkout">
+                          <li><h1><?php echo $row['_name'] ?></h1></li>
+                          <li><p><?php echo $row['price_in_aktion'] ?></p></li>
+                          <li>
+                              <ul class="colors colors-checkout">
+                                  <?php
+                                  mysqli_data_seek($color, 0);
+                                  while ($row3 = mysqli_fetch_assoc($color)) {
+                                      //print_r($row3);
+                                      if($row['id'] == $row3['product_id']) {
+                                          ?>
+                                          <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
+                                          <?php
+                                      }
+                                  }
+                                  ?>
+                              </ul>
+                          </li>
+                      </ul>
+                  </a>
+              </section>
           <?php
         }
         ?>
@@ -516,7 +349,7 @@
                </p>
           </section>
           <section class="contactinfo">
-             <h3>Unser Studio</h3>
+             <h4>Unser Studio</h4>
                <p>
                     01 555 555 55
                </p>
@@ -551,7 +384,7 @@
 
          <section class="contactform_main"> <a name="contactform_main"></a>
 
-             <h3>Schreibe uns</h3>
+             <h4>Schreibe uns</h4>
 
            <form class="form_main" action="#" method="post">
 
@@ -590,7 +423,7 @@
            </form>
 
           </section>
-          
+
 
          <!-- <section class="socialmedia_main">
               <h3>Bleib in Kontakt</h3>
