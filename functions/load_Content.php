@@ -41,6 +41,7 @@ $about_us = get_specific_content_data('contents', 'id', 3);
 $impressum = get_specific_content_data('contents', 'id', 15);
 $agb = get_specific_content_data('contents', 'id', 16);
 $products = get_content_data('products');
+$sale_products = get_specific_content_data('products', 'in_aktion', 1);
 $shop = get_content_data('products');
 $categories = get_content_data('shop_categories');
 $color = get_distinct_content_data('stock', 'product_id, color');

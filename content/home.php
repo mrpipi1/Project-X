@@ -83,7 +83,7 @@
           <ul>
             <li><h5><?php echo $row['_name'] ?></h5></li>
             <li><img src="img/kurse/<?php echo $img ?>.svg" alt="" /></li>
-            <li><p><?php echo $row['beschreibung'] ?>.</p></li>
+            <li><p><?php echo $row['description'] ?>.</p></li>
             <!-- <a class="btn_main"href="#">Erfahren Sie mehr</a> -->
           </ul>
           <?php
@@ -108,7 +108,7 @@
           <h3>Produkt Aktion</h3>
 
           <?php
-          while( $row = mysqli_fetch_assoc($products) ){
+          while( $row = mysqli_fetch_assoc($sale_products) ){
           ?>
               <section class="product">
                   <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
@@ -117,11 +117,11 @@
                       </ul>
                       <ul class="info">
                           <li><?php echo $row['_name'] ?></li>
-                          <li><?php echo $row['price'] ?></li>
+                          <li><?php echo $row['price_in_aktion'] ?></li>
                       </ul>
                       <ul class="overlay overlay-checkout">
                           <li><h1><?php echo $row['_name'] ?></h1></li>
-                          <li><p><?php echo $row['price'] ?></p></li>
+                          <li><p><?php echo $row['price_in_aktion'] ?></p></li>
                           <li>
                               <ul class="colors colors-checkout">
                                   <?php
