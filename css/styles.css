@@ -1991,9 +1991,39 @@ pie chart
 }
 
 /* Profile page */
+.profile_section{
+  margin-bottom: 2em;
+}
+.profile_section div{
+  font-weight: 200;
+}
+.profile_section h4{
+  font-weight: 400;
+}
 .profile_main-hl{
   padding: 5em 0 2em;
+}
+.profile_info_label{
+  width: 195px;
+  margin: 5px 0;
+}
+.profile_shop_link{
+  margin: 10px 0;
 }
 .profile_shop_link:hover{
   color: #5a8e7d;
 }
+
+.profile_info_value{
+  width: 88%;
+  max-width: calc(100% - 201px);
+  text-align: left;
+}
+.profile_info_value, .profile_info_label{
+  display: inline-block;
+  font-size: 14px;
+}
+/*.profile_info_wrapper{
+  display:flex;
+  justify-content: space-between;
+}*/
