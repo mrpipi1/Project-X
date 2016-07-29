@@ -164,7 +164,7 @@ a {
     background-position: center;
 }
 .logo {
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     background-image: url(../img/logo.svg);
     background-size: cover;
 }
@@ -204,17 +204,24 @@ a {
     margin: 0 0.5em;
 
 }
+.nav ul li.cart, .nav ul li:last-child{
+  min-width:auto;
+}
 .nav ul li a {
     padding: 1em 2em;
     display: block;
     transition: all 0.5s ease-in-out;
     text-shadow: 1px 1px 1px #656565;
 }
+.nav ul li.cart a, .nav ul li:last-child a{
+  padding:0;
+}
 .nav ul li a:hover {
     color: #fff;
     background-color: #65a591;
     text-shadow: none;
 }
+
  .nav ul li.cart a:hover{
   background-color: transparent !important;
 }
@@ -229,10 +236,13 @@ a {
     font-size: 200% !important;
     color: #5a8e7d;
 }
-
-.logout:hover {
-    font-size: 200% !important;
-    color: #ffffff;
+.nav ul li:last-child a:hover{
+  /*font-size: 120%*/
+  background-color: transparent;
+  text-shadow: none;
+}
+.nav ul li a:last-child:hover i{
+  color: #486e5f;
 }
 
 .active_nav {
