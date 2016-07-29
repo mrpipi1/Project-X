@@ -45,6 +45,9 @@ $sale_products = get_specific_content_data('products', 'in_aktion', 1);
 $shop = get_content_data('products');
 $categories = get_content_data('shop_categories');
 $color = get_distinct_content_data('stock', 'product_id, color');
+$orders = get_specific_content_data('orders', 'user_id', $user_id);
+$user_info = get_specific_content_data('users', 'id', $user_id);
+
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
     $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
 

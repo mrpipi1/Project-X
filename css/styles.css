@@ -1989,3 +1989,11 @@ pie chart
 .pie-chart_hl {
     text-align: left;
 }
+
+/* Profile page */
+.profile_main-hl{
+  padding: 5em 0 2em;
+}
+.profile_shop_link:hover{
+  color: #5a8e7d;
+}
