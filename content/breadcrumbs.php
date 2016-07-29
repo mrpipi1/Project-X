@@ -32,7 +32,7 @@
              </span>
         </li>
 
-        <li class="breadcrumb-item current">
+        <li class="breadcrumb-item crumb-current">
 
             <span class="span-wrapper">
                  <span class="line visited_color"></span>

@@ -32,7 +32,7 @@
 }
 html {
     position: relative;
-    min-height: 100%;
+    /*height: 100%;*/
 }
 .body {
     margin: 0;
@@ -205,11 +205,21 @@ a {
     padding: 1em 2em;
     display: block;
     transition: all 0.5s ease-in-out;
-
+    text-shadow: 1px 1px 1px #656565;
 }
 .nav ul li a:hover {
     color: #fff;
     background-color: #65a591;
+    text-shadow: none;
+}
+ .nav ul li.cart a:hover{
+  background-color: transparent !important;
+}
+.fixed .nav ul li a{
+  text-shadow: none;
+}
+.tiny .nav ul li a{
+  text-shadow: none;
 }
 
 .logout {
@@ -1554,13 +1564,14 @@ ____            _____  _  __ ______  _   _  _____
     margin-right: 30px;
     text-transform: uppercase;
     justify-content: center;
+    color: #FFFFFF;
 }
 
 .nav_header_backend a {
     height: 100%;
     padding: 1em 2em;
     transition: all 0.2s ease-in-out;
-
+    color: #FFFFFF;
 }
 .nav_header_backend li:last-child a {
   padding: 0.5em 0.5em;
@@ -1591,8 +1602,9 @@ ____            _____  _  __ ______  _   _  _____
 }
 .backend_wrapper {
     display: flex;
-    width: 100vw;
+    /*width: 100vw;*/
     height:100%;
+    min-height: calc(100vh - 60px);
 }
 .hl_form_backend {
     font-size: 2em;
@@ -1646,6 +1658,10 @@ ____            _____  _  __ ______  _   _  _____
     padding: 0;
     margin: 0;
 }
+.body_backend{
+  min-height: 100vh;
+}
+
 .nav_backend {
     font-size: 0.9em;
     font-weight: 300;
