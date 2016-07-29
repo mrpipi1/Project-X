@@ -153,9 +153,6 @@ a {
     box-shadow: 0 0 10px #eee;
 }
 
-
-
-
 .logo, .cart {
     width: 60px;
     height: 50px;
@@ -164,7 +161,7 @@ a {
     background-position: center;
 }
 .logo {
-    /*margin-left: 50px;*/
+    margin-left: 10px;
     background-image: url(../img/logo.svg);
     background-size: cover;
 }
@@ -198,7 +195,7 @@ a {
     font-size: 0.9em;
     letter-spacing: 1.5px;
     font-weight: 300;
-    min-width: 120px;
+    min-width: 110px;
     max-width: 200px;
     text-align: center;
     margin: 0 0.5em;
@@ -235,13 +232,17 @@ a {
 .logout {
     font-size: 200% !important;
     color: #5a8e7d;
+    margin-right: 10px;
 }
 .nav ul li:last-child a:hover{
   /*font-size: 120%*/
   background-color: transparent;
   text-shadow: none;
 }
-.nav ul li a:last-child:hover i{
+ul li a:hover i.logout{
+  color: #486e5f;
+}
+ul li a:hover i.logout{
   color: #486e5f;
 }
 
