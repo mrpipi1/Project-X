@@ -5,14 +5,30 @@
       <li class="facebook footer_sm-icon"><a href="#">Facebook</a></li>
       <li class="youtube footer_sm-icon"><a href="#">youtube</a></li>
     </ul> -->
+    <section class="links_footer" >
+<?php
+    $cnt = 0;
+    while( $row = mysqli_fetch_assoc($footer) ){
+      if($row['type'] == 'subheadline'){
+          if($cnt != 0){
+            echo '</ul>';
+          }
+          echo '<ul><li><h4>'.$row["content"].'</h4></li>';
+      }else{
+          echo '<li><a href="'.$row["content"].'">'.$row["type"].'</a>';
+      }
+      if($cnt == mysqli_num_rows($footer)){
+        echo '</ul>';
+      }
+      $cnt++;
+    }
+    ?>
 
 
 
-    <section class="links_footer">
-      <ul>
-        <li><h4>Socialmedia</h4></li>
-        <li><a href="http://www.facebook.com">Facebook</a>
-        <li><a href="http://www.instagram.com">Instagram</a>
+
+
+     <!--   <li><a href="http://www.instagram.com">Instagram</a>
         <li><a href="http://www.youtube.com">Youtube</a>
       </ul>
 
@@ -33,11 +49,11 @@
 
       <ul>
         <li><h4>Lorem</h4></li>
-        <li><a href="index.php?page=Impressum"<?php if( $page == "Impressum" ) echo ' class="active_footer"'; ?>>Impressum</a></li>
-        <li><a href="index.php?page=AGB"<?php if( $page == "AGB" ) echo ' class="active_footer"'; ?>>AGB</a></li>
-        <li><a href="index.php?page=Datenschutz"<?php if( $page == "Datenschutz" ) echo ' class="active_footer"'; ?>>Datenschutz</a></li>
-        <li><a href="index.php?page=FAQs"<?php if( $page == "FAQs" ) echo ' class="active_footer"'; ?>>FAQs</a></li>
-      </ul>
+        <li><a href="index.php?page=Impressum"<?php /*if( $page == "Impressum" ) echo ' class="active_footer"'; */?>>Impressum</a></li>
+        <li><a href="index.php?page=AGB"<?php /*if( $page == "AGB" ) echo ' class="active_footer"'; */?>>AGB</a></li>
+        <li><a href="index.php?page=Datenschutz"<?php /*if( $page == "Datenschutz" ) echo ' class="active_footer"'; */?>>Datenschutz</a></li>
+        <li><a href="index.php?page=FAQs"<?php /*if( $page == "FAQs" ) echo ' class="active_footer"'; */?>>FAQs</a></li>
+      </ul>-->
     </section>
 
 
