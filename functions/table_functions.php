@@ -27,7 +27,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
     $ths = "";
     $tds = "";
-    if((!isset($_GET['page']) || $_GET['page'] == 'dashboard') && $dashboard_tablename != NULL) {
+    if($page == 'dashboard' && $dashboard_tablename != NULL) {
         $ths .= "<h3>".$dashboard_tablename."</h3>";
         $ths .= "<table class=\"table_backend table_dashboard\">";
 
@@ -37,7 +37,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
     //$ths .= "<table class=\"table_backend\">";
     $ths .= "<thead>";
     $ths .= "<tr>";
-    if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
+    if($page != 'dashboard') {
         $tds .= " <th>Actions</th>\n\r";
 
     }
@@ -51,14 +51,14 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
             foreach ($row as $col => $wert) {
                 //<th> elemente zusammenbauen, nur während 1. schleifendurchlauf
-                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $page == 'dashboard' )) {
+                if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && $page == 'dashboard') {
 
                     $ths .= "<th>" . sort_table($table_name, $col, underscore_to_space($col)) . "</th>";
                 }
                 if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $page != 'dashboard' ) {
                     $ths .= "<th>" . sort_table($table_name, $col, underscore_to_space($col)) . "</th>";
                 }
-                if(($col != 'id' && $col != 'deleted_at' && $page != 'dashboard') || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && (!isset($_GET['page']) || $page == 'dashboard' )) ) {
+                if(($col != 'id' && $col != 'deleted_at' && $page != 'dashboard') || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && ($page == 'dashboard' )) ) {
                     // <td> elemente zusammenbauen
                     if (substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_') {
                         $tds .= "<td>" . bool_to_word($wert) . "</td>";
@@ -83,13 +83,13 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
             $cnt++;
             if ($table_name == 'users') {
                 $tds .= "<td>";
-                $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" . $_GET['page'] . "&amp;action=show_orders&amp;id=" . $row['id'] . "\">show orders</a>";
+                $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" . $page . "&amp;action=show_orders&amp;id=" . $row['id'] . "\">show orders</a>";
                 $tds .= "</td>";
             }
-            if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
+            if($page != 'dashboard') {
                 $tds .= "<td>";
-                $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" . $_GET['page'] . "&amp;action=edit&amp;id=" . $row['id'] . "\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>";
-                $tds .= "<a class=\"delete small_delete\" href=\"index.php?page=" . $_GET['page'] . "&amp;action=delete&amp;id=" . $row['id'] . "\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>";
+                $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" . $page . "&amp;action=edit&amp;id=" . $row['id'] . "\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>";
+                $tds .= "<a class=\"delete small_delete\" onClick=\"delete_Query(this,'".$table_name."',".$row['id'].")\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>";
                 $tds .= "</td>";
                 $tds .= "</tr>";
             }
@@ -109,7 +109,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
 
         if($pagination === true){
-            pagination_backend($_GET['page'], $current_page, $total_pages);
+            pagination_backend($page, $current_page, $total_pages);
         }
 
 
@@ -134,7 +134,8 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
 function total_contents($table_name) {
     global $link;
-    if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
+    global $page;
+    if($page != 'dashboard') {
         $sql = "SELECT COUNT(*) as total_count FROM " . $table_name . " WHERE deleted_at IS NULL";
         $result = mysqli_query($link, $sql);
         return mysqli_fetch_assoc($result)["total_count"];
@@ -255,35 +256,46 @@ function insert_contents($tablename, $content_array) {
 
 
 function pagination_backend($site, $current_page, $total_pages) {
+    global $page;
     $start = max($current_page-2, 1);
     $end = min($current_page+2, $total_pages);
 
     if($total_pages > 1) {
         if($current_page != 1) {
             $before = $current_page-1;
-            //echo '<i class="fa fa-chevron-left pagination" aria-hidden="true"></i>';
-            include("views/pagination/pagination_first_link.php");
+            echo "<span onClick=\"load_Content('".$page."','".$before."','id','ASC')\"><i class='fa fa-chevron-left pagination' aria-hidden='true'></i></span>";
         }
 
         for ($i=$start; $i <= $end; $i++) {
-            include("views/pagination/pagination_link.php");
+                if($i == $current_page) {
+                    echo '<span class="current pagination">'.$i.'</span>';
+                } else{
+                    echo "<span onClick=\"load_Content('".$page."','".$i."','id','ASC')\" class='pagination'>".$i."</span>";
+                }
+
         }
 
 
         if($current_page != $total_pages) {
             $next = $current_page+1;
-            //echo '<i class="fa fa-chevron-right pagination" aria-hidden="true"></i>';
-            include("views/pagination/pagination_last_link.php");
+            echo "<span onClick=\"load_Content('".$page."','".$next."','id','ASC')\"><i class='fa fa-chevron-right pagination' aria-hidden='true'></i></span>";
         }
     }
 
 }
 
 function sort_table($site, $column, $anchor) {
-    $order_dir = isset($_GET["order_dir"]) && $_GET["order_dir"] == "desc" ? "asc" : "desc";
+    global $order_dir;
+    global $page;
+    global $current_page;
+    if($order_dir == 'desc'){
+        $dir = 'asc';
+    }else{
+        $dir = 'desc';
+    }
     $anchor = ucfirst($anchor);
     $output = <<<HEREDOC
-<a href="?page=$site&order_by=$column&order_dir=$order_dir">$anchor</a>
+<p onClick="load_Content('$page','$current_page','id','$dir')">$anchor</p>
 HEREDOC;
 
     return $output;

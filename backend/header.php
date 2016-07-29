@@ -50,109 +50,113 @@
     <nav class="nav_backend" >
         <ul class="sidebar">
             <li>
-                    <a href="index.php?page=dashboard">
+                <p onClick="load_Content('dashboard', '1', 'id', 'ASC')">
                         <i class="fa fa-pie-chart"></i><span class="title">Dashboard</span>
                         <span class="selected"></span>
-                    </a>
+                </p>
             </li>
             <li>
-                <a href="index.php?page=statistik">
+                <p onClick="load_Content('statistik', '1', 'id', 'ASC')">
                     <i class="fa fa-bar-chart"></i><span class="title">Statistik</span>
                     <span class="selected"></span>
-                </a>
+                </p>
             <li>
-                <a href="">
+                <p>
                     <i class="fa fa-users"></i><span class="title">Users</span>
                     <span class="arrow"></span>
-                </a>
+                </p>
                 <ul class="sub_menu">
-                    <li><a href="index.php?page=admins">
+                    <li><p onClick="load_Content('admins', '1', 'id', 'ASC')">
                             <i class="fa fa-star"></i><span class="title">Admin</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=users">
+                    <li><p onClick="load_Content('users', '1', 'id', 'ASC')">
                             <i class="fa fa-user"></i><span class="title">Users</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="">
+                <p>
                     <i class="fa fa-sitemap"></i><span class="title">Content</span>
                     <span class="arrow"></span>
-                </a>
+                </p>
                 <ul class="sub_menu">
-                    <li><a href="index.php?page=contents">
-                            <i class="fa fa-file"></i><span class="title">Content</span>
+                    <li><p onClick="load_Content('contents', '1', 'id', 'ASC')">
+                        <i class="fa fa-file"></i><span class="title">Content</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=courses">
+                    <li><p onClick="load_Content('courses', '1', 'id', 'ASC')">
                             <i class="fa fa-graduation-cap"></i><span class="title">Courses</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=header_items">
+                    <li><p onClick="load_Content('header_items', '1', 'id', 'ASC')">
                             <i class="fa fa-anchor"></i><span class="title">Header Items</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=employees">
+                    <li><p onClick="load_Content('employees', '1', 'id', 'ASC')">
                             <i class="fa fa-user-md"></i><span class="title">Employees</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=socialmedia_icons">
+                    <li><p onClick="load_Content('socialmedia_icons', '1', 'id', 'ASC')">
                             <i class="fa fa-twitter"></i><span class="title">Social Media Icons</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="">
+                <p>
                     <i class="fa fa-shopping-basket"></i><span class="title">Shop</span>
                     <span class="arrow"></span>
-                </a>
+                </p>
                 <ul class="sub_menu">
-                    <li><a href="index.php?page=shop_categories">
+                    <li><p onClick="load_Content('shop_categories', '1', 'id', 'ASC')">
                             <i class="fa fa-file"></i><span class="title">Categories</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=products">
+                    <li><p onClick="load_Content('products', '1', 'id', 'ASC')">
                             <i class="fa fa-gift"></i><span class="title">Products</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=orders">
+                    <li><p onClick="load_Content('orders', '1', 'id', 'ASC')">
                             <i class="fa fa-credit-card-alt"></i><span class="title">Orders</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
-                    <li><a href="index.php?page=bestell_items">
+                    <li><p onClick="load_Content('bestell_items', '1', 'id', 'ASC')">
                             <i class="fa fa-user-md"></i><span class="title">Order Items</span>
                             <span class="selected"></span>
-                        </a>
+                        </p>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="index.php?page=user_messages">
+                <p onClick="load_Content('user_messages', '1', 'id', 'ASC')">
                     <i class="fa fa-commenting-o"></i><span class="title">User Messages</span>
                     <span class="selected"></span>
-                </a>
+                </p>
             <li>
-                <a href="index.php?page=log">
+                <p onClick="load_Content('log', '1', 'id', 'ASC')">
                     <i class="fa fa-database"></i><span class="title">Log</span>
                     <span class="selected"></span>
-                </a>
+                </p>
             </li>
 
         </ul>
     </nav>
+    <section class="content-wrapper_backend">
+       <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>-->
+        </section>
+
 
 
 
