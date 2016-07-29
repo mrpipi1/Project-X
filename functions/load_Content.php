@@ -42,7 +42,7 @@ function get_specific_stock_content_data($table_name, $table_name2, $where, $whe
     $return = array($res, $res2);
     return $return;
 }
-
+$user_id = $_SESSION["user"]["user_id"];
 $employees = get_content_data('employees');
 $courses = get_content_data('courses');
 $about_us = get_specific_content_data('contents', 'id', 3);

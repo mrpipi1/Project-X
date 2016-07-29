@@ -2,7 +2,6 @@
 
 <h4 class="profile_sub-hl">Deine letzten Bestellungen</h4>
 <?php
-$user_id = $_SESSION["user"]["user_id"];
 if(mysqli_num_rows($orders) > 0){
   while( $row = mysqli_fetch_assoc($orders) ){ ?>
   <p>
@@ -16,8 +15,6 @@ if(mysqli_num_rows($orders) > 0){
 <?php
 }
 ?>
-
-
  <h4 class="profile_sub-hl">Deine Infos oda sowas</h4>
  <?php
   while( $row = mysqli_fetch_assoc($user_info) ){
