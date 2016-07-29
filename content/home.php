@@ -105,44 +105,45 @@
 
       <section class="saleproducts_main section_main" id="saleproducts_main">
 
-          <h3>Produkt Aktion</h3>
-
-          <?php
-          while( $row = mysqli_fetch_assoc($sale_products) ){
+        <h3>Produkt Aktion</h3>
+          <section class="wrapper_saleproducts_main">
+            <?php
+            while( $row = mysqli_fetch_assoc($sale_products) ){
+            ?>
+                <section class="product">
+                    <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
+                        <ul class="product-img">
+                            <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
+                        </ul>
+                        <ul class="info">
+                            <li><?php echo $row['_name'] ?></li>
+                            <li><?php echo $row['price_in_aktion'] ?></li>
+                        </ul>
+                        <ul class="overlay overlay-checkout">
+                            <li><h1><?php echo $row['_name'] ?></h1></li>
+                            <li><p><?php echo $row['price_in_aktion'] ?></p></li>
+                            <li>
+                                <ul class="colors colors-checkout">
+                                    <?php
+                                    mysqli_data_seek($color, 0);
+                                    while ($row3 = mysqli_fetch_assoc($color)) {
+                                        //print_r($row3);
+                                        if($row['id'] == $row3['product_id']) {
+                                            ?>
+                                            <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </ul>
+                            </li>
+                        </ul>
+                    </a>
+                </section>
+            <?php
+          }
           ?>
-              <section class="product">
-                  <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
-                      <ul class="product-img">
-                          <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
-                      </ul>
-                      <ul class="info">
-                          <li><?php echo $row['_name'] ?></li>
-                          <li><?php echo $row['price_in_aktion'] ?></li>
-                      </ul>
-                      <ul class="overlay overlay-checkout">
-                          <li><h1><?php echo $row['_name'] ?></h1></li>
-                          <li><p><?php echo $row['price_in_aktion'] ?></p></li>
-                          <li>
-                              <ul class="colors colors-checkout">
-                                  <?php
-                                  mysqli_data_seek($color, 0);
-                                  while ($row3 = mysqli_fetch_assoc($color)) {
-                                      //print_r($row3);
-                                      if($row['id'] == $row3['product_id']) {
-                                          ?>
-                                          <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
-                                          <?php
-                                      }
-                                  }
-                                  ?>
-                              </ul>
-                          </li>
-                      </ul>
-                  </a>
-              </section>
-          <?php
-        }
-        ?>
+        </section>
 
 
      </section>

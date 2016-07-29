@@ -1,4 +1,4 @@
-<section class="content-wrapper wrapper_checkout">
+<section class="content-wrapper wrapper_register">
 
     <section class="wrapper_form_login">
 
@@ -58,6 +58,13 @@
         </div>
 
         <div class="form-group">
+            <input type='tel' name="tel" value="" required class="input" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
+            <span class="highlight"></span>
+            <span class="form-bar"></span>
+            <label class="label">Telefonnummer*</label>
+        </div>
+
+        <div class="form-group">
             <input type="password" name="password" value="" required class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
@@ -102,7 +109,7 @@
 
 
         <div class="radio_datenschutz">
-            <input class="input_dateschutz" type="checkbox" name="agb-confirm" id="agb-confirm" /> <label>Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*"</label>
+            <input class="input_dateschutz" type="checkbox" name="agb-confirm" id="agb-confirm" /> <label>Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
         </div>
 
 
