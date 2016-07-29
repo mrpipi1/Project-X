@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.42)
 # Database: lotusyoga
-# Generation Time: 2016-07-29 13:56:02 +0000
+# Generation Time: 2016-07-29 14:51:45 +0000
 # ************************************************************
 
 
@@ -71,6 +71,35 @@ VALUES
 	(3,2323,23,1,NULL);
 
 /*!40000 ALTER TABLE `bestell_items` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table breadcrubms_checkout
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `breadcrubms_checkout`;
+
+CREATE TABLE `breadcrubms_checkout` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(70) DEFAULT NULL,
+  `position` int(3) DEFAULT NULL,
+  `is_active` tinyint(1) DEFAULT '1',
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `breadcrubms_checkout` WRITE;
+/*!40000 ALTER TABLE `breadcrubms_checkout` DISABLE KEYS */;
+
+INSERT INTO `breadcrubms_checkout` (`id`, `name`, `position`, `is_active`, `deleted_at`)
+VALUES
+	(1,'Warenkorb',1,1,NULL),
+	(2,'Anmelden',2,1,NULL),
+	(3,'Adresse',3,1,NULL),
+	(4,'Bezahlung & Versand',4,1,NULL),
+	(5,'Zusammenfassung',5,1,NULL);
+
+/*!40000 ALTER TABLE `breadcrubms_checkout` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
