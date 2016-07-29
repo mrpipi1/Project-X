@@ -42,7 +42,11 @@ function get_specific_stock_content_data($table_name, $table_name2, $where, $whe
     $return = array($res, $res2);
     return $return;
 }
-$user_id = $_SESSION["user"]["user_id"];
+if(isset($_SESSION["user"])){
+  $user_id = $_SESSION["user"]["user_id"];
+  $orders = get_specific_content_data('orders', 'user_id', $user_id);
+  $user_info = get_specific_content_data('users', 'id', $user_id);
+}
 $employees = get_content_data('employees');
 $courses = get_content_data('courses');
 $about_us = get_specific_content_data('contents', 'id', 3);
@@ -53,8 +57,6 @@ $sale_products = get_specific_content_data('products', 'in_aktion', 1);
 $shop = get_content_data('products');
 $categories = get_content_data('shop_categories');
 $color = get_distinct_content_data('stock', 'product_id, color');
-$orders = get_specific_content_data('orders', 'user_id', $user_id);
-$user_info = get_specific_content_data('users', 'id', $user_id);
 $contact = get_ordered_content_data('contents', '_name', 'Kontakt', 'sequence', 'asc');
 $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
