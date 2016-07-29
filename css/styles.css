@@ -66,6 +66,9 @@ a {
     padding: 1.65em 0;
     text-align: center;
 }
+.main #about_us h3{
+  padding:2.5em 0 1.5em;
+}
 
 /*    ## inside sections ##    */
 
@@ -150,9 +153,6 @@ a {
     box-shadow: 0 0 10px #eee;
 }
 
-
-
-
 .logo, .cart {
     width: 60px;
     height: 50px;
@@ -161,7 +161,7 @@ a {
     background-position: center;
 }
 .logo {
-    margin-left: 50px;
+    margin-left: 10px;
     background-image: url(../img/logo.svg);
     background-size: cover;
 }
@@ -195,11 +195,14 @@ a {
     font-size: 0.9em;
     letter-spacing: 1.5px;
     font-weight: 300;
-    min-width: 120px;
+    min-width: 110px;
     max-width: 200px;
     text-align: center;
     margin: 0 0.5em;
 
+}
+.nav ul li.cart, .nav ul li:last-child{
+  min-width:auto;
 }
 .nav ul li a {
     padding: 1em 2em;
@@ -207,11 +210,15 @@ a {
     transition: all 0.5s ease-in-out;
     text-shadow: 1px 1px 1px #656565;
 }
+.nav ul li.cart a, .nav ul li:last-child a{
+  padding:0;
+}
 .nav ul li a:hover {
     color: #fff;
     background-color: #65a591;
     text-shadow: none;
 }
+
  .nav ul li.cart a:hover{
   background-color: transparent !important;
 }
@@ -225,11 +232,18 @@ a {
 .logout {
     font-size: 200% !important;
     color: #5a8e7d;
+    margin-right: 10px;
 }
-
-.logout:hover {
-    font-size: 200% !important;
-    color: #ffffff;
+.nav ul li:last-child a:hover{
+  /*font-size: 120%*/
+  background-color: transparent;
+  text-shadow: none;
+}
+ul li a:hover i.logout{
+  color: #486e5f;
+}
+ul li a:hover i.logout{
+  color: #486e5f;
 }
 
 .active_nav {
@@ -260,7 +274,7 @@ __  __          _____ _   _
 main {
     position: relative;
     z-index: 100;
-    padding: 10em 0;
+    padding: 80px 0;
     background-color: white;
 }
 
