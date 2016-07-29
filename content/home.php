@@ -145,193 +145,6 @@
         ?>
 
 
-
-
-<!--
-          <section class="product product-main">
-               <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="jumper_black"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <ul class="overlay overlay-checkout" >
-                  <li><h1>Jumper - Unisex</h1></li>
-                  <li><p>39,99€</p></li>
-                  <li>
-                      <ul class="colors colors-checkout">
-                          <li>RED</li>
-                          <li>RED</li>
-                          <li>RED</li>
-                      </ul>
-                  </li>
-              </ul>
-              </a>
-          </section>
-
-          <section class="product product-main">
-            <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="jumper_white"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product product-main">
-               <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="yogabag-mat"></li>
-              </ul>
-              <ul class="info">
-                  <li>Yogabag &amp; Matte</li>
-                  <li>39,99€</li>
-              </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Bag &amp; Matte</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product product-main">
-               <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="tshirt_w-red"></li>
-              </ul>
-              <ul class="info">
-                  <li>T-Shirt</li>
-                  <li>19,99€</li>
-              </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>T-Shirt - Damen</h1></li>
-                      <li><p>19,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product product-main">
-               <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="notebook"></li>
-              </ul>
-              <ul class="info">
-                  <li>Notizbuch</li>
-                  <li>19,99€</li>
-              </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Notizbuch</h1></li>
-                      <li><p>19,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product product-main">
-               <a href="index.php?page=Detailansicht">
-              <ul class="product-img">
-                  <li class="yogaring"></li>
-              </ul>
-              <ul class="info">
-                  <li>Yogaring</li>
-                  <li>24,99€</li>
-              </ul>
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Yogaring</h1></li>
-                      <li><p>24,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-        -->
-
-          <!-- <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section>
-
-          <section class="product">
-              <ul class="product-img">
-                  <li class="product-1"></li>
-              </ul>
-              <ul class="info">
-                  <li>Jumper</li>
-                  <li>39,99€</li>
-              </ul>
-              <a href="index.php?page=Detailansicht">
-                  <ul class="overlay overlay-checkout" >
-                      <li><h1>Jumper - Unisex</h1></li>
-                      <li><p>39,99€</p></li>
-                      <li>
-                          <ul class="colors colors-checkout">
-                              <li>RED</li>
-                              <li>RED</li>
-                              <li>RED</li>
-                          </ul>
-                      </li>
-                  </ul>
-              </a>
-          </section> -->
      </section>
 
 
@@ -342,39 +155,37 @@
 
 
      <section class="contact_main section_main" id="contact">
-          <section class="contact_question">
-          <h3>Kontakt</h3>
-               <p>
-                    Du hast Fragen ? <br> Kontaktiere uns doch einfach und wir melden uns unverzüglich.
-               </p>
-          </section>
-          <section class="contactinfo">
-             <h4>Unser Studio</h4>
-               <p>
-                    01 555 555 55
-               </p>
 
-               <p>
-                   <a href="mailto:office@lotusyoga.at?subject=Kontaktformular-Website">office@lotusyoga.at</a>
-              </p> <br>
+              <?php
+              $cnt = 0;
+              while( $row = mysqli_fetch_assoc($contact) ){
+                  if($cnt == 0) {
+                      echo '<section class="' . $row['_name'] . '">';
+                  }
+                  if($row['type'] == 'headline'){
+                      echo '<h3>' .$row['content'].'</h3>';
+                  }else if($row['type'] == 'subheadline'){
+                      echo '<h4>' .$row['content'].'</h4>';
+                  }else if ($row['type'] == 'content'){
+                      echo '<p>' .$row['content'].'</p>';
+                  }else if ($row['type'] == 'email'){
+                      echo '<p><a href=\"mailto:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                  }else if ($row['type'] == 'tel'){
+                      echo '<p><a href=\"tel:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                  }
+                  $cnt++;
+              }
+          ?>
+      </section>
 
-               <p>
-                    Siebensterngasse 2
-               </p>
-
-               <p>
-                    Stock 1 | Tür 13
-               </p>
-
-               <p>
-                    Österreich, Wien
-               </p>
-
-               <p>
-                    1070
-               </p>
-
-               <div id='map'></div>
+                <div id='map'
+                    <?php
+                        while( $row = mysqli_fetch_assoc($map) ) {
+                            echo $row['type']."='".$row['content']."'";
+                        }
+                    ?>
+                >
+               </div>
 
            <div class="btn">
              <a href="#contactform_main">Zum Kontaktformular</a>
@@ -382,57 +193,50 @@
 
           </section>
 
-         <section class="contactform_main"> <a name="contactform_main"></a>
 
-             <h4>Schreibe uns</h4>
+        <?php
+        $cnt = 0;
+        while( $row = mysqli_fetch_assoc($contact_form) ){
+            if($cnt == 0) {
+                echo '<section class="' . $row['_name'] . '">';
 
-           <form class="form_main" action="#" method="post">
+            }
+            if ($row['type'] == 'headline') {
+                echo '<h3>' . $row['content'] . '</h3>';
+            } else if ($row['type'] == 'subheadline') {
+                echo '<h4>' . $row['content'] . '</h4>';
+            }
+            if($cnt == 0){
+                echo '<form class="form_main" action="#" method="post">';
+            }
+            if ($row['type'] == 'comment') {
+                echo '<div class="form-group">
+                           <textarea class="textarea" name="'.$row['type'].'" rows="10" cols="100" placeholder="'.$row['content'].'" ></textarea>
+                           <span class="highlight"></span>
+                           <span class="form-bar"></span>
+                      </div>';
+            } else if($row['type'] == 'submit') {
+                echo '<div class="btn">
+                       <input type="submit" class="submit_main input" name="user_message" value="' . $row['content'] . '" >
+                     </div>';
+            }else{
+                echo '<div class="form-group">
+                       <input type="text" name="'.$row['type'].'" value="" required class="input">
+                       <span class="highlight"></span>
+                       <span class="form-bar"></span>
+                       <label class="label">'.$row['content'].'</label>
+                     </div>';
+            }
+            if($cnt == mysqli_num_rows($contact_form)){
+                echo '</form>';
+            }
 
-             <div class="form-group">
-               <input type="text" name="name" value="" required class="input">
-               <span class="highlight"></span>
-               <span class="form-bar"></span>
-               <label class="label">Vorname | Nachname*</label>
-             </div>
+            $cnt++;
+        }
 
-             <div class="form-group">
-               <input type="text" name="tel" value="" required class="input">
-               <span class="highlight"></span>
-               <span class="form-bar"></span>
-               <label class="label">Telefonnumer*</label>
-             </div>
+        echo '</section>';
+        ?>
 
-             <div class="form-group">
-               <input type="text" name="email" value="" required class="input">
-               <span class="highlight"></span>
-               <span class="form-bar"></span>
-               <label class="label">E-Mailadresse*</label>
-             </div>
-
-             <div class="form-group">
-               <textarea class="textarea" name="comment" rows="10" cols="100" placeholder="Kommentar" ></textarea>
-               <span class="highlight"></span>
-               <span class="form-bar"></span>
-
-             </div>
-
-             <div class="btn">
-               <input type="submit" class="submit_main input" name="user_message" value="Absenden" >
-             </div>
-
-           </form>
-
-          </section>
-
-
-         <!-- <section class="socialmedia_main">
-              <h3>Bleib in Kontakt</h3>
-                   <ul>
-                        <li class="instagram"><a href="#"><i class="fa fa-facebook-official fa-4x" aria-hidden="true"></i></a></li>
-                        <li class="facebook"><a href="#"><i class="fa fa-instagram fa-4x" aria-hidden="true"></i></a></li>
-                        <li class="youtube"><a href="#"><i class="fa fa-youtube-play fa-4x" aria-hidden="true"></i></a></li>
-                  </ul>
-         </section> -->
 
      </section>
   </main>

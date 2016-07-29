@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 28. Jul 2016 um 13:50
+-- Erstellungszeit: 29. Jul 2016 um 11:30
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -74,29 +74,49 @@ INSERT INTO `bestell_items` (`id`, `bestellnummer`, `shopitem_id`, `is_active`, 
 
 CREATE TABLE IF NOT EXISTS `contents` (
   `id` int(11) NOT NULL,
-  `headline` varchar(150) NOT NULL,
+  `_name` varchar(1000) NOT NULL,
+  `type` varchar(150) NOT NULL,
   `content` varchar(1000) NOT NULL DEFAULT '',
+  `sequence` int(11) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `contents`
 --
 
-INSERT INTO `contents` (`id`, `headline`, `content`, `is_active`, `deleted_at`) VALUES
-(3, 'Über Uns', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
-(4, 'Datenschutz', 'Lorem Ipsum\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
-(5, 'test', 'test', 1, NULL),
-(6, 'rrtreb', 'regbergb', 1, NULL),
-(7, 'rrtr', 'reert', 1, NULL),
-(8, 'qwefwf', 'wqfwfewf', 1, NULL),
-(9, 'uiko8l', 'muuimi76m6', 1, NULL),
-(10, 'ukmumum', 'm67m67', 1, NULL),
-(11, 'h tehh', 'enb ', 1, NULL),
-(12, 'erhrh', 'rthzhtb', 1, NULL),
-(13, 'fbgrenn', 'ku,iz,io', 1, NULL),
-(14, 'uk,u,u', 'ut,ui,', 1, NULL);
+INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active`, `deleted_at`) VALUES
+(3, '', 'Über Uns', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 1, NULL),
+(4, '', 'Datenschutz', 'Lorem Ipsum\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 0, 1, NULL),
+(5, '', 'test', 'test', 0, 1, NULL),
+(6, '', 'rrtreb', 'regbergb', 0, 1, NULL),
+(7, '', 'rrtr', 'reert', 0, 1, NULL),
+(8, '', 'qwefwf', 'wqfwfewf', 0, 1, NULL),
+(9, '', 'uiko8l', 'muuimi76m6', 0, 1, NULL),
+(10, '', 'ukmumum', 'm67m67', 0, 1, NULL),
+(11, '', 'h tehh', 'enb ', 0, 1, NULL),
+(12, '', 'erhrh', 'rthzhtb', 0, 1, NULL),
+(13, '', 'fbgrenn', 'ku,iz,io', 0, 1, NULL),
+(14, '', 'uk,u,u', 'ut,ui,', 0, 1, NULL),
+(15, 'Kontakt', 'headline', 'Kontakt', 0, 1, NULL),
+(16, 'Kontakt', 'content', 'Du hast Fragen ?', 1, 1, NULL),
+(17, 'Kontakt', 'subheadline', 'Unser Studio', 3, 1, NULL),
+(18, 'Kontakt', 'tel', '01 555 555 55', 4, 1, NULL),
+(19, 'Kontakt', 'content', 'Kontaktiere uns doch einfach und wir melden uns unverzüglich.', 2, 1, NULL),
+(20, 'Kontakt', 'email', 'office@lotusyoga.at', 5, 1, NULL),
+(21, 'Kontakt', 'content', 'Siebensterngasse 2', 6, 1, NULL),
+(22, 'Kontakt', 'content', 'Österreich, Wien', 8, 1, NULL),
+(23, 'Kontakt', 'content', 'Stock 1 | Tür 13', 7, 1, NULL),
+(24, 'Kontakt', 'content', '1070', 9, 1, NULL),
+(25, 'Map', 'lat', '48.20294029999999', 0, 1, NULL),
+(26, 'Map', 'lng', '16.356826899999987', 1, 1, NULL),
+(27, 'contactform_main', 'name', 'Vorname | Nachname*', 1, 1, NULL),
+(28, 'contactform_main', 'tel', 'Telefonnummer*', 2, 1, NULL),
+(29, 'contactform_main', 'email', 'E-Mailadresse*', 3, 1, NULL),
+(30, 'contactform_main', 'comment', 'Kommentar', 4, 1, NULL),
+(31, 'contactform_main', 'submit', 'Absenden', 5, 1, NULL),
+(32, 'contactform_main', 'subheadline', 'Schreibe uns', 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -238,6 +258,11 @@ INSERT INTO `menu_backend_items` (`id`, `item_name`, `is_active`, `deleted_at`) 
 
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `stock_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -261,7 +286,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price_in_aktion` float NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `products`
@@ -270,10 +295,18 @@ CREATE TABLE IF NOT EXISTS `products` (
 INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `in_aktion`, `price_in_aktion`, `is_active`, `deleted_at`) VALUES
 (7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt.png', 'img/shop-images/damen-tshirt.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper_white.png', 0, 0, 1, NULL),
 (8, 'Yogabag & Matte', 39.99, 2, 'jkjnjk', 'img/shop-images/tragetasche_yogamatte.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL),
-(9, 'Jumper', 39.99, 1, 'Jumper - Unisex', 'img/shop-images/jumper-grau.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL),
+(9, 'Jumper', 39.99, 1, 'Jumper - Unisex', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 0, 0, 1, NULL),
 (10, 'Yogaring', 24.99, 2, 'jkjnjk', 'img/shop-images/yogaring.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL),
 (11, 'Notizbuch', 19.99, 3, 'jkjnjk', 'img/shop-images/notebook.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL),
-(12, 'Herren T-Shirt', 19.99, 1, 'jkjnjk', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL);
+(12, 'Herren T-Shirt', 19.99, 1, 'jkjnjk', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 0, 0, 1, NULL),
+(13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 1, 5.99, 1, NULL),
+(14, 'Lotus Band 3er', 15.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 1, 8.99, 1, NULL),
+(15, 'Baumwollband', 12.99, 3, 'Baumwollband', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 1, 9.99, 1, NULL),
+(16, 'Core Trainer', 29.99, 3, 'Core Trainer', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 1, 19.99, 1, NULL),
+(17, 'Lotus Handtuch', 12.99, 2, 'Handtuch', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 0, 0, 1, NULL),
+(18, 'Yoga Matte', 19.99, 2, 'Yoga Matte', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 0, 0, 1, NULL),
+(19, 'asd', 3, 0, 'asd', '', 'asd', 'asd', 'asd', 0, 3, 1, NULL),
+(20, '', 0, 0, '', '', '', '', '', 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -589,7 +622,7 @@ ALTER TABLE `bestell_items`
 -- AUTO_INCREMENT für Tabelle `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT für Tabelle `courses`
 --
@@ -624,7 +657,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT für Tabelle `shop_categories`
 --
