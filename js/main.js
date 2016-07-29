@@ -96,7 +96,11 @@ function onScroll(event){
 
 // ### GOOGLE MAPS API - VIEW CONFIGS ###
 function initMap() {
-  var myLatLng = {lat: 48.20294029999999, lng: 16.356826899999987};
+
+    var Lat = Number($('#map').attr('lat'));
+    var Lng = Number($('#map').attr('lng'));
+  var myLatLng = {lat: Lat, lng: Lng};
+  console.log(myLatLng)
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,

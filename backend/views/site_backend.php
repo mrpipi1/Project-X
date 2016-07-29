@@ -17,7 +17,7 @@ $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
 echo "<a class=\"btn_table\" href=\"index.php?page=".$_GET['page']."&amp;action=new\">".$new_item."</a>";
 }
-if($_GET['action'] == 'edit' || $_GET['action'] == 'new'){
+if(isset($_GET['action']) && ($_GET['action'] == 'edit' || $_GET['action'] == 'new')){
 ?>
 <section class="wrapper-form-backend">
     <h2 class="hl_form_backend">
