@@ -58,6 +58,8 @@ a {
     padding-top: 1em;
 }
 
+/*     ### HEADLINES HOME ###    */
+
 /*    ## sections h3 - every H inside section => inside section h4 ##    */
 
 .main h3, .main h4  {
@@ -98,6 +100,8 @@ a {
 }
 
 
+
+
 /* Landing Page */
 
 .landingpage {
@@ -129,12 +133,12 @@ a {
 }
 
 .header .logo, .header .cart {
-    opacity: 0;
+    visibility: hidden;
     transition: all 0.8s ease-in-out;
 }
 
 .header.fixed .logo, .header.fixed .cart {
-    opacity: 1;
+  visibility: visible;
 }
 
 .header.fixed {
@@ -255,6 +259,43 @@ ul li a:hover i.logout{
     display: block;
     box-sizing: content-box;
     padding: 0 20px;
+}
+
+
+
+
+
+/*     ### CONTENT WRAPPER MAIN ###    */
+
+
+.content-wrapper {
+    position: relative;
+    z-index: 50;
+    padding:  150px 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.content-wrapper h3 {
+    font-size: 2em;
+    font-weight: 400;
+    padding: 1vw 0vw;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content-wrapper h4 {
+  margin: 2em 0;
+
+  font-size: 1.75em;
+  font-weight: 300;
+  padding: 2vw 0;
+}
+.content-wrapper p {
+    font-size: 1.3vw;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
 }
 
 /*#############################################################
@@ -435,19 +476,27 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 
 #############################################################
 #############################################################*/
-
-.saleproducts_main .product {
-    display: flex;
-    flex-wrap: wrap;
+.saleproducts_main {
+  height: calc( 100vh - 60px );
 }
+
+.wrapper_saleproducts_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+
 .product {
     position: relative;
     overflow: hidden;
-    width: 200px;
     height: 300px;
     margin: 10px 50px;
     padding: 0;
     flex-basis: 200px;
+    max-width: 300px;
+    min-width: 100px;
 }
 .product-main {
     margin: 10px 100px;
@@ -904,23 +953,7 @@ ______ ____   ____ _______ ______ _____
 
 /*---------------------------------------------*/
 
-.content-wrapper {
-    position: relative;
-    z-index: 50;
-    padding:  150px 50px;
-    background-color: #fff;
-}
-.content-wrapper h3 {
-    font-weight: 400;
-    padding: 1vw 0vw;
-    text-align: left;
-}
-.content-wrapper p {
-    font-size: 1.3vw;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    text-align: justify;
-}
+
 .impressum-p p {
     margin: 0;
 }
@@ -942,21 +975,38 @@ SHOP
 #############################################################*/
 
 .shop-categories {
+    margin: 2em 0 ;
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 50px;
     justify-content: center;
 }
+
+.shop-categories.fixed {
+  position: fixed;
+  top: 28px;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 10px #eee;
+
+}
 .shop-categories ul {
     display: flex;
     justify-content: center;
+
 }
 .shop-categories li {
-    padding-right: 5%;
+
 }
 .shop-categories a {
+  min-width: 140px;
+    display: block;
     color: #b3b3b3;
+    padding: 0.5em 2em;
+
 }
 .shop-categories a:hover {
     color: black;
@@ -1530,6 +1580,11 @@ Abschluss
 /*#####################
 Registrieren
 #####################*/
+
+.wrapper_register {
+  display: flex;
+  justify-content: space-around;
+}
 
 .form-register {
     width: 500px;

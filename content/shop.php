@@ -1,5 +1,5 @@
-
 <section class="content-wrapper">
+    <h3>Shop</h3>
     <nav class="shop-categories">
         <ul>
             <li><a href="#">Alle</a></li>
@@ -17,7 +17,7 @@
         <?php
         while( $row2 = mysqli_fetch_assoc($categories) ) {
             ?>
-            <h2 id="clothes" class="headline_shop"><?php echo $row2['_name'] ?></h2>
+            <h4><?php echo $row2['_name'] ?></h4>
 
             <section class="line-wrapper_shop">
 
