@@ -1098,10 +1098,14 @@ Breadcrumbs
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    width:100px;
+}
+.number_wrapper{
+  width: 100%;
 }
 .text_a {
     display: inline;
-    margin: 2vw 2vw;
+    margin: 1vw 1vw;
 }
 .span-wrapper {
     display: flex;
@@ -1151,7 +1155,10 @@ Breadcrumbs
     color: white;
     background-color: #5a8e7d;
 }
-
+.two-lines .text{
+  display: flex;
+  flex-wrap: wrap;
+}
 /*########
  weiter und zurück Button
  ########*/

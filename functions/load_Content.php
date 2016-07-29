@@ -61,6 +61,7 @@ $contact = get_ordered_content_data('contents', '_name', 'Kontakt', 'sequence', 
 $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
+$breadcrubms_checkout = get_content_data('breadcrubms_checkout');
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
     $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
 

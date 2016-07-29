@@ -1,8 +1,43 @@
 
 <div class="breadcrumb_wrapper">
     <ul class="breadcrumbs" >
-        <li class="breadcrumb-item visited">
 
+      <?php
+      if(mysqli_num_rows($breadcrubms_checkout) > 0){
+        $i = 0;
+        while( $row = mysqli_fetch_assoc($breadcrubms_checkout) ){
+          if(isset($_GET['page']) && $row['name'] == $_GET['page']){
+            $class = 'crumb-current';
+          }elseif($row['position'] < $i){
+            $class = 'visited';
+          }elseif($row['position'] > $i){
+            $class = '';
+          }
+          if(strpos($row['name'],'&') > 0){
+            $class .= ' two-lines';
+          }
+          ?>
+        <li class="breadcrumb-item <?php echo $class; ?>" position="<?php echo $row['position']; ?>">
+            <span class="span-wrapper">
+                <!-- <span class="line-rand"></span> -->
+                <a href="index.php?page=<?php echo $row['name']; ?>" class="number_wrapper">
+                     <span class="number visited_color"><?php echo $row['position']; ?></span>
+                </a>
+                <!-- <span class="line visited_color"></span> -->
+            </span>
+            <span class="text_wrapper">
+                <a href="index.php?page=<?php echo $row['name']; ?>" class="text_a">
+                    <span class="text visited_color"><?php echo $row['name']; ?></span>
+                </a>
+            </span>
+        </li>
+        <?php
+        $i++;
+        }
+      }
+
+       ?>
+        <!-- <li class="breadcrumb-item visited">
             <span class="span-wrapper">
                 <span class="line-rand"></span>
                 <a href="index.php?page=Warenkorb" class="number_wrapper">
@@ -76,6 +111,6 @@
                     <span class="text future_color">Zusammenfassung</span>
                 </a>
             </span>
-        </li>
+        </li> -->
     </ul>
 </div>
