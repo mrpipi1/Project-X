@@ -1,27 +1,25 @@
-<?php include ('content/landingpage.php');?>
-<main class="main">
+<?php
+if($_COOKIE['landingpage'] == undefined){
+  include ('content/landingpage.php');
+}else{
+  // we don't want the landingpage to be includet because we want to show it once a day
+
+}
+
+?>
+  <main class="main">
 
      <section class="about_us section_main" id="about_us">
          <h3>
              Über uns
          </h3>
          <?php
+
           while( $row = mysqli_fetch_assoc($about_us) ){
+
           ?>
        <p>
         <?php echo $row['content']; ?>
-         <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-         mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
-         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
        </p>
        <?php
      }
@@ -105,44 +103,45 @@
 
       <section class="saleproducts_main section_main" id="saleproducts_main">
 
-          <h3>Produkt Aktion</h3>
-
-          <?php
-          while( $row = mysqli_fetch_assoc($sale_products) ){
+        <h3>Produkt Aktion</h3>
+          <section class="wrapper_saleproducts_main">
+            <?php
+            while( $row = mysqli_fetch_assoc($sale_products) ){
+            ?>
+                <section class="product">
+                    <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
+                        <ul class="product-img">
+                            <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
+                        </ul>
+                        <ul class="info">
+                            <li><?php echo $row['_name'] ?></li>
+                            <li><?php echo $row['price_in_aktion'] ?></li>
+                        </ul>
+                        <ul class="overlay overlay-checkout">
+                            <li><h1><?php echo $row['_name'] ?></h1></li>
+                            <li><p><?php echo $row['price_in_aktion'] ?></p></li>
+                            <li>
+                                <ul class="colors colors-checkout">
+                                    <?php
+                                    mysqli_data_seek($color, 0);
+                                    while ($row3 = mysqli_fetch_assoc($color)) {
+                                        //print_r($row3);
+                                        if($row['id'] == $row3['product_id']) {
+                                            ?>
+                                            <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
+                                            <?php
+                                        }
+                                    }
+                                    ?>
+                                </ul>
+                            </li>
+                        </ul>
+                    </a>
+                </section>
+            <?php
+          }
           ?>
-              <section class="product">
-                  <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
-                      <ul class="product-img">
-                          <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
-                      </ul>
-                      <ul class="info">
-                          <li><?php echo $row['_name'] ?></li>
-                          <li><?php echo $row['price_in_aktion'] ?></li>
-                      </ul>
-                      <ul class="overlay overlay-checkout">
-                          <li><h1><?php echo $row['_name'] ?></h1></li>
-                          <li><p><?php echo $row['price_in_aktion'] ?></p></li>
-                          <li>
-                              <ul class="colors colors-checkout">
-                                  <?php
-                                  mysqli_data_seek($color, 0);
-                                  while ($row3 = mysqli_fetch_assoc($color)) {
-                                      //print_r($row3);
-                                      if($row['id'] == $row3['product_id']) {
-                                          ?>
-                                          <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
-                                          <?php
-                                      }
-                                  }
-                                  ?>
-                              </ul>
-                          </li>
-                      </ul>
-                  </a>
-              </section>
-          <?php
-        }
-        ?>
+        </section>
 
 
      </section>

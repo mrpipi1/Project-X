@@ -34,7 +34,15 @@ if($('.header').hasClass('header_home')){
 
 }
 
-// ### SHRINKY HEADER ###
+// ### FIXED SHOP CATEGORY ###
+
+$(window).scroll(function(){
+  var ShopCategories = $('.shop-categories'),
+      scroll = $(window).scrollTop();
+
+  if (scroll >= 178) ShopCategories.addClass('fixed');
+  else ShopCategories.removeClass('fixed');
+});
 
 
 // ### SMOOTH SCROOL TO ANCHOR ###
