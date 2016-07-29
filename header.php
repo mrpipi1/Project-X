@@ -72,11 +72,8 @@
           } ?>
           <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
 
+          <?php if( is_logged_in()){ echo '<li><a href=\'index.php?action=logout\'><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>'; }; ?>
 
   		</ul>
   	</nav>
-    <ul>
-
-          <?php if( is_logged_in()){ echo '<li><a href=\'index.php?action=logout\'><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>'; }; ?>
-        </ul>
   </header>
