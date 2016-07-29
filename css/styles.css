@@ -137,11 +137,11 @@ a {
     transition: all 0.8s ease-in-out;
 }
 
-.header.fixed .logo, .header.fixed .cart {
+.header.fixed .logo, .header.fixed .cart, .header.header_no_landingpage .logo, .header.header_no_landingpage .cart {
   visibility: visible;
 }
 
-.header.fixed {
+.header.fixed, .header.header_no_landingpage {
     position: fixed;
     top: 0;
     left: 0;
@@ -226,7 +226,7 @@ a {
  .nav ul li.cart a:hover{
   background-color: transparent !important;
 }
-.fixed .nav ul li a{
+.fixed .nav ul li a, .header_no_landingpage .nav ul li a{
   text-shadow: none;
 }
 .tiny .nav ul li a{

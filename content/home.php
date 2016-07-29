@@ -1,27 +1,25 @@
-<?php include ('content/landingpage.php');?>
-<main class="main">
+<?php
+if($_COOKIE['landingpage'] == undefined){
+  include ('content/landingpage.php');
+}else{
+  // we don't want the landingpage to be includet because we want to show it once a day
+
+}
+
+?>
+  <main class="main">
 
      <section class="about_us section_main" id="about_us">
          <h3>
              Über uns
          </h3>
          <?php
+
           while( $row = mysqli_fetch_assoc($about_us) ){
+
           ?>
        <p>
         <?php echo $row['content']; ?>
-         <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-         aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-         in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-         sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-         mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing
-         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-         commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
        </p>
        <?php
      }

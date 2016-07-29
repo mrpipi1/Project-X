@@ -46,8 +46,13 @@
   }else{
     $class = '';
   }
+  if($_COOKIE['landingpage'] != undefined){
+    $no_landingpage = 'header_no_landingpage';
+  }else{
+    $no_landingpage = '';
+  }
   ?>
-  <header class="header <?php echo $class;?>">
+  <header class="header <?php echo $class.' '.$no_landingpage;?>">
     <h1 class="logo">
   	  <a href="index.php?page=home#about_us">
   		  Logo
