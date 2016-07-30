@@ -179,6 +179,7 @@ if(mysqli_num_rows($orders) > 0){
 </section>
   </div>
   <div class="profile_shop_link_wrapper">
+    <div class="email_was_send">Du wirst in kürze eine Email mit deinem neuen Passwort erhalten, solltest du keine Email erhalten kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a></div>
     <div class="profile_shop_link  profile_info_label">Passwort zurücksetzen</div>
     <div class="send_password_message">Passwort wirklich zurücksetzen? <br /><div class="confirm">Ja, neues Passwort zuschicken.</div><br /><div  class="deny"<div>Abbrechen</div>
   </div>

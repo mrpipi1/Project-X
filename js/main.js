@@ -180,6 +180,9 @@ $('.profile_shop_link').click(function(){
 //if($('.send_password_message')){
   console.log($('.deny'))
   $('.confirm').click(function(){
+    $('.send_password_message').css('display', 'none');
+    $('.profile_shop_link').css('display', 'none');
+    $('.email_was_send').css('display', 'block');
   });
   $('.deny').click(function(){
     $('.send_password_message').css('display', 'none');
@@ -199,5 +202,6 @@ $('.pencil_frontend').click(function(){
 $('.profile_update_btn').click(function(){
   $('.user_info_wrapper').css('display', 'block');
   $('.user_info_change_wrapper').css('display', 'none');
+  
 });
 //

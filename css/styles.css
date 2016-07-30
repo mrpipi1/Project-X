@@ -2246,3 +2246,9 @@ cursor: pointer;
 .form_profile input.radiobutton{
   width: 30px;
 }
+.email_was_send{
+  display: none;
+}
+.profile-email:hover{
+  color:#5a8e7d;
+}
