@@ -259,9 +259,12 @@ $('#contact_email').on('input', function() {
     var is_email=re.test(input.val());
     if(is_email){
         input.removeClass("invalid").addClass("valid");
+        $('.contact_email .form-bar').css('display', 'block');
+        $('.error_email').text('');
     } else {
         $('.error_email').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
         input.removeClass("valid").addClass("invalid");
+        $('.contact_email .form-bar').css('display', 'none');
     }
 });
 
