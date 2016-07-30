@@ -599,15 +599,14 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 .colors {
     display: flex;
-    text-indent: -9999px;
     justify-content: center;
 }
 .colors li {
     width: 15px;
     height: 15px;
-    margin: 0 2px 2px;
+    margin: 0 6px;
     transition: all 0.2s ease-in-out;
-    border:1px solid white;
+    color:white;
 }
 /*.colors li:first-child {
     background-color: black;
