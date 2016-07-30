@@ -29,7 +29,7 @@ $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 
 <?php
 if($page != 'dashboard') {
-    echo "<a class=\"btn_table\" href=\"index.php?page=".$page."&amp;action=new\">".$new_item."</a>";
+    echo "<a class=\"btn_table\" onclick='load_forms(\"".$page."\", \"new\")'>".$new_item."</a>";
     // select here
 
 

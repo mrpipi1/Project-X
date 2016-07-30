@@ -151,20 +151,7 @@ function delete_contents($table_name, $id) {
         $timestamp = time();
         $sql = "UPDATE " . $table_name . " SET is_active = 0, deleted_at = " . $timestamp . " WHERE id = " . $id;
         $result = mysqli_query($link, $sql);
-        if (!$result) {
-            echo '<script type="text/javascript">'
-            , 'notification("error", "Konnte nicht gelöscht werden!");'
-            , '</script>';
-        } else {
-            echo '<script type="text/javascript">'
-            , 'notification("success", "Wurde erfolgreich gelöscht");'
-            , '</script>';
-        }
         return $result;
-    }else{
-        echo '<script type="text/javascript">'
-        , 'notification("error", "Eintrag wurde bereits gelöscht!");'
-        , '</script>';
     }
 }
 
@@ -212,7 +199,7 @@ function insert_contents($tablename, $content_array) {
     // vom $_POST column name + wert auslesen und in strings speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
     $i = 0;
     foreach($content_array as $col => $wert){
-        $i++;
+
         if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
@@ -229,20 +216,13 @@ function insert_contents($tablename, $content_array) {
                 $insert_wert .= ", ";
             }
         }
+        $i++;
     }
 
     // sql insert zusammenbauen:
     $sql = "INSERT INTO " .$tablename ." (" .$insert_col ." )" ." VALUES (" .$insert_wert ." )";
     $result = mysqli_query($link, $sql);
-    if(!$result) {
-        echo '<script type="text/javascript">'
-        , 'notification("error", "Konnte nicht erstellt werden!");'
-        , '</script>';
-    }else{
-        echo '<script type="text/javascript">'
-        , 'notification("success", "Wurde erfolgreich erstellt");'
-        , '</script>';
-    }
+    echo $result;
     return $result;
 }
 
@@ -250,8 +230,8 @@ function insert_contents($tablename, $content_array) {
 
 function pagination_backend($site, $current_page, $total_pages) {
     global $page;
-    $start = max($current_page-2, 1);
-    $end = min($current_page+2, $total_pages);
+    $start = max($current_page-10, 1);
+    $end = min($current_page+10, $total_pages);
 
     if($total_pages > 1) {
         if($current_page != 1) {

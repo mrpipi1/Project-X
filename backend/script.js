@@ -111,8 +111,9 @@ function insert_or_update(page, action, id){
                 var data = {page: page, action: action, data: values, id: id};
             }
             $.post('logic/insert_or_update_contents.php', data, function(response, status) {
-                if(response === 1 && status === 'success'){
+                if(response == 1 && status == 'success'){
                     notification('success', 'Eintrag erfolgreich '+msg);
+                    load_Content(page, '1', 'id', 'ASC');
                 }else{
                     notification('error', 'Eintrag konnte nicht '+msg+' werden!');
                 }
@@ -121,6 +122,19 @@ function insert_or_update(page, action, id){
         }
     });
 
+
+}
+
+function delete_Query(el, tablename, Id) {
+
+    $.post('logic/delete_contents.php', {id: Id, table: tablename}, function(response, status) {
+        if(response == 1 && status == 'success') {
+            notification('success', 'Eintrag erfolgreich gelöscht!');
+            load_Content(tablename, '1', 'id', 'ASC');
+        }else{
+            notification('error', 'Eintrag konnte nicht gelöscht werden!');
+        }
+    });
 
 }
 
@@ -159,22 +173,5 @@ function notification(type, message){
 
 }
 
-function delete_Query(el, tablename, Id) {
-    console.log(el);
-    $.post('logic/delete_contents.php', {id: Id, table: tablename}, function(response, status) {
-        if(response === 1 && status == success) {
-            notification('success', 'Eintrag erfolgreich gelöscht!');
-            //todo reload the data
-        }else{
-            notification('error', 'Eintrag konnte nicht gelöscht werden!');
-        }
-    });
 
-}
 
-function update_Query(data) {
-    $.post('logic/edit_contents.php', data, function(response, status) {
-        console.log(response, status);
-    });
-
-}
