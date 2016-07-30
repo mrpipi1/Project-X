@@ -14,15 +14,9 @@
                 }
 
             }
-
         }else{
             $query = sql_query($page, $current_page, $entries_per_page, $order_by, $order_dir);
             create_table($query, $current_page, $total_pages,true, NULL);
         }
 
     ?>
-
-
-
-
-
