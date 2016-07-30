@@ -23,11 +23,15 @@ function get_specific_content_data($table_name, $where, $equals){
 function get_ordered_content_data($table_name, $where, $equals, $order_by, $asc_desc){
     global $link;
     $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = '" . $equals ."' ORDER BY ".$order_by." ". $asc_desc;
-    error_log($sql);
     $res = mysqli_query($link, $sql);
     return $res;
 }
-
+function get_count($table_name, $where, $equals){
+  global $link;
+  $sql = "SELECT COUNT(".$where.") FROM ".$table_name." WHERE ".$where. " = '" .$equals;
+  $res = mysqli_query($link, $sql);
+  return $res;
+}
 
 function get_specific_stock_content_data($table_name, $table_name2, $where, $where2, $equals){
     global $link;
@@ -62,6 +66,9 @@ $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
 $breadcrubms_checkout = get_content_data('breadcrubms_checkout');
+$female = get_count('users', 'gender', 'female');
+$male = get_count('users', 'gender', 'male');
+
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
     $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
 
