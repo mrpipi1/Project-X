@@ -160,6 +160,31 @@ $('.raidiobutton_wrapper_shipping').click(function(){
   }
 });
 
-$('.profile_shop_link').click(function(){
 
+$('.profile_shop_link').click(function(){
+  $('.send_password_message').css('display', 'block');
 });
+//if($('.send_password_message')){
+  console.log($('.deny'))
+  $('.confirm').click(function(){
+  });
+  $('.deny').click(function(){
+    $('.send_password_message').css('display', 'none');
+  })
+//}
+
+$('.pencil_frontend').click(function(){
+  $('.user_info_wrapper').toggleClass('showing_form');
+  if($('.user_info_wrapper').hasClass('showing_form')){
+    $('.user_info_wrapper').css('display', 'none');
+    $('.user_info_change_wrapper').css('display', 'block');
+  }else{
+  $('.user_info_wrapper').css('display', 'block');
+  $('.user_info_change_wrapper').css('display', 'none');
+}});
+
+$('.profile_update_btn').click(function(){
+  $('.user_info_wrapper').css('display', 'block');
+  $('.user_info_change_wrapper').css('display', 'none');
+});
+//
