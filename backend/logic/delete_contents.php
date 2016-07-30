@@ -9,9 +9,10 @@ if(isset($_POST['table']) && isset($_POST['id'])) {
         $timestamp = time();
         $sql = "UPDATE {$_POST['table']} SET is_active = 0, deleted_at = " . $timestamp . " WHERE id = {$_POST['id']}";
         $result = mysqli_query($link, $sql);
-        if (!$result) {
-            die(mysqli_error($link));
+        if($result) {
+            echo $result;
+        }else{
+            echo 0;
         }
-        echo $result;
     }
 }
