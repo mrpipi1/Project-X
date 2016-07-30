@@ -124,7 +124,11 @@ include('../views/table.php'); ?>
 </section>
 <?php
 }else{
+    
+    
+    include('../../functions/statistik_functions.php');
     $views = $page .".php";
+
     include('../views/'.$views);
 }
 

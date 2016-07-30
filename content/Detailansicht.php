@@ -91,7 +91,7 @@
         </div>
 
         <div class="btn_checkout">
-            <a href="index.php?page=Detailansicht&product_id=<?php echo $_GET['product_id']; ?>quantity=5&size=xl&color=red&action=insert" >in den Warenkorb</a>
+            <a href="index.php?page=Detailansicht&product_id=<?php echo $_GET['product_id']; ?>&quantity=5&size=xl&color=red&cart=insert" >in den Warenkorb</a>
         </div>
     </div>
 
