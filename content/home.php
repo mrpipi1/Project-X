@@ -112,7 +112,7 @@
                 <section class="product">
                     <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
                         <ul class="product-img">
-                            <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
+                            <img src="<?php echo $row['pic'] ?>"/>
                         </ul>
                         <ul class="info">
                             <li><?php echo $row['_name'] ?></li>
