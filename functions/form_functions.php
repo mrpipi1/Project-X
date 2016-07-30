@@ -20,6 +20,7 @@ function get_col_data($table_name){
 // $id wenn action = edit damit man den richtigen datensatz bearbeiten kann
 function addInput($column_data, $action, $id, $attribute = [] ){
     global $link;
+    global $page;
     $output = "";              // hier wird dann alles rein gespeichert das dann ausgegeben werden soll, \n und |r sollten überall sein wo norm. eine neue zeile ist.
     $ende = "</div> \n \r";    // default wenns keine checkbox ist, siehe  comment in "if ($type == "checkbox") {"
     $cnt = 0;
@@ -36,7 +37,7 @@ function addInput($column_data, $action, $id, $attribute = [] ){
         $is_other_table = substr($input_name, -3, 3); // = _id
         $second_table_name = substr($input_name, 0, -3);    //$is_other_table, $second_table_name, $col_name werden erst später gebraucht, wenn ich ein select erstelln will zb bei den mitarbeitern welcher kurs unterrichtet wird.
         $col_name = "_name";
-        $table_name = $_GET['page'];
+        $table_name = $page;
         $input_name_space = underscore_to_space($input_name);
         $label = ucfirst($input_name_space);
 

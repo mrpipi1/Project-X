@@ -1,37 +1,49 @@
 <?php
+include("../../db-connect.php");
+include("../../functions/helpers.php");
+include("../../functions/form_functions.php");
+$action = $_POST['action'];
+$page = $_POST['page'];
+if($action == 'edit'){
+    $id = $_POST['id'];
+}else{
+    $id = NULL;
+}
+
+?>
 <h2 class="hl_form_backend">
             <?php
-            if($_GET['action'] == 'edit'){
-                if($_GET['page'] == "staff"){
+            if($action == 'edit'){
+                if($page == "staff"){
                     echo "Mitarbeiter aktualiesieren";
-                }elseif($_GET['page'] == "orders"){
+                }elseif($page == "orders"){
                     echo "Bestellung aktualiesieren";
-                }elseif($_GET['page'] == "shop_categories"){
+                }elseif($page == "shop_categories"){
                     echo "Kategorie aktualiesieren";
-                }elseif($_GET['page'] == "shop_item"){
+                }elseif($page == "shop_item"){
                     echo "Produkt aktualiesieren";
-                }elseif($_GET['page'] == "content"){
+                }elseif($page == "content"){
                     echo ucfirst($_GET['page']) ." aktualiesieren";
-                }elseif($_GET['page'] == "socialmedia"){
+                }elseif($page == "socialmedia"){
                     echo "Icon aktualiesieren";
                 }else{
-                    echo ucfirst(substr($_GET['page'], 0, -1)) ." aktualiesieren";
+                    echo ucfirst(substr($page, 0, -1)) ." aktualiesieren";
                 }
-            }elseif($_GET['action'] == 'new'){
-                if($_GET['page'] == "staff"){
+            }elseif($action == 'new'){
+                if($page == "staff"){
                     echo "new Employee";
-                }elseif($_GET['page'] == "orders"){
+                }elseif($page == "orders"){
                     echo "new Order";
-                }elseif($_GET['page'] == "shop_categories"){
+                }elseif($page == "shop_categories"){
                     echo "new Category";
-                }elseif($_GET['page'] == "shop_item"){
+                }elseif($page == "shop_item"){
                     echo "neues Produkt";
-                }elseif($_GET['page'] == "content"){
+                }elseif($page == "content"){
                     echo "neuer " .ucfirst($_GET['page']);
-                }elseif($_GET['page'] == "socialmedia"){
+                }elseif($page == "socialmedia"){
                     echo "neues Icon";
                 }else{
-                    echo "neuer " .ucfirst(substr($_GET['page'], 0, -1));
+                    echo "neuer " .ucfirst(substr($page, 0, -1));
                 }
             }
   ?>
@@ -40,10 +52,8 @@
 <form class="form_backend" enctype="multipart/form-data" action="index.php?page=<?php /*echo $_GET['page'];*/?>&amp;action=<?php /*if($_GET['action'] == 'edit'){echo "update&amp;id=".$_GET['id'];}elseif($_GET['action'] == 'new'){echo 'insert';}*/?>" method="post" >
 
     <?php
-    if(!isset($_GET['id'])){
-        $_GET['id'] = NULL;
-    }
-    echo addInput(get_col_data($_GET['page']), $_GET['action'], $_GET['id']);
+
+    echo addInput(get_col_data($page), $action, $id);
     ?>
 
     <div class="btn_backend">
@@ -54,22 +64,22 @@
 
 </section>
 <?php
-global $link;
+/*global $link;
 
 
 $total_pages = ceil($total_contents / $entries_per_page);
 
-if(isset($_GET['action'])){
-    if($_GET['action'] == 'delete' ){
-            $id = (int)$_GET["id"];
-            $deleted = delete_contents($_GET['page'], $id);
+if($action){
+    if($action == 'delete' ){
+            //$id = (int)$_GET["id"];
+            $deleted = delete_contents($page, $id);
             $return['deleted'] =  $deleted;
         }elseif($_GET['action'] == 'edit'){
         }elseif($_GET['action'] == 'update'){
-            $id = $_GET['id'];
+            //$id = $_GET['id'];
             $array = $_POST;
-            $tablename = $_GET['page'];
-            $updated = update_contents($_GET['page'], $id, $array);
+            $tablename = $page;
+            $updated = update_contents($page, $id, $array);
             $return['updated'] =  $updated;
         }elseif($_GET['action'] == 'new') {
         }elseif($_GET['action'] == 'insert'){
@@ -78,5 +88,5 @@ if(isset($_GET['action'])){
             $insert = insert_contents($_GET['page'], $array);
             $return['insert'] =  $insert;
     }
-}
+}*/
 ?>

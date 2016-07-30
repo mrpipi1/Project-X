@@ -66,22 +66,25 @@ function load_Content(page, site, order_by, order_dir){
 
     $.post('logic/get_contents.php', {page: page, site: site, order_by: order_by, order_dir: order_dir}, function(response, status) {
         $(".content-wrapper_backend").empty();
+        $(".content-wrapper_backend").append('<section class="wrapper-form-backend"> </section>');
         $(".content-wrapper_backend").append(response);
+
     });
 
 }
 
-function load_forms(page, action){
-
+function load_forms(page, action, id){
     if(!page){
         page = 'dashboard';
     }
 
-    if(!action){
-        order_dir = 'ASC';
+    if(!id){
+        var data = {page: page, action: action};
+    }else{
+        var data = {page: page, action: action, id: id};
     }
 
-    $.post('logic/get_forms.php', {page: page, action: action}, function(response, status) {
+    $.post('logic/get_forms.php', data, function(response, status) {
         $(".wrapper-form-backend").empty();
         $(".wrapper-form-backend").append(response);
     });
