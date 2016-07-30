@@ -46,7 +46,7 @@
   }else{
     $class = '';
   }
-  if($_COOKIE['landingpage'] != undefined){
+  if(!isset($_COOKIE['landingpage'])){
     $no_landingpage = 'header_no_landingpage';
   }else{
     $no_landingpage = '';
