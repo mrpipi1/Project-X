@@ -40,17 +40,29 @@
 
                 ?>
                 <ul class="selects">
-                    <li class="selects-text">Größe:</li>
+
                     <?php
                     mysqli_data_seek($sizes, 0);
+                    $cnt = 0;
                     while ($row3 = mysqli_fetch_assoc($sizes)) {
                         //print_r($row3);
 
                         if($row['id'] == $row3['product_id']) {
 
                             if($row3['stock'] > 0){
+                                if($cnt == 0) {
+                                    echo "<li class='selects-text'>Größe:</li>";
+                                    $cnt++;
+                                }
                                 echo "<li class='size'>".strtoupper($row3['size'])."</li>";
+                            }else{
+                                if($cnt == 0) {
+                                    echo "<li class='selects-text'>Größe:</li>";
+                                    $cnt++;
+                                }
+                                    echo "<li class='size-out'>".strtoupper($row3['size'])."</li>";
                             }
+
                         }
                     }
                 }

@@ -23,7 +23,7 @@
         while ($row2 = mysqli_fetch_assoc($products)) {
 
             if($row['product_id'] == $row2['id']) {
-                $price += $row2['price'];
+                $price += $row2['price']*$row['quantity'];
                 ?>
 
                 <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; if ($cnt == 0) {echo 'card-item_first';} ?> ">
