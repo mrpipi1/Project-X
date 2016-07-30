@@ -169,9 +169,9 @@
                   }else if ($row['type'] == 'content'){
                       echo '<p>' .$row['content'].'</p>';
                   }else if ($row['type'] == 'email'){
-                      echo '<p><a href=\"mailto:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                      echo '<p><a href="mailto:'.$row["content"].'?subject=Kontaktformular-Website">'.$row['content'].'</a></p>';
                   }else if ($row['type'] == 'tel'){
-                      echo '<p><a href=\"tel:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                      echo '<p><a href="tel:'.$row["content"].'?subject=Kontaktformular-Website">'.$row['content'].'</a></p>';
                   }
                   $cnt++;
               }
