@@ -6,7 +6,6 @@
      $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values }, function(response, status) {
          if(status == 'success') {
             response = jQuery.parseJSON(response);
-            console.log(response);
             for(i = 0; i < response.length; i++){
               if(response[i] > 0){
                 data.push( {
