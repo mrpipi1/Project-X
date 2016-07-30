@@ -107,7 +107,8 @@ function initMap() {
 
     var Lat = Number($('#map').attr('lat'));
     var Lng = Number($('#map').attr('lng'));
-  var myLatLng = {lat: Lat, lng: Lng};
+    var myLatLng = {lat: Lat, lng: Lng};
+
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
@@ -123,14 +124,31 @@ function initMap() {
 }
 
 function add_to_Cart(user_id, product_id){
-    $.post('logic/add_to_cart.php', {user_id: user_id, product_id: product_id}, function(response, status) {
-        if(response == 1 && status == 'success') {
-            console.log('worked');
-        }else{
-            console.log('fail');
-        }
-    });
+    var size = $(".size-selected").text();
+    var quantity = $(".quantity").val();
+    if(size && quantity > 0) {
+        $.post('logic/add_to_cart.php', {
+            user_id: user_id,
+            product_id: product_id,
+            size: size,
+            quantity: quantity
+        }, function (response, status) {
+            if (response == 1 && status == 'success') {
+                console.log('okay');
+            } else if(response == 2 && status == 'success'){
+                console.log('menge nicht verfügbar');
+            } else {
+                console.log('fehler');
+            }
+        });
+    }
 }
+
+
+$('.size').on('click', function(){
+    $(".size").removeClass("size-selected");
+    $(this).addClass( "size-selected" );
+})
 
 $('.raidiobutton_wrapper_shipping').click(function(){
   if(!$('.raidiobutton_wrapper_shipping input').prop('checked')){
@@ -143,11 +161,5 @@ $('.raidiobutton_wrapper_shipping').click(function(){
 });
 
 $('.profile_shop_link').click(function(){
-  
+
 });
-
-
-
-
-
-//
