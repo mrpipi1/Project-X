@@ -2146,9 +2146,8 @@ div.profile_shop_link{
   cursor: pointer;
 
 }
-div.profile_shop_link:hover{
+div.profile_shop_link:hover, a.profile_shop_link:hover{
   color: #5a8e7d;
-
 }
 
 .profile_info_value{
