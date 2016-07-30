@@ -1189,7 +1189,7 @@ Breadcrumbs
 .btn_checkout {
     margin: 20px;
 }
-.btn_checkout a {
+.btn_checkout a, .btn_checkout  span{
     font-size: 14px;
     font-weight: 600;
     margin: 0 auto;
@@ -1202,7 +1202,7 @@ Breadcrumbs
     color: #5a8e7d;
     border: 1px solid #5a8e7d;
 }
-.btn_checkout a:hover {
+.btn_checkout a:hover, .btn_checkout:hover span{
     color: white;
     background-color: #5a8e7d;
 }

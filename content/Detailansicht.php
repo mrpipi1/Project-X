@@ -92,7 +92,7 @@
 
 
             <?php
-            echo "<div class=\"btn_checkout\" onClick=\"add_to_Cart('".$_SESSION['user']['user_id']."','".$_GET['product_id']."')\">in den Warenkorb</div>";
+            echo "<div class=\"btn_checkout\" onClick=\"add_to_Cart('".$_SESSION['user']['user_id']."','".$_GET['product_id']."')\"><span>in den Warenkorb</span></div>";
             ?>
 
 
