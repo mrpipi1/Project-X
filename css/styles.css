@@ -831,6 +831,9 @@ ______ ____  _____  __  __
        transition: 0.5s ease all;
        background: #5a8e7d;
    }
+   .form-bar_invalid:before, .form-bar_invalid:after{
+     background: #5a8e7d;
+   }
    .form-bar:before {
        left: 50%;
    }

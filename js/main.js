@@ -261,9 +261,12 @@ $('#contact_email').on('input', function() {
     var is_email=re.test(input.val());
     if(is_email){
         input.removeClass("invalid").addClass("valid");
+        $('.contact_email .form-bar').css('display', 'block');
+        $('.error_email').text('');
     } else {
         $('.error_email').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
         input.removeClass("valid").addClass("invalid");
+        $('.contact_email .form-bar').css('display', 'none');
     }
 });
 
@@ -273,9 +276,12 @@ $('#contact_comment').keyup(function(event) {
     console.log(message);
     if(message){
         input.removeClass("invalid").addClass("valid");
+        $('.contact_comment .form-bar').css('display', 'block');
+        $('.error_comment').text('');
     } else {
         $('.error_comment').text('Bitte geben Sie eine Nachricht ein!');
         input.removeClass("valid").addClass("invalid");
+        $('.contact_comment .form-bar').css('display', 'none');
     }
 });
 
@@ -285,21 +291,27 @@ $('#contact_name').keyup(function(event) {
     console.log(message);
     if(message){
         input.removeClass("invalid").addClass("valid");
+        $('.contact_name .form-bar').css('display', 'block');
+        $('.error_name').text('');
     } else {
-        $('.error_comment').text('Bitte geben Sie einen Namen ein!');
+        $('.error_name').text('Bitte geben Sie einen Namen ein!');
         input.removeClass("valid").addClass("invalid");
+        $('.contact_name .form-bar').css('display', 'none');
     }
 });
 
-$('#contact_name').on('input', function() {
+$('#contact_tel').on('input', function() {
     var input=$(this);
     var re = /^([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})*$/;
     var is_tel=re.test(input.val());
     if(is_tel){
         input.removeClass("invalid").addClass("valid");
+        $('.contact_name .form-bar').css('display', 'block');
+        $('.error_tel').text('');
     } else {
         $('.error_tel').text('Bitte geben Sie eine gültige Telefonnummer ein!');
         input.removeClass("valid").addClass("invalid");
+        $('.contact_name .form-bar').css('display', 'none');
     }
 });
 //
