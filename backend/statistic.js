@@ -1,203 +1,123 @@
 /**
  * Created by alex on 05/05/16.
  */
+ function statistik_data_Query(tablename, column, values, colors, name, subtitle) {
+   var data = [];
+     $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values }, function(response, status) {
+         if(status == 'success') {
+            response = jQuery.parseJSON(response);
+            console.log(response);
+            for(i = 0; i < response.length; i++){
+              if(response[i] > 0){
+                data.push( {
+                    "label": values[i],
+                    "value": response[i],
+                    "color": colors[i]
+                });
+              }
+                if(i == response.length - 1){
+                  if(name){
+                    name = name;
+                  }else{
+                    name = column;
+                  }
+                  if(subtitle){
+                    subtitle = subtitle;
+                  }else{
+                    subtitle = '';
+                  }
+                  var pie = new d3pie("pieChart", {
+                      "header": {
+                          "title": {
+                              "text": name,
+                              "fontSize": 24,
+                              "font": "helvetica"
+                          },
+                          "subtitle": {
+                              "text": subtitle,
+                              "color": "#999999",
+                              "fontSize": 10,
+                              "font": "helvetica"
+                          },
+                          "location": "pie-center",
+                          "titleSubtitlePadding": 10
+                      },
+                      "footer": {
+                          "color": "#999999",
+                          "fontSize": 10,
+                          "font": "open sans",
+                          "location": "bottom-left"
+                      },
+                      "size": {
+                          "canvasHeight": 300,
+                          "canvasWidth": 340,
+                          "pieInnerRadius": "92%",
+                          "pieOuterRadius": "72%"
+                      },
+                      "data": {
+                          "sortOrder": "label-desc",
+                          "content":
+                              data
 
- // function statistik_data_Query(tablename, Id, bla) {
- //     console.log(el);
- //     $.post('logic/statistik_data.php', {id: Id, table: tablename}, function(response, status) {
- //         if(response === 1 && status == success) {
- //             notification('success', 'Eintrag erfolgreich gelöscht!');
- //             //todo reload the data
- //         }else{
- //             notification('error', 'Eintrag konnte nicht gelöscht werden!');
- //         }
- //     });
- //
- // }
- // var female = statistik_data_Query('users', 'gender', 'female')
-
-var pie = new d3pie("pie_gender", {
-    "header": {
-        "title": {
-            "text": "gender",
-            "fontSize": 24,
-            "font": "helvetica"
-        },
-        "subtitle": {
-            "text": "user gender",
-            "color": "#999999",
-            "fontSize": 10,
-            "font": "helvetica"
-        },
-        "location": "pie-center",
-        "titleSubtitlePadding": 10
-    },
-    "footer": {
-        "color": "#999999",
-        "fontSize": 10,
-        "font": "open sans",
-        "location": "bottom-left"
-    },
-    "size": {
-        "canvasHeight": 300,
-        "canvasWidth": 340,
-        "pieInnerRadius": "92%",
-        "pieOuterRadius": "72%"
-    },
-    "data": {
-        "sortOrder": "label-desc",
-        "content": [
-            {
-                "label": "male",
-                "value": 4,
-                "color": "#3e4f99"
-            },
-            {
-                "label": "female",
-                "value": 2,
-                "color": "#cb83d5"
-            }
-        ]
-    },
-    "labels": {
-        "outer": {
-            "format": "label-percentage1",
-            "pieDistance": 10
-        },
-        "inner": {
-            "format": "none"
-        },
-        "mainLabel": {
-            "font": "helvetica",
-            "fontSize": 11
-        },
-        "percentage": {
-            "color": "#999999",
-            "font": "helvetica",
-            "fontSize": 11,
-            "decimalPlaces": 0
-        },
-        "value": {
-            "color": "#cccc43",
-            "font": "helvetica",
-            "fontSize": 11
-        },
-        "lines": {
-            "enabled": true,
-            "style": "straight",
-            "color": "#777777"
-        },
-        "truncation": {
-            "enabled": true
-        }
-    },
-    "effects": {
-        "pullOutSegmentOnClick": {
-            "effect": "linear",
-            "speed": 400,
-            "size": 8
-        }
-    },
-    "misc": {
-        "colors": {
-            "segmentStroke": "#000000"
-        }
-    }
-});
-
-
-    //####################
-
-    var pie = new d3pie("pieChart", {
-        "header": {
-            "title": {
-                "text": "prev. delivery",
-                "fontSize": 24,
-                "font": "helvetica"
-            },
-            "subtitle": {
-                "text": "",
-                "color": "#999999",
-                "fontSize": 10,
-                "font": "helvetica"
-            },
-            "location": "pie-center",
-            "titleSubtitlePadding": 10
-        },
-        "footer": {
-            "color": "#999999",
-            "fontSize": 10,
-            "font": "open sans",
-            "location": "bottom-left"
-        },
-        "size": {
-            "canvasHeight": 300,
-            "canvasWidth": 340,
-            "pieInnerRadius": "92%",
-            "pieOuterRadius": "72%"
-        },
-        "data": {
-            "sortOrder": "label-desc",
-            "content": [
-                {
-                    "label": "Post",
-                    "value": 8,
-                    "color": "#3f9999"
-                },
-                {
-                    "label": "DHL",
-                    "value": 3,
-                    "color": "#709925"
-                },
-                {
-                    "label": "Express",
-                    "value": 6,
-                    "color": "#206999"
+                      },
+                      "labels": {
+                          "outer": {
+                              "format": "label-percentage1",
+                              "pieDistance": 10
+                          },
+                          "inner": {
+                              "format": "none"
+                          },
+                          "mainLabel": {
+                              "font": "helvetica",
+                              "fontSize": 11
+                          },
+                          "percentage": {
+                              "color": "#999999",
+                              "font": "helvetica",
+                              "fontSize": 11,
+                              "decimalPlaces": 0
+                          },
+                          "value": {
+                              "color": "#cccc43",
+                              "font": "helvetica",
+                              "fontSize": 11
+                          },
+                          "lines": {
+                              "enabled": true,
+                              "style": "straight",
+                              "color": "#777777"
+                          },
+                          "truncation": {
+                              "enabled": true
+                          }
+                      },
+                      "effects": {
+                          "pullOutSegmentOnClick": {
+                              "effect": "linear",
+                              "speed": 400,
+                              "size": 8
+                          }
+                      },
+                      "misc": {
+                          "colors": {
+                              "segmentStroke": "#000000"
+                          }
+                      }
+                  });
                 }
-            ]
-        },
-        "labels": {
-            "outer": {
-                "format": "label-percentage1",
-                "pieDistance": 10
-            },
-            "inner": {
-                "format": "none"
-            },
-            "mainLabel": {
-                "font": "helvetica",
-                "fontSize": 11
-            },
-            "percentage": {
-                "color": "#999999",
-                "font": "helvetica",
-                "fontSize": 11,
-                "decimalPlaces": 0
-            },
-            "value": {
-                "color": "#cccc43",
-                "font": "helvetica",
-                "fontSize": 11
-            },
-            "lines": {
-                "enabled": true,
-                "style": "straight",
-                "color": "#777777"
-            },
-            "truncation": {
-                "enabled": true
-            }
-        },
-        "effects": {
-            "pullOutSegmentOnClick": {
-                "effect": "linear",
-                "speed": 400,
-                "size": 8
-            }
-        },
-        "misc": {
-            "colors": {
-                "segmentStroke": "#000000"
-            }
-        }
-    });
+
+             }
+
+         }else{
+           console.log('error');
+         }
+     });
+
+ }
+ // here are the colors for the statistics defined
+var colors = ['#000', '#848484', '#dddddd'];
+statistik_data_Query('users', 'gender', ['female', 'male'], colors, 'Gender');
+statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment', 'Test Subheadline');
+statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors, 'prefered Delivery');
+statistik_data_Query('users', 'city', ['Wien', 'Berlin'], colors, 'City');

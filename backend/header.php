@@ -20,6 +20,8 @@
     <!-- jQuery library (served from Google) -->
     <script src="../js/jquery-1.12.2.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script src="d3pie.min.js"></script>
+    <script src="statistic.js"></script>
     <script src="script.js"></script>
 
 </head>
@@ -156,8 +158,3 @@
             </section>
        <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>-->
         </section>
-
-
-
-
-

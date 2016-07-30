@@ -20,7 +20,6 @@ $(document).ready(function(){
     parent.children('li.open').removeClass('open');
 
     var sub = jQuery(this).next();
-    console.log(sub)
     var slideOffeset = -200;
     var slideSpeed = 200;
 
@@ -175,7 +174,3 @@ function update_Query(data) {
     });
 
 }
-
-
-
-

@@ -1,3 +1,4 @@
+<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
 
 <script src="d3pie.min.js"></script>
 <script src="statistic.js"></script>
@@ -10,7 +11,6 @@
  * Time: 14:07
  */
 include('backend_crumbs.php');
-echo $female;
 ?>
 
     <section class="pie-chart_wrapper">

@@ -1,7 +1,13 @@
 <?php
-function get_count($table_name, $where, $equals){
+include("../../db-connect.php");
+$tablename = $_POST['statistik_table'];
+$column = $_POST['statistik_col'];
+$values = $_POST['satistik_values'];
   global $link;
-  $sql = "SELECT COUNT(".$where.") FROM ".$table_name." WHERE ".$where. " = '" .$equals;
-  $res = mysqli_query($link, $sql);
-  return $res;
-}
+  for($i = 0; $i < count($values); $i++){
+    $sql = "SELECT * FROM ".$tablename." WHERE ".$column. " = '" .$values[$i]."'";
+    $res = mysqli_query($link, $sql);
+    $result[] = mysqli_num_rows($res);
+  }
+
+  echo json_encode($result);
