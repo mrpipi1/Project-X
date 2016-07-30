@@ -4,7 +4,7 @@
 
  // function statistik_data_Query(tablename, Id, bla) {
  //     console.log(el);
- //     $.post('logic/delete_contents.php', {id: Id, table: tablename}, function(response, status) {
+ //     $.post('logic/statistik_data.php', {id: Id, table: tablename}, function(response, status) {
  //         if(response === 1 && status == success) {
  //             notification('success', 'Eintrag erfolgreich gelöscht!');
  //             //todo reload the data
@@ -14,7 +14,6 @@
  //     });
  //
  // }
- // console.log('hallo')
  // var female = statistik_data_Query('users', 'gender', 'female')
 
 var pie = new d3pie("pie_gender", {
