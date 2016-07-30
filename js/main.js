@@ -122,3 +122,13 @@ function initMap() {
     title: 'Lotus Yoga'
   });
 }
+
+function add_to_Cart(user_id, product_id){
+    $.post('logic/add_to_cart.php', {user_id: user_id, product_id: product_id}, function(response, status) {
+        if(response == 1 && status == 'success') {
+            console.log('worked');
+        }else{
+            console.log('fail');
+        }
+    });
+}

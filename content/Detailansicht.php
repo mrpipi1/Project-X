@@ -90,8 +90,13 @@
             <a href="index.php?page=Shop">zurück</a>
         </div>
 
-        <div class="btn_checkout">
-            <a href="index.php?page=Detailansicht&product_id=<?php echo $_GET['product_id']; ?>&quantity=5&size=xl&color=red&cart=insert" >in den Warenkorb</a>
+
+            <?php
+            echo "<div class=\"btn_checkout\" onClick=\"add_to_Cart('".$_SESSION['user']['user_id']."','".$_GET['product_id']."')\">in den Warenkorb</div>";
+            ?>
+
+
+
         </div>
     </div>
 

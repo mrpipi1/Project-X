@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 30. Jul 2016 um 13:32
+-- Erstellungszeit: 30. Jul 2016 um 14:09
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -67,6 +67,30 @@ CREATE TABLE IF NOT EXISTS `bestell_items` (
 
 INSERT INTO `bestell_items` (`id`, `bestellnummer`, `shopitem_id`, `is_active`, `deleted_at`) VALUES
 (3, 2323, 23, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `size` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `size`, `created_at`, `deleted_at`) VALUES
+(1, 2, 7, 0, '', '2016-07-30 13:06:48', NULL);
 
 -- --------------------------------------------------------
 
@@ -530,6 +554,12 @@ ALTER TABLE `bestell_items`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indizes für die Tabelle `contents`
 --
 ALTER TABLE `contents`
@@ -621,6 +651,11 @@ ALTER TABLE `admins`
 --
 ALTER TABLE `bestell_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT für Tabelle `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
