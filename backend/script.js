@@ -71,6 +71,23 @@ function load_Content(page, site, order_by, order_dir){
 
 }
 
+function load_forms(page, action){
+
+    if(!page){
+        page = 'dashboard';
+    }
+
+    if(!action){
+        order_dir = 'ASC';
+    }
+
+    $.post('logic/get_forms.php', {page: page, action: action}, function(response, status) {
+        $(".wrapper-form-backend").empty();
+        $(".wrapper-form-backend").append(response);
+    });
+
+}
+
 
 load_Content('dashboard', '1', 'id', 'ASC');
 /*$.ajax({
