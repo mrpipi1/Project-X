@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 30. Jul 2016 um 17:15
+-- Erstellungszeit: 30. Jul 2016 um 18:15
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -487,29 +487,30 @@ CREATE TABLE IF NOT EXISTS `stock` (
   `id` int(11) unsigned NOT NULL,
   `product_id` int(11) NOT NULL,
   `size` varchar(11) NOT NULL DEFAULT '',
-  `stock` int(11) DEFAULT NULL
+  `stock` int(11) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `stock`
 --
 
-INSERT INTO `stock` (`id`, `product_id`, `size`, `stock`) VALUES
-(1, 7, 'xs', NULL),
-(2, 7, 's', 22),
-(3, 7, 'm', 34),
-(4, 7, 'l', 9),
-(5, 7, 'xl', 4),
-(27, 9, 'xs', 49),
-(28, 9, 's', 25),
-(29, 9, 'm', 49),
-(30, 9, 'l', 61),
-(31, 9, 'xl', 16),
-(34, 12, 'xs', 72),
-(35, 12, 's', 95),
-(36, 12, 'm', 19),
-(37, 12, 'l', 26),
-(38, 12, 'xl', 25);
+INSERT INTO `stock` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
+(1, 7, 'xs', NULL, NULL),
+(2, 7, 's', 22, NULL),
+(3, 7, 'm', 34, NULL),
+(4, 7, 'l', 9, NULL),
+(5, 7, 'xl', 4, NULL),
+(27, 9, 'xs', 49, NULL),
+(28, 9, 's', 25, NULL),
+(29, 9, 'm', 49, NULL),
+(30, 9, 'l', 61, NULL),
+(31, 9, 'xl', 16, NULL),
+(34, 12, 'xs', 72, NULL),
+(35, 12, 's', 95, NULL),
+(36, 12, 'm', 19, NULL),
+(37, 12, 'l', 26, NULL),
+(38, 12, 'xl', 25, NULL);
 
 -- --------------------------------------------------------
 
