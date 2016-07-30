@@ -1285,6 +1285,10 @@ Detailseite
     color: white;
 }
 
+.fa-ban {
+    color:#8e0000 !important;
+}
+
 /* COLORPICKER */
 
 .color:hover, .size:hover {

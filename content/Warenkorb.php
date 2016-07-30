@@ -16,16 +16,17 @@
     </div>
     <?php
     $cnt = 0;
+    $price = 0;
+    $delivery_cost = 5;
     while ($row = mysqli_fetch_assoc($cart)) {
         mysqli_data_seek($products, 0);
         while ($row2 = mysqli_fetch_assoc($products)) {
-            if($row['product_id'] == $row2['id']) {
 
+            if($row['product_id'] == $row2['id']) {
+                $price += $row2['price'];
                 ?>
 
-                <div class="card-item <?php if ($cnt == 0) {
-                    echo 'card-item_first';
-                } ?> ">
+                <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; if ($cnt == 0) {echo 'card-item_first';} ?> ">
 
                     <img src="<?php echo $row2['pic']; ?>" class="img_card" alt="<?php echo $row2['pic']; ?>"/>
 
@@ -42,13 +43,18 @@
 
 
                     <div class="price_wrapper"><?php echo $row2['price']; ?></div>
-                    <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
+                    <div class="delete_wrapper"><a href="#" class="delete" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></a></div>
 
                 </div>
                 <?php
             }
         }
+        $cnt++;
     }
+    if($price > 50){
+        $delivery_cost = 0;
+    }
+    $price += $delivery_cost;
     ?>
 
 </section>
@@ -57,13 +63,14 @@
 
     <ul class="versand-datum">
         <li>Vorraussichtliche Lieferung:</li>
-        <li>Dienstag, 05.04.2016</li>
+        <li>in 3 - 5 Werktagen</li>
     </ul>
 
     <ul class="sum_card">
-        <li>Versandkosten: 5€</li>
-        <li>Gesammtpreis: 48,97</li>
+        <li>Versandkosten: <?php echo $delivery_cost; ?> €</li>
+        <li>Gesammtpreis: <?php echo $price; ?> €</li>
         <li class="small-text">* alle Preise inkl. MwSt.</li>
+        <li class="small-text">* Versandkostenfrei ab 40€</li>
     </ul>
 </div>
 

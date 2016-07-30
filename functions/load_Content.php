@@ -1,7 +1,7 @@
 <?php
 function get_content_data($table_name){
     global $link;
-    $sql = "SELECT * FROM " .$table_name;
+    $sql = "SELECT * FROM " .$table_name. " WHERE deleted_at IS NULL";
 	$res = mysqli_query($link, $sql);
 	return $res;
 }
@@ -15,7 +15,7 @@ function get_distinct_content_data($table_name, $value){
 
 function get_specific_content_data($table_name, $where, $equals){
     global $link;
-    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals;
+    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals . " AND deleted_at IS NULL ";
     $res = mysqli_query($link, $sql);
     return $res;
 }
