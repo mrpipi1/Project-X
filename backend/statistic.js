@@ -1,9 +1,9 @@
 /**
  * Created by alex on 05/05/16.
  */
- function statistik_data_Query(tablename, column, values, colors) {
+ function statistik_data_Query(tablename, column, values, colors, name) {
    var data = [];
-     $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values}, function(response, status) {
+     $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values }, function(response, status) {
          if(status == 'success') {
             response = jQuery.parseJSON(response);
             console.log(response);
@@ -16,10 +16,15 @@
                 });
               }
                 if(i == response.length - 1){
+                  if(name){
+                    name = name;
+                  }else{
+                    name = column;
+                  }
                   var pie = new d3pie("pieChart", {
                       "header": {
                           "title": {
-                              "text": column,
+                              "text": name,
                               "fontSize": 24,
                               "font": "helvetica"
                           },
@@ -107,6 +112,7 @@
  }
  // here are the colors for the statistics defined
 var colors = ['#000', '#848484', '#dddddd'];
-statistik_data_Query('users', 'gender', ['female', 'male'], colors);
-statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors);
-statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors);
+statistik_data_Query('users', 'gender', ['female', 'male'], colors, 'Gender');
+statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment');
+statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors, 'prefered Delivery');
+statistik_data_Query('users', 'city', ['Wien', 'Berlin'], colors, 'City');
