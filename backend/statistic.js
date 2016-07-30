@@ -2,6 +2,20 @@
  * Created by alex on 05/05/16.
  */
 
+ function statistik_data_Query(tablename, Id, bla) {
+     console.log(el);
+     $.post('logic/delete_contents.php', {id: Id, table: tablename}, function(response, status) {
+         if(response === 1 && status == success) {
+             notification('success', 'Eintrag erfolgreich gelöscht!');
+             //todo reload the data
+         }else{
+             notification('error', 'Eintrag konnte nicht gelöscht werden!');
+         }
+     });
+
+ }
+ var female = statistik_data_Query('users', 'gender', 'female')
+
 var pie = new d3pie("pie_gender", {
     "header": {
         "title": {
