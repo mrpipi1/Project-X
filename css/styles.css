@@ -2128,11 +2128,16 @@ pie chart
   width: 195px;
   margin: 5px 0;
 }
-.profile_shop_link{
-  margin: 10px 0;
+div.profile_shop_link{
+  margin: 15px 0;
+  font-weight: 300;
+  cursor: pointer;
+
 }
-.profile_shop_link:hover{
+div.profile_shop_link:hover{
   color: #5a8e7d;
+  cursor: pointer;
+
 }
 
 .profile_info_value{

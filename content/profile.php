@@ -40,10 +40,10 @@ if(mysqli_num_rows($orders) > 0){
       <div class="profile_info_value"><?php echo $row['fullname']; ?></div>
     <?php
     }
-    if(isset($row['email'])){
+    if(isset($row['address'])){
     ?>
       <div class="profile_info_label">Adresse </div>
-      <div class="profile_info_value"><?php echo $row['address'].', '. $row['zip_code'].' '. $row['city']; ?></div>
+      <div class="profile_info_value"><?php if($row['address']){ echo $row['address'];}?>, <?php if($row['zip_code']){ echo $row['zip_code'];} ?>  <?php if($row['city']){ echo $row['city'];} ?></div>
 
     <?php
     }
@@ -82,7 +82,7 @@ if(mysqli_num_rows($orders) > 0){
   <?php
   }
   ?>
-  <a href="index.php?page=profile&amp;action=update&amp;id=<?php echo $_GET['user']['user_id'];?>" class="profile_shop_link  profile_info_label">Passwort ändern</a>
+  <div class="profile_shop_link  profile_info_label">Passwort zurücksetzen</div>
 
 </section>
 

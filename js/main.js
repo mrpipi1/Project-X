@@ -141,3 +141,13 @@ $('.raidiobutton_wrapper_shipping').click(function(){
     $('.shipping_form_wrapper').css('display','none');
   }
 });
+
+$('.profile_shop_link').click(function(){
+  
+});
+
+
+
+
+
+//
