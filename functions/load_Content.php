@@ -61,6 +61,9 @@ $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
 $breadcrubms_checkout = get_content_data('breadcrubms_checkout');
+if(isset($_SESSION['user']['user_id'])) {
+    $cart = get_specific_content_data('cart', 'user_id', $_SESSION['user']['user_id']);
+}
 
 
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){

@@ -14,73 +14,42 @@
             <li class="actions_price">Preis</li>
         </ul>
     </div>
+    <?php
+    $cnt = 0;
+    while ($row = mysqli_fetch_assoc($cart)) {
+        mysqli_data_seek($products, 0);
+        while ($row2 = mysqli_fetch_assoc($products)) {
+            if($row['product_id'] == $row2['id']) {
+
+                ?>
+
+                <div class="card-item <?php if ($cnt == 0) {
+                    echo 'card-item_first';
+                } ?> ">
+
+                    <img src="<?php echo $row2['pic']; ?>" class="img_card" alt="<?php echo $row2['pic']; ?>"/>
+
+                    <ul class="description_card-item">
+                        <li><?php echo $row2['_name']; ?></li>
+                        <li><?php echo $row2['description']; ?></li>
+                    </ul>
+
+                    <ul class="actions_card-item">
+                        <li><?php echo $row['product_size']; ?></li>
+                        <li class="farbe"><?php echo $row2['color']; ?></li>
+                        <li><?php echo $row['quantity']; ?></li>
+                    </ul>
 
 
-    <div class="card-item card-item_first ">
+                    <div class="price_wrapper"><?php echo $row2['price']; ?></div>
+                    <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
 
-        <img src="img/shop-images/damen-tshirt_small.png" class="img_card" alt="lorem" />
-
-        <ul class="description_card-item">
-            <li>Damen T-Shirt</li>
-            <li>T-Shirt aus reiner Bio-Baumwolle, Lorem ipsum dolor sit amet.</li>
-        </ul>
-
-        <ul class="actions_card-item">
-            <li>M</li>
-            <li class="farbe">Weiß</li>
-            <li>1</li>
-        </ul>
-
-
-        <div class="price_wrapper">19,99€</div>
-        <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
-
-    </div>
-
-    <div class="card-item">
-
-        <img src="img/shop-images/notebook.png" class="img_card" alt="lorem" />
-
-        <ul class="description_card-item">
-            <li>Notizblock</li>
-            <li>Notizblock mit Gummiband und Lesezeichen. Seiten kariert.</li>
-        </ul>
-
-        <ul class="actions_card-item">
-            <li>M</li>
-            <li class="farbe">Weiß</li>
-            <li>1</li>
-        </ul>
-
-        <div class="price_wrapper">19,99€</div>
-        <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
-
-    </div>
-
-    <div class="card-item">
-
-        <img src="img/shop-images/2er-band.png" class="img_card" alt="lorem" />
-
-        <ul class="description_card-item">
-            <li>2 Gummiarmbänder</li>
-            <li>Bequeme Armbänder.</li>
-        </ul>
-
-        <ul class="actions_card-item">
-            <li>M</li>
-            <li class="farbe"><ul>
-                    <li>Schwarz</li>
-                    <li>Weiß</li>
-                </ul>
-            </li>
-
-            <li>1</li>
-        </ul>
-
-        <div class="price_wrapper">3,99€</div>
-        <div class="delete_wrapper"><a href="#" class="delete">delete</a></div>
-
-    </div>
+                </div>
+                <?php
+            }
+        }
+    }
+    ?>
 
 </section>
 
