@@ -1,11 +1,9 @@
 <?php
-if(!isset($_GET['page']) ){
-    $crumb = "Dashboard"; // Legt default-wert "home" in die Variable $page
-}else{
-    $crumb = $_GET['page'];
-}
+
+    $crumb = $page;
+
 ?>
-<section class="content-wrapper_backend">
+
 
     <h3 class="main-hl_backend"><?php echo ucfirst($crumb); ?></h3>
         <div class="page-bar">

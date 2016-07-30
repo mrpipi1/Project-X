@@ -1,11 +1,9 @@
 <?php
 include('backend_crumbs.php');
 
-if(isset($_GET['page'])) {
-    $page_name = ucfirst($_GET['page']);
-}else{
-    $page_name = ucfirst('dashboard');
-}
+
+    $page_name = ucfirst($page);
+
 $new_item = substr($page_name, 0, -1);
 $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 
@@ -14,12 +12,12 @@ $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 </h3>
 
 <?php
-if(isset($_GET['page']) && $_GET['page'] != 'dashboard') {
-echo "<a class=\"btn_table\" href=\"index.php?page=".$_GET['page']."&amp;action=new\">".$new_item."</a>";
+if($page != 'dashboard') {
+echo "<a class=\"btn_table\" href=\"index.php?page=".$page."&amp;action=new\">".$new_item."</a>";
 }
 if(isset($_GET['action']) && ($_GET['action'] == 'edit' || $_GET['action'] == 'new')){
 ?>
-<section class="wrapper-form-backend">
+    <section class="wrapper-form-backend">
     <h2 class="hl_form_backend">
         <?php
         if($_GET['action'] == 'edit'){

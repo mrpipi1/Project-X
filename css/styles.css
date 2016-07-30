@@ -1797,12 +1797,12 @@ ____            _____  _  __ ______  _   _  _____
     border-bottom: 1px solid #414247;
 }
 
-.nav_backend li a:hover, .nav_backend li ul.sub_menu li a:hover{
+.nav_backend li p:hover, .nav_backend li ul.sub_menu li p:hover{
     background-color:#2B2B30;
     transition: all 0.2s ease-in-out;
 
 }
-.nav_backend li a, i {
+.nav_backend li p, i {
     color: #eee;
 }
 .nav_backend .sidebar li .active, .nav_backend li ul.sub_menu li .active{
@@ -1810,7 +1810,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 
-.nav_backend li a {
+.nav_backend li p {
     height:40px;
     display: block;
     position: relative;
@@ -1820,6 +1820,7 @@ ____            _____  _  __ ______  _   _  _____
     font-size: 14px;
     font-weight: 300;
     line-height:21px;
+    cursor:pointer;
 }
 .nav_backend li i {
     font-size: 16px;
@@ -1832,7 +1833,7 @@ ____            _____  _  __ ______  _   _  _____
     font-size: 14px;
     font-weight: 300;
 }
-.nav_backend li a .arrow:before {
+.nav_backend li p .arrow:before {
     float: right;
     margin-top: 0px;
     margin-right: 5px;
@@ -1846,7 +1847,7 @@ ____            _____  _  __ ______  _   _  _____
     color:#eee !important
 }
 
-.nav_backend  li  a  .arrow.open:before {
+.nav_backend  li  p  .arrow.open:before {
     float: right;
     margin-top: 0px;
     margin-right: 3px;
@@ -1871,7 +1872,7 @@ ____            _____  _  __ ______  _   _  _____
     padding: 0px;
     margin-top: 1px !important;
 }
-.nav_backend li ul.sub_menu li a {
+.nav_backend li ul.sub_menu li p {
     display: block;
     display: block;
     margin: 0px 0px 0px 0px;
@@ -1883,6 +1884,8 @@ ____            _____  _  __ ______  _   _  _____
     background: none;
     line-height:28px;
 }
+
+
 /*
 .nav_backend ul {
     padding-top: 20px;
@@ -1973,6 +1976,10 @@ ____            _____  _  __ ______  _   _  _____
     text-align: left;
     height:40px;
 }
+.table_backend th p {
+    cursor:pointer;
+}
+
 .table_backend td {
     font-weight: 300;
 }
@@ -1991,7 +1998,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 .content-wrapper_backend .fa-chevron-right {
-    padding: 11px 13px 12px 14.5px;
+    padding: 10px 14px 11px 13px;
 }
 
 .content-wrapper_backend .fa-chevron-left {
@@ -2044,6 +2051,8 @@ ____            _____  _  __ ______  _   _  _____
     border-color: #dddddd;
     color:black;
     background-color:#ddd;
+    margin:0px 1px;
+    cursor:pointer;
 }
 .pagination:hover{
   border-color: #cecece;

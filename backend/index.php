@@ -16,7 +16,7 @@ $order_dir = isset($_GET['order_dir']) ? $_GET["order_dir"] : "ASC";
 error_reporting(-1);
 include('header.php');
 include("../db-connect.php");
-include("../functions/table_functions.php");
+//include("../functions/table_functions.php");
 include("../functions/form_functions.php");
 include('../functions/helpers.php');
 include('../functions/backend_functions.php');
@@ -28,14 +28,14 @@ if( ! isset($_GET['page']) || $_GET['page'] == 'dashboard' ){
     //$page = "dashboard"; // Legt default-wert in die Variable $page
     $views .= $page .".php";
     //include($views);
-    include('views/site_backend.php');
+    //include('views/site_backend.php');
 }elseif($page == "statistik"){
     $views .= $page .".php";
     include($views);
 }else{
     //$page = $_GET['page']; // Legt dynamischen GET-Parameter in die Variable $page
     if($page != 'dashboard'){
-      include('views/site_backend.php');
+      //include('views/site_backend.php');
     }
 }
 include('footer.php');
