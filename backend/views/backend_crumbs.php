@@ -10,11 +10,11 @@
             <ul class="page-breadcrumb">
                 <li>
                     <i class="fa fa-home"></i>
-                    <a href="index.html">Home</a>
+                    <span onClick="load_Content('dashboard', '1', 'id', 'ASC')">Home</span>
                     <i class="fa fa-angle-right"></i>
                 </li>
                 <li>
-                    <a href="#"><?php echo ucfirst($crumb); ?></a>
+                    <span onClick="load_Content('<?php echo $crumb ?>', '1', 'id', 'ASC')"><?php echo ucfirst($crumb); ?></span>
                 </li>
             </ul>
 
