@@ -201,31 +201,35 @@
                 echo '<section class="' . $row['_name'] . '">';
 
             }
+            if ($cnt == 0) {
+                echo '<form class="form_main" action="#" method="post">';
+            }
             if ($row['type'] == 'headline') {
                 echo '<h3>' . $row['content'] . '</h3>';
             } else if ($row['type'] == 'subheadline') {
                 echo '<h4>' . $row['content'] . '</h4>';
-            }
-            if($cnt == 0){
-                echo '<form class="form_main" action="#" method="post">';
-            }
-            if ($row['type'] == 'comment') {
-                echo '<div class="form-group">
-                           <textarea class="textarea" name="'.$row['type'].'" rows="10" cols="100" placeholder="'.$row['content'].'" ></textarea>
+            }else {
+
+                if ($row['type'] == 'comment') {
+                    echo '<div class="form-group">
+                           <textarea id="contact_' . $row['type'] . '" class="textarea" name="' . $row['type'] . '" rows="10" cols="100" placeholder="' . $row['content'] . '" ></textarea>
                            <span class="highlight"></span>
                            <span class="form-bar"></span>
+                           <span class="error error_' . $row['type'] . '""></span>
                       </div>';
-            } else if($row['type'] == 'submit') {
-                echo '<div class="btn">
-                       <input type="submit" class="submit_main input" name="user_message" value="' . $row['content'] . '" >
+                } else if ($row['type'] == 'submit') {
+                    echo '<div class="btn">
+                       <input id="contact_' . $row['type'] . '" type="submit" class="submit_main input" name="user_message" value="' . $row['content'] . '" >
                      </div>';
-            }else{
-                echo '<div class="form-group">
-                       <input type="text" name="'.$row['type'].'" value="" required class="input">
+                } else {
+                    echo '<div class="form-group contact_' . $row['type'] . '">
+                       <input id="contact_' . $row['type'] . '" type="text" name="' . $row['type'] . '" value="" required class="input">
                        <span class="highlight"></span>
                        <span class="form-bar"></span>
-                       <label class="label">'.$row['content'].'</label>
+                       <label class="label">' . $row['content'] . '</label>
+                       <span class="error error_' . $row['type'] . '"></span>
                      </div>';
+                }
             }
             if($cnt == mysqli_num_rows($contact_form)){
                 echo '</form>';
