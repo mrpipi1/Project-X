@@ -30,6 +30,7 @@ $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 <?php
 if($page != 'dashboard') {
     echo "<a class=\"btn_table\" href=\"index.php?page=".$page."&amp;action=new\">".$new_item."</a>";
+    
 }
 
 /*if(isset($_GET['action']) && ($_GET['action'] == 'edit' || $_GET['action'] == 'new')){
@@ -124,13 +125,10 @@ include('../views/table.php'); ?>
 </section>
 <?php
 }else{
-    
-    
+
+
     include('../../functions/statistik_functions.php');
     $views = $page .".php";
 
     include('../views/'.$views);
 }
-
-
-

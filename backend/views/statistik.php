@@ -1,3 +1,5 @@
+<script src="d3pie.min.js"></script>
+<script src="statistic.js"></script>
 <?php
 /**
  * Created by PhpStorm.
