@@ -2,12 +2,11 @@
  * Created by alex on 05/05/16.
  */
 
- function statistik_data_Query(tablename, column, value) {
-     $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_value: value}, function(response, status) {
+ function statistik_data_Query(tablename, column, value, tablename2, column2, value2) {
+     $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_value: value, statistik_table2: tablename2, statistik_col2: column2, satistik_value2: value2}, function(response, status) {
          if(status == 'success') {
              console.log(response);
-             var bla = response;
-             return response;
+             response = jQuery.parseJSON(response);;
 
              var pie = new d3pie("pieChart", {
                  "header": {
@@ -41,13 +40,13 @@
                      "sortOrder": "label-desc",
                      "content": [
                          {
-                             "label": "male",
-                             "value": male,
+                             "label": value,
+                             "value": response[0],
                              "color": "#3f9999"
                          },
                          {
-                             "label": "female",
-                             "value": female,
+                             "label": value2,
+                             "value": response[1],
                              "color": "#206999"
                          }
                      ]
@@ -98,9 +97,6 @@
                  }
              });
 
-             var female = statistik_data_Query('users', 'gender', 'female');
-             var male = statistik_data_Query('users', 'gender', 'male');
-             console.log('hallo');
 
          }else{
            console.log('error');
@@ -108,6 +104,8 @@
      });
 
  }
+statistik_data_Query('users', 'gender', 'female', 'users', 'gender', 'male');
+//statistik_data_Query('users', 'pref_delivery', 'female', 'users', 'gender', 'male');
 
 
     //####################
