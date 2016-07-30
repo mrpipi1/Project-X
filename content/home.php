@@ -211,7 +211,7 @@
             }else {
 
                 if ($row['type'] == 'comment') {
-                    echo '<div class="form-group">
+                    echo '<div class="form-group contact_' . $row['type'] . '"">
                            <textarea id="contact_' . $row['type'] . '" class="textarea" name="' . $row['type'] . '" rows="10" cols="100" placeholder="' . $row['content'] . '" ></textarea>
                            <span class="highlight"></span>
                            <span class="form-bar"></span>
