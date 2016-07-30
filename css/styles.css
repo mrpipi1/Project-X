@@ -1087,7 +1087,9 @@ h2.hl_checkout {
     font-size: 1.6em;
     margin: 0 0 4em 0;
 }
-
+h2.hl_shipping_address{
+  margin-bottom: 0;
+}
 
 .form_checkout-sectionsheadline {
     font-weight: 500;
@@ -1205,6 +1207,7 @@ Breadcrumbs
 .btn_checkout a:hover, .btn_checkout:hover span{
     color: white;
     background-color: #5a8e7d;
+    cursor:pointer;
 }
 
 /*####################

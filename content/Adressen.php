@@ -39,9 +39,14 @@
 
         <section class="shipping-address">
 
-            <h2 class="hl_checkout">Lieferadresse:</h2>
+            <h2 class="hl_checkout hl_shipping_address">Lieferadresse:</h2>
 
             <form class="form_checkout" action="#" method="post">
+
+              <div class="raidiobutton_wrapper">
+                <label for="is_shipping_addess" class="label_backend">gleich wie Rechnungsadresse</label>
+                <input type="checkbox" name="is_shipping_address" id="is_shipping_address" />
+              </div>
 
                 <div class="form-group">
                     <input type="text" name="name" value="" required class="input">
