@@ -1,12 +1,11 @@
-<div class="landingpage_wrapper"></div>
 
 <?php
-// if(!isset($_COOKIE['landingpage'])){
-//   include ('content/landingpage.php');
-// }else{
+ if(!isset($_COOKIE['landingpage'])){
+   include ('content/landingpage.php');
+ }else{
 //   // we don't want the landingpage to be includet because we want to show it once a day
 //
-// }
+ }
 
 ?>
   <main class="main">

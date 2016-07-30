@@ -1,4 +1,8 @@
+<?php
+setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
+?>
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -46,7 +50,7 @@
   }else{
     $class = '';
   }
-  if(!isset($_COOKIE['landingpage'])){
+  if(isset($_COOKIE['landingpage'])){
     $no_landingpage = 'header_no_landingpage';
   }else{
     $no_landingpage = '';
