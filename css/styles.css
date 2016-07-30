@@ -534,24 +534,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     height: 250px;
 
 }
-.jumper_black {
-    background: url(../img/shop/jumper_black.png) no-repeat;
-}
-.jumper_white {
-    background: url(../img/shop/jumper_white.png) no-repeat;
-}
-.yogabag-mat {
-    background: url(../img/shop/tragetasche_yogamatte.png) no-repeat;
-}
-.tshirt_w-red {
-    background: url(../img/shop/tshirt_w_red.png) no-repeat;
-}
-.notebook {
-    background: url(../img/shop/notebook.png) no-repeat;
-}
-.yogaring {
-    background: url(../img/shop/yogaring.png) no-repeat;
-}
+
 .product-img li:hover {
     transform: scale(1);
 }

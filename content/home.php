@@ -112,7 +112,7 @@
                 <section class="product">
                     <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">
                         <ul class="product-img">
-                            <img src="<?php echo $row['pic'] ?>" class="jumper_white"/>
+                            <img src="<?php echo $row['pic'] ?>"/>
                         </ul>
                         <ul class="info">
                             <li><?php echo $row['_name'] ?></li>
@@ -169,9 +169,9 @@
                   }else if ($row['type'] == 'content'){
                       echo '<p>' .$row['content'].'</p>';
                   }else if ($row['type'] == 'email'){
-                      echo '<p><a href=\"mailto:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                      echo '<p><a href="mailto:'.$row["content"].'?subject=Kontaktformular-Website">'.$row['content'].'</a></p>';
                   }else if ($row['type'] == 'tel'){
-                      echo '<p><a href=\"tel:\"'.$row["content"].'\"?subject=Kontaktformular-Website\">'.$row['content'].'</a></p>';
+                      echo '<p><a href="tel:'.$row["content"].'?subject=Kontaktformular-Website">'.$row['content'].'</a></p>';
                   }
                   $cnt++;
               }

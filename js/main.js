@@ -63,15 +63,17 @@ function onScroll(event){
 	var scrollPosition = $(document).scrollTop();
    $('.nav_main a').each(function () {
      var currentLink = $(this);
-     var refElement = $(currentLink.attr("href"));
-     if (refElement.position().top <= scrollPosition
-         && refElement.position().top + refElement.height() > scrollPosition) {
-       $('.nav_main ul li a').removeClass("active_nav");
-       currentLink.addClass("active_nav");
-     }
-     else{
-       currentLink.removeClass("active_nav");
-     }
+       if(currentLink.attr("href").indexOf('#') > -1){
+           var refElement = $(currentLink.attr("href"));
+           if (refElement.position().top <= scrollPosition
+               && refElement.position().top + refElement.height() > scrollPosition) {
+               $('.nav_main ul li a').removeClass("active_nav");
+               currentLink.addClass("active_nav");
+           }
+           else {
+               currentLink.removeClass("active_nav");
+           }
+       }
    });
 }
 
