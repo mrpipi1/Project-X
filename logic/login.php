@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 17/04/16
- * Time: 14:49
- */
 
 global $link;
 

@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19/04/16
- * Time: 17:22
- */
 
 // holt alle column names und die data types dazu
 function get_col_data($table_name){

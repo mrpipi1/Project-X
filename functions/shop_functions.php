@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 05/05/16
- * Time: 18:01
- */
 
 
 // nach category ordnen!

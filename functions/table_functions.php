@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 19/04/16
- * Time: 09:51
- */
 
 function sql_query($table_name, $current_page, $entries_per_page, $order_by, $order_dir){
 
