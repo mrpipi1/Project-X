@@ -67,6 +67,7 @@ a {
     font-weight: 200;
     padding: 1.65em 0;
     text-align: center;
+
 }
 .main #about_us h3{
   padding:2.5em 0 1.5em;
@@ -151,6 +152,7 @@ a {
 }
 
 .header.tiny {
+
     height: 60px;
     color: #000;
     background-color: #fff;
@@ -271,23 +273,44 @@ ul li a:hover i.logout{
 .content-wrapper {
     position: relative;
     z-index: 50;
-    padding:  150px 50px;
+    padding:  8vw;
     background-color: #fff;
     text-align: center;
 }
 
-.content-wrapper h3 {
+.footer-content p {
+  font-weight: 300;
+}
+
+.footer-content h2 {
+color: #65a591;
+margin-bottom: 1.25em;
+font-size: 2em;
+font-weight: 400;
+}
+
+.content-wrapper.footer-content h3 {
+  color: #65a591;
+  font-size: 1.25em;
+  font-weight: 300;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  text-transform: none;
+}
+.content-wrapper h2 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 300;
     padding: 1vw 0vw;
+    margin: 0 35vw;
     text-align: center;
     text-transform: uppercase;
 }
 
-.content-wrapper h4 {
+.content-wrapper h3 {
   margin: 2em 0;
 
-  font-size: 1.75em;
+  font-size: 1.2em;
   font-weight: 300;
   padding: 2vw 0;
 }
@@ -341,11 +364,7 @@ _   _ ____  ______ _____    _    _ _   _  _____
 /*Mitarbeiter*/
 
 .employees_main {
-    /*display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;*/
+  padding: 0 2em;
 }
 .employees_main h2 {
     padding: 0 3vw;
@@ -483,19 +502,19 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 .wrapper_saleproducts_main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2em;
 
 }
 
 
 .product {
+    margin: 2em 0;
     position: relative;
     overflow: hidden;
-    height: 300px;
-    margin: 10px 50px;
-    padding: 0;
-    flex-basis: 200px;
-    max-width: 300px;
+    height: 250px;
+    flex-basis: 220px;
+    max-width: 220px;
     min-width: 100px;
 }
 .product-main {
@@ -511,8 +530,8 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 
 .product-img img {
-    width: 200px;
-    height: 300px;
+    width: 220px;
+    height: 250px;
 
 }
 .jumper_black {
@@ -544,6 +563,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     padding: 0;
     transition: all 0.6s ease-in-out;
     justify-content: space-around;
+
 }
 .overlay {
     position: absolute;
@@ -570,7 +590,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     margin-bottom: 15px;
 }
 .product:hover .overlay {
-    top: 200px;
+    top: 150px;
     opacity: 1;
 }
 .product:hover .info {
@@ -998,9 +1018,6 @@ SHOP
     justify-content: center;
 
 }
-.shop-categories li {
-
-}
 .shop-categories a {
   min-width: 140px;
     display: block;
@@ -1017,7 +1034,7 @@ SHOP
 .line-wrapper_shop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 /*####################
@@ -1196,7 +1213,14 @@ Detailseite
 
 ####################*/
 
+.wrapper_checkout-productdetail {
+  display: flex;
+  border: 1px solid red;
+}
 
+.wrapper_checkout-productdetail h2 {
+  margin: 0;
+}
 /* Allgemein */
 
 .info-wrapper_detailansicht {
@@ -1239,10 +1263,11 @@ Detailseite
     display: flex;
     padding-top: 10px;
     align-items: baseline;
+    border: 1px solid aqua;
 }
 .color, .size {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 10px;
 }
 
