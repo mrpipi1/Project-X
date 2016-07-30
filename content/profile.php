@@ -1,5 +1,5 @@
 <section class=" wrapper_profile">
-<h3 class="profile_main-hl">Hallo <?php echo $_SESSION["user"]["username"]; ?>!</h3>
+<h3 class="profile_main-hl ">Hallo <?php echo $_SESSION["user"]["username"];?>!</h3>
 
 <section class="profile_section">
 <h4 class="profile_sub-hl">Deine letzten Bestellungen</h4>
@@ -22,6 +22,8 @@ if(mysqli_num_rows($orders) > 0){
 <section class="profile_section">
  <h4 class="profile_sub-hl">Deine Daten</h4>
  <i class="fa fa-pencil pencil_frontend" aria-hidden="true"></i><br />
+ <div class="profile_error_message_user">Deine Daten konnten nicht aktualisiert werden, bitte versuche es später noch einmal.</div>
+ <div class="profile_success_message_user">Deine Daten wurden erfolgreich aktualisiert.</div>
  <div class="user_info_wrapper">
  <?php
   while( $row = mysqli_fetch_assoc($user_info) ){
@@ -34,7 +36,7 @@ if(mysqli_num_rows($orders) > 0){
     if(isset($row['email'])){
     ?>
       <div class="profile_info_label">Email </div>
-      <div class="profile_info_value"><?php echo $row['email']; ?></div>
+      <div class="profile_info_value profile_info_value_email"><?php echo $row['email']; ?></div>
     <?php
     }
     if(isset($row['fullname'])){
@@ -166,8 +168,8 @@ if(mysqli_num_rows($orders) > 0){
       </div>
 
       <div class="profile_form_button_wrapper">
-        <div class=" btn_big-checkout">
-            <div class="profile_update_btn">Aktualisieren</div>
+        <div class=" btn_big-checkout_profile">
+            <div id ="<?php echo $_SESSION['user']['user_id']; ?>" class="profile_update_btn">Aktualisieren</div>
         </div>
       </div>
     </form>
@@ -180,6 +182,7 @@ if(mysqli_num_rows($orders) > 0){
   </div>
   <div class="profile_shop_link_wrapper">
     <div class="email_was_send">Du wirst in kürze eine Email mit deinem neuen Passwort erhalten, solltest du keine Email erhalten kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a></div>
+    <div class="profile_error_message_password">Die Email konnte nicht gesendet weden, bitte kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a></div>
     <div class="profile_shop_link  profile_info_label">Passwort zurücksetzen</div>
     <div class="send_password_message">Passwort wirklich zurücksetzen? <br /><div class="confirm">Ja, neues Passwort zuschicken.</div><br /><div  class="deny"<div>Abbrechen</div>
   </div>

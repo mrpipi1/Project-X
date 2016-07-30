@@ -177,17 +177,30 @@ $('.raidiobutton_wrapper_shipping').click(function(){
 $('.profile_shop_link').click(function(){
   $('.send_password_message').css('display', 'block');
 });
-//if($('.send_password_message')){
-  console.log($('.deny'))
+
+function send_user_email(user_email, subject){
+        $.post('logic/send_user_email.php', {
+            user_mail: user_email, subject: subject,
+        }, function (response, status) {
+            if (status == 'success' && response == true) {
+                $('.email_was_send').css('display', 'block');
+                $('.profile_error_message_password').css('display', 'none');
+            } else {
+                $('.profile_error_message_password').css('display', 'block');
+            }
+        });
+}
+
   $('.confirm').click(function(){
     $('.send_password_message').css('display', 'none');
     $('.profile_shop_link').css('display', 'none');
-    $('.email_was_send').css('display', 'block');
+    var user_email = $('.profile_info_value_email').value;
+    send_user_email(user_email, 'new_password');
+
   });
   $('.deny').click(function(){
     $('.send_password_message').css('display', 'none');
   })
-//}
 
 $('.pencil_frontend').click(function(){
   $('.user_info_wrapper').toggleClass('showing_form');
@@ -199,9 +212,43 @@ $('.pencil_frontend').click(function(){
   $('.user_info_change_wrapper').css('display', 'none');
 }});
 
+function update_user_profile(cart_id){
+        // $.post('iwas.php', {
+        //     //data
+        // }, function (response, status) {
+        //     if (status == 'success') {
+        //         location.reload();
+        //     } else {
+        //         $('.profile_error_message_user').css();
+        //     }
+        // });
+}
+
+function insert_or_update(page, action, id){
+
+    var values = {};
+    $.each($('.form_profile input').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+        if(i == $('.form_profile').serializeArray().length -1 ){
+                var data = {page: page, action: action, id: id, data: values};
+            console.log(values);
+            $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
+                if(response == 1 && status == 'success'){
+                    $('.profile_success_message_user').css('display', 'block');
+                    setTimeout(function(){ $('.profile_success_message_user').css('display', 'none'); }, 10000);
+                }else{
+                    $('.profile_error_message_user').css('display', 'block');
+                }
+            });
+        }
+    });
+}
+
 $('.profile_update_btn').click(function(){
   $('.user_info_wrapper').css('display', 'block');
   $('.user_info_change_wrapper').css('display', 'none');
-  
+  var id = $('.profile_update_btn').attr('id');
+  console.log(id);
+  insert_or_update('users', 'edit', id );
 });
 //

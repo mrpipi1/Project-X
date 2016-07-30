@@ -1500,7 +1500,7 @@ Anmelden
 Adressen
 #######################*/
 
-.btn_big-checkout {
+.form_checkout .btn_big-checkout, .btn_big-checkout_profile{
     width: 100%;
     margin: 0;
     transition: all 0.5s linear;
@@ -1508,7 +1508,7 @@ Adressen
     border: 1px solid #5a8e7d;
     background-color: white;
 }
-.btn_big-checkout:hover {
+ .form_checkout .btn_big-checkout:hover, .btn_big-checkout_profile:hover{
     color: white;
     background-color: #5a8e7d;
 }
@@ -2220,12 +2220,12 @@ cursor: pointer;
   display: flex;
   justify-content: center;
 }
-.profile_form_button_wrapper .btn_big-checkout{
+.profile_form_button_wrapper .btn_big-checkout_profile{
   width: 200px;
   padding: 4px;
   text-align: center;
 }
-.btn_big-checkout div{
+.btn_big-checkout_profile div{
   font-weight: 300;
   cursor: pointer;
 }
@@ -2251,4 +2251,9 @@ cursor: pointer;
 }
 .profile-email:hover{
   color:#5a8e7d;
+}
+
+.profile_error_message_user, .profile_success_message_user, .profile_error_message_password{
+  display: none;
+  margin-bottom: 10px;
 }
