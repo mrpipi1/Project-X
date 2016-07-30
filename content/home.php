@@ -124,14 +124,14 @@
                             <li>
                                 <ul class="colors colors-checkout">
                                     <?php
-                                    mysqli_data_seek($color, 0);
-                                    while ($row3 = mysqli_fetch_assoc($color)) {
-                                        //print_r($row3);
-                                        if($row['id'] == $row3['product_id']) {
-                                            ?>
-                                            <li style="Background-color: <?php echo $row3['color'] ?>"><?php echo $row3['color'] ?></li>
-                                            <?php
-                                        }
+                                    mysqli_data_seek($sizes, 0);
+                                    while ($row3 = mysqli_fetch_assoc($sizes)) {
+                                    //print_r($row3);
+                                    if($row['id'] == $row3['product_id']) {
+                                    ?>
+                                    <?php if($row3['stock'] > 0){ echo "<li>".strtoupper($row3['size'])."</li>"; }?>
+                                    <?php
+                                    }
                                     }
                                     ?>
                                 </ul>
