@@ -20,7 +20,6 @@ include("../db-connect.php");
 include("../functions/form_functions.php");
 include('../functions/helpers.php');
 include('../functions/backend_functions.php');
-include('../functions/statistik_functions.php');
 include('../functions/load_Content.php');
 if(isset($_GET['action']) && $_GET['action'] == 'login'){
     include('../logout.php');

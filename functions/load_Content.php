@@ -26,12 +26,6 @@ function get_ordered_content_data($table_name, $where, $equals, $order_by, $asc_
     $res = mysqli_query($link, $sql);
     return $res;
 }
-function get_count($table_name, $where, $equals){
-  global $link;
-  $sql = "SELECT COUNT(".$where.") FROM ".$table_name." WHERE ".$where. " = '" .$equals;
-  $res = mysqli_query($link, $sql);
-  return $res;
-}
 
 function get_specific_stock_content_data($table_name, $table_name2, $where, $where2, $equals){
     global $link;
