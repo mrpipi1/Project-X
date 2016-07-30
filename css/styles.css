@@ -1500,7 +1500,7 @@ Anmelden
 Adressen
 #######################*/
 
-.form_checkout .btn_big-checkout {
+.btn_big-checkout {
     width: 100%;
     margin: 0;
     transition: all 0.5s linear;
@@ -1508,7 +1508,7 @@ Adressen
     border: 1px solid #5a8e7d;
     background-color: white;
 }
-.form_checkout .btn_big-checkout:hover {
+.btn_big-checkout:hover {
     color: white;
     background-color: #5a8e7d;
 }
@@ -2121,6 +2121,9 @@ pie chart
 }
 
 /* Profile page */
+.wrapper_profile{
+  padding: 2em;
+}
 .profile_section{
   margin-bottom: 2em;
 }
@@ -2145,7 +2148,6 @@ div.profile_shop_link{
 }
 div.profile_shop_link:hover{
   color: #5a8e7d;
-  cursor: pointer;
 
 }
 
@@ -2162,3 +2164,85 @@ div.profile_shop_link:hover{
   display:flex;
   justify-content: space-between;
 }*/
+.confirm, .deny{
+  margin-top: 10px;
+  display: inline-block;
+}
+.confirm:hover, .deny:hover{
+  color: #5a8e7d;
+cursor: pointer;
+}
+
+.pencil_frontend{
+  color: #5a8e7d;
+  cursor: pointer;
+}
+.pencil_frontend:hover{
+  color:#486e5f;
+}
+.profile_sub-hl{
+  display:inline-block;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.send_password_message{
+  display: none;
+}
+.user_info_change_wrapper{
+  display:none;
+}
+.form_profile{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+  width: 500px;
+  max-width: 90vw;
+}
+.form_profile_innerwrapper{
+  width: 200px;
+}
+.form_profile input{
+  padding: 5px 10px 0px 3px;
+  width: 200px;
+}
+.form_profile label{
+  top: -15px !important;
+}
+.form_profile label.geb-label{
+  top: -9px !important;
+}
+.form_profile .highlight .form_profile .form-bar{
+  width: 200px ;
+}
+.profile_form_button_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.profile_form_button_wrapper .btn_big-checkout{
+  width: 200px;
+  padding: 4px;
+  text-align: center;
+}
+.btn_big-checkout div{
+  font-weight: 300;
+  cursor: pointer;
+}
+.form_profile input.geb-input{
+  margin-top: -5px;
+  padding: 5px 10px 0px 3px;
+}
+.radiobutton_wrapper, .radiobutton_hl{
+  line-height: normal;
+  text-align: left;
+}
+.radiobutton_hl{
+  padding-top: 8px;
+}
+.radiobutton_hl_payment{
+  padding-top: 14px;
+}
+.form_profile input.radiobutton{
+  width: 30px;
+}
