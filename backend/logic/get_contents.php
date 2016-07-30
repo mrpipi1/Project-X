@@ -32,9 +32,13 @@ if($page != 'dashboard') {
     echo "<a class=\"btn_table\" href=\"index.php?page=".$page."&amp;action=new\">".$new_item."</a>";
     // select here
 
+
 }
 
 ?>
+    <section class="wrapper-form-backend">
+    </section>
+
 
 
 <?php

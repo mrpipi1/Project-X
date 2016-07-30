@@ -88,7 +88,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
             }
             if($page != 'dashboard') {
                 $tds .= "<td>";
-                $tds .= "<a class=\"edit small_edit\" href=\"index.php?page=" . $page . "&amp;action=edit&amp;id=" . $row['id'] . "\"><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>";
+                $tds .= "<a class=\"edit small_edit\" onclick='load_forms(\"".$page."\", \"edit\", \"".$row['id']."\")'><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>";
                 $tds .= "<a class=\"delete small_delete\" onClick=\"delete_Query(this,'".$table_name."',".$row['id'].")\"><i class=\"fa fa-trash\" aria-hidden=\"true\"></i></a>";
                 $tds .= "</td>";
                 $tds .= "</tr>";
@@ -175,7 +175,7 @@ function update_contents($tablename, $id, $content_array) {
     // vom $_POST column name + wert auslesen und in string speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
     $i = 0;
     foreach($content_array as $col => $wert){
-        $i++;
+
         if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
@@ -194,20 +194,13 @@ function update_contents($tablename, $id, $content_array) {
                 }
             }
         }
+        $i++;
     }
 
     // sql update zusammenbauen:
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
-    if(!$result) {
-        echo '<script type="text/javascript">'
-                , 'notification("error", "Konnte nicht aktualisiert werden!");'
-                , '</script>';
-    }else{
-        echo '<script type="text/javascript">'
-                , 'notification("success", "Wurde erfolgreich aktualisiert");'
-                , '</script>';
-    }
+    echo $result;
     return $result;
 }
 

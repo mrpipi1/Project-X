@@ -54,39 +54,12 @@ if($action == 'edit'){
     <?php
 
     echo addInput(get_col_data($page), $action, $id);
-    ?>
 
-    <div class="btn_backend">
-        <input type="submit" name= "<?php /*echo  $_GET['page'] ."_form"*/?>" value="<?php /*if($_GET['action'] == 'new'){ echo "erstellen";}else{ echo "updaten";} */?>" class="btn_admin_backend">
-    </div>
 
+    echo "<div class=\"btn_backend\" onClick=\"insert_or_update('".$page."','". $action ."','". $id."')\">";
+    if($action == 'new'){ echo "erstellen";}else{ echo "updaten";}
+    echo '</div>';
+?>
 </form>
 
 </section>
-<?php
-/*global $link;
-
-
-$total_pages = ceil($total_contents / $entries_per_page);
-
-if($action){
-    if($action == 'delete' ){
-            //$id = (int)$_GET["id"];
-            $deleted = delete_contents($page, $id);
-            $return['deleted'] =  $deleted;
-        }elseif($_GET['action'] == 'edit'){
-        }elseif($_GET['action'] == 'update'){
-            //$id = $_GET['id'];
-            $array = $_POST;
-            $tablename = $page;
-            $updated = update_contents($page, $id, $array);
-            $return['updated'] =  $updated;
-        }elseif($_GET['action'] == 'new') {
-        }elseif($_GET['action'] == 'insert'){
-            $array = $_POST;
-            $tablename = $_GET['page'];
-            $insert = insert_contents($_GET['page'], $array);
-            $return['insert'] =  $insert;
-    }
-}*/
-?>

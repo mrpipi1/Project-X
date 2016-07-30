@@ -65,7 +65,7 @@ function load_Content(page, site, order_by, order_dir){
 
     $.post('logic/get_contents.php', {page: page, site: site, order_by: order_by, order_dir: order_dir}, function(response, status) {
         $(".content-wrapper_backend").empty();
-        $(".content-wrapper_backend").append('<section class="wrapper-form-backend"> </section>');
+        //$(".page-bar").append('<section class="wrapper-form-backend"> </section>');
         $(".content-wrapper_backend").append(response);
 
     });
@@ -87,6 +87,36 @@ function load_forms(page, action, id){
         $(".wrapper-form-backend").empty();
         $(".wrapper-form-backend").append(response);
     });
+
+}
+
+function insert_or_update(page, action, id){
+    if(action == 'edit'){
+        var msg = 'aktualisiert';
+    }else{
+        var msg = 'hinzugefügt'
+    }
+    var values = {};
+    $.each($('.form_backend').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+
+        if(i == $('.form_backend').serializeArray().length -1 ){
+            if(!id){
+                var data = {page: page, action: action, data: values};
+            }else{
+                var data = {page: page, action: action, data: values, id: id};
+            }
+            $.post('logic/insert_or_update_contents.php', data, function(response, status) {
+                if(response === 1 && status === 'success'){
+                    notification('success', 'Eintrag erfolgreich '+msg);
+                }else{
+                    notification('error', 'Eintrag konnte nicht '+msg+' werden!');
+                }
+
+            });
+        }
+    });
+
 
 }
 
