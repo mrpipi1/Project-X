@@ -6,6 +6,7 @@
  * Time: 14:07
  */
 include('backend_crumbs.php');
+echo $female;
 ?>
 
     <section class="pie-chart_wrapper">
