@@ -20,5 +20,3 @@ if($action == 'edit'){
     $insert = insert_contents($page, $array);
     $return['insert'] =  $insert;
 }
-
-
