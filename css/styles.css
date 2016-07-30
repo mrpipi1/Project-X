@@ -2016,7 +2016,7 @@ ____            _____  _  __ ______  _   _  _____
     padding: 10px;
 }
 
-.btn_table {
+.btn_table, .btn_backend {
     color: #fff;
     background-color: #65a591;
     border-color: #65a591;
@@ -2038,7 +2038,7 @@ ____            _____  _  __ ______  _   _  _____
     border: 1px solid transparent;
     border-radius: 4px;
 }
-.btn_table:hover{
+.btn_table:hover, .btn_backend:hover{
   background-color: #5a8e7d;
   border-color: #5a8e7d;
 }
