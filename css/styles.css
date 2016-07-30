@@ -1085,10 +1085,16 @@ Abschluss
 }
 h2.hl_checkout {
     font-size: 1.6em;
-    margin: 0 0 4em 0;
+    margin: 0 0 2em 0;
 }
 h2.hl_shipping_address{
   margin-bottom: 0;
+}
+.shipping_form_wrapper{
+  display: none;
+}
+.raidiobutton_wrapper_shipping{
+  margin-bottom: 20px;
 }
 
 .form_checkout-sectionsheadline {

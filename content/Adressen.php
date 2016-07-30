@@ -3,7 +3,7 @@
     <section class="wrapper_form">
         <section class="billing-address">
 
-            <h2 class="hl_checkout">Rechnungsadresse:</h2>
+            <h2 class="hl_checkout">Rechnungsadresse</h2>
 
             <form class="form_checkout" action="#" method="post">
 
@@ -39,14 +39,16 @@
 
         <section class="shipping-address">
 
-            <h2 class="hl_checkout hl_shipping_address">Lieferadresse:</h2>
+            <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
 
             <form class="form_checkout" action="#" method="post">
 
-              <div class="raidiobutton_wrapper">
+              <div class="raidiobutton_wrapper_shipping">
                 <label for="is_shipping_addess" class="label_backend">gleich wie Rechnungsadresse</label>
-                <input type="checkbox" name="is_shipping_address" id="is_shipping_address" />
+                <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
               </div>
+
+              <div class="shipping_form_wrapper">
 
                 <div class="form-group">
                     <input type="text" name="name" value="" required class="input">
@@ -72,6 +74,7 @@
                 <div class="btn_checkout btn_big-checkout">
                     <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input">
                 </div>
+              </div>
 
             </form>
 

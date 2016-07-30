@@ -108,7 +108,6 @@ function initMap() {
     var Lat = Number($('#map').attr('lat'));
     var Lng = Number($('#map').attr('lng'));
   var myLatLng = {lat: Lat, lng: Lng};
-  console.log(myLatLng)
 
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
@@ -132,3 +131,13 @@ function add_to_Cart(user_id, product_id){
         }
     });
 }
+
+$('.raidiobutton_wrapper_shipping').click(function(){
+  if(!$('.raidiobutton_wrapper_shipping input').prop('checked')){
+    $('.raidiobutton_wrapper_shipping input').removeAttr('checked');
+    $('.shipping_form_wrapper').css('display','block');
+  }else{
+    $('.raidiobutton_wrapper_shipping input').attr('checked');
+    $('.shipping_form_wrapper').css('display','none');
+  }
+});
