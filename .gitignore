@@ -19,3 +19,6 @@ GULP_FINISH/
 
 # Ignore develop
 develop/
+
+# Ignore SQL
+.sql
