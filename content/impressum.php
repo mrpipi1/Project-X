@@ -1,4 +1,4 @@
-<section class="content-wrapper impressum-p">
+<section class="content-wrapper footer-content">
   <?php
   while( $row = mysqli_fetch_assoc($impressum) ) {
     ?>

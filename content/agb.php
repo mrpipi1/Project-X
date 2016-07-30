@@ -1,4 +1,4 @@
-<section class="content-wrapper">
+<section class="content-wrapper footer-content">
 
 	<?php
 	while( $row = mysqli_fetch_assoc($agb) ) {

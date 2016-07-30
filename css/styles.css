@@ -67,6 +67,7 @@ a {
     font-weight: 200;
     padding: 1.65em 0;
     text-align: center;
+
 }
 .main #about_us h3{
   padding:2.5em 0 1.5em;
@@ -151,6 +152,7 @@ a {
 }
 
 .header.tiny {
+
     height: 60px;
     color: #000;
     background-color: #fff;
@@ -271,23 +273,44 @@ ul li a:hover i.logout{
 .content-wrapper {
     position: relative;
     z-index: 50;
-    padding:  150px 50px;
+    padding:  8vw;
     background-color: #fff;
     text-align: center;
 }
 
-.content-wrapper h3 {
+.footer-content p {
+  font-weight: 300;
+}
+
+.footer-content h2 {
+color: #65a591;
+margin-bottom: 1.25em;
+font-size: 2em;
+font-weight: 400;
+}
+
+.content-wrapper.footer-content h3 {
+  color: #65a591;
+  font-size: 1.25em;
+  font-weight: 300;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  text-transform: none;
+}
+.content-wrapper h2 {
     font-size: 2em;
-    font-weight: 400;
+    font-weight: 300;
     padding: 1vw 0vw;
+    margin: 0 35vw;
     text-align: center;
     text-transform: uppercase;
 }
 
-.content-wrapper h4 {
+.content-wrapper h3 {
   margin: 2em 0;
 
-  font-size: 1.75em;
+  font-size: 1.2em;
   font-weight: 300;
   padding: 2vw 0;
 }
@@ -341,11 +364,7 @@ _   _ ____  ______ _____    _    _ _   _  _____
 /*Mitarbeiter*/
 
 .employees_main {
-    /*display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;*/
+  padding: 0 2em;
 }
 .employees_main h2 {
     padding: 0 3vw;
@@ -483,19 +502,19 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 .wrapper_saleproducts_main {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 2em;
 
 }
 
 
 .product {
+    margin: 2em 0;
     position: relative;
     overflow: hidden;
-    height: 300px;
-    margin: 10px 50px;
-    padding: 0;
-    flex-basis: 200px;
-    max-width: 300px;
+    height: 250px;
+    flex-basis: 220px;
+    max-width: 220px;
     min-width: 100px;
 }
 .product-main {
@@ -511,8 +530,8 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 }
 
 .product-img img {
-    width: 200px;
-    height: 300px;
+    width: 220px;
+    height: 250px;
 
 }
 .jumper_black {
@@ -544,6 +563,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     padding: 0;
     transition: all 0.6s ease-in-out;
     justify-content: space-around;
+
 }
 .overlay {
     position: absolute;
@@ -570,7 +590,7 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     margin-bottom: 15px;
 }
 .product:hover .overlay {
-    top: 200px;
+    top: 150px;
     opacity: 1;
 }
 .product:hover .info {
@@ -983,6 +1003,7 @@ SHOP
     justify-content: center;
 }
 
+
 .shop-categories.fixed {
   position: fixed;
   top: 28px;
@@ -996,9 +1017,6 @@ SHOP
 .shop-categories ul {
     display: flex;
     justify-content: center;
-
-}
-.shop-categories li {
 
 }
 .shop-categories a {
@@ -1017,7 +1035,7 @@ SHOP
 .line-wrapper_shop {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 /*####################
@@ -1196,7 +1214,14 @@ Detailseite
 
 ####################*/
 
+.wrapper_checkout-productdetail {
+  display: flex;
+  border: 1px solid red;
+}
 
+.wrapper_checkout-productdetail h2 {
+  margin: 0;
+}
 /* Allgemein */
 
 .info-wrapper_detailansicht {
@@ -1239,10 +1264,11 @@ Detailseite
     display: flex;
     padding-top: 10px;
     align-items: baseline;
+    border: 1px solid aqua;
 }
 .color, .size {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 10px;
 }
 
@@ -1772,12 +1798,12 @@ ____            _____  _  __ ______  _   _  _____
     border-bottom: 1px solid #414247;
 }
 
-.nav_backend li p:hover, .nav_backend li ul.sub_menu li p:hover{
+.nav_backend li a:hover, .nav_backend li ul.sub_menu li a:hover{
     background-color:#2B2B30;
     transition: all 0.2s ease-in-out;
 
 }
-.nav_backend li p, i {
+.nav_backend li a, i {
     color: #eee;
 }
 .nav_backend .sidebar li .active, .nav_backend li ul.sub_menu li .active{
@@ -1785,7 +1811,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 
-.nav_backend li p {
+.nav_backend li a {
     height:40px;
     display: block;
     position: relative;
@@ -1795,7 +1821,6 @@ ____            _____  _  __ ______  _   _  _____
     font-size: 14px;
     font-weight: 300;
     line-height:21px;
-    cursor:pointer;
 }
 .nav_backend li i {
     font-size: 16px;
@@ -1808,7 +1833,7 @@ ____            _____  _  __ ______  _   _  _____
     font-size: 14px;
     font-weight: 300;
 }
-.nav_backend li p .arrow:before {
+.nav_backend li a .arrow:before {
     float: right;
     margin-top: 0px;
     margin-right: 5px;
@@ -1822,7 +1847,7 @@ ____            _____  _  __ ______  _   _  _____
     color:#eee !important
 }
 
-.nav_backend  li  p  .arrow.open:before {
+.nav_backend  li  a  .arrow.open:before {
     float: right;
     margin-top: 0px;
     margin-right: 3px;
@@ -1847,7 +1872,7 @@ ____            _____  _  __ ______  _   _  _____
     padding: 0px;
     margin-top: 1px !important;
 }
-.nav_backend li ul.sub_menu li p {
+.nav_backend li ul.sub_menu li a {
     display: block;
     display: block;
     margin: 0px 0px 0px 0px;
@@ -1859,8 +1884,6 @@ ____            _____  _  __ ______  _   _  _____
     background: none;
     line-height:28px;
 }
-
-
 /*
 .nav_backend ul {
     padding-top: 20px;
@@ -1951,10 +1974,6 @@ ____            _____  _  __ ______  _   _  _____
     text-align: left;
     height:40px;
 }
-.table_backend th p {
-    cursor:pointer;
-}
-
 .table_backend td {
     font-weight: 300;
 }
@@ -1973,7 +1992,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 .content-wrapper_backend .fa-chevron-right {
-    padding: 10px 14px 11px 13px;
+    padding: 11px 13px 12px 14.5px;
 }
 
 .content-wrapper_backend .fa-chevron-left {
@@ -2026,8 +2045,6 @@ ____            _____  _  __ ______  _   _  _____
     border-color: #dddddd;
     color:black;
     background-color:#ddd;
-    margin:0px 1px;
-    cursor:pointer;
 }
 .pagination:hover{
   border-color: #cecece;

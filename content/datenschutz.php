@@ -1,4 +1,4 @@
-<section class="content-wrapper">
+<section class="content-wrapper footer-content">
   <h2>Datenschutz</h2>
 
   <h3>Lorem Ipsum</h3>
