@@ -37,35 +37,28 @@
 
             <p><?php echo $row['description'] ?></p>
             <?php
-            }
+
                 ?>
-                <div class="selects">
-                    <p class="selects-text">Größe:</p>
-                    <p class="selects-text">Farbe:</p>
+                <ul class="selects">
+                    <li class="selects-text">Größe:</li>
                     <?php
-                    while( $row2 = mysqli_fetch_assoc($stock_color) ) {
-                        ?>
-                    <div class="selects">
-                        <div
-                            class="size sizepicker-<?php echo $row2['size'] ?>"><?php echo $row2['size'] ?></div>
-    </div>
-                    <!--<div class="size sizepicker-s">S</div>
-                    <div class="size sizepicker-m">M</div>
-                    <div class="size sizepicker-l">L</div>
-                    <div class="size sizepicker-xl">XL</div>-->
+                    mysqli_data_seek($sizes, 0);
+                    while ($row3 = mysqli_fetch_assoc($sizes)) {
+                        //print_r($row3);
 
+                        if($row['id'] == $row3['product_id']) {
 
-
-
-                    <div class="selects">
-                    <div class="color colorpicker-<?php echo $row2['color'] ?>">
-                        </div>
-                        <?php
+                            if($row3['stock'] > 0){
+                                echo "<li class='size'>".strtoupper($row3['size'])."</li>";
+                            }
+                        }
                     }
+                }
                     ?>
+
                     <!--<div class="color colorpicker-red"></div>
                     <div class="color colorpicker-white"></div>-->
-                </div>
+                </ul>
 
 
                 <form class="quantity_big-wrapper">

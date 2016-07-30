@@ -1266,9 +1266,14 @@ Detailseite
     border: 1px solid aqua;
 }
 .color, .size {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 20px;
     margin: 10px;
+}
+
+.size-selected {
+    background:#5a8e7d;
+    color: white;
 }
 
 /* COLORPICKER */
@@ -2061,7 +2066,7 @@ ____            _____  _  __ ______  _   _  _____
     font-weight: 400;
 }
 /*pagination*/
-.pagination {
+.pagination, {
     padding: 10px 15px;
     border-color: #dddddd;
     color:black;

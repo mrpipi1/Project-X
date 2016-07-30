@@ -64,13 +64,7 @@ $breadcrubms_checkout = get_content_data('breadcrubms_checkout');
 
 
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
-    $data = get_specific_stock_content_data('products', 'stock', 'id', 'product_id', $_GET['product_id']);
-
-    $detail_product = $data[0];
-
-    $stock_color = $data[1];
-
-
+    $detail_product = get_specific_content_data('products', 'id', $_GET['product_id']);
 }
 
 
