@@ -2056,7 +2056,9 @@ ____            _____  _  __ ______  _   _  _____
     color:black;
     background-color:#ddd;
     margin:0px 1px;
+    cursor:pointer;
 }
+
 .pagination:hover{
   border-color: #cecece;
   background-color:#cecece;

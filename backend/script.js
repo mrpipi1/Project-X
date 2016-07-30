@@ -51,11 +51,6 @@ $(document).ready(function(){
 });*/
 function load_Content(page, site, order_by, order_dir){
 
-    init_load_Content(page, site, order_by, order_dir);
-
-}
-
-function init_load_Content(page, site, order_by, order_dir){
     if(!page){
         page = 'dashboard';
     }
@@ -73,8 +68,11 @@ function init_load_Content(page, site, order_by, order_dir){
         $(".content-wrapper_backend").empty();
         $(".content-wrapper_backend").append(response);
     });
+
 }
-init_load_Content('dashboard', '1', 'id', 'ASC');
+
+
+load_Content('dashboard', '1', 'id', 'ASC');
 /*$.ajax({
     type:"POST",
     url: "logic/get_contents.php",
