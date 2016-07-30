@@ -58,7 +58,6 @@ function date_to_better_date($date){
 
 function redirect_to($location, $message = "") {
     $_SESSION["flash"] = $message;
-    echo $_SESSION;
     header("location: $location");
     exit();
 }
@@ -66,6 +65,3 @@ function redirect_to($location, $message = "") {
 function is_post_request($type) {
     return (strtolower($_SERVER["REQUEST_METHOD"]) == "post" && !empty($_POST) && isset($_POST[$type]));
 }
-
-
-

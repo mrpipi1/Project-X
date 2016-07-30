@@ -1963,25 +1963,37 @@ ____            _____  _  __ ______  _   _  _____
     border-spacing: 0.5rem;
     border-collapse: collapse;
 }
+.dashboard_table_wrapper{
+  float: left;
+  width:45%;
+  min-width: 580px;
+}
+.dashboard_table_wrapper h3{
+  display: inline-block;
+  margin-left: 10px;
+
+}
 .table_dashboard {
-    width:45%;
-    float:left;
-    margin: 2em 2em;
+  width: calc(100% - 20px);
+  margin: 10px 10px;
 }
 .table_backend th, .table_backend td {
     font-size: 0.8em;
     padding: 6px 10px 6px;
 }
+.table_backend.table_dashboard td{
+  font-size: 11px;
+}
 .table_backend th {
-    //font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     text-align: left;
     height:40px;
 }
 .table_backend th p{
     cursor:pointer;
-    font-weight:500;
+    font-weight:400;
+    line-height: 1.3em;
 }
 .table_backend td {
     font-weight: 300;

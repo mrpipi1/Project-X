@@ -28,6 +28,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
     $ths = "";
     $tds = "";
     if($page == 'dashboard' && $dashboard_tablename != NULL) {
+        $ths .= "<div class=\"dashboard_table_wrapper\">";
         $ths .= "<h3>".$dashboard_tablename."</h3>";
         $ths .= "<table class=\"table_backend table_dashboard\">";
 
@@ -106,7 +107,9 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
         }
         echo $return['tds'];
         echo "</tbody>\n\r</table>";
-
+        if($page == 'dashboard' ){
+          echo "\n\r</div>";
+        }
 
         if($pagination === true){
             pagination_backend($page, $current_page, $total_pages);
@@ -273,11 +276,3 @@ HEREDOC;
 
     return $output;
 }
-
-
-
-
-
-
-
-
