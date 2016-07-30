@@ -164,8 +164,11 @@ function update_contents($tablename, $id, $content_array) {
     $insert_string = "";
     // vom $_POST column name + wert auslesen und in string speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
     $i = 0;
+    $log_name = "";
     foreach($content_array as $col => $wert){
-
+        if($col == '_name') {
+            $log_name .= $wert;
+        }
         if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
@@ -190,8 +193,18 @@ function update_contents($tablename, $id, $content_array) {
     // sql update zusammenbauen:
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
-    echo $result;
-    return $result;
+    if($result) {
+        $sql = "INSERT INTO log (_name, type, location )  VALUES ('{$log_name}','update','{$tablename}' )";
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            echo $result;
+        } else {
+            echo 0;
+        }
+    }else {
+        echo 0;
+    }
+
 }
 
 // zum erstellen von neuen db einträgen:
@@ -201,8 +214,11 @@ function insert_contents($tablename, $content_array) {
     $insert_wert = "";
     // vom $_POST column name + wert auslesen und in strings speichern, erstellen kommt vom button => wird nicht verwendet & für boolische werte ein if (on = 1, off = 0)
     $i = 0;
+    $log_name = "";
     foreach($content_array as $col => $wert){
-
+        if($col == '_name') {
+            $log_name .= $wert;
+        }
         if($wert != "erstellen" && $wert != "updaten"){
             if($wert == "on"){
                 $wert = 1;
@@ -225,8 +241,18 @@ function insert_contents($tablename, $content_array) {
     // sql insert zusammenbauen:
     $sql = "INSERT INTO " .$tablename ." (" .$insert_col ." )" ." VALUES (" .$insert_wert ." )";
     $result = mysqli_query($link, $sql);
-    echo $result;
-    return $result;
+    if($result) {
+        $sql = "INSERT INTO log (_name, type, location )  VALUES ('{$log_name}','insert' ,'{$tablename}' )";
+        $result = mysqli_query($link, $sql);
+        if ($result) {
+            echo $result;
+        } else {
+            echo 0;
+        }
+    }else {
+        echo 0;
+    }
+
 }
 
 

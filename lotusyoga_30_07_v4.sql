@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 30. Jul 2016 um 16:20
+-- Erstellungszeit: 30. Jul 2016 um 17:15
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -97,11 +97,11 @@ INSERT INTO `breadcrubms_checkout` (`id`, `name`, `position`, `is_active`, `dele
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `cart`
+-- Tabellenstruktur für Tabelle `carts`
 --
 
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE IF NOT EXISTS `cart` (
+DROP TABLE IF EXISTS `carts`;
+CREATE TABLE IF NOT EXISTS `carts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -112,10 +112,10 @@ CREATE TABLE IF NOT EXISTS `cart` (
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `cart`
+-- Daten für Tabelle `carts`
 --
 
-INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `product_size`, `created_at`, `deleted_at`) VALUES
+INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `product_size`, `created_at`, `deleted_at`) VALUES
 (1, 2, 7, 0, '', '2016-07-30 15:02:03', '0000-00-00 00:00:00'),
 (2, 2, 9, 0, '', '2016-07-30 15:09:50', '0000-00-00 00:00:00'),
 (3, 2, 9, 0, '', '2016-07-30 11:21:20', NULL),
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `contents` (
   `sequence` int(11) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `contents`
@@ -197,12 +197,36 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (47, 'footer', 'AGB', 'index.php?page=AGB', 14, 1, NULL),
 (48, 'footer', 'Datenschutz', 'index.php?page=Datenschutz', 15, 1, NULL),
 (49, 'footer', 'FAQs', 'index.php?page=FAQs', 16, 1, NULL),
-(50, 'asd', 'asd', 'asd', 1, 1, NULL),
+(50, 'testobert', 'asd', 'asd', 1, 0, NULL),
 (51, 'asdasd', 'asdasd', 'adsasd', 1, 0, '0000-00-00 00:00:00'),
 (52, 'test', 'test', 'test', 1, 0, '0000-00-00 00:00:00'),
 (53, 'test', 'test', 'test', 0, 0, '0000-00-00 00:00:00'),
 (54, 'asdasd', 'asdasd', 'asdasd', 1, 0, '0000-00-00 00:00:00'),
-(55, 'ads', 'asdasd', 'adsasd', 1, 1, NULL);
+(55, 'ads', 'asdasd', 'adsasd', 1, 0, '0000-00-00 00:00:00'),
+(56, 'testaktion', 'headlin', 'test', 1, 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `coupon_codes`
+--
+
+DROP TABLE IF EXISTS `coupon_codes`;
+CREATE TABLE IF NOT EXISTS `coupon_codes` (
+  `id` int(11) NOT NULL,
+  `_name` varchar(100) NOT NULL,
+  `code` varchar(100) NOT NULL,
+  `is_active` tinyint(1) NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `coupon_codes`
+--
+
+INSERT INTO `coupon_codes` (`id`, `_name`, `code`, `is_active`, `deleted_at`) VALUES
+(1, 'lotusyoga', 'LOTUSYOGA2016', 1, NULL),
+(2, 'lotusyoga', 'LOTUSYOGA2015', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -286,25 +310,29 @@ INSERT INTO `header_items` (`id`, `h_name`, `is_active`, `deleted_at`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `log`
+-- Tabellenstruktur für Tabelle `logs`
 --
 
-DROP TABLE IF EXISTS `log`;
-CREATE TABLE IF NOT EXISTS `log` (
+DROP TABLE IF EXISTS `logs`;
+CREATE TABLE IF NOT EXISTS `logs` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(1000) NOT NULL,
   `location` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `log`
+-- Daten für Tabelle `logs`
 --
 
-INSERT INTO `log` (`id`, `_name`, `type`, `location`, `created_at`, `deleted_at`) VALUES
-(1, 'Franzi', 'hinzugefügt', 'users', '2016-07-26 19:27:00', NULL);
+INSERT INTO `logs` (`id`, `_name`, `type`, `location`, `created_at`, `is_active`, `deleted_at`) VALUES
+(1, 'Franzi', 'hinzugefügt', 'users', '2016-07-26 19:27:00', 0, NULL),
+(2, 'ads', 'contents', 'delete', '2016-07-30 16:00:41', 0, NULL),
+(3, 'testobert', 'contents', 'update', '2016-07-30 16:06:44', 0, NULL),
+(4, 'testaktion', 'contents', 'insert', '2016-07-30 16:08:39', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -599,15 +627,21 @@ ALTER TABLE `breadcrubms_checkout`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `cart`
+-- Indizes für die Tabelle `carts`
 --
-ALTER TABLE `cart`
+ALTER TABLE `carts`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indizes für die Tabelle `contents`
 --
 ALTER TABLE `contents`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `coupon_codes`
+--
+ALTER TABLE `coupon_codes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -629,9 +663,9 @@ ALTER TABLE `header_items`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indizes für die Tabelle `log`
+-- Indizes für die Tabelle `logs`
 --
-ALTER TABLE `log`
+ALTER TABLE `logs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -702,15 +736,20 @@ ALTER TABLE `bestell_items`
 ALTER TABLE `breadcrubms_checkout`
   MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT für Tabelle `cart`
+-- AUTO_INCREMENT für Tabelle `carts`
 --
-ALTER TABLE `cart`
+ALTER TABLE `carts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
+--
+-- AUTO_INCREMENT für Tabelle `coupon_codes`
+--
+ALTER TABLE `coupon_codes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT für Tabelle `courses`
 --
@@ -727,10 +766,10 @@ ALTER TABLE `employees`
 ALTER TABLE `header_items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT für Tabelle `log`
+-- AUTO_INCREMENT für Tabelle `logs`
 --
-ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `logs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `menu_backend_items`
 --

@@ -3,7 +3,6 @@ $page = $_POST['page'];
 if($page != 'statistik'){
 include("../../db-connect.php");
 include("../../functions/table_functions.php");
-include('../../functions/helpers.php');
 
 $entries_per_page = 10;
 $current_page = $_POST['site'];
@@ -20,7 +19,7 @@ include('../views/backend_crumbs.php');
 
     $page_name = ucfirst($page);
 
-$new_item = substr($page_name, 0, -1);
+$new_item = underscore_to_space(substr($page_name, 0, -1));
 $new_item .=" <i class=\"fa fa-plus\" aria-hidden=\"true\"></i> ";
 
 ?>

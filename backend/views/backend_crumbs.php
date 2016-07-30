@@ -1,11 +1,12 @@
 <?php
+include('../../functions/helpers.php');
 
-    $crumb = $page;
+    $crumb = underscore_to_space(ucfirst($page));
 
 ?>
 
 
-    <h3 class="main-hl_backend"><?php echo ucfirst($crumb); ?></h3>
+    <h3 class="main-hl_backend"><?php echo $crumb; ?></h3>
         <div class="page-bar">
             <ul class="page-breadcrumb">
                 <li>
