@@ -144,6 +144,19 @@ function add_to_Cart(user_id, product_id){
     }
 }
 
+function delete_from_cart(cart_id){
+        $.post('logic/delete_from_cart.php', {
+            cart_id: cart_id
+        }, function (response, status) {
+            if (response == 1 && status == 'success') {
+                location.reload();
+            } else {
+                console.log('fehler');
+            }
+        });
+
+}
+
 
 $('.size').on('click', function(){
     $(".size").removeClass("size-selected");

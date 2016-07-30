@@ -137,6 +137,17 @@
                             <span class="selected"></span>
                         </p>
                     </li>
+                    <li><p onClick="load_Content('carts', '1', 'id', 'ASC')">
+                            <i class="fa fa-shopping-basket"></i><span class="title">Cart</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
+                    <li><p onClick="load_Content('coupon_codes', '1', 'id', 'ASC')">
+                            <i class="fa fa-barcode" aria-hidden="true"></i><span class="title">Coupon Codes</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
+
                 </ul>
             </li>
             <li>
@@ -145,7 +156,7 @@
                     <span class="selected"></span>
                 </p>
             <li>
-                <p onClick="load_Content('log', '1', 'id', 'ASC')">
+                <p onClick="load_Content('logs', '1', 'id', 'ASC')">
                     <i class="fa fa-database"></i><span class="title">Log</span>
                     <span class="selected"></span>
                 </p>

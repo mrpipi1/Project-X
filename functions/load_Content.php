@@ -1,7 +1,7 @@
 <?php
 function get_content_data($table_name){
     global $link;
-    $sql = "SELECT * FROM " .$table_name;
+    $sql = "SELECT * FROM " .$table_name. " WHERE deleted_at IS NULL";
 	$res = mysqli_query($link, $sql);
 	return $res;
 }
@@ -15,7 +15,7 @@ function get_distinct_content_data($table_name, $value){
 
 function get_specific_content_data($table_name, $where, $equals){
     global $link;
-    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals;
+    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = " . $equals . " AND deleted_at IS NULL ";
     $res = mysqli_query($link, $sql);
     return $res;
 }
@@ -61,6 +61,9 @@ $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
 $breadcrubms_checkout = get_content_data('breadcrubms_checkout');
+if(isset($_SESSION['user']['user_id'])) {
+    $cart = get_specific_content_data('carts', 'user_id', $_SESSION['user']['user_id']);
+}
 
 
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
