@@ -14,10 +14,10 @@ function create_menu_items(){
 
     foreach($items as $item){
         $menu_item = ucfirst($item['item_name']);
-        $list_item .= ";
+        $list_item .= "";
     }
 
     return $list_item;
 }
 
-*/
+
