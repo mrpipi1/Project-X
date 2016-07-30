@@ -1085,9 +1085,17 @@ Abschluss
 }
 h2.hl_checkout {
     font-size: 1.6em;
-    margin: 0 0 4em 0;
+    margin: 0 0 2em 0;
 }
-
+h2.hl_shipping_address{
+  margin-bottom: 0;
+}
+.shipping_form_wrapper{
+  display: none;
+}
+.raidiobutton_wrapper_shipping{
+  margin-bottom: 20px;
+}
 
 .form_checkout-sectionsheadline {
     font-weight: 500;
@@ -1189,7 +1197,7 @@ Breadcrumbs
 .btn_checkout {
     margin: 20px;
 }
-.btn_checkout a {
+.btn_checkout a, .btn_checkout  span{
     font-size: 14px;
     font-weight: 600;
     margin: 0 auto;
@@ -1202,9 +1210,10 @@ Breadcrumbs
     color: #5a8e7d;
     border: 1px solid #5a8e7d;
 }
-.btn_checkout a:hover {
+.btn_checkout a:hover, .btn_checkout:hover span{
     color: white;
     background-color: #5a8e7d;
+    cursor:pointer;
 }
 
 /*####################

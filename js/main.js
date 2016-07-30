@@ -109,6 +109,7 @@ function initMap() {
     var Lng = Number($('#map').attr('lng'));
     var myLatLng = {lat: Lat, lng: Lng};
 
+
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
     center: myLatLng,
@@ -143,7 +144,19 @@ function add_to_Cart(user_id, product_id){
     }
 }
 
+
 $('.size').on('click', function(){
     $(".size").removeClass("size-selected");
     $(this).addClass( "size-selected" );
 })
+
+$('.raidiobutton_wrapper_shipping').click(function(){
+  if(!$('.raidiobutton_wrapper_shipping input').prop('checked')){
+    $('.raidiobutton_wrapper_shipping input').removeAttr('checked');
+    $('.shipping_form_wrapper').css('display','block');
+  }else{
+    $('.raidiobutton_wrapper_shipping input').attr('checked');
+    $('.shipping_form_wrapper').css('display','none');
+  }
+});
+
