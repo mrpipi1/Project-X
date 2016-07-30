@@ -152,7 +152,7 @@ function delete_contents($table_name, $id) {
         $sql = "UPDATE " . $table_name . " SET is_active = 0, deleted_at = " . $timestamp . " WHERE id = " . $id;
         $result = mysqli_query($link, $sql);
         return $result;
-   
+    }
 }
 
 // zum editieren von db einträgen:
