@@ -37,11 +37,11 @@
                                 </ul>
                                 <ul class="info">
                                     <li><?php echo $row['_name'] ?></li>
-                                    <li><?php echo $row['price'] ?></li>
+                                    <li><?php echo $row['price'] ?>€</li>
                                 </ul>
                                 <ul class="overlay overlay-checkout">
                                     <li><h1><?php echo $row['_name'] ?></h1></li>
-                                    <li><p><?php echo $row['price'] ?></p></li>
+                                    <li><p><?php echo $row['price'] ?>€</p></li>
                                     <li>
                                         <ul class="colors colors-checkout">
                                             <?php
