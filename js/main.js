@@ -40,7 +40,7 @@ $(window).scroll(function(){
   var ShopCategories = $('.shop-categories'),
       scroll = $(window).scrollTop();
 
-  if (scroll >= 129) ShopCategories.addClass('fixed')
+  if (scroll >= 132) ShopCategories.addClass('fixed')
   else ShopCategories.removeClass('fixed');
 });
 

@@ -62,13 +62,13 @@
 <div class="sum_card_wrapper">
 
     <ul class="versand-datum">
-        <li>Vorraussichtliche Lieferung:</li>
+        <li><h5>Vorraussichtliche Lieferung:</h5></li>
         <li>in 3 - 5 Werktagen</li>
     </ul>
 
     <ul class="sum_card">
         <li>Versandkosten: <?php echo $delivery_cost; ?> €</li>
-        <li>Gesammtpreis: <?php echo $price; ?> €</li>
+        <li><h5>Gesammtpreis: </h5> <?php echo $price; ?> €</li>
         <li class="small-text">* alle Preise inkl. MwSt.</li>
         <li class="small-text">* Versandkostenfrei ab 40€</li>
     </ul>

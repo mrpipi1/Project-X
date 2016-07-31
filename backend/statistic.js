@@ -29,7 +29,7 @@
                       "header": {
                           "title": {
                               "text": name,
-                              "fontSize": 24,
+                              "fontSize": 20,
                               "font": "helvetica"
                           },
                           "subtitle": {

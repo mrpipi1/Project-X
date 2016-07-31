@@ -1050,17 +1050,38 @@ Abschluss
 }
 .order-confirmation h3 {
     text-align: center;
+    font-size: 1.75vw;
+    padding: 0;
+    margin: 2vw;
 }
 .bg-wrapper {
-    height: 50vh;
-    margin: 50px;
+    height: 60vh;
     padding: 5vw 10vw;
     text-align: center;
     color: #fff;
     background: rgba(0, 0, 0, 0.5);
 }
+
+.bg-content-wrapper {
+  padding: 2vw;
+  width: 50%;
+ height: 50%;
+ overflow: visible;
+ margin: auto;
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+}
 .bg-wrapper p {
     text-align: center;
+}
+
+.bg-wrapper a {
+  transition: all 0.2s ease-in-out;
+
+}
+
+.bg-wrapper a:hover {
+  color: #5a8e7d;
 }
 
 /*############################
@@ -1082,11 +1103,14 @@ Abschluss
     font-size: small;
 }
 h2.hl_checkout {
-    font-size: 1.6em;
-    margin: 0 0 2em 0;
+    font-size: 2vw;
+    margin: 0 0 5vw 0;
+    text-transform: capitalize;
+    text-align: center;
 }
 h2.hl_shipping_address{
-  margin-bottom: 0;
+  margin: 0 0 5vw 0;
+
 }
 .shipping_form_wrapper{
   display: none;
@@ -1222,12 +1246,13 @@ Detailseite
 
 .wrapper_checkout-productdetail {
   display: flex;
-  border: 1px solid red;
+  justify-content: space-between;
 }
 
 .wrapper_checkout-productdetail h2 {
-  margin: 0;
+  margin: 0 0 1em 0;
 }
+
 /* Allgemein */
 
 .info-wrapper_detailansicht {
@@ -1239,6 +1264,11 @@ Detailseite
 .headline-wrapper_detailansicht {
     display: flex;
     justify-content: space-between;
+}
+
+.headline-wrapper_detailansicht h2, .headline-wrapper_detailansicht h3 {
+  padding: 0;
+  margin: 0 0 1em 0;
 }
 
 /* BILDER */
@@ -1268,13 +1298,12 @@ Detailseite
 
 .selects {
     display: flex;
-    padding-top: 10px;
     align-items: baseline;
-    border: 1px solid aqua;
+    padding: 1em 0;
 }
 .color, .size {
-    width: 25px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin: 10px;
 }
 
@@ -1329,7 +1358,7 @@ Detailseite
 }
 .quantity_big-wrapper {
     display: flex;
-    margin-top: 20px;
+    padding: 1em 0;
 }
 .quantity_big-wrapper label {
     margin-right: 10px;
@@ -1349,24 +1378,25 @@ Warenkorb
 /* Überschriften im card */
 
 .card-header {
-    font-size: small;
+    font-size: 0.9em;
     display: flex;
     border: 1px solid #dfe0e2;
     background-color: #f6f7f9;
     justify-content: space-around;
-}
+  }
 .card-header li {
-    padding: 10px 0;
+    padding: 1vw 0;
+    border: 1px solid red;
+
 }
 .description {
-    margin-left: 10px;
-    flex-grow: 6;
+    flex-basis: 60%;
 }
 .actions {
-    flex-grow: 0.6;
+    flex-basis: 10%;
 }
 .actions_price {
-    flex-grow: 1;
+    flex-basis: 15%;
 }
 
 /* items */
@@ -1381,8 +1411,8 @@ Warenkorb
 /* Bild */
 
 .img_card {
-    width: 120px;
-    height: 120px;
+    width: 10vw;
+    height: 100%;
 }
 
 /* Name + Beschreibung vom Artikel */
@@ -1390,8 +1420,11 @@ Warenkorb
 .description_card-item {
     display: flex;
     flex-direction: column;
-    padding-left: 20px;
-    flex-grow: 0.4;
+    flex-basis: 76%;
+    border: 1px solid green;
+    align-items: center;
+    justify-content: center;
+
 }
 .description_card-item li {
     width: 20vw;
@@ -1406,23 +1439,27 @@ Warenkorb
 /* Menge, Farbe, Größe und Preis */
 
 .actions_card-item {
-    font-size: small;
+    font-size: 1vw;
     display: flex;
-    flex-grow: 0.7;
+    flex-basis: 48%;
     justify-content: space-around;
+    border: 1px solid blue;
 }
 .actions_card-item li, .price_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 1px solid fuchsia;
+    flex-basis: 34%;
 }
 .farbe {
     text-align: center;
-    flex-basis: 100px;
 }
 .price_wrapper {
+  font-size: 1vw;
     text-align: center;
-    flex-grow: 0.4;
+    flex-basis: 20%;
+    border: 1px solid purple;
 }
 
 /* X zum löschen vom produkt */
@@ -1431,7 +1468,8 @@ Warenkorb
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-grow: 0.1;
+    flex-grow: 0;
+    border: 1px solid aqua;
 }
 .delete, .edit {
     width: 20px;
@@ -1474,13 +1512,29 @@ III.     #486e5f*/
     margin-top: 1.8vw;
     justify-content: space-between;
 }
+
 .versand-datum li {
     margin-bottom: 1vw;
+    text-align: left;
+    font-weight: 300;
 }
+.sum_card h5 {
+  margin: 0.5vw;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+}
+.versand-datum h5, .sum_card h5 {
+  font-size: 1.5vw;
+  color: #5a8e7d;
+  font-weight: 400;
+}
+
 .sum_card li {
     display: flex;
     margin-bottom: 1vw;
     justify-content: flex-end;
+    align-items: center;
 }
 
 /*#######################
@@ -1522,6 +1576,7 @@ Versand
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 4vw 0;
 }
 
 .radiobutton_wrapper {
@@ -1533,10 +1588,7 @@ Versand
     height: 16px;
 }
 .shipping-info {
-    display: flex;
-    flex-direction: column;
     width: 40vw;
-    align-items: flex-start;
 }
 .form_cuopon {
     display: flex;
@@ -1578,12 +1630,17 @@ Zusammenfassung
 
 }
 
+.form_confirmation {
+  width: 100%;
+}
+
 .form_confirmation_content {
     margin-top: 4em;
     width: 100%;
 }
 .form_confirmation_content input {
     width: 30px;
+
 }
 
 .form_checkout {
@@ -1605,14 +1662,17 @@ Abschluss
 .btn_special {
 
     margin: 0 2em;
+
 }
 
 .btn_special a {
+  font-size: 1vw;
+  white-space: nowrap;
     border: 1px solid #fff;
-    padding: 1em 2em;
+    padding: 1vw 2vw;
     display: block;
-    min-width: 220px;
     max-width: 250px;
+    min-width: 60px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     font-weight: 200;
@@ -2112,7 +2172,7 @@ pie chart
 
 .pie-chart_wrapper {
     display: flex;
-    width: 350px;
+    justify-content: center;
 }
 .pie-chart_hl {
     text-align: left;
