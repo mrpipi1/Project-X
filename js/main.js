@@ -280,13 +280,6 @@ function insert_or_update(page, action, id){
     });
 }
 
-$('.profile_update_btn').click(function(){
-  $('.user_info_wrapper').css('display', 'block');
-  $('.user_info_change_wrapper').css('display', 'none');
-  var id = $('.profile_update_btn').attr('id');
-  console.log(id);
-  insert_or_update('users', 'edit', id );
-});
 
 //validation contact form
 
@@ -301,19 +294,19 @@ $('.form-group input[type="text"], .form-group input[type="password"]').keyup(fu
         re = /^[a-z0-9_-]{3,16}$/;
         errtxt = 'Bitte geben Sie einen gültigen Namen ein!';
     } else if ($(this).attr('name').indexOf('password') > -1) {
-        re = /^[a-z0-9_-]{6,18}$/;
+        re = /^[a-z0-9_-]{5,18}$/;
         errtxt = 'Bitte geben Sie eine gültiges Passwort ein!';
-    } else if ($(this).attr('name') == 'email') {
+    } else if ($(this).attr('name') == 'email' || $(this).attr('name') == 'login_guest')  {
         re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         errtxt = 'Bitte geben Sie eine gültige E-Mailaddresse ein!';
     } else if ($(this).attr('name') == 'tel'){
         re = /^0(6[045679][0469]){1}(\-)?(1)?[^0\D]{1}\d{6}$/;
         errtxt = 'Bitte geben Sie eine gültige Telefonnummer ein!';
     } else if($(this).attr('name') == 'zip_code'){
-        re = /^\\d{4}$/;
+        re = /^\d{4,5}$/;
         errtxt = 'Bitte geben Sie eine gültige Postleitzahl ein!';
     }else if ($(this).attr('name') == 'address'){
-        re = /\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\./;
+        re =  /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
         errtxt = 'Bitte geben Sie eine gültige Adresse ein!';
     }else if($(this).attr('name') == 'fullname'){
         re = /^[a-z ,.'-]+$/;
@@ -362,6 +355,56 @@ $('.contact_submit').on('click',function(event){
         event.preventDefault();
     }
 });
+
+$('.checkout_login_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_guest_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_default_address_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_receipt_address_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.profile_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }else{
+        $('.user_info_wrapper').css('display', 'block');
+        $('.user_info_change_wrapper').css('display', 'none');
+        var id = $('.profile_update_btn').attr('id');
+        console.log(id);
+        insert_or_update('users', 'edit', id );
+    }
+});
+
+
+
+
 
 
 

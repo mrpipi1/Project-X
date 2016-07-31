@@ -15,6 +15,7 @@
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">E-Mail oder Username*</label>
+                        <span class="error">
                     </div>
 
                     <div class="form-group">
@@ -22,10 +23,11 @@
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">Passwort*</label>
+                        <span class="error">
                     </div>
 
                     <div class="btn_checkout btn_big-checkout">
-                        <input type="submit" name="login" value="Anmelden"   class="btn_big-checkout input">
+                        <input type="submit" name="login" value="Anmelden"   class="btn_big-checkout input checkout_login_submit">
                     </div>
                 </form>
 
@@ -55,10 +57,11 @@
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">E-Mailadresse*</label>
+                        <span class="error">
                     </div>
 
                     <div class="btn_checkout btn_big-checkout ">
-                        <input type="submit" name="gast" value="als Gast fortfahren"  class="btn_big-checkout input">
+                        <input type="submit" name="gast" value="als Gast fortfahren"  class="btn_big-checkout input checkout_guest_submit">
                     </div>
                 </form>
 

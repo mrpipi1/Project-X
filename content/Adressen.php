@@ -12,6 +12,7 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Vorname | Nachname*</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -19,6 +20,7 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Strasse | Hausnummer</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -26,10 +28,11 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Postleitzahl | Stadt</label>
+                    <span class="error">
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input">
+                    <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input checkout_default_address_submit">
                 </div>
 
             </form>
@@ -55,6 +58,7 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Vorname | Nachname*</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -62,6 +66,7 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Strasse | Hausnummer</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -69,10 +74,11 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Postleitzahl | Stadt</label>
+                    <span class="error">
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input">
+                    <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input checkout_receipt_address_submit">
                 </div>
               </div>
 
