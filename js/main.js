@@ -236,9 +236,10 @@ $('.pencil_frontend').click(function(){
 
 $(".cart").hover(
     function () {
-        //console.log($('.header').height());
+        var offset_right = $( window ).width() - $('.cart').position().left - 140;
         if($('#cart-header-quantity').text()) {
             $('#cart-display').css('top', $('.header').height() + 'px');
+            $('#cart-display').css('right', offset_right + 'px');
             $("#cart-display").show();
         }
     },
