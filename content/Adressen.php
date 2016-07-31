@@ -12,7 +12,8 @@
                     <input type="text" name="name" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname</label>
+                    <label class="label">Vorname | Nachname*</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -20,6 +21,7 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Strasse | Hausnummer*</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -27,10 +29,11 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Postleitzahl | Stadt*</label>
+                    <span class="error">
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="reciept_address" value="Übernehmen" class="btn_big-checkout input">
+                    <input type="submit" name="reciept_address" value="Übernehmen" class="btn_big-checkout input checkout_default_address_submit">
                 </div>
 
             </form>
@@ -54,14 +57,16 @@
                     <input type="text" name="name" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname</label>
+                    <label class="label">Vorname | Nachname*</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
                     <input type="text" name="tel" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label class="label">Strasse | Hausnummer*</label>
+                    <label class="label">Strasse | Hausnummer</label>
+                    <span class="error">
                 </div>
 
                 <div class="form-group">
@@ -69,10 +74,11 @@
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Postleitzahl | Stadt*</label>
+                    <span class="error">
                 </div>
 
                 <div class="btn_checkout btn_big-checkout">
-                    <input type="submit" name="delivery_address" value="Übernehmen" class="btn_big-checkout input">
+                    <input type="submit" name="delivery_address" value="Übernehmen" class="btn_big-checkout input checkout_receipt_address_submit">
                 </div>
               </div>
             </form>
@@ -88,7 +94,7 @@
 
                 <?php
                   while( $row = mysqli_fetch_assoc($user_info) ){
-                    if(isset($row['_name'])){
+                    if(isset($row['adress'])){
                 ?>
                   <div class="form-group">
                       <input type="text" name="tel" value="" required class="input">
@@ -96,6 +102,7 @@
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
                   </div>
+                  <?php } ?>
 
                   <div class="form-group">
                       <input type="text" name="email" value="" required class="input">
