@@ -1867,7 +1867,8 @@ ____            _____  _  __ ______  _   _  _____
 .hl_form_backend {
     font-size: 2em;
     font-weight: 200;
-    padding: 2vw 0 2vw 0;
+    padding: 1em 0.5em;
+    text-transform: capitalize;
 }
 
 /* Backend Flyout */
@@ -2251,25 +2252,33 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 
-.radiobutton_wrapper_backend {
 
+.radiobutton_wrapper_backend {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .form_backend {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 
 }
 .form_backend .form-group_backend{
-  width: 100%;
+
   flex-basis: 45%;
-  height: 4.5em;
 }
 
+
 .form-group_backend {
-  padding: 1em;
-  display: flex;
+  margin: 1em;
+}
+
+.btn_backend {
+  flex-basis: 100%;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+  margin: 1em 0;
 }
 
 /*.form-group_backend:nth-child(n+8) {
@@ -2468,7 +2477,7 @@ cursor: pointer;
 .breadcrumbs i:last-child{
   display: none;
 }
-.error_detailansicht, .error_message_checkout{
+.error_detailansicht{
   max-width: 75vw;
   color: #b50101;
   font-size: 1em;
@@ -2479,17 +2488,10 @@ cursor: pointer;
 .error_detailansicht a:hover{
   color: #8e0000;
 }
-.errormessage_detail_wrapper, .errors_checkout_wrapper{
+.errormessage_detail_wrapper{
   display: none;
   position: absolute;
   top:75px;
   left:0;
   width: 100%;
-}
-.form-group_radio_register{
-  display: flex;
-  margin-bottom: 0;
-}
-.radiobutton_first{
-  margin-right: 20px;
 }
