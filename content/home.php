@@ -220,7 +220,7 @@
                       </div>';
                 } else if ($row['type'] == 'submit') {
                     echo '<div class="btn">
-                       <input id="contact_' . $row['type'] . '" type="submit" class="submit_main input" name="user_message" value="' . $row['content'] . '" >
+                       <input id="contact_' . $row['type'] . '" type="submit" class="submit_main input contact_submit" name="user_message" value="' . $row['content'] . '" >
                      </div>';
                 } else {
                     echo '<div class="form-group contact_' . $row['type'] . '">

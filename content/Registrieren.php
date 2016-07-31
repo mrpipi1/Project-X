@@ -23,7 +23,7 @@
             </div>
 
             <div class="btn_checkout btn_big-checkout">
-                <input type="submit" name="login" value="Einloggen"   class="btn_big-checkout input">
+                <input type="submit" name="login" value="Einloggen"   class="btn_big-checkout input login_submit">
             </div>
         </form>
 
@@ -74,7 +74,7 @@
         </div>
 
         <div class="form-group register_tel">
-            <input id="register_tel" type='tel' name="tel" value="" required class="input" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
+            <input id="register_tel" type='text' name="tel" value="" required class="input" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Telefonnummer*</label>
@@ -131,7 +131,7 @@
         <p class="pflichtfeld">*Pflichtfelder</p>
 
         <div class="btn_checkout btn_big-checkout">
-            <input type="submit" name="register" value="Registrieren" class="btn_big-checkout input">
+            <input type="submit" name="register" value="Registrieren" class="btn_big-checkout input register_submit">
         </div>
 
     </form>
