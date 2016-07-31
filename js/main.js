@@ -129,20 +129,24 @@ function add_to_Cart(user_id, product_id){
     var size = $(".size-selected").text();
     var quantity = $(".quantity").val();
     if(size && quantity > 0) {
+      if(quantity > 11){
+        var error_message = 'Die maximale bestellmenge für dieses Produkt sind 11 Stück. Wenn Du mehr bestellen möchtest kontaktiere uns bitte unter<a href="mailto:office@lotusyoga.at?subject=order_quantity">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a>';
+      }else{
         $.post('logic/add_to_cart.php', {
             user_id: user_id,
             product_id: product_id,
             size: size,
             quantity: quantity
-        }, function (response, status) {
-            if (response == 1 && status == 'success') {
-                console.log('okay');
-            } else if(response == 2 && status == 'success'){
-                console.log('menge nicht verfügbar');
-            } else {
-                console.log('fehler');
-            }
-        });
+          }, function (response, status) {
+              if (response == 1 && status == 'success') {
+                  console.log('okay');
+              } else if(response == 2 && status == 'success'){
+                  console.log('menge nicht verfügbar');
+              } else {
+                  console.log('fehler');
+              }
+          });
+      }
     }
 }
 

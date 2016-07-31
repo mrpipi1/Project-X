@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 16/04/16
- * Time: 15:31
- */
+
         if($page == 'dashboard'){
             $dashboard_tables = array('users', 'orders', 'products', 'content', 'employees');
             for($i = 0; $i<count($dashboard_tables); $i++){

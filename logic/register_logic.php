@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 05/05/16
- * Time: 14:41
- */
 
 /*if(is_logged_in()&& isset ($_SESSION['is_admin'])) {
     redirect_to("backend/index.php");

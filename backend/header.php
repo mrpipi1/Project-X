@@ -142,8 +142,8 @@
                             <span class="selected"></span>
                         </p>
                     </li>
-                    <li><p onClick="load_Content('coupon_codes', '1', 'id', 'ASC')">
-                            <i class="fa fa-barcode" aria-hidden="true"></i><span class="title">Coupon Codes</span>
+                    <li><p onClick="load_Content('delivery_options', '1', 'id', 'ASC')">
+                            <i class="fa fa-truck" aria-hidden="true"></i><span class="title">Delivery Options</span>
                             <span class="selected"></span>
                         </p>
                     </li>

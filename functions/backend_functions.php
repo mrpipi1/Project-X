@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: alex
- * Date: 30/04/16
- * Time: 13:55
-
 
 
 function create_menu_items(){
@@ -20,10 +14,10 @@ function create_menu_items(){
 
     foreach($items as $item){
         $menu_item = ucfirst($item['item_name']);
-        $list_item .= ";
+        $list_item .= "";
     }
 
     return $list_item;
 }
 
-*/
+

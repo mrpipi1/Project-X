@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 30. Jul 2016 um 18:15
+-- Erstellungszeit: 30. Jul 2016 um 22:50
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -116,18 +116,15 @@ CREATE TABLE IF NOT EXISTS `carts` (
 --
 
 INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `product_size`, `created_at`, `deleted_at`) VALUES
-(1, 2, 7, 0, '', '2016-07-30 15:02:03', '0000-00-00 00:00:00'),
-(2, 2, 9, 0, '', '2016-07-30 15:09:50', '0000-00-00 00:00:00'),
-(3, 2, 9, 0, '', '2016-07-30 11:21:20', NULL),
-(4, 2, 9, 0, '', '2016-07-30 15:13:34', '0000-00-00 00:00:00'),
-(5, 2, 9, 0, '', '2016-07-30 15:09:26', '0000-00-00 00:00:00'),
-(6, 2, 9, 0, '', '2016-07-30 15:13:40', '0000-00-00 00:00:00'),
-(7, 2, 9, 0, '', '2016-07-30 11:21:24', NULL),
-(8, 2, 9, 0, '', '2016-07-30 11:21:26', NULL),
-(9, 2, 9, 0, '', '2016-07-30 15:10:47', '0000-00-00 00:00:00'),
-(10, 2, 9, 0, '', '2016-07-30 11:21:27', NULL),
-(11, 2, 9, 0, '', '2016-07-30 11:21:27', NULL),
-(12, 2, 9, 0, '', '2016-07-30 15:10:52', '0000-00-00 00:00:00');
+(1, 2, 7, 5, 'xs', '2016-07-30 21:35:26', NULL),
+(2, 2, 9, 6, 'xl', '2016-07-30 21:35:23', NULL),
+(4, 2, 12, 9, 'm', '2016-07-30 21:35:19', NULL),
+(7, 2, 8, 8, '', '2016-07-30 21:33:32', NULL),
+(8, 2, 10, 1, '', '2016-07-30 21:33:37', NULL),
+(9, 2, 11, 2, '', '2016-07-30 21:35:32', NULL),
+(10, 2, 13, 6, '', '2016-07-30 21:33:44', NULL),
+(11, 2, 15, 8, '', '2016-07-30 21:34:24', NULL),
+(12, 2, 17, 8, '', '2016-07-30 21:35:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -216,6 +213,8 @@ CREATE TABLE IF NOT EXISTS `coupon_codes` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `code` varchar(100) NOT NULL,
+  `percentage_value` int(11) DEFAULT NULL,
+  `flat_value` int(11) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -224,9 +223,9 @@ CREATE TABLE IF NOT EXISTS `coupon_codes` (
 -- Daten für Tabelle `coupon_codes`
 --
 
-INSERT INTO `coupon_codes` (`id`, `_name`, `code`, `is_active`, `deleted_at`) VALUES
-(1, 'lotusyoga', 'LOTUSYOGA2016', 1, NULL),
-(2, 'lotusyoga', 'LOTUSYOGA2015', 0, NULL);
+INSERT INTO `coupon_codes` (`id`, `_name`, `code`, `percentage_value`, `flat_value`, `is_active`, `deleted_at`) VALUES
+(1, 'lotusyoga', 'LOTUSYOGA2016', 5, NULL, 1, NULL),
+(2, 'lotusyoga', 'LOTUSYOGA2015', 10, NULL, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -251,6 +250,29 @@ INSERT INTO `courses` (`id`, `_name`, `description`, `is_active`, `deleted_at`) 
 (3, 'yin yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
 (4, 'ashtanga yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL),
 (5, 'tri yoga', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `delivery_options`
+--
+
+DROP TABLE IF EXISTS `delivery_options`;
+CREATE TABLE IF NOT EXISTS `delivery_options` (
+  `id` int(11) NOT NULL,
+  `_name` varchar(100) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `delivery_options`
+--
+
+INSERT INTO `delivery_options` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
+(1, 'Post', 1, NULL),
+(2, 'DHL', 1, NULL),
+(3, 'Expressversand', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -379,9 +401,13 @@ DROP TABLE IF EXISTS `orders`;
 CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `stock_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
+  `payment` varchar(100) NOT NULL,
+  `delivery_option_id` int(11) NOT NULL,
+  `delivery_address` varchar(1000) NOT NULL,
+  `receipt_address` varchar(1000) NOT NULL,
+  `status` int(11) NOT NULL,
+  `coupon_code_id` int(11) NOT NULL,
+  `is_active` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -415,17 +441,17 @@ CREATE TABLE IF NOT EXISTS `products` (
 --
 
 INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `color`, `in_aktion`, `price_in_aktion`, `is_active`, `deleted_at`) VALUES
-(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt.png', 'img/shop-images/damen-tshirt.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper_white.png', NULL, 0, 0, 1, NULL),
-(8, 'Yogabag & Matte', 39.99, 2, 'jkjnjk', 'img/shop-images/tragetasche_yogamatte.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(9, 'Jumper', 39.99, 1, 'Jumper - Unisex', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', NULL, 0, 0, 1, NULL),
-(10, 'Yogaring', 24.99, 2, 'jkjnjk', 'img/shop-images/yogaring.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
+(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt.png', 'img/shop-images/damen-tshirt.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper_white.png', 'Schwarz', 0, 0, 1, NULL),
+(8, 'Yogabag & Matte', 39.99, 2, 'jkjnjk', 'img/shop-images/tragetasche_yogamatte.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Schwarz / Grau', 0, 0, 1, NULL),
+(9, 'Jumper', 39.99, 1, 'Jumper - Unisex', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'Grau', 0, 0, 1, NULL),
+(10, 'Yogaring', 24.99, 2, 'jkjnjk', 'img/shop-images/yogaring.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Grün', 0, 0, 1, NULL),
 (11, 'Notizbuch', 19.99, 3, 'jkjnjk', 'img/shop-images/notebook.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(12, 'Herren T-Shirt', 19.99, 1, 'jkjnjk', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', NULL, 1, 5.99, 1, NULL),
+(12, 'Herren T-Shirt', 19.99, 1, 'jkjnjk', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Red', 0, 0, 1, NULL),
+(13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'Schwarz / Weiss', 1, 5.99, 1, NULL),
 (14, 'Lotus Band 3er', 15.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', NULL, 1, 8.99, 1, NULL),
-(15, 'Baumwollband', 12.99, 3, 'Baumwollband', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', NULL, 1, 9.99, 1, NULL),
+(15, 'Baumwollband', 12.99, 3, 'Baumwollband', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'Grau', 1, 9.99, 1, NULL),
 (16, 'Core Trainer', 29.99, 3, 'Core Trainer', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', NULL, 1, 19.99, 1, NULL),
-(17, 'Lotus Handtuch', 12.99, 2, 'Handtuch', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', NULL, 0, 0, 1, NULL),
+(17, 'Lotus Handtuch', 12.99, 2, 'Handtuch', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'Grau', 0, 0, 1, NULL),
 (18, 'Yoga Matte', 19.99, 2, 'Yoga Matte', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', NULL, 0, 0, 1, NULL),
 (19, 'asd', 3, 0, 'asd', '', 'asd', 'asd', 'asd', NULL, 0, 3, 1, NULL),
 (20, '', 0, 0, '', '', '', '', '', NULL, 0, 0, 1, NULL);
@@ -652,6 +678,12 @@ ALTER TABLE `courses`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `delivery_options`
+--
+ALTER TABLE `delivery_options`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indizes für die Tabelle `employees`
 --
 ALTER TABLE `employees`
@@ -756,6 +788,11 @@ ALTER TABLE `coupon_codes`
 --
 ALTER TABLE `courses`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT für Tabelle `delivery_options`
+--
+ALTER TABLE `delivery_options`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `employees`
 --
