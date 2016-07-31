@@ -73,12 +73,12 @@ $products = get_content_data('products');
 $sale_products = get_specific_content_data('products', 'in_aktion', 1);
 $shop = get_content_data('products');
 $categories = get_content_data('shop_categories');
-$sizes = get_content_data('stock');
+$sizes = get_content_data('stocks');
 $contact = get_ordered_content_data('contents', '_name', 'Kontakt', 'sequence', 'asc');
 $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
-$breadcrubms_checkout = get_content_data('breadcrubms_checkout');
+$breadcrubms_checkout = get_content_data('breadcrumbs_checkouts');
 //if(isset($_GET['page']) && ($_GET['page'] == 'Warenkorb' || $_GET['page'] == 'home')) {
     if(isset($_SESSION['user']['user_id'])) {
         $cart = get_specific_content_data('carts', 'user_id', $_SESSION['user']['user_id']);

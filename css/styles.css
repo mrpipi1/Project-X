@@ -1179,7 +1179,7 @@ Breadcrumbs
 
 .breadcrumb_wrapper {
     display: flex;
-    margin-top: 5vw;
+    margin-top: 3vw;
     margin-right: 25px;
     justify-content: center;
 }
@@ -1191,7 +1191,8 @@ Breadcrumbs
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    width:100px;
+    margin: 0 0.6em;
+    height: 1em;
 }
 .number_wrapper{
   width: 100%;
@@ -1239,7 +1240,7 @@ Breadcrumbs
     background-color: transparent;
 }
 .text {
-    font-size: 14px;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2119,6 +2120,9 @@ ____            _____  _  __ ______  _   _  _____
     text-align: left;
     height:40px;
 }
+.table_backend th:last-child{
+  width: 70px;
+}
 .table_backend th p{
     cursor:pointer;
     font-weight:400;
@@ -2126,6 +2130,9 @@ ____            _____  _  __ ______  _   _  _____
 }
 .table_backend td {
     font-weight: 300;
+}
+.table_backend td:last-child {
+    width: 70px;
 }
 /*wozu???? cg 27.07*/
 /*.table_backend td:nth-child(5) {
@@ -2373,4 +2380,14 @@ cursor: pointer;
 }
 .wrapper_checkout{
   min-height: 58vh;
+}
+
+.breadcrumbs i{
+  color: #5a8e7d;
+}
+.breadcrumbs i:last-child{
+  display: none;
+}
+.breadcrumb-item:hover{
+  color: #5a8e7d;
 }
