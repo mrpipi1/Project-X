@@ -222,6 +222,15 @@ $('.pencil_frontend').click(function(){
   $('.user_info_change_wrapper').css('display', 'none');
 }});
 
+$(".cart").hover(
+    function () {
+        $("#cart-display").show();
+    },
+    function () {
+        $("#cart-display").hide();
+    }
+);
+
 function update_user_profile(cart_id){
         // $.post('iwas.php', {
         //     //data

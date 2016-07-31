@@ -92,5 +92,33 @@ setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
           <?php if( is_logged_in()){ echo '<li><a href=\'index.php?action=logout\'><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>'; }; ?>
 
   		</ul>
+        <div id="cart-display" class="cart-header">
+            <?php
+            $cnt = 0;
+            $price = 0;
+            while ($row = mysqli_fetch_assoc($cart)) {
+                mysqli_data_seek($products, 0);
+                while ($row2 = mysqli_fetch_assoc($products)) {
+                    if ($row['product_id'] == $row2['id']) {
+                        $cnt++;
+                        $price += $row2['price'] * $row['quantity'];
+                        ?>
+                        <div class="cart-header-item">
+                            <img src="<?php echo $row2['pic']; ?>"/>
+                            <p class="cart-header-name"><?php echo $row2['_name']; ?></p>
+                            <span><?php echo $row['quantity']; ?></span>
+                        </div>
+                        <?php
+                    }
+                }
+            }
+            if($price < 40){
+               $price += 5;
+            }
+            if($cnt != 0) {
+                echo "<span class='cart-header-price'>" . $price . "€</span>";
+            }
+            ?>
+        </div>
   	</nav>
   </header>
