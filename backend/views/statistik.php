@@ -16,6 +16,8 @@ include('backend_crumbs.php');
 
         <div id="pieChart"></div>
 
+        <div id="test"></div>
+
 
     </section>
 
