@@ -348,7 +348,7 @@ $('.register_submit').on('click',function(event){
 });
 
 $('.register_submit').on('click',function(event){
-    var form_data=$(this).parent().parent().find('input.invalid');
+    var form_data=$(this).parent().find('input.invalid');
     if(form_data.length > 0){
         console.log('error hier anzeigen');
         event.preventDefault();
