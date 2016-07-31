@@ -60,6 +60,8 @@ if(isset($_SESSION["user"])){
   $user_id = $_SESSION["user"]["user_id"];
   $orders = get_specific_content_data('orders', 'user_id', $user_id);
   $user_info = get_specific_content_data('users', 'id', $user_id);
+}else{
+    $user_id = null;
 }
 $employees = get_content_data('employees');
 $courses = get_content_data('courses');
@@ -81,10 +83,10 @@ if(isset($_GET['page']) && $_GET['page'] == 'Warenkorb') {
     if(isset($_SESSION['user']['user_id'])) {
         $cart = get_specific_content_data('carts', 'user_id', $_SESSION['user']['user_id']);
     }else if(isset($_SESSION['guest_id'])) {
-        $cart = get_specific_content_data('carts', 'user_id', $_SESSION['guest_id']);
+        $cart = get_specific_content_data('carts', 'guest_id', $_SESSION['guest_id']);
     }else if(!isset($_SESSION['guest_id'])){
-        $user_id = insert_guest();
-        $_SESSION['guest_id'] = $user_id;
+        $guest_id = insert_guest();
+        $_SESSION['guest_id'] = $guest_id;
         $cart = get_specific_content_data('carts', 'user_id', $_SESSION['guest_id']);
     }
 
@@ -96,10 +98,10 @@ if(isset($_GET['page']) && $_GET['page'] == 'Warenkorb') {
 if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])) {
     $detail_product = get_specific_content_data('products', 'id', $_GET['product_id']);
     if(!isset($_SESSION['guest_id'])){
-        $user_id = insert_guest();
+        $guest_id = insert_guest();
         $_SESSION['guest_id'] = $user_id;
     }else{
-        $user_id = $_SESSION['guest_id'];
+        $guest_id = $_SESSION['guest_id'];
     }
 }
 

@@ -95,7 +95,7 @@
 
 
             <?php
-            echo "<div class=\"btn_checkout\" onClick=\"add_to_Cart('".$user_id."','".$_GET['product_id']."')\"><span>in den Warenkorb</span></div>";
+            echo "<div class=\"btn_checkout\" onClick=\"add_to_Cart('".$user_id."','".$guest_id."','".$_GET['product_id']."')\"><span>in den Warenkorb</span></div>";
             ?>
 
 

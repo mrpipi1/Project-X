@@ -7,6 +7,7 @@
     if(mysqli_num_rows($cart) == 0){
       ?>
       <div class="empty_cart">Dein Warenkorb ist leer! <a href="index.php?page=Shop">Hier gehts zum Shop.</a></div>
+    </section>
       <?php
     }else{
       ?>
@@ -97,5 +98,44 @@
       </section>
 
       <?php
+    $cnt = 0;
+    $price = 0;
+    $delivery_cost = 5;
+    while ($row = mysqli_fetch_assoc($cart)) {
+        mysqli_data_seek($products, 0);
+        while ($row2 = mysqli_fetch_assoc($products)) {
+
+            if($row['product_id'] == $row2['id']) {
+                $price += $row2['price']*$row['quantity'];
+                ?>
+
+                <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; ?> ">
+
+                    <img src="<?php echo $row2['pic']; ?>" class="img_card" alt="<?php echo $row2['pic']; ?>"/>
+
+                    <ul class="description_card-item">
+                        <li><?php echo $row2['_name']; ?></li>
+                        <li><?php echo $row2['description']; ?></li>
+                    </ul>
+
+                    <ul class="actions_card-item">
+                        <li><?php echo $row['product_size']; ?></li>
+                        <li class="farbe"><?php echo $row2['color']; ?></li>
+                        <li><?php echo $row['quantity']; ?></li>
+                    </ul>
+
+
+                    <div class="price_wrapper"><?php echo $row2['price']; ?></div>
+                    <div class="delete_wrapper"><a href="#" class="delete" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></a></div>
+
+                </div>
+                <?php
+            }
+        }
+        $cnt++;
     }
+    if($price > 50){
+        $delivery_cost = 0;
+    }
+  }
     ?>

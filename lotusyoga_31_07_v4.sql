@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 31. Jul 2016 um 10:09
+-- Erstellungszeit: 31. Jul 2016 um 14:01
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -103,29 +103,36 @@ INSERT INTO `breadcrubms_checkout` (`id`, `name`, `position`, `is_active`, `dele
 DROP TABLE IF EXISTS `carts`;
 CREATE TABLE IF NOT EXISTS `carts` (
   `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `guest_id` int(11) DEFAULT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL,
   `product_size` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `carts`
 --
 
-INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `product_size`, `created_at`, `deleted_at`) VALUES
-(1, 2, 7, 5, 'xs', '2016-07-30 21:35:26', NULL),
-(2, 2, 9, 6, 'xl', '2016-07-30 21:35:23', NULL),
-(4, 2, 12, 9, 'm', '2016-07-30 21:35:19', NULL),
-(7, 2, 8, 8, '', '2016-07-30 21:33:32', NULL),
-(8, 2, 10, 1, '', '2016-07-30 21:33:37', NULL),
-(9, 2, 11, 2, '', '2016-07-30 21:35:32', NULL),
-(10, 2, 13, 6, '', '2016-07-30 21:33:44', NULL),
-(11, 2, 15, 8, '', '2016-07-30 21:34:24', NULL),
-(12, 2, 17, 8, '', '2016-07-30 21:35:36', NULL),
-(13, 9, 7, 1, 'L', '2016-07-31 08:58:19', NULL);
+INSERT INTO `carts` (`id`, `user_id`, `guest_id`, `product_id`, `quantity`, `product_size`, `created_at`, `deleted_at`) VALUES
+(1, 2, NULL, 7, 5, 'xs', '2016-07-31 12:43:44', '0000-00-00 00:00:00'),
+(2, 2, NULL, 9, 6, 'xl', '2016-07-31 12:43:50', '0000-00-00 00:00:00'),
+(4, 2, NULL, 12, 9, 'm', '2016-07-30 21:35:19', NULL),
+(7, 2, NULL, 8, 8, '', '2016-07-30 21:33:32', NULL),
+(8, 2, NULL, 10, 1, '', '2016-07-30 21:33:37', NULL),
+(9, 2, NULL, 11, 2, '', '2016-07-30 21:35:32', NULL),
+(10, 2, NULL, 13, 6, '', '2016-07-30 21:33:44', NULL),
+(11, 2, NULL, 15, 8, '', '2016-07-30 21:34:24', NULL),
+(12, 2, NULL, 17, 8, '', '2016-07-30 21:35:36', NULL),
+(13, 9, NULL, 7, 1, 'L', '2016-07-31 08:58:19', NULL),
+(14, 9, NULL, 7, 2, 'L', '2016-07-31 12:32:25', NULL),
+(15, 9, NULL, 7, 2, 'L', '2016-07-31 12:32:34', NULL),
+(16, 9, NULL, 7, 2, 'l', '2016-07-31 12:41:22', NULL),
+(17, 10, NULL, 7, 1, 'l', '2016-07-31 12:49:31', '0000-00-00 00:00:00'),
+(18, 0, 10, 7, 2, 'l', '2016-07-31 12:55:28', '0000-00-00 00:00:00'),
+(19, 0, 10, 7, 2, 'l', '2016-07-31 12:55:46', NULL);
 
 -- --------------------------------------------------------
 
@@ -322,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `guests` (
   `is_active` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `guests`
@@ -337,7 +344,8 @@ INSERT INTO `guests` (`id`, `guest_mail`, `is_active`, `created_at`, `deleted_at
 (6, '', 1, '2016-07-31 08:45:29', NULL),
 (7, '', 1, '2016-07-31 08:45:32', NULL),
 (8, '', 1, '2016-07-31 08:47:00', NULL),
-(9, '', 1, '2016-07-31 08:47:42', NULL);
+(9, '', 1, '2016-07-31 08:47:42', NULL),
+(10, '', 1, '2016-07-31 12:44:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -554,7 +562,7 @@ INSERT INTO `stock` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
 (1, 7, 'xs', NULL, NULL),
 (2, 7, 's', 22, NULL),
 (3, 7, 'm', 34, NULL),
-(4, 7, 'L', 9, NULL),
+(4, 7, 'l', 9, NULL),
 (5, 7, 'xl', 4, NULL),
 (27, 9, 'xs', 49, NULL),
 (28, 9, 's', 25, NULL),
@@ -807,7 +815,7 @@ ALTER TABLE `breadcrubms_checkout`
 -- AUTO_INCREMENT für Tabelle `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
@@ -837,7 +845,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT für Tabelle `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT für Tabelle `header_items`
 --

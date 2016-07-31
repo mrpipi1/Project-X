@@ -591,6 +591,10 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     transition: all 0.2s ease-in-out;
     color:white;
 }
+
+.colors .out {
+    opacity:0.3;
+}
 /*.colors li:first-child {
     background-color: black;
 }
@@ -2313,11 +2317,18 @@ cursor: pointer;
 .email_was_send{
   display: none;
 }
-.profile-email:hover, .empty_cart:hover{
+.profile-email:hover, .empty_cart a:hover{
   color:#5a8e7d;
 }
 
 .profile_error_message_user, .profile_success_message_user, .profile_error_message_password{
   display: none;
   margin-bottom: 10px;
+}
+
+.empty_cart{
+  margin-top: 4em;
+}
+.wrapper_checkout{
+  min-height: 58vh;
 }
