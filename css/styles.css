@@ -727,6 +727,7 @@ ______ ____  _____  __  __
     font-weight: 200;
     max-width: 300px;
     min-width: 200px;
+    cursor: pointer;
 }
 .btn a {
     display: block;
@@ -754,6 +755,7 @@ ______ ____  _____  __  __
  color: #fff;
  border: 1px solid #fff;
  transition: all 0.3s ease-in-out;
+ cursor: pointer;
 
 }
 
@@ -1469,7 +1471,6 @@ Warenkorb
   }
 .card-header li {
     padding: 1vw 0;
-    border: 1px solid red;
 
 }
 .description {
@@ -1504,7 +1505,6 @@ Warenkorb
     display: flex;
     flex-direction: column;
     flex-basis: 77%;
-    border: 1px solid green;
     align-items: center;
     justify-content: center;
 
@@ -1513,10 +1513,11 @@ Warenkorb
     width: 20vw;
 }
 .description_card-item li:first-child {
-    margin: 15px 0 20px;
+    margin: 0.6em 0;
 }
 .description_card-item li:last-child {
     font-size: small;
+    margin: 0 0 0.6em;
 }
 
 /* Menge, Farbe, Größe und Preis */
@@ -1526,13 +1527,11 @@ Warenkorb
     display: flex;
     flex-basis: 48%;
     justify-content: space-around;
-    border: 1px solid blue;
 }
 .actions_card-item li, .price_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid fuchsia;
     flex-basis: 34%;
 }
 .farbe {
@@ -1542,7 +1541,6 @@ Warenkorb
   font-size: 1vw;
     text-align: center;
     flex-basis: 20%;
-    border: 1px solid purple;
 }
 
 /* X zum löschen vom produkt */
@@ -1552,7 +1550,6 @@ Warenkorb
     flex-direction: column;
     justify-content: center;
     flex-grow: 0;
-    border: 1px solid aqua;
 }
 .delete, .edit {
     width: 20px;
