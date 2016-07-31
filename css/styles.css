@@ -2252,10 +2252,10 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 
-
 .radiobutton_wrapper_backend {
-  display: flex;
-  flex-wrap: wrap;
+  padding: 0 2em;
+  margin: auto;
+
 }
 
 .form_backend {
@@ -2293,6 +2293,7 @@ ____            _____  _  __ ______  _   _  _____
   width: 100%;
   font-size: 1em;
   margin: 0.5em 0;
+  font-weight: 300;
 }
 
 .form-group_backend input[type] {
@@ -2317,6 +2318,10 @@ ____            _____  _  __ ______  _   _  _____
   width: 15%;
   margin: 0 2em;
 }
+
+
+
+
 /*#######################
 pie chart
 #######################*/
