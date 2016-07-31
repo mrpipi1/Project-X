@@ -1,7 +1,6 @@
-
+<div class="errors_checkout_wrapper"><div class="error_message_checkout"></div></div>
 <div class="breadcrumb_wrapper">
     <ul class="breadcrumbs" >
-
       <?php
       if(mysqli_num_rows($breadcrubms_checkout) > 0){
         $i = 0;

@@ -43,6 +43,15 @@
             <label class="label">Username*</label>
         </div>
 
+        <div class="form-group form-group_radio_register">
+            <p class="radiobutton_wrapper radiobutton_first">
+                <input type="radio" id="female" name="gender" class="radiobutton "/> <label for="female">Frau</label>
+            </p>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="male" name="gender" class="radiobutton"/> <label for=male>Herr</label>
+            </p>
+        </div>
+
         <div class="form-group">
             <input type="text" name="fullname" value="" required class="input">
             <span class="highlight"></span>
@@ -76,13 +85,6 @@
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Passwort wiederholen*</label>
-        </div>
-
-        <div class="form-group">
-            <input type="text" name="gender" value="" required class="input">
-            <span class="highlight"></span>
-            <span class="form-bar"></span>
-            <label class="label">Gender*</label>
         </div>
 
         <div class="form-group">

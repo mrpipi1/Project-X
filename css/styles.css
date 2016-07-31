@@ -2391,7 +2391,7 @@ cursor: pointer;
 .breadcrumbs i:last-child{
   display: none;
 }
-.error_detailansicht{
+.error_detailansicht, .error_message_checkout{
   max-width: 75vw;
   color: #b50101;
   font-size: 1em;
@@ -2402,10 +2402,17 @@ cursor: pointer;
 .error_detailansicht a:hover{
   color: #8e0000;
 }
-.errormessage_detail_wrapper{
+.errormessage_detail_wrapper, .errors_checkout_wrapper{
   display: none;
   position: absolute;
   top:75px;
   left:0;
   width: 100%;
+}
+.form-group_radio_register{
+  display: flex;
+  margin-bottom: 0;
+}
+.radiobutton_first{
+  margin-right: 20px;
 }

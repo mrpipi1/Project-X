@@ -348,4 +348,34 @@ $('#contact_tel').on('input', function() {
         $('.contact_name .form-bar').css('display', 'none');
     }
 });
+
+
+
+
+
+
+function checkout_next( next_page_href){
+  // check if user has entered values
+  // if(1 == 1){
+  //   // load next page
+  //   window.location.href = "index.php?page=Adressen";
+  // }else{
+  //
+  // }
+  console.log('hallo');
+
+}
+
+$('.next_btn_anmelden').click('click',function(){
+  if(1 == 1){
+    // load next page
+    window.location.href = "index.php?page=Adressen";
+  }else{
+
+  }
+});
+
+
+
+
 //

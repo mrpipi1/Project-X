@@ -21,7 +21,6 @@ global $link;
             $is_active =  $user['is_active'];
             if($is_active == 1) {
                 if (password_verify($password, $pw)) {
-
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
                     redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
