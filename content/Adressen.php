@@ -40,15 +40,14 @@
 
         </section>
 
-<<<<<<< HEAD
+<!-- 
         <div class="raidiobutton_wrapper_shipping">
           <label for="is_shipping_address" class="label_backend">Gleich wie Rechnungsadresse</label>
           <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
         </div>
 
 
-=======
->>>>>>> e848596ed16bc365f6c52495685e5340836c1015
+-->
         <section class="shipping-address">
 
             <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
