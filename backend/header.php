@@ -129,11 +129,6 @@
                             <span class="selected"></span>
                         </p>
                     </li>
-                    <li><p onClick="load_Content('socialmedia_icons', '1', 'id', 'ASC')">
-                            <i class="fa fa-twitter"></i><span class="title">Social Media Icons</span>
-                            <span class="selected"></span>
-                        </p>
-                    </li>
                 </ul>
             </li>
             <li>
@@ -148,7 +143,7 @@
                         </p>
                     </li>
                     <li><p onClick="load_Content('products', '1', 'id', 'ASC')">
-                            <i class="fa fa-gift"></i><span class="title">Products</span>
+                            <i class="fa fa-tags"></i><span class="title">Products</span>
                             <span class="selected"></span>
                         </p>
                     </li>
@@ -169,6 +164,21 @@
                     </li>
                     <li><p onClick="load_Content('delivery_options', '1', 'id', 'ASC')">
                             <i class="fa fa-truck" aria-hidden="true"></i><span class="title">Delivery Options</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
+                    <li><p onClick="load_Content('breadcrumbs_checkouts', '1', 'id', 'ASC')">
+                            <i class="fa fa-road" aria-hidden="true"></i><span class="title">Breadcrumbs</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
+                    <li><p onClick="load_Content('coupon_codes', '1', 'id', 'ASC')">
+                            <i class="fa fa-barcode" aria-hidden="true"></i><span class="title">Coupon Codes</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
+                    <li><p onClick="load_Content('stocks', '1', 'id', 'ASC')">
+                            <i class="fa fa-line-chart" aria-hidden="true"></i><span class="title">Stock</span>
                             <span class="selected"></span>
                         </p>
                     </li>
