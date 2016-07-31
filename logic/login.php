@@ -23,7 +23,11 @@ global $link;
                 if (password_verify($password, $pw)) {
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
-                    redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+                    if($_GET['page'] == 'Anmelden'){
+                      redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
+                    }else{
+                      redirect_to("index.php?page=Adressen", "Erfolgreich eingeloggt!");
+                    }
                     session_write_close();
 
                 } else {
