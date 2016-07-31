@@ -402,16 +402,6 @@ $('.profile_submit').on('click',function(event){
     }
 });
 
-
-
-
-
-
-
-
-
-
-
 function checkout_next( next_page_href){
   // check if user has entered values
   // if(1 == 1){

@@ -41,9 +41,7 @@
         </section>
 
         <section class="shipping-address">
-
             <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
-
             <form class="form_checkout" action="#" method="post">
 
               <div class="raidiobutton_wrapper_shipping">
@@ -94,18 +92,17 @@
 
                 <?php
                   while( $row = mysqli_fetch_assoc($user_info) ){
-                    if(isset($row['adress'])){
                 ?>
                   <div class="form-group">
-                      <input type="text" name="tel" value="" required class="input">
+                      <input type="text" name="tel" value="<?php if(isset($row['adress'])){echo $row['adress'];} ?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
                   </div>
-                  <?php } ?>
+
 
                   <div class="form-group">
-                      <input type="text" name="email" value="" required class="input">
+                      <input type="text" name="email" value="<?php if(isset($row['address'])){echo $row['address'];} ?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Postleitzahl | Stadt*</label>
@@ -118,7 +115,6 @@
               </form>
 
           </section>
-
 
           <section class="shipping-address">
 

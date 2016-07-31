@@ -6,7 +6,6 @@
 
     <section class="wrapper_shipping-info">
 
-
         <section class="shipping-info">
 
             <h2 class="hl_checkout">Versandart:</h2>
