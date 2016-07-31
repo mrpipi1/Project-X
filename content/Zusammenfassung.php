@@ -6,70 +6,83 @@ include("breadcrumbs.php");
     <!-- Adressen -->
     <section class="wrapper-order-sum">
         <section class="wrapper-form-order-sum">
-            <section class="billing-address">
-                <h2 class="hl_checkout">Rechnungsadresse:</h2>
-                <form class="form_checkout" action="#" method="post">
+          <section class="billing-address">
 
-                    <div class="form-group">
-                        <input type="text" name="name" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Vorname | Nachname*</label>
-                    </div>
+              <h2 class="hl_checkout">Rechnungsadresse</h2>
 
-                    <div class="form-group">
-                        <input type="text" name="tel" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Strasse | Hausnummer</label>
-                    </div>
+              <form class="form_checkout" action="#" method="post">
 
-                    <div class="form-group">
-                        <input type="text" name="email" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Postleitzahl | Stadt</label>
-                    </div>
+                  <div class="form-group">
+                      <input type="text" name="name" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Vorname | Nachname*</label>
+                  </div>
 
-                    <div class="btn_checkout btn_big-checkout">
-                        <input type="submit" name="address" value="Ändern" class="btn_big-checkout input">
-                    </div>
-                </form>
-            </section>
+                  <div class="form-group">
+                      <input type="text" name="tel" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Strasse | Hausnummer</label>
+                  </div>
 
-            <section class="shipping-address">
+                  <div class="form-group">
+                      <input type="text" name="email" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Postleitzahl | Stadt</label>
+                  </div>
 
-                <h2 class="hl_checkout">Lieferadresse:</h2>
+                  <div class="btn_checkout btn_big-checkout">
+                      <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input">
+                  </div>
 
-                <form class="form_checkout" action="#" method="post">
+              </form>
 
-                    <div class="form-group">
-                        <input type="text" name="name" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Vorname | Nachname*</label>
-                    </div>
+          </section>
 
-                    <div class="form-group">
-                        <input type="text" name="tel" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Strasse | Hausnummer</label>
-                    </div>
 
-                    <div class="form-group">
-                        <input type="text" name="email" value="" required class="input">
-                        <span class="highlight"></span>
-                        <span class="form-bar"></span>
-                        <label class="label">Postleitzahl | Stadt</label>
-                    </div>
+          <section class="shipping-address">
 
-                    <div class="btn_checkout btn_big-checkout">
-                        <input type="submit" name="address" value="Ändern" class="btn_big-checkout input">
-                    </div>
+              <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
 
-                </form>
-            </section>
+              <form class="form_checkout" action="#" method="post">
+
+                <div class="raidiobutton_wrapper_shipping">
+                  <label for="is_shipping_addess" class="label_backend">gleich wie Rechnungsadresse</label>
+                  <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
+                </div>
+
+                <div class="shipping_form_wrapper">
+
+                  <div class="form-group">
+                      <input type="text" name="name" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Vorname | Nachname*</label>
+                  </div>
+
+                  <div class="form-group">
+                      <input type="text" name="tel" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Strasse | Hausnummer</label>
+                  </div>
+
+                  <div class="form-group">
+                      <input type="text" name="email" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Postleitzahl | Stadt</label>
+                  </div>
+
+                  <div class="btn_checkout btn_big-checkout">
+                      <input type="submit" name="address" value="Übernehmen" class="btn_big-checkout input">
+                  </div>
+                </div>
+
+              </form>
+          </section>
         </section>
 
 

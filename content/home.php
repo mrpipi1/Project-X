@@ -144,14 +144,15 @@
           ?>
         </section>
 
+        <div class="btn">
+             <a href="index.php?page=shop">Zum Shop</a>
+        </div>
 
      </section>
 
 
 
-     <div class="btn">
-          <a href="index.php?page=shop">Zum Shop</a>
-     </div>
+
 
 
      <section class="contact_main section_main" id="contact">
