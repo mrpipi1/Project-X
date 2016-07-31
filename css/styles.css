@@ -2313,7 +2313,7 @@ cursor: pointer;
 .email_was_send{
   display: none;
 }
-.profile-email:hover{
+.profile-email:hover, .empty_cart:hover{
   color:#5a8e7d;
 }
 
