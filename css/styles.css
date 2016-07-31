@@ -2077,6 +2077,9 @@ ____            _____  _  __ ______  _   _  _____
     text-align: left;
     height:40px;
 }
+.table_backend th:last-child{
+  width: 70px;
+}
 .table_backend th p{
     cursor:pointer;
     font-weight:400;
@@ -2084,6 +2087,9 @@ ____            _____  _  __ ______  _   _  _____
 }
 .table_backend td {
     font-weight: 300;
+}
+.table_backend td:last-child {
+    width: 70px;
 }
 /*wozu???? cg 27.07*/
 /*.table_backend td:nth-child(5) {
