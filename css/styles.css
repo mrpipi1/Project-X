@@ -553,11 +553,11 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
 
 
 .product {
-    margin: 2em 0;
+    margin: 2em;
     position: relative;
     overflow: hidden;
     height: 250px;
-    flex-basis: 220px;
+    flex-basis: 25%;
     max-width: 220px;
     min-width: 100px;
 }
@@ -571,11 +571,13 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     transform: scale(1.1);
     background-position: center;
     background-size: contain;
+
 }
 
 .product-img img {
     width: 220px;
-    height: 250px;
+    height: auto;
+    background-color: #f7f8fa;
 
 }
 
@@ -1152,19 +1154,39 @@ Abschluss
 }
 h2.hl_checkout {
     font-size: 2vw;
-    margin: 0 0 5vw 0;
+    margin: 0 0 2em 0;
     text-transform: capitalize;
     text-align: center;
 }
-h2.hl_shipping_address{
-  margin: 0 0 5vw 0;
 
-}
 .shipping_form_wrapper{
   display: none;
 }
 .raidiobutton_wrapper_shipping{
-  margin-bottom: 20px;
+  margin: auto auto 0 auto;
+  bottom: 0;
+  font-size: 1em;
+  letter-spacing: 0.5px;
+  border: 1px solid #5a8e7d;
+  transition: all 0.5s linear;
+  padding: 0.7em 2em;
+font-weight: 300;
+}
+
+.raidiobutton_wrapper_shipping input[type=checkbox]{
+   display:none;
+}
+.raidiobutton_wrapper_shipping.checkbox-active {
+  background-color: #65a591;
+  color: #fff;
+}
+.raidiobutton_wrapper_shipping:hover {
+  background-color: #65a591;
+  color: #fff;
+}
+
+.billing-address, .shipping-address {
+  width: 30%;
 }
 
 .form_checkout-sectionsheadline {
@@ -1703,8 +1725,8 @@ Zusammenfassung
 }
 
 .form_checkout {
-    width: 400px;
-    min-width: 400px;
+    width: 100%;
+    min-width: 40%;
     max-width: 600px;
 
 }
@@ -2225,12 +2247,67 @@ ____            _____  _  __ ______  _   _  _____
 }
 
 .wrapper-form-backend {
-    width: 60vw;
-}
-.form_backend .form-group_backend{
-  width:300px;
+    width: 80vw;
 }
 
+
+.radiobutton_wrapper_backend {
+
+}
+
+.form_backend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+.form_backend .form-group_backend{
+  width: 100%;
+  flex-basis: 45%;
+  height: 4.5em;
+}
+
+.form-group_backend {
+  padding: 1em;
+  display: flex;
+}
+
+/*.form-group_backend:nth-child(n+8) {
+  flex-basis: 100%;
+}*/
+
+
+
+.label_backend {
+  display: block;
+  float: left;
+  width: 100%;
+  font-size: 1em;
+  margin: 0.5em 0;
+}
+
+.form-group_backend input[type] {
+    background-color: #65a591;
+    color: white;
+}
+
+.label_backend:after {
+  content: ": "
+}
+
+.form-group_backend input {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  font-size: 1em;
+  font-weight: 200;
+}
+
+
+.form-group_backend input[type=radio] {
+  width: 15%;
+  margin: 0 2em;
+}
 /*#######################
 pie chart
 #######################*/
