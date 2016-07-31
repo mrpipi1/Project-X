@@ -8,6 +8,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'login'){
 }
 
 if(isset($_GET['action']) && $_GET['action'] == 'logout' && isset($_SESSION)){
+	session_unset();
 	session_destroy();
 }
 $admin = '';
