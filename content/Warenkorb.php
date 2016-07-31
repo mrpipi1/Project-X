@@ -26,7 +26,7 @@
                 $price += $row2['price']*$row['quantity'];
                 ?>
 
-                <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; if ($cnt == 0) {echo 'card-item_first';} ?> ">
+                <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; ?> ">
 
                     <img src="<?php echo $row2['pic']; ?>" class="img_card" alt="<?php echo $row2['pic']; ?>"/>
 

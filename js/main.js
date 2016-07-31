@@ -128,7 +128,7 @@ function initMap() {
   });
 }
 
-function add_to_Cart(user_id, product_id){
+function add_to_Cart(user_id, guest_id, product_id){
     var size = $(".size-selected").text();
     var quantity = $(".quantity").val();
     if(size && quantity > 0) {
@@ -137,6 +137,7 @@ function add_to_Cart(user_id, product_id){
       }else{
         $.post('logic/add_to_cart.php', {
             user_id: user_id,
+            guest_id: guest_id,
             product_id: product_id,
             size: size,
             quantity: quantity
