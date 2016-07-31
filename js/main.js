@@ -287,18 +287,19 @@ $('.profile_update_btn').click(function(){
   console.log(id);
   insert_or_update('users', 'edit', id );
 });
+
 //validation contact form
 
-$('#contact_email').on('input', function() {
+/*$('#contact_email').on('input', function() {
     var input=$(this);
     var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     var is_email=re.test(input.val());
     if(is_email){
         input.removeClass("invalid").addClass("valid");
         $('.contact_email .form-bar').css('display', 'block');
-        $('.error_email').text('');
+        $('.error_contact_email').text('');
     } else {
-        $('.error_email').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
+        $('.error_contact_email').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
         input.removeClass("valid").addClass("invalid");
         $('.contact_email .form-bar').css('display', 'none');
     }
@@ -311,9 +312,9 @@ $('#contact_comment').keyup(function(event) {
     if(message){
         input.removeClass("invalid").addClass("valid");
         $('.contact_comment .form-bar').css('display', 'block');
-        $('.error_comment').text('');
+        $('.error_contact_comment').text('');
     } else {
-        $('.error_comment').text('Bitte geben Sie eine Nachricht ein!');
+        $('.error_contact_comment').text('Bitte geben Sie eine Nachricht ein!');
         input.removeClass("valid").addClass("invalid");
         $('.contact_comment .form-bar').css('display', 'none');
     }
@@ -326,9 +327,9 @@ $('#contact_name').keyup(function(event) {
     if(message){
         input.removeClass("invalid").addClass("valid");
         $('.contact_name .form-bar').css('display', 'block');
-        $('.error_name').text('');
+        $('.error_contact_name').text('');
     } else {
-        $('.error_name').text('Bitte geben Sie einen Namen ein!');
+        $('.error_contact_name').text('Bitte geben Sie einen Namen ein!');
         input.removeClass("valid").addClass("invalid");
         $('.contact_name .form-bar').css('display', 'none');
     }
@@ -341,11 +342,81 @@ $('#contact_tel').on('input', function() {
     if(is_tel){
         input.removeClass("invalid").addClass("valid");
         $('.contact_name .form-bar').css('display', 'block');
-        $('.error_tel').text('');
+        $('.error_contact_tel').text('');
     } else {
-        $('.error_tel').text('Bitte geben Sie eine gültige Telefonnummer ein!');
+        $('.error_contact_tel').text('Bitte geben Sie eine gültige Telefonnummer ein!');
         input.removeClass("valid").addClass("invalid");
         $('.contact_name .form-bar').css('display', 'none');
+    }
+});*/
+//validation login form
+
+$('.form-group input[type="text"][name!="email"], .form-group input[type="password"]').keyup(function(event) {
+    var input=$(this);
+    var re;
+    var errtxt = 'Bitte geben Sie einen gültigen Wert ein!';
+    if($(this).attr('name') == '_name'){
+        re = /^[a-z0-9_-]{3,16}$/;
+    }else if($(this).attr('name').indexOf('password') > -1) {
+        re = /^[a-z0-9_-]{6,18}$/;
+    }
+    var check=re.test(input.val());
+    if(check){
+        input.removeClass("invalid").addClass("valid");
+        $(this).parent().children('.form-bar').css('display', 'block');
+        $(this).parent().children('.error').text('');
+    } else {
+        $(this).parent().children('.error').text('Bitte geben Sie einen gültigen Wert ein!');
+        input.removeClass("valid").addClass("invalid");
+        $(this).parent().children('.form-bar').css('display', 'none');
+    }
+});
+
+/*$('.form-group input[type="password"][name="password_wh"]').on('input', function(event) {
+    var input=$(this);
+    var message=$(this).val();
+    console.log($(this).prev());
+    console.log(message);
+    if(message){
+        input.removeClass("invalid").addClass("valid");
+        $(this).parent().children('.form-bar').css('display', 'block');
+        $(this).parent().children('.error').text('');
+    } else {
+        $(this).parent().children('.error').text('Bitte geben Sie einen gültigen Wert ein!');
+        input.removeClass("valid").addClass("invalid");
+        $(this).parent().children('.form-bar').css('display', 'none');
+    }
+});*/
+
+$('.form-group input[name="email"]').on('input', function() {
+    var input=$(this);
+    var re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    var is_email=re.test(input.val());
+    if(is_email){
+        input.removeClass("invalid").addClass("valid");
+        $(this).parent().children('.form-bar').css('display', 'block');
+        $(this).parent().children('.error').text('');
+    } else {
+        $(this).parent().children('.error').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
+        input.removeClass("valid").addClass("invalid");
+        $(this).parent().children('.form-bar').css('display', 'none');
+    }
+});
+
+
+$('.form-group textarea').keyup(function(event) {
+    var input=$(this);
+    var message=$(this).val();
+    console.log($(this).parent().children('.form-bar'));
+    console.log($(this).parent().children('.form-bar'))
+    if(message){
+        input.removeClass("invalid").addClass("valid");
+        $(this).parent().children('.form-bar').css('display', 'block');
+        $(this).parent().children('.error').text('');
+    } else {
+        $(this).parent().children('.error').text('Bitte geben Sie einen gültiges Kommentar ein!');
+        input.removeClass("valid").addClass("invalid");
+        $(this).parent().children('.form-bar').css('display', 'none');
     }
 });
 
@@ -379,3 +450,4 @@ $('.next_btn_anmelden').click('click',function(){
 
 
 //
+

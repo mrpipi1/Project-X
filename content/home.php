@@ -216,7 +216,7 @@
                            <textarea id="contact_' . $row['type'] . '" class="textarea" name="' . $row['type'] . '" rows="10" cols="100" placeholder="' . $row['content'] . '" ></textarea>
                            <span class="highlight"></span>
                            <span class="form-bar"></span>
-                           <span class="error error_' . $row['type'] . '""></span>
+                           <span class="error error_contact_' . $row['type'] . '""></span>
                       </div>';
                 } else if ($row['type'] == 'submit') {
                     echo '<div class="btn">
@@ -228,7 +228,7 @@
                        <span class="highlight"></span>
                        <span class="form-bar"></span>
                        <label class="label">' . $row['content'] . '</label>
-                       <span class="error error_' . $row['type'] . '"></span>
+                       <span class="error error_contact_' . $row['type'] . '"></span>
                      </div>';
                 }
             }

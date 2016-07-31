@@ -48,9 +48,7 @@ function insert_guest(){
     if($res){
         $sql2 = "SELECT id FROM guests ORDER BY id DESC LIMIT 1";
         $res2 = mysqli_query($link, $sql2);
-        print_r($res2);
         $row = mysqli_fetch_row($res2);
-        print_r($row);
         if($row){
           return $row[0];
         }
