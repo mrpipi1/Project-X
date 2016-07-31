@@ -24,9 +24,9 @@ global $link;
                     $_SESSION['logged_in'] = true;
                     $_SESSION['user'] = array('username' => $user["_name"], 'user_id' => $user["id"]);
                     if($_GET['page'] == 'Anmelden'){
-                      redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
-                    }else{
                       redirect_to("index.php?page=Adressen", "Erfolgreich eingeloggt!");
+                    }else{
+                      redirect_to("index.php?page=home#about_us", "Erfolgreich eingeloggt!");
                     }
                     session_write_close();
 
@@ -57,14 +57,16 @@ global $link;
 
             }
         }
-
         if($error == 1) {
             $errors["auth"] = "Die eingegebene Email-Passwort-Kombination stimmt nicht überein.";
-
         }
         if($error == 2) {
             $errors["user"] = "Der eingegebene User ist inaktiv.";
         }
+    }
+    if(is_post_request("gast")){
+      $email = mysqli_real_escape_string($link, $_POST["login_guest"]);
+      $sql = "INSERT INTO guests (guest_mail) VALUES('".$email."')";
     }
 
 //}
