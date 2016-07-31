@@ -103,12 +103,13 @@ include("breadcrumbs.php");
             $cnt = 0;
             $price = 0;
             $delivery_cost = 5;
+            mysqli_data_seek($cart, 0);
             while ($row = mysqli_fetch_assoc($cart)) {
                 mysqli_data_seek($products, 0);
                 while ($row2 = mysqli_fetch_assoc($products)) {
 
                     if($row['product_id'] == $row2['id']) {
-                        $price += $row2['price'];
+                        $price += $row2['price']*$row['quantity'];
                         ?>
 
                         <div class="card-item <?php echo 'cart_item_'.$row['id'].' '; if ($cnt == 0) {echo 'card-item_first';} ?> ">
@@ -136,7 +137,7 @@ include("breadcrumbs.php");
                 }
                 $cnt++;
             }
-            if($price > 50){
+            if($price >= 40){
                 $delivery_cost = 0;
             }
             $price += $delivery_cost;
