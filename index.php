@@ -19,6 +19,7 @@ include('functions/shop_functions.php');
 include('logic/login.php');
 include('logic/register_logic.php');
 include('logic/user_message.php');
+include('logic/checkout_logic.php');
 include('header.php');
 
 
