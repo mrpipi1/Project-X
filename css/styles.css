@@ -591,6 +591,10 @@ ____) / ____ \| |____| |____  | |    | | \ \| |__| | |__| | |__| | |____   | |  
     transition: all 0.2s ease-in-out;
     color:white;
 }
+
+.colors .out {
+    opacity:0.3;
+}
 /*.colors li:first-child {
     background-color: black;
 }

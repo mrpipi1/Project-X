@@ -50,7 +50,13 @@
                                                 //print_r($row3);
                                                 if($row['id'] == $row3['product_id']) {
                                                     ?>
-                                                    <?php if($row3['stock'] > 0){ echo "<li>".strtoupper($row3['size'])."</li>"; }?>
+                                                    <?php if($row3['stock'] > 0){
+                                                        echo "<li>".strtoupper($row3['size'])."</li>";
+                                                    }else{
+                                                        echo "<li class='out'>".strtoupper($row3['size'])."</li>";
+                                                    }
+
+                                                    ?>
                                                     <?php
                                                 }
                                             }
