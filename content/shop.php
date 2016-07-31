@@ -2,11 +2,13 @@
     <h2>Shop</h2>
     <nav class="shop-categories">
         <ul>
-            <li><a href="#">Alle</a></li>
-            <li><a href="#clothes">Bekleidung</a></li>
-            <li><a href="#accessories">Zubehör</a></li>
-            <li><a href="#others">Sonstiges</a></li>
-            <li><a href="#">Suche</a></li>
+            <?php
+            while( $row3 = mysqli_fetch_assoc($categories) ) {
+                ?>
+                <li ><a href = "#<?php echo $row3['_name'] ?>" ><?php echo $row3['_name'] ?></a ></li>
+            <?php
+            }
+            ?>
         </ul>
     </nav>
 
@@ -15,9 +17,10 @@
 
     <section class="wrapper_shop">
         <?php
+        mysqli_data_seek($categories, 0);
         while( $row2 = mysqli_fetch_assoc($categories) ) {
             ?>
-            <h3><?php echo $row2['_name'] ?></h3>
+            <h3 id="<?php echo $row2['_name'] ?>"><?php echo $row2['_name'] ?></h3>
 
             <section class="line-wrapper_shop">
 
@@ -25,7 +28,7 @@
                 <?php
                 mysqli_data_seek($shop, 0);
                 while ($row = mysqli_fetch_assoc($shop)) {
-                    if($row2['id'] == $row['shop_categories_id']) {
+                    if($row2['id'] == $row['shop_categories_id'] || $row2['id'] == 4) {
                         ?>
                         <section class="product">
                             <a href="index.php?page=Detailansicht&amp;product_id=<?php echo $row['id'] ?>">

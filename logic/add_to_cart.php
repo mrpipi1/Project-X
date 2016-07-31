@@ -8,7 +8,7 @@ $sql = "SELECT * FROM stock WHERE product_id = ".$product_id." AND size = '". $s
 $res = mysqli_query($link, $sql);
 while ($row = mysqli_fetch_assoc($res)) {
     if($row['stock'] >= $quantity){
-        $sql = "INSERT INTO cart (user_id, product_id, quantity, product_size )  VALUES ('" .$user_id . "','".$product_id."','".$quantity."','".$size."' )";
+        $sql = "INSERT INTO carts (user_id, product_id, quantity, product_size )  VALUES ('" .$user_id . "','".$product_id."','".$quantity."','".$size."' )";
             $result = mysqli_query($link, $sql);
             if($result) {
                 echo $result;

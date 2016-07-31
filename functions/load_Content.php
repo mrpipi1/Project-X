@@ -40,6 +40,22 @@ function get_specific_stock_content_data($table_name, $table_name2, $where, $whe
     $return = array($res, $res2);
     return $return;
 }
+
+function insert_guest(){
+    global $link;
+    $sql = "INSERT INTO guests (is_active)  VALUES (1)";
+    $res = mysqli_query($link, $sql);
+    if($res){
+        $sql2 = "SELECT id FROM guests ORDER BY id DESC LIMIT 1";
+        $res2 = mysqli_query($link, $sql2);
+        print_r($res2);
+        $row = mysqli_fetch_row($res2);
+        print_r($row);
+        if($row){
+          return $row[0];
+        }
+    }
+}
 if(isset($_SESSION["user"])){
   $user_id = $_SESSION["user"]["user_id"];
   $orders = get_specific_content_data('orders', 'user_id', $user_id);
@@ -61,13 +77,30 @@ $map = get_ordered_content_data('contents', '_name', 'Map', 'sequence', 'asc');
 $contact_form = get_ordered_content_data('contents', '_name', 'contactform_main', 'sequence', 'asc');
 $footer = get_ordered_content_data('contents', '_name', 'footer', 'sequence', 'asc');
 $breadcrubms_checkout = get_content_data('breadcrubms_checkout');
-if(isset($_SESSION['user']['user_id'])) {
-    $cart = get_specific_content_data('carts', 'user_id', $_SESSION['user']['user_id']);
+if(isset($_GET['page']) && $_GET['page'] == 'Warenkorb') {
+    if(isset($_SESSION['user']['user_id'])) {
+        $cart = get_specific_content_data('carts', 'user_id', $_SESSION['user']['user_id']);
+    }else if(isset($_SESSION['guest_id'])) {
+        $cart = get_specific_content_data('carts', 'user_id', $_SESSION['guest_id']);
+    }else if(!isset($_SESSION['guest_id'])){
+        $user_id = insert_guest();
+        $_SESSION['guest_id'] = $user_id;
+        $cart = get_specific_content_data('carts', 'user_id', $_SESSION['guest_id']);
+    }
+
+
+
 }
 
 
-if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])){
+if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['product_id'])) {
     $detail_product = get_specific_content_data('products', 'id', $_GET['product_id']);
+    if(!isset($_SESSION['guest_id'])){
+        $user_id = insert_guest();
+        $_SESSION['guest_id'] = $user_id;
+    }else{
+        $user_id = $_SESSION['guest_id'];
+    }
 }
 
 
