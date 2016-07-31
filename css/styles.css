@@ -1247,6 +1247,9 @@ Breadcrumbs
     flex-direction: column;
     justify-content: center;
 }
+.text:hover{
+  color: #5a8e7d;
+}
 .breadcrumb-item:hover .number {
     color: white;
     background-color: #5a8e7d;
@@ -2389,7 +2392,4 @@ cursor: pointer;
 }
 .breadcrumbs i:last-child{
   display: none;
-}
-.breadcrumb-item:hover{
-  color: #5a8e7d;
 }
