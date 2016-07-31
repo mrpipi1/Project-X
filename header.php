@@ -79,7 +79,15 @@ setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
         <?php if($admin) {
             echo "<li><a href=\"backend/index.php?page=dashbord\">Backend</a></li>";
           } ?>
-          <li class="cart"><a href="index.php?page=Warenkorb">CART</a></li>
+          <li class="cart">
+            <a href="index.php?page=Warenkorb">CART</a>
+          <?php
+          $cnt = mysqli_num_rows($cart);
+            if($cnt > 0) {
+                echo '<span id = "cart-counter" >'.$cnt.'</span >';
+            }
+            ?>
+          </li>
 
           <?php if( is_logged_in()){ echo '<li><a href=\'index.php?action=logout\'><i class="fa fa-sign-out logout" aria-hidden="true"></i></a></li>'; }; ?>
 

@@ -143,7 +143,7 @@ function add_to_Cart(user_id, guest_id, product_id){
             quantity: quantity
           }, function (response, status) {
               if (response == 1 && status == 'success') {
-                  console.log('okay');
+                  window.location.href = "index.php?page=shop";
               } else if(response == 2 && status == 'success'){
                   console.log('menge nicht verfügbar');
               } else {
