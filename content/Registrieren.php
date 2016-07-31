@@ -50,9 +50,20 @@
             <input id="register_fullname" type="text" name="fullname" value="" required class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label class="label">Fullname*</label>
+            <label class="label">Vor und Nachname*</label>
             <span class="error error_register_fullname">
         </div>
+
+        <div class="form-group form-group_radio_register">
+            <p class="radiobutton_wrapper radiobutton_first">
+                <input type="radio" id="female" name="gender" class="radiobutton "/> <label for="female">Frau</label>
+            </p>
+            <p class="radiobutton_wrapper">
+                <input type="radio" id="male" name="gender" class="radiobutton"/> <label for=male>Herr</label>
+            </p>
+        </div>
+
+
 
         <div class="form-group register_email">
             <input id="register_email" type="text" name="email" value="" required class="input">
@@ -86,13 +97,6 @@
             <span class="error error_register_password_wh">
         </div>
 
-        <div class="form-group register_gender">
-            <input id="register_gender" type="text" name="gender" value="" required class="input">
-            <span class="highlight"></span>
-            <span class="form-bar"></span>
-            <label class="label">Gender*</label>
-            <span class="error error_register_gender">
-        </div>
 
         <div class="form-group">
             <input type="date" name="birthday" value="" required class="input">

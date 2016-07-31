@@ -88,7 +88,7 @@
         </div>
 
         <div class="btn_checkout">
-            <a href="index.php?page=Versand">weiter</a>
+            <span class="next_btn next_btn_adressen">weiter</span>
         </div>
     </div>
 

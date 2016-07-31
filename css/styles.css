@@ -317,7 +317,7 @@ ul li a:hover i.logout{
 .content-wrapper {
     position: relative;
     z-index: 50;
-    padding:  8vw;
+    padding: 110px 5em 5em;
     background-color: #fff;
     text-align: center;
 }
@@ -359,7 +359,7 @@ font-weight: 400;
   padding: 2vw 0;
 }
 .content-wrapper p {
-    font-size: 1.3vw;
+    font-size: 1em;
     line-height: 1.8;
     margin-bottom: 30px;
     text-align: justify;
@@ -2383,13 +2383,36 @@ cursor: pointer;
 .empty_cart{
   margin-top: 4em;
 }
-.wrapper_checkout{
-  min-height: 58vh;
-}
+
 
 .breadcrumbs i{
   color: #5a8e7d;
 }
 .breadcrumbs i:last-child{
   display: none;
+}
+.error_detailansicht, .error_message_checkout{
+  max-width: 75vw;
+  color: #b50101;
+  font-size: 1em;
+  text-align: center;
+  padding: 0 0 1em 0;
+  margin: 0 auto;
+}
+.error_detailansicht a:hover{
+  color: #8e0000;
+}
+.errormessage_detail_wrapper, .errors_checkout_wrapper{
+  display: none;
+  position: absolute;
+  top:75px;
+  left:0;
+  width: 100%;
+}
+.form-group_radio_register{
+  display: flex;
+  margin-bottom: 0;
+}
+.radiobutton_first{
+  margin-right: 20px;
 }

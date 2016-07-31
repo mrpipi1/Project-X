@@ -1,5 +1,5 @@
 <?php
-setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
+//setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
 ?>
 <!DOCTYPE html>
 

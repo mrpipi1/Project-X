@@ -11,14 +11,14 @@
                 <form class="form_checkout" action="#" method="post">
 
                     <div class="form-group">
-                        <input type="text" name="email" value="" required class="input">
+                        <input type="text" name="_name" value="" required class="input input_anmelden_email">
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">E-Mail oder Username*</label>
                     </div>
 
                     <div class="form-group">
-                        <input type="password" name="password" value="" required class="input">
+                        <input type="password" name="password" value="" required class="input input_anmelden_pw">
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">Passwort*</label>
@@ -51,7 +51,7 @@
                 <form class="form_checkout" action="#" method="post">
 
                     <div class="form-group_ckeckout form-group_alsGast">
-                        <input type="text" name="email" value="" required class="input">
+                        <input type="text" name="email" value="" required class="input input_anmelden_guest">
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">E-Mailadresse*</label>
@@ -68,10 +68,6 @@
     <div class="btn-wrapper_checkout">
         <div  class="btn_checkout">
             <a href="index.php?page=Warenkorb">zurück</a>
-        </div>
-
-        <div class="btn_checkout">
-            <a href="index.php?page=Adressen">weiter</a>
         </div>
     </div>
 
