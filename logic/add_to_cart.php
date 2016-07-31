@@ -14,7 +14,7 @@ $guest_id = $_POST['guest_id'];
 $product_id = $_POST['product_id'];
 $size = strtolower($_POST['size']);
 $quantity = $_POST['quantity'];
-$sql = "SELECT * FROM stock WHERE product_id = ".$product_id." AND size = '". $size ."'";
+$sql = "SELECT * FROM stocks WHERE product_id = ".$product_id." AND size = '". $size ."'";
 $res = mysqli_query($link, $sql);
 while ($row = mysqli_fetch_assoc($res)) {
     if($row['stock'] >= $quantity){
@@ -29,5 +29,3 @@ while ($row = mysqli_fetch_assoc($res)) {
         echo 2;
     }
 }
-
-

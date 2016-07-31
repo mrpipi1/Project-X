@@ -11,7 +11,7 @@
                 data.push( {
                     "label": values[i],
                     "value": response[i],
-                    "colors": colors[i]
+                    "color": colors[i]
                 });
               }
                 if(i == response.length - 1){
