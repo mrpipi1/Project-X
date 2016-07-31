@@ -727,7 +727,6 @@ ______ ____  _____  __  __
     font-weight: 200;
     max-width: 300px;
     min-width: 200px;
-    font-size: 0.7em;
 }
 .btn a {
     display: block;
@@ -745,10 +744,23 @@ ______ ____  _____  __  __
 }
 
 .btn .input {
-   font-size: 0.9em;
-   border: none;
-   padding: 1em 2em;
-   text-transform: uppercase;
+ letter-spacing: 1.8px;
+ font-weight: 200;
+ font-size: 0.9em;
+ border: none;
+ padding: 1em 2em;
+ text-transform: uppercase;
+ background-color: #65a591;
+ color: #fff;
+ border: 1px solid #fff;
+ transition: all 0.3s ease-in-out;
+
+}
+
+.btn .input:hover {
+  background-color: #ffffff;
+  color: #65a591;
+  border: 1px solid #65a591;
 }
 
    /* ---------------------------------------------------------------------*/
@@ -1148,6 +1160,7 @@ Abschluss
 }
 
 .wrapper_form_login {
+  width: 35%;
 }
 .small-text {
     font-size: small;
@@ -1163,30 +1176,14 @@ h2.hl_checkout {
   display: none;
 }
 .raidiobutton_wrapper_shipping{
-  margin: auto auto 0 auto;
-  bottom: 0;
   font-size: 1em;
-  letter-spacing: 0.5px;
-  border: 1px solid #5a8e7d;
+  letter-spacing: 0.2px;
   transition: all 0.5s linear;
-  padding: 0.7em 2em;
-font-weight: 300;
-}
-
-.raidiobutton_wrapper_shipping input[type=checkbox]{
-   display:none;
-}
-.raidiobutton_wrapper_shipping.checkbox-active {
-  background-color: #65a591;
-  color: #fff;
-}
-.raidiobutton_wrapper_shipping:hover {
-  background-color: #65a591;
-  color: #fff;
+  font-weight: 300;
 }
 
 .billing-address, .shipping-address {
-  width: 30%;
+  width: 35%;
 }
 
 .form_checkout-sectionsheadline {
@@ -1376,9 +1373,14 @@ Detailseite
     padding: 1em 0;
 }
 .color, .size {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     margin: 10px;
+    font-weight: 200;
+}
+
+.size {
+  line-height: 30px;
 }
 
 .size-out {
@@ -1471,7 +1473,7 @@ Warenkorb
 
 }
 .description {
-    flex-basis: 60%;
+    flex-basis: 58%;
 }
 .actions {
     flex-basis: 10%;
@@ -1492,7 +1494,7 @@ Warenkorb
 /* Bild */
 
 .img_card {
-    width: 10vw;
+    width: 8vw;
     height: 100%;
 }
 
@@ -1501,7 +1503,7 @@ Warenkorb
 .description_card-item {
     display: flex;
     flex-direction: column;
-    flex-basis: 76%;
+    flex-basis: 77%;
     border: 1px solid green;
     align-items: center;
     justify-content: center;
@@ -2249,12 +2251,13 @@ ____            _____  _  __ ______  _   _  _____
 
 .wrapper-form-backend {
     width: 80vw;
+    margin: auto;
 }
 
 
 .radiobutton_wrapper_backend {
-  padding: 0 2em;
-  margin: auto;
+  padding: 0 1em;
+  margin: 1.3em 0;
 
 }
 
@@ -2274,6 +2277,17 @@ ____            _____  _  __ ______  _   _  _____
   margin: 1em;
 }
 
+.form-group_backend:nth-child(5) {
+  display: flex;
+  align-items: center;
+}
+
+.form-group_backend  #male, .form-group_backend #female {
+  flex-basis: 4%;
+  margin-left: 1em;
+}
+
+
 .btn_backend {
   flex-basis: 100%;
   transition: all 0.3s linear;
@@ -2288,9 +2302,7 @@ ____            _____  _  __ ______  _   _  _____
 
 
 .label_backend {
-  display: block;
-  float: left;
-  width: 100%;
+  width: auto;
   font-size: 1em;
   margin: 0.5em 0;
   font-weight: 300;
@@ -2299,6 +2311,7 @@ ____            _____  _  __ ______  _   _  _____
 .form-group_backend input[type] {
     background-color: #65a591;
     color: white;
+    margin: 0.5em 0;
 }
 
 .label_backend:after {

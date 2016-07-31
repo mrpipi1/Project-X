@@ -9,16 +9,7 @@ include('backend_crumbs.php');
 ?>
 
     <section class="pie-chart_wrapper">
-
-
-        <div id="pie_gender"></div>
-
-
         <div id="pieChart"></div>
-
-        <div id="test"></div>
-
-
     </section>
 
 
