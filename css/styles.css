@@ -1865,7 +1865,7 @@ ____            _____  _  __ ______  _   _  _____
     min-height: calc(100vh - 60px);
 }
 .hl_form_backend {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 200;
     padding: 1em 0.5em;
     text-transform: capitalize;
@@ -2307,9 +2307,9 @@ ____            _____  _  __ ______  _   _  _____
 
 .form-group_backend input {
   width: 100%;
-  padding: 1em;
+  padding: 0.6em;
   border: none;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 200;
 }
 
