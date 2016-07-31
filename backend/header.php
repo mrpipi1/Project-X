@@ -96,6 +96,11 @@
                             <span class="selected"></span>
                         </p>
                     </li>
+                    <li><p onClick="load_Content('guests', '1', 'id', 'ASC')">
+                            <i class="fa fa-user"></i><span class="title">Guests</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
                 </ul>
             </li>
             <li>

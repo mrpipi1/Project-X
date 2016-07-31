@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Erstellungszeit: 30. Jul 2016 um 22:50
+-- Erstellungszeit: 31. Jul 2016 um 10:09
 -- Server-Version: 5.5.49-log
 -- PHP-Version: 7.0.6
 
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `carts` (
   `product_size` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `carts`
@@ -124,7 +124,8 @@ INSERT INTO `carts` (`id`, `user_id`, `product_id`, `quantity`, `product_size`, 
 (9, 2, 11, 2, '', '2016-07-30 21:35:32', NULL),
 (10, 2, 13, 6, '', '2016-07-30 21:33:44', NULL),
 (11, 2, 15, 8, '', '2016-07-30 21:34:24', NULL),
-(12, 2, 17, 8, '', '2016-07-30 21:35:36', NULL);
+(12, 2, 17, 8, '', '2016-07-30 21:35:36', NULL),
+(13, 9, 7, 1, 'L', '2016-07-31 08:58:19', NULL);
 
 -- --------------------------------------------------------
 
@@ -311,6 +312,36 @@ INSERT INTO `employees` (`id`, `fullname`, `email`, `telno`, `pic`, `courses_id`
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `guests`
+--
+
+DROP TABLE IF EXISTS `guests`;
+CREATE TABLE IF NOT EXISTS `guests` (
+  `id` int(11) NOT NULL,
+  `guest_mail` varchar(100) NOT NULL,
+  `is_active` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `guests`
+--
+
+INSERT INTO `guests` (`id`, `guest_mail`, `is_active`, `created_at`, `deleted_at`) VALUES
+(1, '', 1, '2016-07-31 08:42:08', NULL),
+(2, '', 1, '2016-07-31 08:42:53', NULL),
+(3, '', 1, '2016-07-31 08:43:27', NULL),
+(4, '', 1, '2016-07-31 08:43:52', NULL),
+(5, '', 1, '2016-07-31 08:44:37', NULL),
+(6, '', 1, '2016-07-31 08:45:29', NULL),
+(7, '', 1, '2016-07-31 08:45:32', NULL),
+(8, '', 1, '2016-07-31 08:47:00', NULL),
+(9, '', 1, '2016-07-31 08:47:42', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `header_items`
 --
 
@@ -434,27 +465,25 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price_in_aktion` float NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `products`
 --
 
 INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `color`, `in_aktion`, `price_in_aktion`, `is_active`, `deleted_at`) VALUES
-(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt.png', 'img/shop-images/damen-tshirt.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper_white.png', 'Schwarz', 0, 0, 1, NULL),
-(8, 'Yogabag & Matte', 39.99, 2, 'jkjnjk', 'img/shop-images/tragetasche_yogamatte.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Schwarz / Grau', 0, 0, 1, NULL),
-(9, 'Jumper', 39.99, 1, 'Jumper - Unisex', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'Grau', 0, 0, 1, NULL),
-(10, 'Yogaring', 24.99, 2, 'jkjnjk', 'img/shop-images/yogaring.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Grün', 0, 0, 1, NULL),
-(11, 'Notizbuch', 19.99, 3, 'jkjnjk', 'img/shop-images/notebook.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(12, 'Herren T-Shirt', 19.99, 1, 'jkjnjk', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', 'Red', 0, 0, 1, NULL),
-(13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'Schwarz / Weiss', 1, 5.99, 1, NULL),
+(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt.png', 'img/shop-images/damen-tshirt.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper_white.png', NULL, 0, 0, 1, NULL),
+(8, 'Yogabag & Matte', 39.99, 2, 'Yogamatte mit praktischer Bag in schlichtem Schwarz. Mit einem verschließbaren Fach für Schlüssel oder Handy.', 'img/shop-images/tragetasche_yogamatte.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
+(9, 'Jumper', 39.99, 1, 'Stylischer Jumper für Männer und Frauen. Aus 100% Baumwolle und Machienenwaschbar.', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', 'img/shop-images/jumper-grau.png', NULL, 0, 0, 1, NULL),
+(10, 'Pilatesring', 24.99, 2, 'Dieser Pilatesring mit ergonomischen Griffen unterstützt perfekt beim Training. Es können sowohl Beine, als auch Arme und Körpermitte gestärkt und gestrafft werden.', 'img/shop-images/yogaring.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
+(11, 'Notizbuch', 15.99, 3, 'Unser Notizbuch ist der perfekte Begleiter durch den Tag. Er enthält einen Kalender und Bildanleitungen für Yoga und Pilates Übungen sowie Karierte Seiten für Notizen.', 'img/shop-images/notebook.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
+(12, 'Herren T-Shirt', 19.99, 1, 'Herren T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/herren-tshirt-rot.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
+(13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', 'img/shop-images/2er-band.png', NULL, 1, 5.99, 1, NULL),
 (14, 'Lotus Band 3er', 15.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', NULL, 1, 8.99, 1, NULL),
-(15, 'Baumwollband', 12.99, 3, 'Baumwollband', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'Grau', 1, 9.99, 1, NULL),
+(15, 'Baumwollband', 12.99, 3, 'Das Baumwollband ist länger als andere Baumwollbänder um in jeder Position perfekte unterstützung zu bieten. ', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', NULL, 1, 9.99, 1, NULL),
 (16, 'Core Trainer', 29.99, 3, 'Core Trainer', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', 'img/shop-images/core-trainer.png', NULL, 1, 19.99, 1, NULL),
-(17, 'Lotus Handtuch', 12.99, 2, 'Handtuch', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'Grau', 0, 0, 1, NULL),
-(18, 'Yoga Matte', 19.99, 2, 'Yoga Matte', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', NULL, 0, 0, 1, NULL),
-(19, 'asd', 3, 0, 'asd', '', 'asd', 'asd', 'asd', NULL, 0, 3, 1, NULL),
-(20, '', 0, 0, '', '', '', '', '', NULL, 0, 0, 1, NULL);
+(17, 'Lotus Handtuch', 12.99, 2, 'Das super sugfähige Handtuch ist speziell für Sportler entwickelt worden. Es ist nicht nur praktisch sondern auch angenehm weich, da es aus 100% Baumwolle besteht. Es ist 50cm breit und 80cm lang und Maschienenwaschbar bei bis zu 60°C.', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', 'img/shop-images/handtuch.png', NULL, 0, 0, 1, NULL),
+(18, 'Yoga Matte', 19.99, 2, 'Yoga Matte 5mm, zweifarbig. Die Yogamatte bietet optimalen Halt und ist besonders rutschfest.', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', 'img/shop-images/yogamatte.png', NULL, 0, 0, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -525,7 +554,7 @@ INSERT INTO `stock` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
 (1, 7, 'xs', NULL, NULL),
 (2, 7, 's', 22, NULL),
 (3, 7, 'm', 34, NULL),
-(4, 7, 'l', 9, NULL),
+(4, 7, 'L', 9, NULL),
 (5, 7, 'xl', 4, NULL),
 (27, 9, 'xs', 49, NULL),
 (28, 9, 's', 25, NULL),
@@ -690,6 +719,12 @@ ALTER TABLE `employees`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indizes für die Tabelle `guests`
+--
+ALTER TABLE `guests`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indizes für die Tabelle `header_items`
 --
 ALTER TABLE `header_items`
@@ -772,7 +807,7 @@ ALTER TABLE `breadcrubms_checkout`
 -- AUTO_INCREMENT für Tabelle `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
@@ -799,6 +834,11 @@ ALTER TABLE `delivery_options`
 ALTER TABLE `employees`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
+-- AUTO_INCREMENT für Tabelle `guests`
+--
+ALTER TABLE `guests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+--
 -- AUTO_INCREMENT für Tabelle `header_items`
 --
 ALTER TABLE `header_items`
@@ -822,7 +862,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT für Tabelle `shop_categories`
 --
