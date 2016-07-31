@@ -66,7 +66,10 @@ global $link;
     }
     if(is_post_request("gast")){
       $email = mysqli_real_escape_string($link, $_POST["login_guest"]);
-      $sql = "INSERT INTO guests (guest_mail) VALUES('".$email."')";
+      $guest_id = $_SESSION['guest_id'];
+      $sql = "UPDATE guests SET guest_mail = '".$email."' WHERE id = ".$guest_id;
+      $result = mysqli_query($link, $sql);
+        header("location: index.php?page=Adressen");
     }
 
 //}

@@ -86,7 +86,6 @@
         <div  class="btn_checkout">
             <a href="index.php?page=Anmelden">zurück</a>
         </div>
-
         <div class="btn_checkout">
             <span class="next_btn next_btn_adressen">weiter</span>
         </div>
