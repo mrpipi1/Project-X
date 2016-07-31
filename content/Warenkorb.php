@@ -59,7 +59,7 @@
               }
               $cnt++;
           }
-          if($price > 50){
+          if($price >= 40){
               $delivery_cost = 0;
           }
           $price += $delivery_cost;
