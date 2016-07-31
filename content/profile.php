@@ -98,6 +98,7 @@ if(mysqli_num_rows($orders) > 0){
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Username</label>
+            <span class="error"></span>
         </div>
 
         <div class="form-group">
@@ -105,6 +106,7 @@ if(mysqli_num_rows($orders) > 0){
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Email</label>
+            <span class="error"></span>
         </div>
 
         <div class="form-group">
@@ -112,6 +114,7 @@ if(mysqli_num_rows($orders) > 0){
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Name</label>
+            <span class="error"></span>
         </div>
 
         <div class="form-group">
@@ -119,18 +122,21 @@ if(mysqli_num_rows($orders) > 0){
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Adresse</label>
+            <span class="error"></span>
         </div>
         <div class="form-group">
             <input type="text" name="zip_code" value="<?php if(isset($row['zip_code'])){echo $row['zip_code'];}  ?>" class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Postleitzahl</label>
+            <span class="error"></span>
         </div>
         <div class="form-group">
             <input type="text" name="city" value="<?php if(isset($row['city'])){echo $row['city'];}  ?>" class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Stadt</label>
+            <span class="error"></span>
         </div>
 
       </div>
@@ -173,7 +179,7 @@ if(mysqli_num_rows($orders) > 0){
 
       <div class="profile_form_button_wrapper">
         <div class=" btn_big-checkout_profile">
-            <div id ="<?php echo $_SESSION['user']['user_id']; ?>" class="profile_update_btn">Aktualisieren</div>
+            <div id ="<?php echo $_SESSION['user']['user_id']; ?>" class="profile_update_btn profile_submit">Aktualisieren</div>
         </div>
       </div>
     </form>

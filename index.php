@@ -3,9 +3,7 @@ session_start();
 date_default_timezone_set('UTC');
 // content definieren
 $content = ('content/');
-if(isset($_GET['action']) && $_GET['action'] == 'login'){
-	//include('logout.php');
-}
+
 
 if(isset($_GET['action']) && $_GET['action'] == 'logout' && isset($_SESSION)){
 	session_unset();
@@ -21,6 +19,7 @@ include('functions/shop_functions.php');
 include('logic/login.php');
 include('logic/register_logic.php');
 include('logic/user_message.php');
+include('logic/checkout_logic.php');
 include('header.php');
 
 

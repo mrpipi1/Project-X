@@ -216,11 +216,11 @@
                            <textarea id="contact_' . $row['type'] . '" class="textarea" name="' . $row['type'] . '" rows="10" cols="100" placeholder="' . $row['content'] . '" ></textarea>
                            <span class="highlight"></span>
                            <span class="form-bar"></span>
-                           <span class="error error_' . $row['type'] . '""></span>
+                           <span class="error"></span>
                       </div>';
                 } else if ($row['type'] == 'submit') {
                     echo '<div class="btn">
-                       <input id="contact_' . $row['type'] . '" type="submit" class="submit_main input" name="user_message" value="' . $row['content'] . '" >
+                       <input id="contact_' . $row['type'] . '" type="submit" class="submit_main input contact_submit" name="user_message" value="' . $row['content'] . '" >
                      </div>';
                 } else {
                     echo '<div class="form-group contact_' . $row['type'] . '">
@@ -228,7 +228,7 @@
                        <span class="highlight"></span>
                        <span class="form-bar"></span>
                        <label class="label">' . $row['content'] . '</label>
-                       <span class="error error_' . $row['type'] . '"></span>
+                       <span class="error"></span>
                      </div>';
                 }
             }

@@ -289,72 +289,160 @@ function insert_or_update(page, action, id){
     });
 }
 
-$('.profile_update_btn').click(function(){
-  $('.user_info_wrapper').css('display', 'block');
-  $('.user_info_change_wrapper').css('display', 'none');
-  var id = $('.profile_update_btn').attr('id');
-  console.log(id);
-  insert_or_update('users', 'edit', id );
-});
+
 //validation contact form
 
-$('#contact_email').on('input', function() {
-    var input=$(this);
-    var re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var is_email=re.test(input.val());
-    if(is_email){
+
+//validation login form
+
+$('.form-group input[type="text"], .form-group input[type="password"]').keyup(function(event) {
+    var input = $(this);
+    var re;
+    var errtxt = 'Bitte geben Sie einen gültigen Wert ein!';
+    if ($(this).attr('name') == '_name' || $(this).attr('name') == 'name') {
+        re = /^[a-z0-9_-]{3,16}$/;
+        errtxt = 'Bitte geben Sie einen gültigen Namen ein!';
+    } else if ($(this).attr('name').indexOf('password') > -1) {
+        re = /^[a-z0-9_-]{5,18}$/;
+        errtxt = 'Bitte geben Sie eine gültiges Passwort ein!';
+    } else if ($(this).attr('name') == 'email' || $(this).attr('name') == 'login_guest')  {
+        re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+        errtxt = 'Bitte geben Sie eine gültige E-Mailaddresse ein!';
+    } else if ($(this).attr('name') == 'tel'){
+        re = /^0(6[045679][0469]){1}(\-)?(1)?[^0\D]{1}\d{6}$/;
+        errtxt = 'Bitte geben Sie eine gültige Telefonnummer ein!';
+    } else if($(this).attr('name') == 'zip_code'){
+        re = /^\d{4,5}$/;
+        errtxt = 'Bitte geben Sie eine gültige Postleitzahl ein!';
+    }else if ($(this).attr('name').indexOf('address') > -1){
+        re =  /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
+        errtxt = 'Bitte geben Sie eine gültige Adresse ein!';
+    }else if($(this).attr('name') == 'fullname'){
+        re = /^[a-z ,.'-]+$/;
+        errtxt = 'Bitte geben Sie gültige Vor und Nachnamen ein!';
+    }
+    var check=re.test(input.val());
+    if(check){
         input.removeClass("invalid").addClass("valid");
-        $('.contact_email .form-bar').css('display', 'block');
-        $('.error_email').text('');
+        $(this).parent().children('.form-bar').css('display', 'block');
+        $(this).parent().children('.error').text('');
     } else {
-        $('.error_email').text('Bitte geben Sie eine gültige E-Mailadresse ein!');
+        $(this).parent().children('.error').text(errtxt);
         input.removeClass("valid").addClass("invalid");
-        $('.contact_email .form-bar').css('display', 'none');
+        $(this).parent().children('.form-bar').css('display', 'none');
     }
 });
 
-$('#contact_comment').keyup(function(event) {
-    var input=$(this);
-    var message=$(this).val();
-    console.log(message);
-    if(message){
-        input.removeClass("invalid").addClass("valid");
-        $('.contact_comment .form-bar').css('display', 'block');
-        $('.error_comment').text('');
-    } else {
-        $('.error_comment').text('Bitte geben Sie eine Nachricht ein!');
-        input.removeClass("valid").addClass("invalid");
-        $('.contact_comment .form-bar').css('display', 'none');
+$('.login_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
     }
 });
 
-$('#contact_name').keyup(function(event) {
-    var input=$(this);
-    var message=$(this).val();
-    console.log(message);
-    if(message){
-        input.removeClass("invalid").addClass("valid");
-        $('.contact_name .form-bar').css('display', 'block');
-        $('.error_name').text('');
-    } else {
-        $('.error_name').text('Bitte geben Sie einen Namen ein!');
-        input.removeClass("valid").addClass("invalid");
-        $('.contact_name .form-bar').css('display', 'none');
+$('.register_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
     }
 });
 
-$('#contact_tel').on('input', function() {
-    var input=$(this);
-    var re = /^([0-9]{10})|(\([0-9]{3}\)\s+[0-9]{3}\-[0-9]{4})*$/;
-    var is_tel=re.test(input.val());
-    if(is_tel){
-        input.removeClass("invalid").addClass("valid");
-        $('.contact_name .form-bar').css('display', 'block');
-        $('.error_tel').text('');
-    } else {
-        $('.error_tel').text('Bitte geben Sie eine gültige Telefonnummer ein!');
-        input.removeClass("valid").addClass("invalid");
-        $('.contact_name .form-bar').css('display', 'none');
+$('.register_submit').on('click',function(event){
+    var form_data=$(this).parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
     }
 });
+
+$('.contact_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_login_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_guest_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_default_address_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.checkout_receipt_address_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }
+});
+
+$('.profile_submit').on('click',function(event){
+    var form_data=$(this).parent().parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }else{
+        $('.user_info_wrapper').css('display', 'block');
+        $('.user_info_change_wrapper').css('display', 'none');
+        var id = $('.profile_update_btn').attr('id');
+        console.log(id);
+        insert_or_update('users', 'edit', id );
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+function checkout_next( next_page_href){
+  // check if user has entered values
+  // if(1 == 1){
+  //   // load next page
+  //   window.location.href = "index.php?page=Adressen";
+  // }else{
+  //
+  // }
+  console.log('hallo');
+
+}
+
+$('.next_btn_anmelden').click('click',function(){
+  if(1 == 1){
+    // load next page
+    window.location.href = "index.php?page=Adressen";
+  }else{
+
+  }
+});
+
+
+
+
 //
