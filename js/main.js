@@ -9,7 +9,7 @@ $('.handle').on('click', function(){
 });
 
 // ### FIXED HEADER onScroll
-if($('.header').hasClass('header_home')){
+if($('header').hasClass('header_home')){
   $(window).scroll(function(){
     //var headerOffSetTop = 530;
       var height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
@@ -59,7 +59,9 @@ $(document).ready(function () {
 	$(document).on("scroll", onScroll);
 });
 
+
 function onScroll(event){
+  if($('header').hasClass('header_home')){
 	var scrollPosition = $(document).scrollTop();
    $('.nav_main a').each(function () {
      var currentLink = $(this);
@@ -75,6 +77,7 @@ function onScroll(event){
            }
        }
    });
+ }
 }
 
 // ### PRODUCTVIEW HOVER ###
