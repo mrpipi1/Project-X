@@ -133,7 +133,9 @@ function add_to_Cart(user_id, guest_id, product_id){
     var quantity = $(".quantity").val();
     if(size && quantity > 0) {
       if(quantity > 11){
-        var error_message = 'Die maximale bestellmenge für dieses Produkt sind 11 Stück. Wenn Du mehr bestellen möchtest kontaktiere uns bitte unter<a href="mailto:office@lotusyoga.at?subject=order_quantity">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a>';
+        $('.error_detailansicht').text('');
+        $('.error_detailansicht').append('Die maximale bestellmenge für dieses Produkt sind 11 Stück. Wenn Du mehr bestellen möchtest kontaktiere uns bitte unter <a href="mailto:office@lotusyoga.at?subject=order_quantity">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a>');
+        $('.errormessage_detail_wrapper').css('display', 'block');
       }else{
         $.post('logic/add_to_cart.php', {
             user_id: user_id,
@@ -144,13 +146,23 @@ function add_to_Cart(user_id, guest_id, product_id){
           }, function (response, status) {
               if (response == 1 && status == 'success') {
                   window.location.href = "index.php?page=shop";
+                  $('.error_detailansicht').text('');
+                  $('.errormessage_detail_wrapper').css('display', 'none');
               } else if(response == 2 && status == 'success'){
-                  console.log('menge nicht verfügbar');
+                  $('.error_detailansicht').text('');
+                  $('.error_detailansicht').text('Menge leider nicht verfügbar.');
+                  $('.errormessage_detail_wrapper').css('display', 'block');
               } else {
-                  console.log('fehler');
+                  $('.error_detailansicht').text('');
+                  $('.error_detailansicht').text('Produkt konnt enicht in den Warenkorb hinzugefügt werden.');
+                  $('.errormessage_detail_wrapper').css('display', 'block');
               }
           });
       }
+    }else{
+      $('.error_detailansicht').text('');
+      $('.error_detailansicht').text('Du hast kein Produkt ausgewählt.');
+      $('.errormessage_detail_wrapper').css('display', 'block');
     }
 }
 

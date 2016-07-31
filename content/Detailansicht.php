@@ -1,4 +1,6 @@
 <section class="content-wrapper wrapper_checkout">
+  <div class="errormessage_detail_wrapper"><div class="error_detailansicht">hallo</div></div>
+
 <?php
     while( $row = mysqli_fetch_assoc($detail_product) ) {
 ?>
