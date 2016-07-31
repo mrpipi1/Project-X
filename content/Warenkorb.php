@@ -26,6 +26,7 @@
           $cnt = 0;
           $price = 0;
           $delivery_cost = 5;
+          mysqli_data_seek($cart, 0);
           while ($row = mysqli_fetch_assoc($cart)) {
               mysqli_data_seek($products, 0);
               while ($row2 = mysqli_fetch_assoc($products)) {

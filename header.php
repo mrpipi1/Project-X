@@ -106,7 +106,7 @@ setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
                         <div class="cart-header-item">
                             <img src="<?php echo $row2['pic']; ?>"/>
                             <p class="cart-header-name"><?php echo $row2['_name']; ?></p>
-                            <span><?php echo $row['quantity']; ?></span>
+                            <span id="cart-header-quantity"><?php echo $row['quantity']; ?></span>
                         </div>
                         <?php
                     }

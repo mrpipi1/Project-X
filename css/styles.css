@@ -191,8 +191,10 @@ a {
     right: 21%;
     top: 60px;
     text-align: center;
-    border:1px solid #ddd;
     display:none;
+    background-color:white;
+    border:1px solid #ddd;
+
 }
 .cart-header span, p{
     line-height:50px;
