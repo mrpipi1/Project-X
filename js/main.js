@@ -34,6 +34,15 @@ if($('header').hasClass('header_home')){
 
 }
 
+// ###  ADD ACTIVE CLASS
+$('input[type="checkbox"]').change(function() {
+    if($(this).is(':checked')) {
+        $(this).parent().addClass('checkbox-active');
+    } else {
+        $(this).parent().removeClass('checkbox-active');
+    }
+});
+
 // ### FIXED SHOP CATEGORY ###
 
 $(window).scroll(function(){
