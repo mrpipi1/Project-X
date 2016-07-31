@@ -18,25 +18,27 @@
           }
           ?>
         <li class="breadcrumb-item <?php echo $class; ?>" position="<?php echo $row['position']; ?>">
-            <span class="span-wrapper">
-                <!-- <span class="line-rand"></span> -->
-                <a href="index.php?page=<?php if($row['name'] == 'Adresse'){echo 'Adressen';}elseif(strpos($row['name'], 'Versand')>0){echo 'Versand';}else{echo $row['name'];} ?>" class="number_wrapper">
-                     <span class="number visited_color"><?php echo $row['position']; ?></span>
-                </a>
-                <!-- <span class="line visited_color"></span> -->
-            </span>
+
             <span class="text_wrapper">
                 <a href="index.php?page=<?php if($row['name'] == 'Adresse'){echo 'Adressen';}elseif(strpos($row['name'], 'Versand')>0){echo 'Versand';}else{echo $row['name'];} ?>" class="text_a">
                     <span class="text visited_color"><?php echo $row['name']; ?></span>
                 </a>
             </span>
         </li>
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
         <?php
         $i++;
         }
       }
 
        ?>
+       <!-- <span class="span-wrapper">-->
+           <!-- <span class="line-rand"></span> -->
+           <!-- <a href="index.php?page=<?php// if($row['name'] == 'Adresse'){echo 'Adressen';}elseif(strpos($row['name'], 'Versand')>0){echo 'Versand';}else{echo $row['name'];} ?>" class="number_wrapper"> -->
+                <!-- <span class="number visited_color"><?php //echo $row['position']; ?></span> -->
+           <!-- </a> -->
+           <!-- <span class="line visited_color"></span> -->
+       <!-- </span> -->
         <!-- <li class="breadcrumb-item visited">
             <span class="span-wrapper">
                 <span class="line-rand"></span>
