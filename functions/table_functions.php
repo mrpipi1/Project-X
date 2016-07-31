@@ -53,7 +53,7 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
                 if ($cnt == 0 && $col != 'deleted_at' && $col != 'id' && $page != 'dashboard' ) {
                     $ths .= "<th>" . sort_table($table_name, $col, underscore_to_space($col)) . "</th>";
                 }
-                if(($col != 'id' && $col != 'deleted_at' && $page != 'dashboard') || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && ($page == 'dashboard' )) ) {
+                if(($col != 'id' && $col != 'deleted_at' && $page != 'dashboard' ) || ($col != 'deleted_at' && $col != 'id' && $col != 'is_active' && $col != 'created_at' && $col != 'password_hash' && $col != 'zip_code' && $col != 'pic' && strrpos($col, "pref") === false && strrpos($col, "thumb") === false && ($page == 'dashboard' )) ) {
                     // <td> elemente zusammenbauen
                     if (substr($col, 0, 3) == 'is_' || substr($col, 0, 3) == 'in_') {
                         $tds .= "<td>" . bool_to_word($wert) . "</td>";
@@ -76,11 +76,11 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
             }
             $cnt++;
-            if ($table_name == 'users') {
-                $tds .= "<td>";
-                $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" . $page . "&amp;action=show_orders&amp;id=" . $row['id'] . "\">show orders</a>";
-                $tds .= "</td>";
-            }
+            // if ($table_name == 'users') {
+            //     $tds .= "<td>";
+            //     $tds .= "<a class=\"btn_backend\" href=\"index.php?page=" . $page . "&amp;action=show_orders&amp;id=" . $row['id'] . "\">show orders</a>";
+            //     $tds .= "</td>";
+            // }
             if($page != 'dashboard') {
                 $tds .= "<td>";
                 $tds .= "<a class=\"edit small_edit\" onclick='load_forms(\"".$page."\", \"edit\", \"".$row['id']."\")'><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i></a>";
@@ -96,9 +96,6 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
 
         // $table = create_table($query);
         echo $return['ths'];
-        if ($page == 'users') {
-            echo " <th>Orders</th>";
-        }
         echo $return['tds'];
         echo "</tbody>\n\r</table>";
         if($page == 'dashboard' ){
@@ -109,21 +106,6 @@ function create_table($query, $current_page, $total_pages, $pagination, $dashboa
             pagination_backend($page, $current_page, $total_pages);
         }
 
-
-
-// table mit orders zu user anzeigen
-        /*if (isset($_GET['action']) && $_GET['action'] == 'show_orders') {
-            $orders = 'orders';
-            $users_id = 'users_id';
-            $sql = "SELECT * FROM " . $orders . " WHERE  " . $users_id . " = " . $_GET['id'];
-            $result = mysqli_query($link, $sql);
-            $orders = mysqli_fetch_all($result, MYSQLI_ASSOC);
-            $table_orders = create_table($orders);
-
-            echo $table_orders['ths'];
-            echo $table_orders['tds'];
-            echo "</tbody>\n\r</table>";
-        }*/
     }else{
         echo "<h4 class='zero-entries'>Derzeit keine Einträge vorhanden!</h4>";
     }
