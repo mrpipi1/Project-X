@@ -50,15 +50,15 @@
 
                 <form class="form_checkout" action="#" method="post">
 
-                    <div class="form-group_ckeckout form-group_alsGast">
-                        <input type="text" name="email" value="" required class="input input_anmelden_guest">
+                    <div class="form-group form-group_alsGast">
+                        <input type="text" name="login_guest" value="" required class="input input_anmelden_guest">
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
                         <label class="label">E-Mailadresse*</label>
                     </div>
 
                     <div class="btn_checkout btn_big-checkout ">
-                        <input type="button" name="gast" value="als Gast fortfahren"  class="btn_big-checkout input">
+                        <input type="submit" name="gast" value="als Gast fortfahren"  class="btn_big-checkout input">
                     </div>
                 </form>
 

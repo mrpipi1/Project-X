@@ -14,7 +14,7 @@
             <form class="form_shipping" action="#" method="post">
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="post" name="shipping-type" class="radiobutton"/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
+                    <input type="radio" id="post" name="shipping-type" class="radiobutton" checked=""/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
@@ -36,7 +36,7 @@
             <form class="form_payment" action="#" method="post">
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="vorkasse" name="payment-type" class="radiobutton"/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
+                    <input type="radio" id="vorkasse" name="payment-type" class="radiobutton" checked/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
