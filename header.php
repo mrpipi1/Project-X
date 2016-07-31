@@ -73,7 +73,7 @@ setcookie ( 'landingpage', 'landingpage_visited', time() + 60, "/");
         <li>
             <?php if( !is_logged_in() && !isset($_SESSION["is_admin"])){ echo "<a href='index.php?page=Registrieren'>Login</a>"; } ?>
             <?php if( is_logged_in() && !isset ($_SESSION['is_admin']) && isset($_SESSION["user"]["user_id"])){ echo "<a href='index.php?page=profile'>Profile</a>"; } ?>
-            <?php if( is_logged_in() && isset ($_SESSION['is_admin'])){ echo "<a href='backend/index.php'>Backend</a>"; }?>
+            <?php if( is_logged_in() && isset ($_SESSION['is_admin']) && isset($_SESSION["user"]["user_id"])){ echo "<a href='backend/index.php'>Backend</a>"; }?>
 
         </li>
         <?php if($admin) {
