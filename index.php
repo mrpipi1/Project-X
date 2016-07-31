@@ -3,12 +3,10 @@ session_start();
 date_default_timezone_set('UTC');
 // content definieren
 $content = ('content/');
-if(isset($_GET['action']) && $_GET['action'] == 'login'){
-	//include('logout.php');
-}
+
 
 if(isset($_GET['action']) && $_GET['action'] == 'logout' && isset($_SESSION)){
-	//session_unset();
+	session_unset();
 	session_destroy();
 }
 $admin = '';
