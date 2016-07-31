@@ -177,7 +177,7 @@
                             <span class="selected"></span>
                         </p>
                     </li>
-                    <li><p onClick="load_Content('stock', '1', 'id', 'ASC')">
+                    <li><p onClick="load_Content('stocks', '1', 'id', 'ASC')">
                             <i class="fa fa-line-chart" aria-hidden="true"></i><span class="title">Stock</span>
                             <span class="selected"></span>
                         </p>
