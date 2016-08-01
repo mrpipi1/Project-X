@@ -167,6 +167,11 @@
                             <span class="selected"></span>
                         </p>
                     </li>
+                    <li><p onClick="load_Content('payment_options', '1', 'id', 'ASC')">
+                            <i class="fa fa-money" aria-hidden="true"></i><span class="title">Payment Options</span>
+                            <span class="selected"></span>
+                        </p>
+                    </li>
                     <li><p onClick="load_Content('breadcrumbs_checkouts', '1', 'id', 'ASC')">
                             <i class="fa fa-road" aria-hidden="true"></i><span class="title">Breadcrumbs</span>
                             <span class="selected"></span>
