@@ -261,7 +261,6 @@ include("breadcrumbs.php");
         <!-- Versand und Bezahlung -->
         <h2 class="hl_checkout">Bestellung</h2>
         <section class="wrapper_card">
-
             <div>
                 <ul class="card-header">
                     <li class="description">Artikel</li>
@@ -293,15 +292,65 @@ include("breadcrumbs.php");
                                 <li><?php echo $row2['description']; ?></li>
                             </ul>
 
-                            <ul class="actions_card-item">
-                                <li><?php echo $row['product_size']; ?></li>
+                            <ul class="actions_card-item edit-hide edit-hide-<?php echo $row['id']; ?>">
+                                <li><?php echo strtoupper($row['product_size']); ?></li>
                                 <li class="farbe"><?php echo $row2['color']; ?></li>
                                 <li><?php echo $row['quantity']; ?></li>
                             </ul>
 
+                            <ul class="actions_card-item edit-show edit-show-<?php echo $row['id']; ?>">
+                              <li><ul class="selects">
+                                        <?php
+
+                                                  mysqli_data_seek($sizes, 0);
+                                                  $size_cnt = 0;
+                                                  while ($row4 = mysqli_fetch_assoc($sizes)) {
+                                                      //print_r($row3);
+
+                                                      if($row['product_id'] == $row4['product_id']) {
+                                                          $size_cnt++;
+                                                          if($row4['stock'] > 0){
+                                                              if($row4['size'] == 'onesize'){
+                                                                  echo "<li class='size size-selected no-size'>".strtoupper($row4['size'])."</li>";
+                                                                }else if($row4['size'] == $row['product_size']){
+                                                                  echo "<li class='size size-selected'>".strtoupper($row4['size'])."</li>";
+                                                                }else{
+                                                                    echo "<li class='size'>".strtoupper($row4['size'])."</li>";
+                                                                }
+                                                          }else{
+
+                                                                  echo "<li class='size-out'>".strtoupper($row4['size'])."</li>";
+                                                          }
+
+                                                      }
+                                                  }
+                                                  if($size_cnt == 0){
+                                                    echo "<li class='size size-selected no-size'>'onesize'</li>";
+                                                  }
+
+                                            ?>
+                                          </ul>
+                                      </li>
+
+
+                              <li class="farbe"><?php echo $row2['color']; ?></li>
+                              <li><div class="quantity_wrapper">
+                          <span id="down"  onclick="updateSpinner(this);">-</span><input id="content" value="<?php echo $row['quantity']; ?>" type="text" class=" quantity"/><span id="up" href="#" onclick="updateSpinner(this);">+</span>
+                      </div></li>
+
+
+
+                      <!--<div class="color colorpicker-red"></div>
+                      <div class="color colorpicker-white"></div>-->
+                  </ul>
+
 
                             <div class="price_wrapper"><?php echo $row2['price']; ?></div>
-                            <div class="delete_wrapper"><a href="#" class="delete" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></a></div>
+                            <div class="delete_wrapper">
+                              <span class="edit edit-show edit-show-<?php echo $row['id']; ?>" onClick="save_edited_cart_item('<?php echo $row['product_id']; ?>','<?php echo $row['id']; ?>')"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+                              <span class="edit edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="edit_cart_item('<?php echo $row['id']; ?>')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                              <span class="delete edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></span>
+                            </div>
 
                         </div>
                         <?php
@@ -313,6 +362,7 @@ include("breadcrumbs.php");
                 $delivery_cost = 0;
             }
             $price += $delivery_cost;
+
             ?>
 
         </section>
@@ -348,9 +398,10 @@ include("breadcrumbs.php");
             <a href="index.php?page=Versand">zurück</a>
         </div>
 
-        <div class="btn_checkout">
+        <div class="btn_checkout btn_order_final" id="<?php if(isset($_SESSION['user']['user_id'])){echo $_SESSION['user']['user_id'];}elseif(isset($_SESSION['guest_id'])){echo $_SESSION['guest_id'];} ?>">
             <a href="index.php?page=Abschluss" >zahlungspflichtig bestellen</a>
         </div>
     </div>
+
 
 </section>
