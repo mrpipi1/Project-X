@@ -6,7 +6,7 @@
         ?>
         <section class="billing-address">
             <h2 class="hl_checkout">Rechnungsadresse</h2>
-            <form class="form_checkout" action="#" method="post">
+            <form class="form_checkout checkout_billing" action="#" method="post">
 
                 <div class="form-group">
                     <input type="text" name="fullname" value="" required class="input">
@@ -38,6 +38,7 @@
                     <label class="label">Postleitzahl*</label>
                     <span class="error">
                 </div>
+                <input type="hidden" name="guest_id" value="<?php echo $_SESSION['guest_id']; ?>" required class="input">
 
             </form>
 
@@ -52,7 +53,7 @@
 
         <section class="shipping-address">
             <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
-            <form class="form_checkout" action="#" method="post">
+            <form class="form_checkout checkout_shipping" action="#" method="post">
 
               <div class="raidiobutton_wrapper_shipping">
                 <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
@@ -103,7 +104,7 @@
 
               <h2 class="hl_checkout">Rechnungsadresse</h2>
 
-              <form class="form_checkout" action="#" method="post">
+              <form class="form_checkout checkout_billing" action="#" method="post">
 
                 <?php
                   while( $row = mysqli_fetch_assoc($user_info) ){
@@ -131,6 +132,7 @@
                       <label class="label">Postleitzahl*</label>
                       <span class="error">
                   </div>
+                      <input type="hidden" name="user_id" value="<?php echo $_SESSION['user']['user_id']; ?>" required class="input">
 
               </form>
 
@@ -141,7 +143,7 @@
 
               <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
 
-              <form class="form_checkout" action="#" method="post">
+              <form class="form_checkout checkout_shipping" action="#" method="post">
 
                 <div class="raidiobutton_wrapper_shipping">
                   <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>

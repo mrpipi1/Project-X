@@ -352,6 +352,34 @@ function insert_or_update(page, action, id){
     });
 }
 
+function insert_or_update_checkout_address(action){
+    var billing_values = {};
+    var shipping_values = {};
+    console.log($('.checkout_billing input'));
+    $.each($('.checkout_billing input').serializeArray(), function(i, field) {
+        billing_values[field.name] = field.value;
+        if(i == $('.checkout_billing input').serializeArray().length -1 ){
+            $.each($('.checkout_shipping input').serializeArray(), function(j, field) {
+                shipping_values[field.name] = field.value;
+                if (j == $('.checkout_shipping input').serializeArray().length - 1) {
+                    var data = {action: action, billing: billing_values, shipping: shipping_values};
+                    $.post('logic/insert_checkout.php', data, function (response, status) {
+                        console.log(response);
+                        console.log(status);
+                        if (response == 1 && status == 'success') {
+                            console.log('passt');
+                            /*$('.profile_success_message_user').css('display', 'block');
+                             setTimeout(function(){ $('.profile_success_message_user').css('display', 'none'); }, 10000);*/
+                        } else {
+                            console.log('fail');
+                        }
+                    });
+                }
+            });
+        }
+    });
+}
+
 
 //validation contact form
 
@@ -362,37 +390,43 @@ $('.form-group input[type="text"][name!="gutschein"] , .form-group input[type="p
     var input = $(this);
     var re;
     var errtxt = 'Bitte geben Sie einen gültigen Wert ein!';
-    if ($(this).attr('name') == '_name' || $(this).attr('name') == 'name') {
-        re = /^[a-z0-9_-]{3,16}$/;
-        errtxt = 'Bitte geben Sie einen gültigen Namen ein!';
-    } else if ($(this).attr('name').indexOf('password') > -1) {
-        re = /^[a-z0-9_-]{5,18}$/;
-        errtxt = 'Das Passwort muss mindestens 5, maximal 18 Zeichen beinhalten!';
-    } else if ($(this).attr('name') == 'email' || $(this).attr('name') == 'login_guest')  {
-        re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
-        errtxt = 'Bitte geben Sie eine gültige E-Mailaddresse ein!';
-    } else if ($(this).attr('name') == 'tel'){
-        re = /^0(6[045679][0469]){1}(\-)?(1)?[^0\D]{1}\d{6}$/;
-        errtxt = 'Bitte geben Sie eine gültige Telefonnummer ein!';
-    } else if($(this).attr('name') == 'zip_code'){
-        re = /^\d{4,5}$/;
-        errtxt = 'Bitte geben Sie eine gültige Postleitzahl ein!';
-    }else if ($(this).attr('name').indexOf('address') > -1){
-        re =  /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
-        errtxt = 'Bitte geben Sie eine gültige Adresse ein!';
-    }else if($(this).attr('name') == 'fullname'){
-        re = /^[a-z ,.'-]+$/;
-        errtxt = 'Bitte geben Sie gültige Vor und Nachnamen ein!';
-    }
-    var check=re.test(input.val());
-    if(check){
+    if($(this).val()) {
+        if ($(this).attr('name') == '_name' || $(this).attr('name') == 'name') {
+            re = /^[a-z0-9_-]{3,16}$/;
+            errtxt = 'Bitte geben Sie einen gültigen Namen ein!';
+        } else if ($(this).attr('name').indexOf('password') > -1) {
+            re = /^[a-z0-9_-]{5,18}$/;
+            errtxt = 'Das Passwort muss mindestens 5, maximal 18 Zeichen beinhalten!';
+        } else if ($(this).attr('name') == 'email' || $(this).attr('name') == 'login_guest') {
+            re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            errtxt = 'Bitte geben Sie eine gültige E-Mailaddresse ein!';
+        } else if ($(this).attr('name') == 'tel') {
+            re = /^0(6[045679][0469]){1}(\-)?(1)?[^0\D]{1}\d{6}$/;
+            errtxt = 'Bitte geben Sie eine gültige Telefonnummer ein!';
+        } else if ($(this).attr('name') == 'zip_code') {
+            re = /^\d{4,5}$/;
+            errtxt = 'Bitte geben Sie eine gültige Postleitzahl ein!';
+        } else if ($(this).attr('name').indexOf('address') > -1) {
+            re = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
+            errtxt = 'Bitte geben Sie eine gültige Adresse ein!';
+        } else if ($(this).attr('name') == 'fullname') {
+            re = /^[a-z ,.'-]+$/;
+            errtxt = 'Bitte geben Sie gültige Vor und Nachnamen ein!';
+        }
+        var check = re.test(input.val());
+        if (check) {
+            input.removeClass("invalid").addClass("valid");
+            $(this).parent().children('.form-bar').css('display', 'block');
+            $(this).parent().children('.error').text('');
+        } else {
+            $(this).parent().children('.error').text(errtxt);
+            input.removeClass("valid").addClass("invalid");
+            $(this).parent().children('.form-bar').css('display', 'none');
+        }
+    }else{
         input.removeClass("invalid").addClass("valid");
         $(this).parent().children('.form-bar').css('display', 'block');
         $(this).parent().children('.error').text('');
-    } else {
-        $(this).parent().children('.error').text(errtxt);
-        input.removeClass("valid").addClass("invalid");
-        $(this).parent().children('.form-bar').css('display', 'none');
     }
 });
 
@@ -471,6 +505,21 @@ $('.profile_submit').on('click',function(event){
         var id = $('.profile_update_btn').attr('id');
         console.log(id);
         insert_or_update('users', 'edit', id );
+    }
+});
+
+$('.next_btn_adressen').on('click',function(event){
+    console.log($(this).parent().parent().parent().find('input.invalid'));
+    var form_data=$(this).parent().parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }else{
+        /*$('.user_info_wrapper').css('display', 'block');
+        $('.user_info_change_wrapper').css('display', 'none');*/
+        //var id = $('.profile_update_btn').attr('id');
+        console.log('test');
+        insert_or_update_checkout_address('new');
     }
 });
 
