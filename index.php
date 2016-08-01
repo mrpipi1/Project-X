@@ -11,7 +11,7 @@ if(isset($_GET['action']) && $_GET['action'] == 'logout' && isset($_SESSION)){
 }
 $admin = '';
 include("db-connect.php");
-include('functions/load_content.php');
+include('functions/load_Content.php');
 include('functions/helpers.php');
 include('functions/form_functions.php');
 include('functions/user_functions.php');
