@@ -193,7 +193,7 @@
           <?php
           }
         }
-          ?>
+        ?>
     </section>
 
     <div class="btn-wrapper_checkout">

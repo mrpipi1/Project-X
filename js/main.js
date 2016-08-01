@@ -457,25 +457,20 @@ $('.next_btn_versand').click(function(){
 });
 
 
-// $('.btn_cart_next').click(function(event){
-//   event.preventDefault;
-//   event.stopPropagation();
-//   $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
-//       if(response == 1 && status == 'success'){
-//         error_shipping = 0;
-//         if(1=1){
-//           window.location.href = "index.php?page=Zusammenfassung";
-//         }else{
-//           window.location.href = "index.php?page=Zusammenfassung";
-//         }
-//       }else{
-//         $('.error_message_checkout').text('');
-//         $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
-//         $('.errors_checkout_wrapper').css('display', 'block');
-//         error_shipping = 1;
-//       }
-//   });
-// })
+$('.btn_cart_next').click(function(event){
+  console.log('click');
+  var data = {action:'add_cart'};
+  $.post('logic/checkout_logic.php', data, function(response, status) {
+      if(status == 'success'){
+        console.log('success');
+      }else{
+        console.log('error');
+        $('.error_message_checkout').text('');
+        $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+        $('.errors_checkout_wrapper').css('display', 'block');
+      }
+  });
+})
 
 
 

@@ -86,11 +86,11 @@
               <a href="index.php?page=Detailansicht">zurück</a>
           </div>
 
-          <div class="btn_checkout">
+          <div class="btn_checkout btn_cart_next">
               <?php if(isset($_SESSION['user'])){
-                  echo '<a class="btn_cart_next" href="index.php?page=Adressen" >weiter</a>';
+                  echo '<a href="index.php?page=Adressen" >weiter</a>';
               }else{
-                  echo '<a class="btn_cart_next" href="index.php?page=Anmelden">weiter</a>';
+                  echo '<a href="index.php?page=Anmelden">weiter</a>';
               }
               ?>
           </div>

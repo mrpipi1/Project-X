@@ -2,7 +2,17 @@
   global $link;
   $guest_id = isset($_SESSION['guest_id']) ? $_SESSION['guest_id'] : NULL;
   $user_id = isset($_SESSION['user']['user_id']) ? $_SESSION['user']['user_id'] : NULL;
-  $id_equals = isset($_SESSION['guest_id']) ? "guest_id = ".$_SESSION['guest_id'] : isset($_SESSION['user']['user_id']) ?  "user_id = ".$_SESSION['user']['user_id'] : NULL;
+  $id_equals = isset($_SESSION['guest_id']) ? "guest_id = '".$_SESSION['guest_id']."'" : (isset($_SESSION['user']['user_id']) ?  "user_id = '".$_SESSION['user']['user_id']."'" : NULL);
+
+if(isset($_POST['action']) && $_POST['action'] == 'add_cart'){
+  if($guest_id != NULL){
+    $sql = "INSERT INTO orders (guest_id) VALUES ('".$guest_id."')";
+  }elseif($user_id != NULL){
+    $sql = "INSERT INTO orders (user_id) VALUES ('".$user_id."')";
+  }
+  //$result = mysqli_query($link, $sql);
+}
+
   if(isset($GET['page']) && $GET['page'] == 'Adressen'){
     if(is_post_request("reciept_address")){
       $fullname = (isset($_SESSION['guest_id']) &&isset($_POST['name'])) ? $_POST['name'] : NULL;
