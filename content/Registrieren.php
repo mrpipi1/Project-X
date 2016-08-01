@@ -56,7 +56,7 @@
 
         <div class="form-group form-group_radio_register">
             <p class="radiobutton_wrapper radiobutton_first">
-                <input type="radio" id="female" name="gender" class="radiobutton "/> <label for="female">Frau</label>
+                <input type="radio" id="female" name="gender" class="radiobutton" checked/> <label for="female">Frau</label>
             </p>
             <p class="radiobutton_wrapper">
                 <input type="radio" id="male" name="gender" class="radiobutton"/> <label for=male>Herr</label>

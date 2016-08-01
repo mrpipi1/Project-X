@@ -63,8 +63,7 @@ function load_Content(page, site, order_by, order_dir){
         order_dir = 'ASC';
     }
   //  $(".content-wrapper_backend").empty();
-    
-    console.log($(".body_backend"));
+
     $.post('logic/get_contents.php', {page: page, site: site, order_by: order_by, order_dir: order_dir}, function(response, status) {
         //$(".page-bar").append('<section class="wrapper-form-backend"> </section>');
         $(".content-wrapper_backend").empty();

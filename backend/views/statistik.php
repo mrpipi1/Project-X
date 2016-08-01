@@ -1,6 +1,6 @@
-<script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+<!--<script src="d3min.js"></script>
 
-<script src="d3pie.min.js"></script>
+<script src="d3pie.min.js"></script>-->
 <script src="statistic.js"></script>
 
 <?php

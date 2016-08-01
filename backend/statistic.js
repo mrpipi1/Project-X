@@ -4,9 +4,12 @@
  function statistik_data_Query(tablename, column, values, colors, name, subtitle) {
    var data = [];
      $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values }, function(response, status) {
+       console.log(response);
          if(status == 'success') {
             response = jQuery.parseJSON(response);
-            for(i = 0; i < response.length; i++){
+            console.log(response);
+
+            for(var i = 0; i < response.length; i++){
               if(response[i] > 0){
                 data.push( {
                     "label": values[i],
@@ -26,7 +29,7 @@
                     subtitle = '';
                   }
 
-                  var pie = new d3pie("pieChart", {
+                  var pie = new d3pie("#pieChart", {
                      "header":{
                         "title":{
                            "text": name,
@@ -104,6 +107,7 @@
                               },
                               "callbacks":{}});
                          }
+
                   }
 
          }else{
@@ -117,4 +121,5 @@ var colors = ['#EC644B', '#F1A9A0', '#DCC6E0', '#E4F1FE', '#4183D7', '#A2DED0', 
 statistik_data_Query('users', 'gender', ['female', 'male'], colors, 'Gender');
 statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment', 'Test Subheadline');
 statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors, 'prefered Delivery');
-statistik_data_Query('users', 'city', ['Wien', 'Berlin'], colors, 'City');
+statistik_data_Query('users', 'city', ['Wien', 'Graz', 'Linz'], colors, 'City');
+statistik_data_Query('users', 'birthday', ['younger than 18','19 - 30', '31 - 40', '41 - 60', 'older than 60'], colors, 'Age');
