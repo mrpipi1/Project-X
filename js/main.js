@@ -357,7 +357,7 @@ function insert_or_update(page, action, id){
 
 //validation login form
 
-$('.form-group input[type="text"], .form-group input[type="password"]').keyup(function(event) {
+$('.form-group input[type="text"][name!="gutschein"] , .form-group input[type="password"]').keyup(function(event) {
     var input = $(this);
     var re;
     var errtxt = 'Bitte geben Sie einen gültigen Wert ein!';
