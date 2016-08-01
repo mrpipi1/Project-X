@@ -270,7 +270,6 @@ function update_user_profile(cart_id){
 }
 
 function insert_or_update(page, action, id){
-
     var values = {};
     $.each($('.form_profile input').serializeArray(), function(i, field) {
         values[field.name] = field.value;
@@ -411,26 +410,73 @@ $('.profile_submit').on('click',function(event){
     }
 });
 
-function checkout_next( next_page_href){
-  // check if user has entered values
-  // if(1 == 1){
-  //   // load next page
-  //   window.location.href = "index.php?page=Adressen";
-  // }else{
-  //
-  // }
-  console.log('hallo');
 
-}
 
-$('.next_btn_anmelden').click('click',function(){
-  if(1 == 1){
-    // load next page
-    window.location.href = "index.php?page=Adressen";
-  }else{
 
-  }
+$('.next_btn_versand').click(function(){
+    var error_shipping = 1;
+    var error_payment = 1;
+    var values = {};
+    $.each($('.form_shipping').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+        if(i == $('.form_shipping').serializeArray().length -1 ){
+            var data = {page: 'orders', action: 'edit', data: values};
+            $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
+                if(response == 1 && status == 'success'){
+                  error_shipping = 0;
+                }else{
+                  $('.error_message_checkout').text('');
+                  $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+                  $('.errors_checkout_wrapper').css('display', 'block');
+                  error_shipping = 1;
+                }
+            });
+        }
+    });
+    $.each($('.form_payment').serializeArray(), function(i, field) {
+        values[field.name] = field.value;
+        if(i == $('.form_payment').serializeArray().length -1 ){
+            var data = {page: 'orders', action: 'edit', data: values};
+            $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
+                if(response == 1 && status == 'success'){
+                  error_payment = 0;
+                }else{
+                    $('.error_message_checkout').text('');
+                    $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+                    $('.errors_checkout_wrapper').css('display', 'block');
+                    error_payment = 1;
+                }
+            });
+        }
+    });
+    if(error_shipping == 0 && error_payment == 0){
+      window.location.href = "index.php?page=Zusammenfassung";
+    }else{
+      console.log(error_shipping+" / "+error_payment);
+    }
 });
+
+
+// $('.btn_cart_next').click(function(event){
+//   event.preventDefault;
+//   event.stopPropagation();
+//   $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
+//       if(response == 1 && status == 'success'){
+//         error_shipping = 0;
+//         if(1=1){
+//           window.location.href = "index.php?page=Zusammenfassung";
+//         }else{
+//           window.location.href = "index.php?page=Zusammenfassung";
+//         }
+//       }else{
+//         $('.error_message_checkout').text('');
+//         $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+//         $('.errors_checkout_wrapper').css('display', 'block');
+//         error_shipping = 1;
+//       }
+//   });
+// })
+
 
 
 
