@@ -18,7 +18,7 @@ if(isset($_POST['user_mail']) && isset($_POST['subject'])){
     $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : false;
     $sql = "SELECT email FROM users WHERE id = '".$user_id."'";
     $user_email = mysqli_query($link, $sql);
-    $message = "Hallo <?php echo $username ?>! <br/>Vielen Dank für Deine Bestellung bei lotusyoga! Sie wird in Drei bis Fünf Werktagen bei dir ankommen.<br /> Viele Grüße <br/>Dein lotusyoga Team";
+    $message = "Hallo <?php echo $username ?>, <br/>vielen Dank für Deine Bestellung bei lotusyoga! Deine Bestellung wird so schnell wie möglich bearbeitet und wird in Drei bis Fünf Werktagen bei dir ankommen.<br /> Viele Grüße, <br/>Dein lotusyoga Team";
   }
 
   $mail_result = mail( $user_email , $subject , $message );
