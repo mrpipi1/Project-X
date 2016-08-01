@@ -1188,6 +1188,8 @@ h2.hl_checkout {
   letter-spacing: 0.2px;
   transition: all 0.5s linear;
   font-weight: 300;
+  margin-top: -25px;
+  margin-bottom: 25px;
 }
 
 .billing-address, .shipping-address {
