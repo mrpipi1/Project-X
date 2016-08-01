@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="../font/fontawesome/css/font-awesome.min.css">
     <!-- jQuery library (served from Google) -->
     <script src="../js/jquery-1.12.2.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.4/d3.min.js"></script>
+    <script src="d3min.js"></script>
     <script src="d3pie.min.js"></script>
     <script src="statistic.js"></script>
     <script src="script.js"></script>
