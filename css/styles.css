@@ -2554,3 +2554,6 @@ cursor: pointer;
   left:0;
   width: 100%;
 }
+.crumb-current span{
+  color: #5a8e7d;
+}

@@ -5,7 +5,7 @@
       if(mysqli_num_rows($breadcrubms_checkout) > 0){
         $i = 0;
         while( $row = mysqli_fetch_assoc($breadcrubms_checkout) ){
-          if(isset($_GET['page']) && $row['name'] == $_GET['page']){
+          if(isset($_GET['page']) && (strpos($row['name'], $_GET['page']) > -1 || $_GET['page'] == 'Adressen' && $row['name'] == 'Adresse')){
             $class = 'crumb-current';
           }elseif($row['position'] < $i){
             $class = 'visited';
