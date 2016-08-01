@@ -14,7 +14,7 @@
                         <input type="text" name="_name" value="" required class="input input_anmelden_email">
                         <span class="highlight"></span>
                         <span class="form-bar"></span>
-                        <label class="label">E-Mail oder Username*</label>
+                        <label class="label">Username*</label>
                         <span class="error">
                     </div>
 
@@ -41,7 +41,7 @@
                       <div class="profile_error_message_password">Die Email konnte nicht gesendet weden, bitte kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a></div>
                       <!-- password reset + confirmation -->
                       <div class="profile_shop_link  profile_info_label">Passwort vergessen?</div>
-                      <div class="send_password_message">Passwort zurücksetzen? <br /><div class="confirm">Ja, neues Passwort zuschicken.</div><br /><div  class="deny"<div>Abbrechen</div>
+                      <div class="send_password_message">Passwort zurücksetzen? <br /><div class="confirm_anmelden">Ja, neues Passwort zuschicken.</div><br /><div  class="deny"<div>Abbrechen</div>
                     </div>
 
                 </div>

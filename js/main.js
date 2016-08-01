@@ -202,7 +202,7 @@ function delete_from_cart(cart_id){
 function edit_cart_item(cart_id){
 
        $('.edit-hide-'+cart_id).hide();
-        $('.edit-show-'+cart_id).show();
+        $('.edit-show-'+cart_id).css('display', 'flex');
 }
 
 function save_edited_cart_item(product_id, cart_id){
@@ -273,9 +273,9 @@ $('.profile_shop_link').click(function(){
   $('.send_password_message').css('display', 'block');
 });
 
-function send_user_email(user_email, subject){
+function send_user_email(user_email, subject, user_id = ''){
         $.post('logic/send_user_email.php', {
-            user_mail: user_email, subject: subject,
+            user_mail: user_email, subject: subject, user_id: user_id
         }, function (response, status) {
             if (status == 'success' && response == true) {
                 $('.email_was_send').css('display', 'block');
@@ -291,8 +291,16 @@ function send_user_email(user_email, subject){
     $('.profile_shop_link').css('display', 'none');
     var user_email = $('.profile_info_value_email').value;
     send_user_email(user_email, 'new_password');
-
   });
+
+  $('.confirm_anmelden').click(function(){
+    $('.send_password_message').css('display', 'none');
+    $('.profile_shop_link').css('display', 'none');
+    var user_email = $('.input_anmelden_email').value;
+    send_user_email(user_email, 'new_password');
+  });
+
+
   $('.deny').click(function(){
     $('.send_password_message').css('display', 'none');
   })
@@ -586,6 +594,10 @@ $('.btn_cart_next').click(function(event){
   });
 });
 
+$('.btn_order_final').click(function(){
+  var user_id = $('.btn_order_final').attr('id');
+      send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
+    });
 
 
 

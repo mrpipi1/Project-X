@@ -1210,7 +1210,7 @@ Breadcrumbs
 
 .breadcrumb_wrapper {
     display: flex;
-    margin-top: 3vw;
+    margin-top: 3em;
     margin-right: 25px;
     justify-content: center;
 }
@@ -2582,4 +2582,12 @@ cursor: pointer;
 }
 .hl_shipping_address{
   margin-bottom: calc(2em - 19px) !important;
+}
+
+.actions_card-item .selects li.size{
+  flex-basis: 0;
+  width: 25px;
+  height: 23px;
+  font-size: 14px;
+  margin: 5px;
 }
