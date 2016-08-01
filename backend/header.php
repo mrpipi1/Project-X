@@ -41,7 +41,7 @@
     <script src="../js/jquery-1.12.2.min.js"></script>
     <script src="d3min.js"></script>
     <script src="d3pie.min.js"></script>
-    <script src="statistic.js"></script>
+    <!--<script src="statistic.js"></script>-->
     <script src="script.js"></script>
 
 </head>

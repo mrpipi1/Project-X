@@ -4,10 +4,8 @@
  function statistik_data_Query(tablename, column, values, colors, name, subtitle) {
    var data = [];
      $.post('logic/statistik_data.php', {statistik_table: tablename, statistik_col: column, satistik_values: values }, function(response, status) {
-       console.log(response);
          if(status == 'success') {
             response = jQuery.parseJSON(response);
-            console.log(response);
 
             for(var i = 0; i < response.length; i++){
               if(response[i] > 0){
@@ -29,7 +27,7 @@
                     subtitle = '';
                   }
 
-                  var pie = new d3pie("#pieChart", {
+                  var pie = new d3pie("pieChart", {
                      "header":{
                         "title":{
                            "text": name,
