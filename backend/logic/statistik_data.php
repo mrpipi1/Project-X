@@ -7,6 +7,7 @@ $values = $_POST['satistik_values'];
 if($column == 'birthday'){
   $sql = "SELECT birthday FROM users";
   $res = mysqli_query($link, $sql);
+
   // echo json_encode($res);
   $birth_year = '';
   $unter18 = 0;
@@ -15,31 +16,35 @@ if($column == 'birthday'){
   $einundvierzig = 0;
   $older_than = 0;
   while($row = mysqli_fetch_assoc($res)){
-    echo $row['birthday'];
-    if(substr($row['birthday'], 0, 3) != 0000){
-      $birth_year = substr($row['birthday'], 0, 3);
+    //echo $row['birthday'];
+      $birth_year = substr($row['birthday'], 0, 4);
+    if($birth_year != 0000){
       switch ($birth_year){
-        case ($birth_year <= 1998):
+        case ($birth_year >= 1998):
           $unter18++;
           break;
-        case ($birth_year >1998 && $birth_year <= 1986):
+        case ($birth_year  < 1998 && $birth_year >= 1986):
           $neunzehn_30++;
           break;
-        case ($birth_year > 1986 && $birth_year <= 1976):
+        case ($birth_year < 1986 && $birth_year >= 1976):
           $einunddreißig++;
           break;
-        case ($birth_year > 1976 && $birth_year <= 1956):
+        case ($birth_year < 1976 && $birth_year >= 1956):
           $einundvierzig++;
           break;
-          case ($birth_year > 1956):
+          case ($birth_year < 1956):
             $older_than++;
             break;
       }
   }
 }
-  $result = array();
+    $result[] = $unter18;
+    $result[] = $neunzehn_30;
+    $result[] = $einunddreißig;
+    $result[] = $einundvierzig;
+    $result[] = $older_than;
   //$result = array_push($result, $unter18,$neunzehn_30,$einunddreißig,$einundvierzig,$older_than);
-  $result = array_push($result, 1,2,9,4,8);
+  //$result = array_push($result, 1,2,9,4,8);
   echo json_encode($result);
 }else{
   for($i = 0; $i < count($values); $i++){

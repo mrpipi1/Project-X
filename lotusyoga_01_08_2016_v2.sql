@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.0
+-- version 4.4.15.5
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Erstellungszeit: 01. Aug 2016 um 18:10
--- Server-Version: 5.5.42
--- PHP-Version: 7.0.0
+-- Host: localhost:3306
+-- Erstellungszeit: 01. Aug 2016 um 18:07
+-- Server-Version: 5.5.49-log
+-- PHP-Version: 7.0.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,14 +27,14 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `admins`;
-CREATE TABLE `admins` (
+CREATE TABLE IF NOT EXISTS `admins` (
   `id` int(11) NOT NULL,
   `admin_name` varchar(50) NOT NULL,
   `admin_email` varchar(200) NOT NULL,
   `password_hash` varchar(250) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `admins`
@@ -53,13 +53,13 @@ INSERT INTO `admins` (`id`, `admin_name`, `admin_email`, `password_hash`, `is_ac
 --
 
 DROP TABLE IF EXISTS `bestell_items`;
-CREATE TABLE `bestell_items` (
+CREATE TABLE IF NOT EXISTS `bestell_items` (
   `id` int(11) NOT NULL,
   `bestellnummer` int(100) NOT NULL,
   `shopitem_id` int(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `bestell_items`
@@ -75,13 +75,13 @@ INSERT INTO `bestell_items` (`id`, `bestellnummer`, `shopitem_id`, `is_active`, 
 --
 
 DROP TABLE IF EXISTS `breadcrubms_checkout`;
-CREATE TABLE `breadcrubms_checkout` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `breadcrubms_checkout` (
+  `id` int(11) unsigned NOT NULL,
   `name` varchar(70) DEFAULT NULL,
   `position` int(3) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `breadcrubms_checkout`
@@ -101,13 +101,13 @@ INSERT INTO `breadcrubms_checkout` (`id`, `name`, `position`, `is_active`, `dele
 --
 
 DROP TABLE IF EXISTS `breadcrumbs_checkouts`;
-CREATE TABLE `breadcrumbs_checkouts` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `breadcrumbs_checkouts` (
+  `id` int(11) unsigned NOT NULL,
   `name` varchar(70) DEFAULT NULL,
   `position` int(3) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `breadcrumbs_checkouts`
@@ -127,7 +127,7 @@ INSERT INTO `breadcrumbs_checkouts` (`id`, `name`, `position`, `is_active`, `del
 --
 
 DROP TABLE IF EXISTS `cart`;
-CREATE TABLE `cart` (
+CREATE TABLE IF NOT EXISTS `cart` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
@@ -135,7 +135,7 @@ CREATE TABLE `cart` (
   `size` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `cart`
@@ -162,7 +162,7 @@ INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `size`, `created_
 --
 
 DROP TABLE IF EXISTS `carts`;
-CREATE TABLE `carts` (
+CREATE TABLE IF NOT EXISTS `carts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `guest_id` int(11) DEFAULT NULL,
@@ -171,7 +171,7 @@ CREATE TABLE `carts` (
   `product_size` varchar(100) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `carts`
@@ -211,7 +211,7 @@ INSERT INTO `carts` (`id`, `user_id`, `guest_id`, `product_id`, `quantity`, `pro
 --
 
 DROP TABLE IF EXISTS `contents`;
-CREATE TABLE `contents` (
+CREATE TABLE IF NOT EXISTS `contents` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(150) NOT NULL,
@@ -219,7 +219,7 @@ CREATE TABLE `contents` (
   `sequence` int(11) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `contents`
@@ -287,7 +287,7 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 --
 
 DROP TABLE IF EXISTS `coupon_codes`;
-CREATE TABLE `coupon_codes` (
+CREATE TABLE IF NOT EXISTS `coupon_codes` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `code` varchar(100) NOT NULL,
@@ -295,7 +295,7 @@ CREATE TABLE `coupon_codes` (
   `flat_value` int(11) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `coupon_codes`
@@ -312,13 +312,13 @@ INSERT INTO `coupon_codes` (`id`, `_name`, `code`, `percentage_value`, `flat_val
 --
 
 DROP TABLE IF EXISTS `courses`;
-CREATE TABLE `courses` (
+CREATE TABLE IF NOT EXISTS `courses` (
   `id` int(11) NOT NULL,
   `_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `courses`
@@ -336,12 +336,12 @@ INSERT INTO `courses` (`id`, `_name`, `description`, `is_active`, `deleted_at`) 
 --
 
 DROP TABLE IF EXISTS `delivery_options`;
-CREATE TABLE `delivery_options` (
+CREATE TABLE IF NOT EXISTS `delivery_options` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `delivery_options`
@@ -359,7 +359,7 @@ INSERT INTO `delivery_options` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `employees`;
-CREATE TABLE `employees` (
+CREATE TABLE IF NOT EXISTS `employees` (
   `id` int(11) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `email` varchar(60) NOT NULL,
@@ -369,7 +369,7 @@ CREATE TABLE `employees` (
   `description` varchar(700) NOT NULL DEFAULT '',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `employees`
@@ -393,13 +393,13 @@ INSERT INTO `employees` (`id`, `fullname`, `email`, `telno`, `pic`, `courses_id`
 --
 
 DROP TABLE IF EXISTS `guests`;
-CREATE TABLE `guests` (
+CREATE TABLE IF NOT EXISTS `guests` (
   `id` int(11) NOT NULL,
   `guest_mail` varchar(100) NOT NULL,
   `is_active` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `guests`
@@ -440,12 +440,12 @@ INSERT INTO `guests` (`id`, `guest_mail`, `is_active`, `created_at`, `deleted_at
 --
 
 DROP TABLE IF EXISTS `header_items`;
-CREATE TABLE `header_items` (
+CREATE TABLE IF NOT EXISTS `header_items` (
   `id` int(11) NOT NULL,
   `h_name` varchar(50) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `header_items`
@@ -461,14 +461,14 @@ INSERT INTO `header_items` (`id`, `h_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `log`;
-CREATE TABLE `log` (
+CREATE TABLE IF NOT EXISTS `log` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(1000) NOT NULL,
   `location` varchar(1000) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `log`
@@ -498,7 +498,7 @@ INSERT INTO `log` (`id`, `_name`, `type`, `location`, `created_at`, `deleted_at`
 --
 
 DROP TABLE IF EXISTS `logs`;
-CREATE TABLE `logs` (
+CREATE TABLE IF NOT EXISTS `logs` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(1000) NOT NULL,
@@ -506,7 +506,7 @@ CREATE TABLE `logs` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `logs`
@@ -525,12 +525,12 @@ INSERT INTO `logs` (`id`, `_name`, `type`, `location`, `created_at`, `is_active`
 --
 
 DROP TABLE IF EXISTS `menu_backend_items`;
-CREATE TABLE `menu_backend_items` (
+CREATE TABLE IF NOT EXISTS `menu_backend_items` (
   `id` int(11) NOT NULL,
   `item_name` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `menu_backend_items`
@@ -560,7 +560,7 @@ INSERT INTO `menu_backend_items` (`id`, `item_name`, `is_active`, `deleted_at`) 
 --
 
 DROP TABLE IF EXISTS `orders`;
-CREATE TABLE `orders` (
+CREATE TABLE IF NOT EXISTS `orders` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `guest_id` int(11) DEFAULT NULL,
@@ -583,7 +583,7 @@ CREATE TABLE `orders` (
 --
 
 DROP TABLE IF EXISTS `products`;
-CREATE TABLE `products` (
+CREATE TABLE IF NOT EXISTS `products` (
   `id` int(11) NOT NULL,
   `_name` varchar(150) NOT NULL,
   `price` float NOT NULL,
@@ -598,7 +598,7 @@ CREATE TABLE `products` (
   `price_in_aktion` float NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `products`
@@ -625,12 +625,12 @@ INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `descripti
 --
 
 DROP TABLE IF EXISTS `shop_categories`;
-CREATE TABLE `shop_categories` (
+CREATE TABLE IF NOT EXISTS `shop_categories` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `shop_categories`
@@ -649,13 +649,13 @@ INSERT INTO `shop_categories` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `socialmedia_icons`;
-CREATE TABLE `socialmedia_icons` (
+CREATE TABLE IF NOT EXISTS `socialmedia_icons` (
   `id` int(11) NOT NULL,
   `icon_name` varchar(100) NOT NULL,
   `pic` varchar(400) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `socialmedia_icons`
@@ -671,13 +671,13 @@ INSERT INTO `socialmedia_icons` (`id`, `icon_name`, `pic`, `is_active`, `deleted
 --
 
 DROP TABLE IF EXISTS `stock`;
-CREATE TABLE `stock` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `stock` (
+  `id` int(11) unsigned NOT NULL,
   `product_id` int(11) NOT NULL,
   `size` varchar(11) NOT NULL DEFAULT '',
   `stock` int(11) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `stock`
@@ -707,13 +707,13 @@ INSERT INTO `stock` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `stocks`;
-CREATE TABLE `stocks` (
-  `id` int(11) UNSIGNED NOT NULL,
+CREATE TABLE IF NOT EXISTS `stocks` (
+  `id` int(11) unsigned NOT NULL,
   `product_id` int(11) NOT NULL,
   `size` varchar(11) NOT NULL DEFAULT '',
   `stock` int(11) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `stocks`
@@ -743,7 +743,7 @@ INSERT INTO `stocks` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL,
   `_name` varchar(50) NOT NULL,
   `fullname` varchar(100) NOT NULL,
@@ -759,17 +759,17 @@ CREATE TABLE `users` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `users`
 --
 
 INSERT INTO `users` (`id`, `_name`, `fullname`, `email`, `password_hash`, `gender`, `birthday`, `pref_delivery`, `pref_payment`, `address`, `zip_code`, `city`, `created_at`, `is_active`, `deleted_at`) VALUES
-(2, 'alex', '', 'alex@bla.at', '$2y$10$N3vs.Spr5NcEtedhChiCrehow8aNNDcKLjMaJJdrKBYpcWImdnoS2', 'female', '1992-08-30', 'post', 'rechnung', 'Blagasse 42/13', 1210, NULL, '2016-04-19 03:19:59', 1, NULL),
-(3, 'Babsi', '', 'babsi.babsi@babsi.at', 'pw123', 'female', '2016-04-11', 'dhl', 'rechnung', 'Schönbrunn 4/44', 1010, NULL, '2016-04-19 04:06:27', 1, NULL),
-(4, 'berni', '', 'berni@bla.at', 'pw123', 'male', '1989-06-15', 'dhl', 'vorkasse', 'zuhause 123', 1220, NULL, '0000-00-00 00:00:00', 1, NULL),
-(5, 'test', '', 'test@test', 'test', 'male', '1998-06-18', 'post', 'rechnung', 'bla 1234', 1010, NULL, '2016-05-02 05:35:50', 1, NULL),
+(2, 'alex', '', 'alex@bla.at', '$2y$10$N3vs.Spr5NcEtedhChiCrehow8aNNDcKLjMaJJdrKBYpcWImdnoS2', 'female', '1992-08-30', 'post', 'rechnung', 'Blagasse 42/13', 1210, 'Wien', '2016-04-19 03:19:59', 1, NULL),
+(3, 'Babsi', '', 'babsi.babsi@babsi.at', 'pw123', 'female', '2016-04-11', 'dhl', 'rechnung', 'Schönbrunn 4/44', 1010, 'Graz', '2016-04-19 04:06:27', 1, NULL),
+(4, 'berni', '', 'berni@bla.at', 'pw123', 'male', '1989-06-15', 'dhl', 'vorkasse', 'zuhause 123', 1220, 'Linz', '0000-00-00 00:00:00', 1, NULL),
+(5, 'test', '', 'test@test', 'test', 'male', '1998-06-18', 'post', 'rechnung', 'bla 1234', 1010, '', '2016-05-02 05:35:50', 1, NULL),
 (6, 'ferdi', '', 'ferdi@ferdi.at', 'ferdi123', 'male', '1987-09-16', 'post', 'vorkasse', 'siebenbrunnenplatz 1', 1050, NULL, '0000-00-00 00:00:00', 1, NULL),
 (7, '', '', '', '', '', '0000-00-00', '', '', '', 0, NULL, '2016-05-02 05:37:13', 0, '0000-00-00 00:00:00'),
 (8, 'gusi', '', 'gusi@bla.bla', 'hallo', 'male', '1991-05-27', 'dpd', 'rechnung', 'Siebenbrunnengasse 88/13', 1050, NULL, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00'),
@@ -811,7 +811,7 @@ INSERT INTO `users` (`id`, `_name`, `fullname`, `email`, `password_hash`, `gende
 --
 
 DROP TABLE IF EXISTS `user_messages`;
-CREATE TABLE `user_messages` (
+CREATE TABLE IF NOT EXISTS `user_messages` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
   `telno` int(15) NOT NULL,
@@ -820,7 +820,7 @@ CREATE TABLE `user_messages` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_answered` tinyint(1) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `user_messages`
@@ -985,82 +985,82 @@ ALTER TABLE `user_messages`
 -- AUTO_INCREMENT für Tabelle `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `bestell_items`
 --
 ALTER TABLE `bestell_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `breadcrubms_checkout`
 --
 ALTER TABLE `breadcrubms_checkout`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `breadcrumbs_checkouts`
 --
 ALTER TABLE `breadcrumbs_checkouts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT für Tabelle `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT für Tabelle `coupon_codes`
 --
 ALTER TABLE `coupon_codes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT für Tabelle `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `delivery_options`
 --
 ALTER TABLE `delivery_options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT für Tabelle `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT für Tabelle `header_items`
 --
 ALTER TABLE `header_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT für Tabelle `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `menu_backend_items`
 --
 ALTER TABLE `menu_backend_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT für Tabelle `orders`
 --
@@ -1070,37 +1070,37 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT für Tabelle `shop_categories`
 --
 ALTER TABLE `shop_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `socialmedia_icons`
 --
 ALTER TABLE `socialmedia_icons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `stock`
 --
 ALTER TABLE `stock`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT für Tabelle `stocks`
 --
 ALTER TABLE `stocks`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT für Tabelle `user_messages`
 --
 ALTER TABLE `user_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
