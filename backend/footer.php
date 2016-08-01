@@ -1,6 +1,6 @@
 
         </div>
-    <script src="statistic.js"></script>
+    <!-- <script src="statistic.js"></script> -->
 
     </body>
 </html>

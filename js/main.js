@@ -199,9 +199,10 @@ function delete_from_cart(cart_id){
         });
 }
 
-function edit_cart_item(cart_id, size, quant){
-       $('.edit-hide').hide();
-        $('.edit-show').show();
+function edit_cart_item(cart_id){
+
+       $('.edit-hide-'+cart_id).hide();
+        $('.edit-show-'+cart_id).show();
 }
 
 function save_edited_cart_item(product_id, cart_id){
@@ -534,7 +535,9 @@ $('.btn_cart_next').click(function(event){
         $('.errors_checkout_wrapper').css('display', 'block');
       }
   });
-})
+});
+
+
 
 
 
