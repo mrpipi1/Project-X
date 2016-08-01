@@ -9,6 +9,9 @@ global $link;
     redirect_to("backend/index.php");
 }else {*/
     if(is_post_request("login")) {
+      if(isset($_SESSION['guest_id'])){
+        unset($_SESSION['guest_id']);
+      }
         $error = 0;
         $email = mysqli_real_escape_string($link, $_POST["_name"]);
         $password = mysqli_real_escape_string($link, $_POST["password"]);

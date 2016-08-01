@@ -63,8 +63,6 @@ function load_Content(page, site, order_by, order_dir){
         order_dir = 'ASC';
     }
   //  $(".content-wrapper_backend").empty();
-
-    $(".body_backend").append('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>');
     
     console.log($(".body_backend"));
     $.post('logic/get_contents.php', {page: page, site: site, order_by: order_by, order_dir: order_dir}, function(response, status) {
@@ -172,6 +170,3 @@ function notification(type, message){
     }
 
 }
-
-
-

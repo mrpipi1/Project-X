@@ -87,7 +87,8 @@
             </form>
         </section>
         <?php
-      }elseif(isset($_SESSION['users']['user_id'])){
+        //
+      }elseif(isset($_SESSION['user']['user_id'])){
           ?>
           <section class="billing-address">
 
@@ -99,7 +100,7 @@
                   while( $row = mysqli_fetch_assoc($user_info) ){
                 ?>
                   <div class="form-group">
-                      <input type="text" name="tel" value="<?php if(isset($row['adress'])){echo $row['adress'];} ?>" required class="input">
+                      <input type="text" name="address" value="<?php if(isset($row['address'])){echo $row['address'];} ?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
@@ -108,7 +109,7 @@
 
 
                   <div class="form-group">
-                      <input type="text" name="email" value="<?php if(isset($row['address'])){echo $row['address'];} ?>" required class="input">
+                      <input type="text" name="city" value="<?php if(isset($row['zip_code'])){echo $row['zip_code'];} if(isset($row['city'])){echo $row['city'];} ?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Postleitzahl | Stadt*</label>

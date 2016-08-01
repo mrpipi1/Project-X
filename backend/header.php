@@ -203,5 +203,4 @@
     <section class="content-wrapper_backend">
         <section class="wrapper-form-backend">
             </section>
-       <!-- <i class="fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom"></i>-->
         </section>
