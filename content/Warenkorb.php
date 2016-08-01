@@ -15,9 +15,8 @@
           <div>
               <ul class="card-header">
                   <li class="description">Artikel</li>
-                  <li class="actions">Größe</li>
-                  <li class="actions">Farbe</li>
-                  <li class="actions">Menge</li>
+                  <li class="actions size_header">Größe</li>
+                  <li class="actions quantity_header">Menge</li>
                   <li class="actions_price">Preis</li>
               </ul>
           </div>
@@ -45,7 +44,6 @@
 
                           <ul class="actions_card-item edit-hide edit-hide-<?php echo $row['id']; ?>">
                               <li><?php echo strtoupper($row['product_size']); ?></li>
-                              <li class="farbe"><?php echo $row2['color']; ?></li>
                               <li><?php echo $row['quantity']; ?></li>
                           </ul>
 

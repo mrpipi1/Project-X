@@ -1515,18 +1515,23 @@ Warenkorb
 .card-header li {
     padding: 1vw 0;
 }
+.size_header {
+    flex-basis: 14%;
+}
+.quantity_header {
+    flex-basis: 13%;
+}
 
 .card-header li:first-child {
   text-indent: 13%;
 }
 .description {
-    flex-basis: 58%;
+    flex-basis: 57%;
 }
-.actions {
-    flex-basis: 10%;
-}
+
 .actions_price {
     flex-basis: 15%;
+    padding-right: 54px !important;
 }
 
 /* items */
@@ -1584,7 +1589,7 @@ Warenkorb
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex-basis: 34%;
+    flex-basis: 50%;
 }
 .farbe {
     text-align: center;
@@ -2621,8 +2626,8 @@ cursor: pointer;
 
 .actions_card-item .selects li.size{
   flex-basis: 0;
-  width: 25px;
-  height: 23px;
+  height: 19px;
   font-size: 14px;
   margin: 5px;
+  padding: 0 6px 0;
 }
