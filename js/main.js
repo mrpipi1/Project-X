@@ -185,8 +185,71 @@ function delete_from_cart(cart_id){
                 console.log('fehler');
             }
         });
-
 }
+
+function delete_from_cart(cart_id){
+        $.post('logic/delete_from_cart.php', {
+            cart_id: cart_id
+        }, function (response, status) {
+            if (response == 1 && status == 'success') {
+                location.reload();
+            } else {
+                console.log('fehler');
+            }
+        });
+}
+
+function edit_cart_item(cart_id, size, quant){
+       $('.edit-hide').hide();
+        $('.edit-show').show();
+}
+
+function save_edited_cart_item(product_id, cart_id){
+  var size = $(".size-selected").text();
+    var quantity = $(".quantity").val();
+    if(size && quantity > 0) {
+       $.post('logic/update_cart_item.php', {
+            product_id: product_id,
+            cart_id: cart_id,
+            size: size,
+            quantity: quantity
+          }, function (response, status) {
+            if(response == 1 && status == 'success'){
+                location.reload();
+            }
+          });
+    }
+}
+$('.form-group input[name="gutschein"]').on('input', function(event){
+      var input = $(this);
+      var coupon_code = input.val();
+      clearTimeout(check_coupon);
+      var check_coupon = setTimeout(function() {
+        if(coupon_code){
+           $.post('logic/check_coupon.php', {
+            coupon_code: coupon_code,
+          }, function (response, status) {
+            console.log(response);
+            console.log(status);
+            if(response != 0 && status == 'success'){
+                console.log('erfolgreich werte abziehen irgendwie');
+                console.log(response);
+                 input.parent().children('.form-bar').css('display', 'block');
+                 input.parent().children('.error').text('');
+            }else{
+                console.log('error display');
+                console.log($('.form-group input[name="gutschein"]'));
+                input.parent().children('.error').text('Gutscheincode ist ungültig!');
+                input.parent().children('.form-bar').css('display', 'none');
+            }
+          });
+        }
+    // do stuff when user has been idle for 1 second
+      }, 1000);
+});
+
+
+
 
 
 $('.size').on('click', function(){

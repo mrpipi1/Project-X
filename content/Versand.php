@@ -109,14 +109,13 @@
             <section class="form_cuopon">
 
             <form  action="#" method="post" class="form_main">
-
                 <div class="form-group">
                     <input type="text" name="gutschein" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Gutscheincode</label>
+                    <span class="error"></span>
                 </div>
-
             </form>
 
             <p><small>* Pro Person ist nur ein Gutscheincode einlösbar.</small></p>
