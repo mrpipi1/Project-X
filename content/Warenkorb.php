@@ -88,9 +88,9 @@
 
           <div class="btn_checkout">
               <?php if(isset($_SESSION['user'])){
-                  echo '<a href="index.php?page=Adressen" >weiter</a>';
+                  echo '<a class="btn_cart_next" href="index.php?page=Adressen" >weiter</a>';
               }else{
-                  echo '<a href="index.php?page=Anmelden">weiter</a>';
+                  echo '<a class="btn_cart_next" href="index.php?page=Anmelden">weiter</a>';
               }
               ?>
           </div>

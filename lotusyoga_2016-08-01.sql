@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.42)
 # Database: lotusyoga
-# Generation Time: 2016-08-01 08:41:45 +0000
+# Generation Time: 2016-08-01 11:18:13 +0000
 # ************************************************************
 
 
@@ -211,7 +211,8 @@ VALUES
 	(20,0,24,9,1,'l','2016-07-31 17:04:46',NULL),
 	(21,0,24,9,2,'l','2016-07-31 17:05:00',NULL),
 	(22,0,12,9,1,'xl','2016-07-31 17:31:50',NULL),
-	(23,2,22,9,1,'m','2016-08-01 06:58:48',NULL);
+	(23,2,22,9,1,'m','2016-08-01 06:58:48',NULL),
+	(24,0,29,9,1,'s','2016-08-01 11:05:20',NULL);
 
 /*!40000 ALTER TABLE `carts` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -458,7 +459,10 @@ VALUES
 	(23,'',1,'2016-08-01 07:58:28',NULL),
 	(24,'',1,'2016-08-01 07:58:30',NULL),
 	(25,'',1,'2016-08-01 08:01:11',NULL),
-	(26,'',1,'2016-08-01 08:01:14',NULL);
+	(26,'',1,'2016-08-01 08:01:14',NULL),
+	(27,'',1,'2016-08-01 11:03:38',NULL),
+	(28,'',1,'2016-08-01 11:04:11',NULL),
+	(29,'',1,'2016-08-01 11:04:28',NULL);
 
 /*!40000 ALTER TABLE `guests` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -522,7 +526,11 @@ VALUES
 	(12,'alex','update','users','2016-07-30 19:22:59',NULL),
 	(13,'alex','update','users','2016-07-30 19:25:33',NULL),
 	(14,'alex','update','users','2016-07-30 19:25:52',NULL),
-	(15,'alex','update','users','2016-07-30 19:26:08',NULL);
+	(15,'alex','update','users','2016-07-30 19:26:08',NULL),
+	(16,'','update','orders','2016-08-01 10:54:28',NULL),
+	(17,'','update','orders','2016-08-01 10:54:28',NULL),
+	(18,'','update','orders','2016-08-01 10:55:34',NULL),
+	(19,'','update','orders','2016-08-01 10:55:34',NULL);
 
 /*!40000 ALTER TABLE `log` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -605,19 +613,30 @@ CREATE TABLE `orders` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `guest_id` int(11) DEFAULT NULL,
+  `guest_name` varchar(200) DEFAULT NULL,
   `payment` varchar(100) NOT NULL,
-  `delivery_option_id` int(11) NOT NULL,
+  `delivery_option` varchar(20) NOT NULL DEFAULT '',
+  `payment_option` varchar(20) DEFAULT NULL,
   `delivery_address` varchar(1000) NOT NULL,
   `receipt_address` varchar(1000) NOT NULL,
   `cart_id` int(11) DEFAULT NULL,
   `coupon_code_id` int(11) NOT NULL,
   `status` int(11) NOT NULL,
-  `is_active` int(11) NOT NULL,
+  `is_active` int(11) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+
+INSERT INTO `orders` (`id`, `user_id`, `guest_id`, `guest_name`, `payment`, `delivery_option`, `payment_option`, `delivery_address`, `receipt_address`, `cart_id`, `coupon_code_id`, `status`, `is_active`, `created_at`, `deleted_at`)
+VALUES
+	(1,NULL,4,'hallo','','0',NULL,'address','',NULL,0,0,1,'2016-08-01 09:02:45',NULL);
+
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 # Dump of table products

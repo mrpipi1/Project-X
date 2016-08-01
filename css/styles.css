@@ -2492,7 +2492,7 @@ cursor: pointer;
 .breadcrumbs i:last-child{
   display: none;
 }
-.error_detailansicht{
+.error_detailansicht, .error_message_checkout{
   max-width: 75vw;
   color: #b50101;
   font-size: 1em;
@@ -2500,7 +2500,7 @@ cursor: pointer;
   padding: 0 0 1em 0;
   margin: 0 auto;
 }
-.error_detailansicht a:hover{
+.error_detailansicht a:hover, .error_message_checkout:hover{
   color: #8e0000;
 }
 .errormessage_detail_wrapper{

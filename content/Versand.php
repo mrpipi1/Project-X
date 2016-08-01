@@ -19,15 +19,15 @@
 
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="post" name="shipping-type" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'post'){echo 'checked';} ?>/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
+                    <input type="radio" id="post" name="delivery_option" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'post'){echo 'checked';} ?>/> <label for="post">Post (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="DHL" name="shipping-type" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'dhl'){echo 'checked';} ?>/> <label for=DHL>DHL (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
+                    <input type="radio" id="DHL" name="delivery_option" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'dhl'){echo 'checked';} ?>/> <label for=DHL>DHL (5€ Versandkosten, ab 40€ Versandkostenfrei.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="express" name="shipping-type" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'express'){echo 'checked';} ?>/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
+                    <input type="radio" id="express" name="delivery_option" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'express'){echo 'checked';} ?>/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
                 </p>
 
             </form>
@@ -39,17 +39,16 @@
             <h2 class="hl_checkout">Zahlungsart:</h2>
 
             <form class="form_payment" action="#" method="post">
-
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="vorkasse" name="payment-type" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'vorkasse'){echo 'checked';} ?>/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
+                    <input type="radio" id="vorkasse" name="payment_option" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'vorkasse'){echo 'checked';} ?>/> <label for="vorkasse">Vorkasse (Das Paket wird nach eingang der Zahlung verschickt.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="rechnung" name="payment-type" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'rechnung'){echo 'checked';} ?>/> <label for=rechnung>Rechnung (Zahlung binnen 14 Tagen nach Erhat der Ware.)</label>
+                    <input type="radio" id="rechnung" name="payment_option" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'rechnung'){echo 'checked';} ?>/> <label for=rechnung>Rechnung (Zahlung binnen 14 Tagen nach Erhat der Ware.)</label>
                 </p>
 
                 <p class="radiobutton_wrapper">
-                    <input type="radio" id="nachname" name="payment-type" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'nachname'){echo 'checked';} ?>/> <label for="nachname">Nachname (Bezahlung bei lieferung des Pakets.)</label>
+                    <input type="radio" id="nachname" name="payment_option" class="radiobutton" <?php if(isset($row['pref_payment']) && strtolower($row['pref_payment']) == 'nachname'){echo 'checked';} ?>/> <label for="nachname">Nachname (Bezahlung bei lieferung des Pakets.)</label>
                 </p>
 
             </form>
@@ -134,7 +133,7 @@
         </div>
 
         <div class="btn_checkout">
-            <a href="index.php?page=Zusammenfassung" >weiter</a>
+            <span class="next_btn_versand" >weiter</span>
         </div>
     </div>
 
