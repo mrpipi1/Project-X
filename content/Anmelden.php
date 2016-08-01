@@ -32,12 +32,18 @@
                 </form>
 
                 <div class="form_checkout_text-link">
-                    <div class="form_checkout-text">
-                        <a href="#" class="form_checkout_link">Passwort vergessen?</a>
+                  <div><h4 class="form_checkout-sectionsheadline">Noch kein Kunde?</h4>
+                       <a href="index.php?page=Registrieren" class="form_checkout_link">Jetzt registrieren!</a>
+                  </div>
+                    <div class="profile_shop_link_wrapper profile_shop_link_wrapper_login">
+                      <!-- hidden user info messages -->
+                      <div class="email_was_send">Du wirst in kürze eine Email mit deinem neuen Passwort erhalten, solltest du keine Email erhalten kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a></div>
+                      <div class="profile_error_message_password">Die Email konnte nicht gesendet weden, bitte kontaktiere uns unter <a href="mailto:office@lotusyoga.at?subject=Password-reset" class="profile-email">office@lotusyoga.at</a> oder <a href="tel:0155555555">01 555 555 55</a></div>
+                      <!-- password reset + confirmation -->
+                      <div class="profile_shop_link  profile_info_label">Passwort vergessen?</div>
+                      <div class="send_password_message">Passwort zurücksetzen? <br /><div class="confirm">Ja, neues Passwort zuschicken.</div><br /><div  class="deny"<div>Abbrechen</div>
                     </div>
-                    <div><h4 class="form_checkout-sectionsheadline">Noch kein Kunde?</h4>
-                         <a href="index.php?page=Registrieren" class="form_checkout_link">Jetzt registrieren!</a>
-                    </div>
+
                 </div>
 
             </section>

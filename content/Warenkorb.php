@@ -51,39 +51,42 @@
 
                           <ul class="actions_card-item edit-show edit-show-<?php echo $row['id']; ?>">
                             <li><ul class="selects">
-                              <?php
+                                      <?php
 
-                                        mysqli_data_seek($sizes, 0);
-                                        $size_cnt = 0;
-                                        while ($row4 = mysqli_fetch_assoc($sizes)) {
-                                            //print_r($row3);
+                                                mysqli_data_seek($sizes, 0);
+                                                $size_cnt = 0;
+                                                while ($row4 = mysqli_fetch_assoc($sizes)) {
+                                                    //print_r($row3);
 
-                                            if($row['product_id'] == $row4['product_id']) {
-                                                $size_cnt++;
-                                                if($row4['stock'] > 0){
+                                                    if($row['product_id'] == $row4['product_id']) {
+                                                        $size_cnt++;
+                                                        if($row4['stock'] > 0){
+                                                            if($row4['size'] == 'onesize'){
+                                                                echo "<li class='size size-selected no-size'>".strtoupper($row4['size'])."</li>";
+                                                              }else if($row4['size'] == $row['product_size']){
+                                                                echo "<li class='size size-selected'>".strtoupper($row4['size'])."</li>";
+                                                              }else{
+                                                                  echo "<li class='size'>".strtoupper($row4['size'])."</li>";
+                                                              }
+                                                        }else{
 
-                                                      if($row4['size'] == $row['product_size']){
-                                                       echo "<li class='size size-selected'>".strtoupper($row4['size'])."</li>";
-                                                      }else{
-                                                        echo "<li class='size'>".strtoupper($row4['size'])."</li>";
-                                                      }
-                                                }else{
+                                                                echo "<li class='size-out'>".strtoupper($row4['size'])."</li>";
+                                                        }
 
-                                                        echo "<li class='size-out'>".strtoupper($row4['size'])."</li>";
+                                                    }
+                                                }
+                                                if($size_cnt == 0){
+                                                  echo "<li class='size size-selected no-size'>'onesize'</li>";
                                                 }
 
-                                            }
-                                        }
-                                        if($size_cnt == 0){
-                                          echo "<li class='size size-selected no-size'>'no'</li>";
-                                        }
+                                          ?>
+                                        </ul>
+                                    </li>
 
-                                  ?>
-                                </ul>
-                            </li>
+
                             <li class="farbe"><?php echo $row2['color']; ?></li>
                             <li><div class="quantity_wrapper">
-                        <a id="down" href="#" onclick="updateSpinner(this);">-</a><input id="content" value="<?php echo $row['quantity']; ?>" type="text" class=" quantity"/><a id="up" href="#" onclick="updateSpinner(this);">+</a>
+                        <span id="down"  onclick="updateSpinner(this);">-</span><input id="content" value="<?php echo $row['quantity']; ?>" type="text" class=" quantity"/><span id="up" href="#" onclick="updateSpinner(this);">+</span>
                     </div></li>
 
 
@@ -95,9 +98,9 @@
 
                           <div class="price_wrapper"><?php echo $row2['price']; ?></div>
                           <div class="delete_wrapper">
-                            <a href="#" class="edit edit-show edit-show-<?php echo $row['id']; ?>" onClick="save_edited_cart_item('<?php echo $row['product_id']; ?>','<?php echo $row['id']; ?>')"><i class="fa fa-floppy-o" aria-hidden="true"></i></a>
-                            <a href="#" class="edit edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="edit_cart_item('<?php echo $row['id']; ?>')"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a href="#" class="delete edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></a>
+                            <span class="edit edit-show edit-show-<?php echo $row['id']; ?>" onClick="save_edited_cart_item('<?php echo $row['product_id']; ?>','<?php echo $row['id']; ?>')"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+                            <span href="#" class="edit edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="edit_cart_item('<?php echo $row['id']; ?>')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                            <span href="#" class="delete edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></span>
                           </div>
 
                       </div>
@@ -186,5 +189,3 @@
         $delivery_cost = 0;
     }
   }
-
-

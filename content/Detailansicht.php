@@ -43,18 +43,22 @@
 
                     <?php
                     mysqli_data_seek($sizes, 0);
-                    $cnt = 0;
+                    $size_cnt = 0;
                     while ($row3 = mysqli_fetch_assoc($sizes)) {
                         //print_r($row3);
 
                         if($row['id'] == $row3['product_id']) {
-
+                            $size_cnt++;
                             if($row3['stock'] > 0){
                                 if($cnt == 0) {
                                     echo "<li class='selects-text'>Größe:</li>";
                                     $cnt++;
                                 }
-                                echo "<li class='size'>".strtoupper($row3['size'])."</li>";
+                                if($row3['size'] == 'onesize') {
+                                    echo "<li class='size size-selected no-size'>" . strtoupper($row3['size']) . "</li>";
+                                }else{
+                                    echo "<li class='size'>" . strtoupper($row3['size']) . "</li>";
+                                }
                             }else{
                                 if($cnt == 0) {
                                     echo "<li class='selects-text'>Größe:</li>";
@@ -64,6 +68,10 @@
                             }
 
                         }
+
+                    }
+                    if($size_cnt == 0){
+                        echo "<li class='size size-selected no-size'>onesize</li>";
                     }
                 }
                     ?>

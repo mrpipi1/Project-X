@@ -55,7 +55,7 @@ $(window).scroll(function(){
 
 
 // ### SMOOTH SCROOL TO ANCHOR ###
-$('a').click(function(){
+$('.nav_main a').click(function(){
   var scrollOffSet = 43;
     $('html, body').animate({
         scrollTop: $( $(this).attr('href') ).offset() .top - scrollOffSet
