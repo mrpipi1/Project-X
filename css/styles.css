@@ -727,7 +727,7 @@ ______ ____  _____  __  __
     font-weight: 200;
     max-width: 300px;
     min-width: 200px;
-    font-size: 0.7em;
+    cursor: pointer;
 }
 .btn a {
     display: block;
@@ -745,10 +745,24 @@ ______ ____  _____  __  __
 }
 
 .btn .input {
-   font-size: 0.9em;
-   border: none;
-   padding: 1em 2em;
-   text-transform: uppercase;
+ letter-spacing: 1.8px;
+ font-weight: 200;
+ font-size: 0.9em;
+ border: none;
+ padding: 1em 2em;
+ text-transform: uppercase;
+ background-color: #65a591;
+ color: #fff;
+ border: 1px solid #fff;
+ transition: all 0.3s ease-in-out;
+ cursor: pointer;
+
+}
+
+.btn .input:hover {
+  background-color: #ffffff;
+  color: #65a591;
+  border: 1px solid #65a591;
 }
 
    /* ---------------------------------------------------------------------*/
@@ -1148,6 +1162,7 @@ Abschluss
 }
 
 .wrapper_form_login {
+  width: 35%;
 }
 .small-text {
     font-size: small;
@@ -1163,30 +1178,14 @@ h2.hl_checkout {
   display: none;
 }
 .raidiobutton_wrapper_shipping{
-  margin: auto auto 0 auto;
-  bottom: 0;
   font-size: 1em;
-  letter-spacing: 0.5px;
-  border: 1px solid #5a8e7d;
+  letter-spacing: 0.2px;
   transition: all 0.5s linear;
-  padding: 0.7em 2em;
-font-weight: 300;
-}
-
-.raidiobutton_wrapper_shipping input[type=checkbox]{
-   display:none;
-}
-.raidiobutton_wrapper_shipping.checkbox-active {
-  background-color: #65a591;
-  color: #fff;
-}
-.raidiobutton_wrapper_shipping:hover {
-  background-color: #65a591;
-  color: #fff;
+  font-weight: 300;
 }
 
 .billing-address, .shipping-address {
-  width: 30%;
+  width: 35%;
 }
 
 .form_checkout-sectionsheadline {
@@ -1376,9 +1375,14 @@ Detailseite
     padding: 1em 0;
 }
 .color, .size {
-    width: 15px;
-    height: 15px;
+    width: 30px;
+    height: 30px;
     margin: 10px;
+    font-weight: 200;
+}
+
+.size {
+  line-height: 30px;
 }
 
 .size-out {
@@ -1467,11 +1471,10 @@ Warenkorb
   }
 .card-header li {
     padding: 1vw 0;
-    border: 1px solid red;
 
 }
 .description {
-    flex-basis: 60%;
+    flex-basis: 58%;
 }
 .actions {
     flex-basis: 10%;
@@ -1492,7 +1495,7 @@ Warenkorb
 /* Bild */
 
 .img_card {
-    width: 10vw;
+    width: 8vw;
     height: 100%;
 }
 
@@ -1501,8 +1504,7 @@ Warenkorb
 .description_card-item {
     display: flex;
     flex-direction: column;
-    flex-basis: 76%;
-    border: 1px solid green;
+    flex-basis: 77%;
     align-items: center;
     justify-content: center;
 
@@ -1511,10 +1513,11 @@ Warenkorb
     width: 20vw;
 }
 .description_card-item li:first-child {
-    margin: 15px 0 20px;
+    margin: 0.6em 0;
 }
 .description_card-item li:last-child {
     font-size: small;
+    margin: 0 0 0.6em;
 }
 
 /* Menge, Farbe, Größe und Preis */
@@ -1524,13 +1527,11 @@ Warenkorb
     display: flex;
     flex-basis: 48%;
     justify-content: space-around;
-    border: 1px solid blue;
 }
 .actions_card-item li, .price_wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid fuchsia;
     flex-basis: 34%;
 }
 .farbe {
@@ -1540,7 +1541,6 @@ Warenkorb
   font-size: 1vw;
     text-align: center;
     flex-basis: 20%;
-    border: 1px solid purple;
 }
 
 /* X zum löschen vom produkt */
@@ -1550,7 +1550,6 @@ Warenkorb
     flex-direction: column;
     justify-content: center;
     flex-grow: 0;
-    border: 1px solid aqua;
 }
 .delete, .edit {
     width: 20px;
@@ -1865,9 +1864,10 @@ ____            _____  _  __ ______  _   _  _____
     min-height: calc(100vh - 60px);
 }
 .hl_form_backend {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 200;
-    padding: 2vw 0 2vw 0;
+    padding: 1em 0.5em;
+    text-transform: capitalize;
 }
 
 /* Backend Flyout */
@@ -2248,28 +2248,48 @@ ____            _____  _  __ ______  _   _  _____
 
 .wrapper-form-backend {
     width: 80vw;
+    margin: auto;
 }
 
 
 .radiobutton_wrapper_backend {
+  padding: 0 1em;
+  margin: 1.3em 0;
 
 }
 
 .form_backend {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
 
 }
 .form_backend .form-group_backend{
-  width: 100%;
+
   flex-basis: 45%;
-  height: 4.5em;
 }
 
+
 .form-group_backend {
-  padding: 1em;
+  margin: 1em;
+}
+
+.form-group_backend:nth-child(5) {
   display: flex;
+  align-items: center;
+}
+
+.form-group_backend  #male, .form-group_backend #female {
+  flex-basis: 4%;
+  margin-left: 1em;
+}
+
+
+.btn_backend {
+  flex-basis: 100%;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+  margin: 1em 0;
 }
 
 /*.form-group_backend:nth-child(n+8) {
@@ -2279,16 +2299,16 @@ ____            _____  _  __ ______  _   _  _____
 
 
 .label_backend {
-  display: block;
-  float: left;
-  width: 100%;
+  width: auto;
   font-size: 1em;
   margin: 0.5em 0;
+  font-weight: 300;
 }
 
 .form-group_backend input[type] {
     background-color: #65a591;
     color: white;
+    margin: 0.5em 0;
 }
 
 .label_backend:after {
@@ -2297,9 +2317,9 @@ ____            _____  _  __ ______  _   _  _____
 
 .form-group_backend input {
   width: 100%;
-  padding: 1em;
+  padding: 0.6em;
   border: none;
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 200;
 }
 
@@ -2308,6 +2328,10 @@ ____            _____  _  __ ______  _   _  _____
   width: 15%;
   margin: 0 2em;
 }
+
+
+
+
 /*#######################
 pie chart
 #######################*/
@@ -2468,7 +2492,7 @@ cursor: pointer;
 .breadcrumbs i:last-child{
   display: none;
 }
-.error_detailansicht, .error_message_checkout{
+.error_detailansicht{
   max-width: 75vw;
   color: #b50101;
   font-size: 1em;
@@ -2479,17 +2503,10 @@ cursor: pointer;
 .error_detailansicht a:hover{
   color: #8e0000;
 }
-.errormessage_detail_wrapper, .errors_checkout_wrapper{
+.errormessage_detail_wrapper{
   display: none;
   position: absolute;
   top:75px;
   left:0;
   width: 100%;
-}
-.form-group_radio_register{
-  display: flex;
-  margin-bottom: 0;
-}
-.radiobutton_first{
-  margin-right: 20px;
 }

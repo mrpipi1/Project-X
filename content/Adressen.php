@@ -41,14 +41,14 @@
         </section>
 
 
-        <!-- <div class="raidiobutton_wrapper_shipping">
+        <div class="raidiobutton_wrapper_shipping">
           <label for="is_shipping_address" class="label_backend">Gleich wie Rechnungsadresse</label>
           <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
-        </div> -->
-        <div class="raidiobutton_wrapper_shipping">
-          <div id="is_shipping_address">Gleich wie Rechnungsadresse</div>
-          <!-- <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/> -->
         </div>
+        <!-- <div class="raidiobutton_wrapper_shipping">
+          <div id="is_shipping_address">Gleich wie Rechnungsadresse</div>
+        </div> -->
+
 
         <section class="shipping-address">
             <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>

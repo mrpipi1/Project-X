@@ -26,11 +26,11 @@
                     subtitle = '';
                   }
 
-                  var pie = new d3pie("test", {
+                  var pie = new d3pie("pieChart", {
                      "header":{
                         "title":{
                            "text": name,
-                           "color":"#51bd4c",
+                           "color":"#65a591",
                            "fontSize":22,
                            "font":"open sans"
                         },
@@ -113,7 +113,7 @@
 
  }
  // here are the colors for the statistics defined
-var colors = ['#000', '#848484', '#dddddd', '#e98e8e', '#3b5457', '#4752d1', '#71f067'];
+var colors = ['#EC644B', '#F1A9A0', '#DCC6E0', '#E4F1FE', '#4183D7', '#A2DED0', '#FDE3A7'];
 statistik_data_Query('users', 'gender', ['female', 'male'], colors, 'Gender');
 statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment', 'Test Subheadline');
 statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors, 'prefered Delivery');
