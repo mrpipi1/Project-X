@@ -463,6 +463,7 @@ $('.btn_cart_next').click(function(event){
   $.post('logic/checkout_logic.php', data, function(response, status) {
       if(status == 'success'){
         console.log('success');
+        console.log(response);
       }else{
         console.log('error');
         $('.error_message_checkout').text('');

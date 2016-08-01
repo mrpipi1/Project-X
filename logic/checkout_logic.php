@@ -5,12 +5,17 @@
   $id_equals = isset($_SESSION['guest_id']) ? "guest_id = '".$_SESSION['guest_id']."'" : (isset($_SESSION['user']['user_id']) ?  "user_id = '".$_SESSION['user']['user_id']."'" : NULL);
 
 if(isset($_POST['action']) && $_POST['action'] == 'add_cart'){
+  $result = '';
   if($guest_id != NULL){
-    $sql = "INSERT INTO orders (guest_id) VALUES ('".$guest_id."')";
+    $sql = "INSERT INTO orders (guest_id) VALUES ('$guest_id')";
+    $result = mysqli_query($link, $sql);
+    echo $result;
   }elseif($user_id != NULL){
-    $sql = "INSERT INTO orders (user_id) VALUES ('".$user_id."')";
+    $sql = "INSERT INTO orders (user_id) VALUES ('$user_id')";
+    $result = mysqli_query($link, $sql);
+    echo $result;
   }
-  //$result = mysqli_query($link, $sql);
+
 }
 
   if(isset($GET['page']) && $GET['page'] == 'Adressen'){
