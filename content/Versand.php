@@ -29,6 +29,7 @@
                 <p class="radiobutton_wrapper">
                     <input type="radio" id="express" name="delivery_option" class="radiobutton" <?php if(isset($row['pref_delivery']) && strtolower($row['pref_delivery']) == 'express'){echo 'checked';} ?>/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
                 </p>
+                <input type="hidden" name="user_id" value="<?php echo $_SESSION['user']['user_id']; ?>" required class="input">
 
             </form>
 
@@ -76,6 +77,7 @@
                   <p class="radiobutton_wrapper">
                       <input type="radio" id="express" name="shipping-type" class="radiobutton"/> <label for="express">Expreeversand (10€ Versandkosten.)</label>
                   </p>
+                  <input type="hidden" name="guest_id" value="<?php echo $_SESSION['guest_id']; ?>" required class="input">
 
               </form>
 

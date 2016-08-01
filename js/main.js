@@ -375,18 +375,44 @@ function insert_or_update_checkout_address(action){
                     $.post('logic/insert_checkout.php', data, function (response, status) {
                         console.log(response);
                         console.log(status);
-                        if (response == 1 && status == 'success') {
-                            console.log('passt');
+                        if (response != 0 && status == 'success') {
+                            window.location.href = "index.php?page=Versand&order="+response;
                             /*$('.profile_success_message_user').css('display', 'block');
                              setTimeout(function(){ $('.profile_success_message_user').css('display', 'none'); }, 10000);*/
                         } else {
-                            console.log('fail');
+                            $('.error_message_checkout').text('');
+                            $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+                            $('.errors_checkout_wrapper').css('display', 'block');
                         }
                     });
                 }
             });
         }
     });
+}
+
+function insert_or_update_checkout_payment(action, step) {
+    var delivery_values = $('.form_shipping input:checked').attr('id');
+    var payment_values = $('.form_payment input:checked').attr('id');
+    var coupon_code = $('.form_payment input[name=gutschein]').val();
+    var guest_id = $('.form_payment input[name=guest_id]').val();
+    var user_id = $('.form_payment input[name=user_id]').val();
+    var data = {action: action, delivery: delivery_values, payment: payment_values, step: step, coupon: coupon_code, user_id: user_id, guest_id: guest_id};
+    $.post('logic/insert_checkout.php', data, function (response, status) {
+        console.log(response);
+        console.log(status);
+        if (response != 0 && status == 'success') {
+            window.location.href = "index.php?page=Zusammenfassung";
+            /*$('.profile_success_message_user').css('display', 'block');
+             setTimeout(function(){ $('.profile_success_message_user').css('display', 'none'); }, 10000);*/
+        } else {
+            $('.error_message_checkout').text('');
+            $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
+            $('.errors_checkout_wrapper').css('display', 'block');
+        }
+
+    });
+
 }
 
 
@@ -528,14 +554,29 @@ $('.next_btn_adressen').on('click',function(event){
         $('.user_info_change_wrapper').css('display', 'none');*/
         //var id = $('.profile_update_btn').attr('id');
         console.log('test');
-        insert_or_update_checkout_address('new');
+        insert_or_update_checkout_address('new', 'address');
+    }
+});
+
+$('.next_btn_versand').on('click',function(event){
+    console.log($(this).parent().parent().parent().find('input.invalid'));
+    var form_data=$(this).parent().parent().parent().find('input.invalid');
+    if(form_data.length > 0){
+        console.log('error hier anzeigen');
+        event.preventDefault();
+    }else{
+        /*$('.user_info_wrapper').css('display', 'block');
+         $('.user_info_change_wrapper').css('display', 'none');*/
+        //var id = $('.profile_update_btn').attr('id');
+        console.log('test');
+        insert_or_update_checkout_payment('new', 'payment_shipping');
     }
 });
 
 
 
 
-$('.next_btn_versand').click(function(){
+/*$('.next_btn_versand').click(function(){
     var error_shipping = 1;
     var error_payment = 1;
     var values = {};
@@ -576,7 +617,7 @@ $('.next_btn_versand').click(function(){
     }else{
       console.log(error_shipping+" / "+error_payment);
     }
-});
+});*/
 
 
 $('.btn_cart_next').click(function(event){
