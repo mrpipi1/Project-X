@@ -38,7 +38,7 @@ html {
     margin: 0;
 }
 p {
-    font-size: 1.1em;
+    font-size: 2.8vmin;
     font-weight: 100;
     line-height: 6vh;
 }
@@ -82,7 +82,7 @@ a {
 /*    ## courses ##    */
 
 .main h5 {
-    font-size: 1.6vw;
+    font-size: 4vmin;
     font-weight: 300;
     text-align: right;
     padding: 0.5em 0;
@@ -91,9 +91,10 @@ a {
 
 /*    ## employees ##    */
 .main h6 {
-    font-size: 1.25vw;
-    border: 1px solid purple;
+    font-size: 3.2vmin;
     font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .light {
@@ -405,25 +406,29 @@ _   _ ____  ______ _____    _    _ _   _  _____
     text-align: center;
 }
 
+
+.about_us p{
+  font-size: 2.5vmin;
+  line-height: 8vmin;
+}
 /*Mitarbeiter*/
 
 .employees_main {
   padding: 0 2em;
 }
-.employees_main h2 {
-    padding: 0 3vw;
-    text-align: left;
-}
+
 .employees_main-info {
     line-height: 2;
     display: flex;
-    padding: 1vw 3vw;
+    padding: 1em;
     align-items: flex-end;
 }
 .employees_main p {
-    padding: 0 3vw;
-    line-height: 1.7;
+    padding: 0 3em;
+    line-height: 5vmin;
     text-align: justify;
+    font-size: 2.5vmin;
+    font-weight: 300;
 }
 .employees_main li {
     text-align: center;
@@ -433,6 +438,7 @@ _   _ ____  ______ _____    _    _ _   _  _____
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 2vmin;
 }
 .employees_main ul:nth-child(2n) {
     display: flex;
@@ -847,7 +853,7 @@ ______ ____  _____  __  __
 
    }
    .input:focus~ .label, .input:valid~ .label {
-       font-size: 0.9em;
+       font-size: 1.8vmin;
        top: -25px;
        color: #5a8e7d;
    }
