@@ -187,29 +187,4 @@
     }
   }
 
-  while($row = mysqli_fetch_assoc($res)){
-    if(substr($row['birthday'], 0, 3) != 0000){
-      $birth_year = substr($row['birthday'], 0, 3);
-      switch ($birth_year){
-        case ($birth_year <= 1998):
-          $unter18++;
-          break;
-        case ($birth_year >1998 && $birth_year <= 1986):
-          $neunzehn_30++;
-          break;
-        case ($birth_year > 1986 && $birth_year <= 1976):
-          $einunddreißig++;
-          break;
-        case ($birth_year > 1976 && $birth_year <= 1956):
-          $einundvierzig++;
-          break;
-          case ($birth_year > 1956):
-            $older_than++;
-            break;
-      }
-  }
-}
-  $result = array();
-  $result = array_push($result, $unter18,$neunzehn_30,$einunddreißig,$einundvierzig,$older_than);
-  echo json_encode($result);
-    ?>
+

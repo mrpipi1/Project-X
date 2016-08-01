@@ -105,7 +105,7 @@
                         ?>
                         <div class="cart-header-item">
                             <img src="<?php echo $row2['pic']; ?>"/>
-                            <p class="cart-header-name"><?php echo $row2['_name']; ?></p>
+                            <span class="cart-header-name"><?php echo $row2['_name']; ?></span>
                             <span id="cart-header-quantity"><?php echo $row['quantity']; ?></span>
                         </div>
                         <?php
