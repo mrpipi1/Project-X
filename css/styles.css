@@ -1577,11 +1577,11 @@ Warenkorb
 
 .delete_wrapper {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     flex-grow: 0;
 }
 .delete_wrapper {
+
     display: flex;
     justify-content: center;
     flex-grow: 0;
@@ -1593,11 +1593,13 @@ Warenkorb
 .edit-show {
     display:none;
 }
+.no-size{
+  display: none !important;
+}
 .delete, .edit {
     width: 20px;
     height: 20px;
     margin-right: 2px;
-    //text-indent: -99999px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1606,7 +1608,7 @@ Warenkorb
     //background-image: url('../img/icons/close.svg');
 }
 .edit {
-    margin-right: 1em;
+    margin-right: 5px;
     //background-image: url('../img/icons/wrench75.svg');
 }
 .edit i, .delete i{
