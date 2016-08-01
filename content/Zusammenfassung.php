@@ -53,8 +53,8 @@ include("breadcrumbs.php");
 
 
         <div class="raidiobutton_wrapper_shipping">
-          <label for="is_shipping_address" class="label_backend">Gleich wie Rechnungsadresse</label>
           <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
+          <label for="is_shipping_address" class="">Gleich wie Rechnungsadresse</label>
         </div>
         <!-- <div class="raidiobutton_wrapper_shipping">
           <div id="is_shipping_address">Gleich wie Rechnungsadresse</div>
@@ -157,8 +157,8 @@ include("breadcrumbs.php");
               <form class="form_checkout" action="#" method="post">
 
                 <div class="raidiobutton_wrapper_shipping">
-                  <label for="is_shipping_addess" class="label_backend">gleich wie Rechnungsadresse</label>
                   <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
+                  <label for="is_shipping_addess" class="">gleich wie Rechnungsadresse</label>
                 </div>
 
                 <div class="shipping_form_wrapper">
