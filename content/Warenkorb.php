@@ -62,14 +62,13 @@
                                                         $size_cnt++;
                                                         if($row4['stock'] > 0){
                                                             if($row4['size'] == 'onesize'){
-                                                                echo "<li class='size size-selected no-size'>".strtoupper($row4['size'])."</li>";
+                                                                echo "<li class='size size-selected ".$row['id']." no-size'>".strtoupper($row4['size'])."</li>";
                                                               }else if($row4['size'] == $row['product_size']){
-                                                                echo "<li class='size size-selected'>".strtoupper($row4['size'])."</li>";
+                                                                echo "<li class='size size-selected ".$row['id']."'>".strtoupper($row4['size'])."</li>";
                                                               }else{
-                                                                  echo "<li class='size'>".strtoupper($row4['size'])."</li>";
+                                                                  echo "<li class='size ".$row['id']."'>".strtoupper($row4['size'])."</li>";
                                                               }
                                                         }else{
-
                                                                 echo "<li class='size-out'>".strtoupper($row4['size'])."</li>";
                                                         }
 

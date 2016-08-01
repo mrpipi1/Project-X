@@ -206,7 +206,9 @@ function edit_cart_item(cart_id){
 }
 
 function save_edited_cart_item(product_id, cart_id){
-  var size = $(".size-selected").text();
+  // var class_id = "."+product_id;
+   //var size = $(class_id).text();
+  var size = $('.size-selected.'+cart_id).text();
     var quantity = $(".quantity").val();
     if(size && quantity > 0) {
        $.post('logic/update_cart_item.php', {
