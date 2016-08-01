@@ -1511,13 +1511,13 @@ Warenkorb
 .description_card-item {
     display: flex;
     flex-direction: column;
-    flex-basis: 77%;
+    flex-basis: 80%;
     align-items: center;
     justify-content: center;
 
 }
 .description_card-item li {
-    width: 20vw;
+    width: 30vw;
 }
 .description_card-item li:first-child {
     margin: 0.6em 0;
@@ -1525,6 +1525,8 @@ Warenkorb
 .description_card-item li:last-child {
     font-size: small;
     margin: 0 0 0.6em;
+    line-height: 1.4;
+
 }
 
 /* Menge, Farbe, Größe und Preis */
@@ -1556,22 +1558,26 @@ Warenkorb
     font-size: 1.2vmax;
   }
   .description_card-item li:first-child {
-    font-size: 1.8vmax;
+    font-size: 1.6vmax;
   }
 }
 
 @media screen and (max-width: 875px) {
   .price_wrapper, .actions_card-item, .description_card-item li:last-child {
-    font-size: 1.4vmax;
+    font-size: 1.3vmax;
   }
   .description_card-item li:first-child {
-    font-size: 1.8vmax;
+    font-size: 1.6vmax;
   }
   .card-header {
     font-size: 1.6vmax;
   }
 }
+/* Wenn das Produkt bearbeitet wird*/
 
+.actions_card-item.edit-show {
+  /*display: flex;*/
+}
 
 /* X zum löschen vom produkt */
 
