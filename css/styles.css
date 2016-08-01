@@ -38,7 +38,7 @@ html {
     margin: 0;
 }
 p {
-    font-size: 2.8vmin;
+    /*font-size: 2.8vmin;*/
     font-weight: 100;
     line-height: 6vh;
 }
@@ -2179,7 +2179,7 @@ ____            _____  _  __ ______  _   _  _____
 .dashboard_table_wrapper{
   float: left;
   width:45%;
-  min-width: 580px;
+  min-width: 510px;
 }
 .dashboard_table_wrapper h3{
   display: inline-block;
@@ -2192,7 +2192,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 .table_backend th, .table_backend td {
     font-size: 0.8em;
-    padding: 6px 10px 6px;
+    padding: 6px 5px 6px;
 }
 .table_backend.table_dashboard td{
   font-size: 11px;
@@ -2202,6 +2202,9 @@ ____            _____  _  __ ______  _   _  _____
     font-weight: 600;
     text-align: left;
     height:40px;
+}
+.dashboard_table_wrapper .table_backend th {
+  font-size: 10px;
 }
 .table_backend th:last-child{
   width: 70px;
@@ -2571,4 +2574,7 @@ cursor: pointer;
 }
 .profile_shop_link_wrapper_register{
   margin-top: 20px;
+}
+#up, #down, .edit, .delete{
+  cursor: pointer;
 }

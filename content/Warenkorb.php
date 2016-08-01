@@ -99,8 +99,8 @@
                           <div class="price_wrapper"><?php echo $row2['price']; ?></div>
                           <div class="delete_wrapper">
                             <span class="edit edit-show edit-show-<?php echo $row['id']; ?>" onClick="save_edited_cart_item('<?php echo $row['product_id']; ?>','<?php echo $row['id']; ?>')"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
-                            <span href="#" class="edit edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="edit_cart_item('<?php echo $row['id']; ?>')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-                            <span href="#" class="delete edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></span>
+                            <span class="edit edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="edit_cart_item('<?php echo $row['id']; ?>')"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+                            <span class="delete edit-hide edit-hide-<?php echo $row['id']; ?>" onClick="delete_from_cart(<?php echo $row['id']; ?>)"><i class="fa fa-ban" aria-hidden="true"></i></span>
                           </div>
 
                       </div>
