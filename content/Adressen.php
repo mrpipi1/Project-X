@@ -40,19 +40,19 @@
 
         </section>
 
-<!-- 
-        <div class="raidiobutton_wrapper_shipping">
+
+        <!-- <div class="raidiobutton_wrapper_shipping">
           <label for="is_shipping_address" class="label_backend">Gleich wie Rechnungsadresse</label>
           <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
+        </div> -->
+        <div class="raidiobutton_wrapper_shipping">
+          <div id="is_shipping_address">Gleich wie Rechnungsadresse</div>
+          <!-- <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/> -->
         </div>
 
-
--->
         <section class="shipping-address">
             <h2 class="hl_checkout hl_shipping_address">Lieferadresse</h2>
             <form class="form_checkout" action="#" method="post">
-
-
 
               <div class="shipping_form_wrapper">
 
@@ -103,6 +103,7 @@
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
+                      <span class="error">
                   </div>
 
 
@@ -111,6 +112,7 @@
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Postleitzahl | Stadt*</label>
+                      <span class="error">
                   </div>
 
                   <div class="btn_checkout btn_big-checkout">
@@ -120,6 +122,7 @@
               </form>
 
           </section>
+
 
           <section class="shipping-address">
 
@@ -139,6 +142,7 @@
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
+                      <span class="error">
                   </div>
 
                   <div class="form-group">
@@ -146,6 +150,7 @@
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Postleitzahl | Stadt*</label>
+                      <span class="error">
                   </div>
 
                   <div class="btn_checkout btn_big-checkout">
@@ -154,7 +159,6 @@
                 </div>
 
               </form>
-
 
           </section>
           <?php
