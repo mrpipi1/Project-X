@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="tel" value="" required class="input">
+                    <input type="text" name="address" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Strasse | Hausnummer*</label>
@@ -25,10 +25,17 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="email" value="" required class="input">
+                    <input type="text" name="city" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label class="label">Postleitzahl | Stadt*</label>
+                    <label class="label">Stadt*</label>
+                    <span class="error">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="zip_code" value="" required class="input">
+                    <span class="highlight"></span>
+                    <span class="form-bar"></span>
+                    <label class="label">Postleitzahl*</label>
                     <span class="error">
                 </div>
 
@@ -65,7 +72,7 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="tel" value="" required class="input">
+                    <input type="text" name="address" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
                     <label class="label">Strasse | Hausnummer</label>
@@ -73,10 +80,17 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="text" name="email" value="" required class="input">
+                    <input type="text" name="city" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
-                    <label class="label">Postleitzahl | Stadt*</label>
+                    <label class="label">Stadt*</label>
+                    <span class="error">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="zip_code" value="" required class="input">
+                    <span class="highlight"></span>
+                    <span class="form-bar"></span>
+                    <label class="label">Postleitzahl*</label>
                     <span class="error">
                 </div>
 
@@ -109,15 +123,22 @@
 
 
                   <div class="form-group">
-                      <input type="text" name="city" value="<?php if(isset($row['zip_code'])){echo $row['zip_code'];} if(isset($row['city'])){echo $row['city'];} ?>" required class="input">
+                      <input type="text" name="city" value="<?php if(isset($row['city'])){echo $row['city'];} ?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
-                      <label class="label">Postleitzahl | Stadt*</label>
+                      <label class="label">Stadt*</label>
+                      <span class="error">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="zip_code" value="<?php if(isset($row['zip_code'])){echo $row['zip_code'];} ?>" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Postleitzahl*</label>
                       <span class="error">
                   </div>
 
                   <div class="btn_checkout btn_big-checkout">
-                      <input type="submit" name="reciept_address" value="Übernehmen" class="btn_big-checkout input">
+                      <input type="submit" name="reciept_address" value="Übernehmen" class="btn_big-checkout input checkout_receipt_address_submit">
                   </div>
 
               </form>
@@ -139,7 +160,7 @@
                 <div class="shipping_form_wrapper">
 
                   <div class="form-group">
-                      <input type="text" name="tel" value="" required class="input">
+                      <input type="text" name="address" value="" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
@@ -147,10 +168,17 @@
                   </div>
 
                   <div class="form-group">
-                      <input type="text" name="email" value="" required class="input">
+                      <input type="text" name="city" value="" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
-                      <label class="label">Postleitzahl | Stadt*</label>
+                      <label class="label">Stadt*</label>
+                      <span class="error">
+                  </div>
+                  <div class="form-group">
+                      <input type="text" name="zip_code" value="" required class="input">
+                      <span class="highlight"></span>
+                      <span class="form-bar"></span>
+                      <label class="label">Postleitzahl*</label>
                       <span class="error">
                   </div>
 

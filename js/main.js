@@ -304,7 +304,7 @@ $('.form-group input[type="text"], .form-group input[type="password"]').keyup(fu
         errtxt = 'Bitte geben Sie einen gültigen Namen ein!';
     } else if ($(this).attr('name').indexOf('password') > -1) {
         re = /^[a-z0-9_-]{5,18}$/;
-        errtxt = 'Bitte geben Sie eine gültiges Passwort ein!';
+        errtxt = 'Das Passwort muss mindestens 5, maximal 18 Zeichen beinhalten!';
     } else if ($(this).attr('name') == 'email' || $(this).attr('name') == 'login_guest')  {
         re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
         errtxt = 'Bitte geben Sie eine gültige E-Mailaddresse ein!';
