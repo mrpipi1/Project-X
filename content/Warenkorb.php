@@ -71,21 +71,18 @@
                                                         }else{
                                                                 echo "<li class='size-out'>".strtoupper($row4['size'])."</li>";
                                                         }
-
                                                     }
                                                 }
                                                 if($size_cnt == 0){
                                                   echo "<li class='size size-selected no-size'>'onesize'</li>";
                                                 }
-
                                           ?>
                                         </ul>
                                     </li>
 
-
                             <li class="farbe"><?php echo $row2['color']; ?></li>
                             <li><div class="quantity_wrapper">
-                        <span id="down"  onclick="updateSpinner(this);">-</span><input id="content" value="<?php echo $row['quantity']; ?>" type="text" class=" quantity"/><span id="up" href="#" onclick="updateSpinner(this);">+</span>
+                        <span id="down"  onclick="updateSpinner(this, <?php echo $row['id']; ?>);">-</span><input id="<?php echo $row['id']; ?>" value="<?php echo $row['quantity'];?>" type="text" class=" quantity <?php echo $row['id'];?>"/><span id="up" onclick="updateSpinner(this, <?php echo $row['id']; ?>);">+</span>
                     </div></li>
 
 

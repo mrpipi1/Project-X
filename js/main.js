@@ -100,20 +100,19 @@ function onScroll(event){
 
 // Produktmengenauswahl
  /* Mengenwahl, nur con 0 bis 11 => max value müssen wir dann aus der db holn, eingabe von user muss noch validiert werden ( auch ohne + & - */
- function updateSpinner(obj)
- {
-     var contentObj = document.getElementById("content");
-     var value = parseInt(contentObj.value);
-     if(obj.id == "down") {
-         if(value != 0 ){
-             value--;
-         }
-     } else {
-         if(value < 11){
-             value++;
-         }
-     }
-     contentObj.value = value;
+ function updateSpinner(obj, cart_id){
+     var contentObj = document.getElementById(cart_id);
+       var value = parseInt(contentObj.value);
+       if(obj.id == "down") {
+           if(value != 0 ){
+               value--;
+           }
+       } else {
+           if(value < 11){
+               value++;
+           }
+       }
+       contentObj.value = value;
  }
 
 // ### GOOGLE MAPS API - VIEW CONFIGS ###
