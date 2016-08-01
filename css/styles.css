@@ -2266,7 +2266,7 @@ ____            _____  _  __ ______  _   _  _____
 }
 .form_backend .form-group_backend{
 
-  flex-basis: 45%;
+  flex-basis: 30%;
 }
 
 
@@ -2317,7 +2317,7 @@ ____            _____  _  __ ______  _   _  _____
 
 .form-group_backend input {
   width: 100%;
-  padding: 0.6em;
+  padding: 0.5em;
   border: none;
   font-size: 0.8em;
   font-weight: 200;
