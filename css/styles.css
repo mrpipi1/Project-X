@@ -2578,3 +2578,6 @@ cursor: pointer;
 #up, #down, .edit, .delete{
   cursor: pointer;
 }
+.hl_shipping_address{
+  margin-bottom: calc(2em - 19px) !important;
+}
