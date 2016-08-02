@@ -1219,7 +1219,7 @@ h2.hl_checkout {
   display: none;
 }
 .raidiobutton_wrapper_shipping{
-  font-size: 1em;
+  font-size: 0.8em;
   letter-spacing: 0.2px;
   transition: all 0.5s linear;
   font-weight: 300;
@@ -1251,6 +1251,7 @@ Breadcrumbs
 }
 .breadcrumbs {
     display: flex;
+    white-space: nowrap;
 }
 .number_wrapper, .text_wrapper {
     display: flex;

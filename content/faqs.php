@@ -1,5 +1,21 @@
 
 <section class="content-wrapper footer-content">
+
+  <?php
+
+    while( $row = mysqli_fetch_assoc($faqs) ){
+      if($row['type'] == 'headline'){
+        echo '<h2>'.$row["content"].'</h2>';
+      }elseif($row['type'] == 'subheadline'){
+          echo '<h3>'.$row["content"].'</h3>';
+      }else{
+          echo '<p>'.$row["content"].'</p>';
+      }
+
+    }
+    ?>
+
+<!-- 
   <h2>FAQs</h2>
 
   <h3>Ich habe mein Passwort vergessen, was kann ich tun?</h3>
@@ -21,5 +37,7 @@
     <p>Wir liefern nur nach Österreich.</p>
 
   <h3>Wie gebe ich einen Artikel zurück?</h3>
-    <p>Sie können Ihre(n) Artikel innerhalb von 14 Tagen nach Erhalt Ihres Pakets für eine Gebühr in Höhe von 1,00 € zurückschicken. Die Artikel müssen ungetragen und in einwandfreiem Zustand sein.  Alle Pakete enthalten ein Rücksendeetikett und einen Lieferschein. Bitte verwenden Sie dieses Etikett, wenn Sie Artikel zurücksenden möchten.</p>
+    <p>Sie können Ihre(n) Artikel innerhalb von 14 Tagen nach Erhalt Ihres Pakets für eine Gebühr in Höhe von 1,00 € zurückschicken. Die Artikel müssen ungetragen und in einwandfreiem Zustand sein.  Alle Pakete enthalten ein Rücksendeetikett und einen Lieferschein. Bitte verwenden Sie dieses Etikett, wenn Sie Artikel zurücksenden möchten.</p> -->
+
+
 </section>
