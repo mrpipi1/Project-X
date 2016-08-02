@@ -20,6 +20,13 @@ function get_specific_content_data($table_name, $where, $equals){
     return $res;
 }
 
+function get_active_content_data($table_name, $where, $equals){
+    global $link;
+    $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = '" . $equals . "' AND is_active = '1' AND deleted_at IS NULL";
+    $res = mysqli_query($link, $sql);
+    return $res;
+}
+
 function get_ordered_content_data($table_name, $where, $equals, $order_by, $asc_desc){
     global $link;
     $sql = "SELECT * FROM " .$table_name. " WHERE ". $where . " = '" . $equals ."' ORDER BY ".$order_by." ". $asc_desc;
@@ -102,6 +109,19 @@ if(isset($_GET['page']) && $_GET['page'] == 'Detailansicht' && isset($_GET['prod
         $guest_id = $_SESSION['guest_id'];
     }
 }
+
+if(isset($_GET['page']) && $_GET['page'] == 'Zusammenfassung') {
+    if(isset($_SESSION['guest_id'])){
+        $guest_id = $_SESSION['guest_id'];
+        $orders = get_active_content_data('orders', 'guest_id', $guest_id);
+
+    }else{
+        $user_id = $_SESSION['user']['user_id'];
+        $orders = get_active_content_data('orders', 'user_id', $user_id);
+
+    }
+}
+$orders
 
 
 ?>
