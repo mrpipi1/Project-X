@@ -10,7 +10,7 @@ global $link;
 }else {*/
     if(is_post_request("user_message")) {
         $error = 0;
-        $name = mysqli_real_escape_string($link, $_POST["name"]);
+        $name = mysqli_real_escape_string($link, $_POST["fullname"]);
         $tel = mysqli_real_escape_string($link, $_POST["tel"]);
         $email = mysqli_real_escape_string($link, $_POST["email"]);
         $comment = mysqli_real_escape_string($link, $_POST["comment"]);
