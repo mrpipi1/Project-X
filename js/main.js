@@ -102,7 +102,9 @@ function onScroll(event){
  /* Mengenwahl, nur con 0 bis 11 => max value müssen wir dann aus der db holn, eingabe von user muss noch validiert werden ( auch ohne + & - */
  function updateSpinner(obj, cart_id){
      var contentObj = document.getElementById(cart_id);
+     console.log(contentObj);
        var value = parseInt(contentObj.value);
+       console.log(value);
        if(obj.id == "down") {
            if(value != 0 ){
                value--;
@@ -222,7 +224,7 @@ function save_edited_cart_item(product_id, cart_id){
   // var class_id = "."+product_id;
    //var size = $(class_id).text();
   var size = $('.size-selected.'+cart_id).text();
-    var quantity = $(".quantity").val();
+    var quantity = $(".quantity."+cart_id).val();
     if(size && quantity > 0) {
        $.post('logic/update_cart_item.php', {
             product_id: product_id,
@@ -375,16 +377,17 @@ function insert_or_update(page, action, id){
     });
 }
 
-function insert_or_update_checkout_address(action){
+function insert_or_update_checkout_address(action, step){
     var billing_values = {};
     var shipping_values = {};
+    console.log($('.checkout_billing input'));
     $.each($('.checkout_billing input').serializeArray(), function(i, field) {
         billing_values[field.name] = field.value;
         if(i == $('.checkout_billing input').serializeArray().length -1 ){
             $.each($('.checkout_shipping input').serializeArray(), function(j, field) {
                 shipping_values[field.name] = field.value;
                 if (j == $('.checkout_shipping input').serializeArray().length - 1) {
-                    var data = {action: action, billing: billing_values, shipping: shipping_values};
+                    var data = {action: action, billing: billing_values, shipping: shipping_values, step: step};
                     $.post('logic/insert_checkout.php', data, function (response, status) {
                         console.log(response);
                         console.log(status);
@@ -427,6 +430,7 @@ function insert_or_update_checkout_payment(action, step) {
     });
 
 }
+
 
 
 //validation contact form
@@ -653,6 +657,7 @@ $('.btn_cart_next').click(function(event){
 });
 
 $('.btn_order_final').click(function(){
+
   var user_id = $('.btn_order_final').attr('id');
       send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
     });

@@ -5,45 +5,60 @@ if($_POST['step'] == 'address') {
         $id = $_POST['id'];
     }
     $billing = $_POST['billing'];
+    $billing['address'] = mysqli_real_escape_string($link, $billing['address']);
+    $billing['city'] = mysqli_real_escape_string($link, $billing['city']);
+    $billing['zip_code'] =  mysqli_real_escape_string($link, $billing['zip_code']);
     $shipping = $_POST['shipping'];
+    $shipping['address'] = mysqli_real_escape_string($link, $shipping['address']);
+    $shipping['city'] = mysqli_real_escape_string($link, $shipping['city']);
+    $shipping['zip_code'] =  mysqli_real_escape_string($link, $shipping['zip_code']);
     if ($shipping['is_shipping_address'] == 'on') {
-        $shipping['address'] = $billing['address'];
-        $shipping['city'] = $billing['city'];
-        $shipping['zip_code'] = $billing['zip_code'];
+        $shipping['address'] = mysqli_real_escape_string($link, $billing['address']);
+        $shipping['city'] = mysqli_real_escape_string($link, $billing['city']);
+        $shipping['zip_code'] = mysqli_real_escape_string($link, $billing['zip_code']);
     }
     if (isset($billing['user_id'])) {
-        $user_id = $billing['user_id'];
+        $user_id = mysqli_real_escape_string($link, $billing['user_id']);
         $guest_id = NULL;
     } else {
         $user_id = NULL;
-        $guest_id = $billing['guest_id'];
+        $guest_id = mysqli_real_escape_string($link, $billing['guest_id']);
     }
 
 
     $action = $_POST['action'];
 
     if ($action == 'new') {
-        $sql = "INSERT INTO orders (user_id, guest_id, delivery_address, receipt_address, is_active )  VALUES ('" . $user_id . "','" . $guest_id . "','" . $billing['address'] . "," . $billing['zip_code'] . "," . $billing['city'] . "','" . $shipping['address'] . "," . $shipping['zip_code'] . "," . $shipping['city'] . "','1' )";
-        $result = mysqli_query($link, $sql);
-        if ($result) {
-            $sql2 = "SELECT * FROM orders WHERE (user_id = '" . $user_id . "' OR guest_id = '" . $guest_id . "') AND is_active = '1' AND deleted_at IS NULL LIMIT 1";
-            $result2 = mysqli_query($link, $sql2);
-            if ($result2) {
-                while ($row = mysqli_fetch_assoc($result2)) {
-                    $sql3 = "UPDATE carts SET order_id = '" . $row['id'] . "' WHERE deleted_at IS NULL AND is_active = '1' AND (user_id = '" . $user_id . "' OR guest_id = '" . $guest_id . "')";
-                    $result3 = mysqli_query($link, $sql3);
-                    if ($result3) {
-                        echo $row['id'];
+        $sql4 = "SELECT * FROM orders WHERE (user_id = '" . $user_id . "' OR guest_id = '" . $guest_id . "') AND is_active = '1' AND deleted_at IS NULL LIMIT 1";
+            $result4 = mysqli_query($link, $sql4);
+            while ($row4 = mysqli_fetch_assoc($result4)){
+                if (mysqli_num_rows($result4) == 0) {
+                    $sql = "INSERT INTO orders (user_id, guest_id, delivery_address, receipt_address, is_active )  VALUES ('" . $user_id . "','" . $guest_id . "','" . $billing['address'] . "," . $billing['zip_code'] . "," . $billing['city'] . "','" . $shipping['address'] . "," . $shipping['zip_code'] . "," . $shipping['city'] . "','1' )";
+                    $result = mysqli_query($link, $sql);
+                }else{
+                    $sql = "UPDATE orders SET user_id = '" . $user_id . "', guest_id = '" . $guest_id . "', delivery_address = '" . $billing['address'] . "," . $billing['zip_code'] . "," . $billing['city'] . "', receipt_address = '" . $shipping['address'] . "," . $shipping['zip_code'] . "," . $shipping['city'] . "', is_active = '1' WHERE id = '" . $row4['id'] . "'";
+                    $result = mysqli_query($link, $sql);
+                }
+                if ($result) {
+                    $sql2 = "SELECT * FROM orders WHERE (user_id = '" . $user_id . "' OR guest_id = '" . $guest_id . "') AND is_active = '1' AND deleted_at IS NULL LIMIT 1";
+                    $result2 = mysqli_query($link, $sql2);
+                    if ($result2) {
+                        while ($row = mysqli_fetch_assoc($result2)) {
+                            $sql3 = "UPDATE carts SET order_id = '" . $row['id'] . "' WHERE deleted_at IS NULL AND is_active = '1' AND (user_id = '" . $user_id . "' OR guest_id = '" . $guest_id . "')";
+                            $result3 = mysqli_query($link, $sql3);
+                            if ($result3) {
+                                echo $row['id'];
+                            } else {
+                                echo 0;
+                            }
+                        }
                     } else {
                         echo 0;
                     }
+                } else {
+                    echo 0;
                 }
-            } else {
-                echo 0;
             }
-        } else {
-            echo 0;
-        }
 
     }
     /*else {
@@ -58,26 +73,23 @@ if($_POST['step'] == 'address') {
 }else if($_POST['step'] == 'payment_shipping') {
 
     if(isset($_POST['coupon'])){
-        $coupon_code = $_POST['coupon'];
+        $coupon_code = mysqli_real_escape_string($link, $_POST['coupon']);
     }else{
         $coupon_id = NULL;
     }
     if(isset($_POST['user_id'])){
-        $user_id = $_POST['user_id'];
+        $user_id = mysqli_real_escape_string($link, $_POST['user_id']);
     }else{
         $user_id = "";
     }
     if(isset($_POST['guest_id'])){
-        $guest_id = $_POST['guest_id'];
+        $guest_id = mysqli_real_escape_string($link, $_POST['guest_id']);
     }else{
         $guest_id = "";
     }
 
-
-
-
-    $delivery = $_POST['delivery'];
-    $payment = $_POST['payment'];
+    $delivery = mysqli_real_escape_string($link, $_POST['delivery']);
+    $payment = mysqli_real_escape_string($link, $_POST['payment']);
     $sql = "SELECT * FROM delivery_options WHERE _name LIKE '%" . ucfirst($delivery). "%'";
     $result = mysqli_query($link, $sql);
     if($result){
