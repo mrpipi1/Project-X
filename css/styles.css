@@ -1330,7 +1330,7 @@ Breadcrumbs
 .btn-wrapper_checkout {
     display: flex;
     width: 100%;
-    margin-top: 4em;
+    margin-top: 1em;
     justify-content: flex-end;
 }
 .btn_checkout {
