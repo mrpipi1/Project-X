@@ -638,18 +638,20 @@ $('.address_zusammenfassung input').focus(function(){
   $('.change_reciept_address').css('display', 'block');
 });
 
-$('.contact_success').click(function(){
-  $('.contact_success').toggleClass('show_message');
-
-});
-
 
 $('.btn_order_final').click(function(){
+    if($('#agbs input:checked')){
+      var user_id = $('.btn_order_final').attr('id');
+      send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
+      window.location.href = "index.php?page=Abschluss";
+    }
 
-    var user_id = $('.btn_order_final').attr('id');
-    send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
-    window.location.href = "index.php?page=Abschluss";
 });
+
+
+
+
+
 
 
 
