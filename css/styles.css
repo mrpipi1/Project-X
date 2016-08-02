@@ -2642,3 +2642,12 @@ cursor: pointer;
 .address_zusammenfassung .change_delivery_address, .change_reciept_address{
   display: none;
 }
+.info_zusammenfassung .radiobutton_wrapper{
+  margin-bottom: 10px;
+}
+.info_zusammenfassung h2.hl_checkout{
+  margin-bottom: 1em;
+}
+.onesize{
+  opacity: 0;
+}

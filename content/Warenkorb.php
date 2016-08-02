@@ -43,7 +43,7 @@
                           </ul>
 
                           <ul class="actions_card-item edit-hide edit-hide-<?php echo $row['id']; ?>">
-                              <li><?php echo strtoupper($row['product_size']); ?></li>
+                              <li <?php if($row['product_size'] == 'onesize'){echo 'class="onesize"';} ?>><?php echo strtoupper($row['product_size']); ?></li>
                               <li><?php echo $row['quantity']; ?></li>
                           </ul>
 
