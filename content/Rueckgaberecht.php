@@ -1,9 +1,16 @@
 <section class="content-wrapper footer-content">
   <?php
-  while( $row = mysqli_fetch_assoc($rueckgaberecht) ) {
+
+    while( $row = mysqli_fetch_assoc($rueckgaberecht) ){
+      if($row['type'] == 'headline'){
+        echo '<h2>'.$row["content"].'</h2>';
+      }elseif($row['type'] == 'subheadline'){
+          echo '<h3>'.$row["content"].'</h3>';
+      }else{
+          echo '<p>'.$row["content"].'</p>';
+      }
+
+    }
     ?>
-    <h2><?php echo $row['headline'];?></h2>
-    <p><?php echo $row['content'];?></p>
-    <?php } ?>
 
 </section>
