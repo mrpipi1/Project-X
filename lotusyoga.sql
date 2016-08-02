@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 02. Aug 2016 um 16:33
+-- Erstellungszeit: 02. Aug 2016 um 17:21
 -- Server-Version: 5.5.42
 -- PHP-Version: 7.0.0
 
@@ -253,7 +253,7 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (24, 'Kontakt', 'content', '1070', 9, 1, NULL),
 (25, 'Map', 'lat', '48.20294029999999', 0, 1, NULL),
 (26, 'Map', 'lng', '16.356826899999987', 1, 1, NULL),
-(27, 'contactform_main', 'name', 'Vorname | Nachname*', 1, 1, NULL),
+(27, 'contactform_main', 'fullname', 'Vorname | Nachname*', 1, 1, NULL),
 (28, 'contactform_main', 'tel', 'Telefonnummer*', 2, 1, NULL),
 (29, 'contactform_main', 'email', 'E-Mailadresse*', 3, 1, NULL),
 (30, 'contactform_main', 'comment', 'Kommentar', 4, 1, NULL),
@@ -264,13 +264,12 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (35, 'footer', 'Instagram', 'http://www.instagram.com', 2, 1, NULL),
 (36, 'footer', 'Youtube', 'http://www.youtube.com', 3, 1, NULL),
 (37, 'footer', 'subheadline', 'Kurse', 4, 1, NULL),
-(38, 'footer', 'Yin Yoga', '#', 5, 1, NULL),
-(39, 'footer', 'Ashtanga Yoga', '#', 6, 1, NULL),
-(40, 'footer', 'Tri Yoga', '#', 7, 1, NULL),
+(38, 'footer', 'Yin Yoga', 'index.php?page=home#course', 5, 1, NULL),
+(39, 'footer', 'Ashtanga Yoga', 'index.php?page=home#course', 6, 1, NULL),
+(40, 'footer', 'Tri Yoga', 'index.php?page=home#course', 7, 1, NULL),
 (41, 'footer', 'subheadline', 'Shop', 8, 1, NULL),
-(42, 'footer', 'Angebote', '#', 9, 1, NULL),
-(43, 'footer', 'Rückgaberecht', '#', 10, 1, NULL),
-(44, 'footer', 'Lorem', '#', 11, 1, NULL),
+(42, 'footer', 'Angebote', 'index.php?page=home#saleproducts_main', 9, 1, NULL),
+(43, 'footer', 'Rückgaberecht', 'index.php?page=Rueckgaberecht', 10, 1, NULL),
 (45, 'footer', 'subheadline', 'Lorem', 12, 1, NULL),
 (46, 'footer', 'Impressum', 'index.php?page=Impressum', 13, 1, NULL),
 (47, 'footer', 'AGB', 'index.php?page=AGB', 14, 1, NULL),
@@ -325,7 +324,12 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (103, 'impressum', 'subheadline', 'Firmenname: Lotus Yoga', 2, 1, NULL),
 (104, 'impressum', 'content', 'Firmengericht: Handelsgericht Wien', 5, 1, NULL),
 (105, 'impressum', 'content', 'FN: 12345LY', 5, 1, NULL),
-(106, 'impressum', 'content', 'UID: ATU12345', 6, 1, NULL);
+(106, 'impressum', 'content', 'UID: ATU12345', 6, 1, NULL),
+(107, 'rueckgaberecht', 'headline', 'RÜCKGABERECHT', 1, 1, NULL),
+(108, 'rueckgaberecht', 'subheadline', 'Lorem Ipsum', 1, 1, NULL),
+(109, 'rueckgaberecht', 'content', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', 1, 1, NULL),
+(110, 'rueckgaberecht', 'subheadline', 'Lorem Ipsum', 2, 1, NULL),
+(111, 'rueckgaberecht', 'content', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', 2, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -488,7 +492,10 @@ INSERT INTO `guests` (`id`, `guest_mail`, `is_active`, `created_at`, `deleted_at
 (33, '', 1, '2016-08-02 13:54:36', NULL),
 (34, '', 1, '2016-08-02 13:58:03', NULL),
 (35, '', 1, '2016-08-02 14:02:01', NULL),
-(36, '', 1, '2016-08-02 14:02:03', NULL);
+(36, '', 1, '2016-08-02 14:02:03', NULL),
+(37, '', 1, '2016-08-02 15:15:01', NULL),
+(38, '', 1, '2016-08-02 15:20:36', NULL),
+(39, '', 1, '2016-08-02 15:20:38', NULL);
 
 -- --------------------------------------------------------
 
@@ -668,12 +675,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `color`, `in_aktion`, `price_in_aktion`, `is_active`, `deleted_at`) VALUES
-(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-back.png', '', NULL, 0, 0, 1, NULL),
-(8, 'Yogabag & Matte', 39.99, 2, 'Yogamatte mit praktischer Bag in schlichtem Schwarz. Mit einem verschließbaren Fach für Schlüssel oder Handy.', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_open.jpg', '', NULL, 0, 0, 1, NULL),
-(9, 'Jumper', 39.99, 1, 'Stylischer Jumper für Männer und Frauen. Aus 100% Baumwolle und Machienenwaschbar.', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-back.png', '', NULL, 0, 0, 1, NULL),
-(10, 'Pilatesring', 24.99, 2, 'Dieser Pilatesring mit ergonomischen Griffen unterstützt perfekt beim Training. Es können sowohl Beine, als auch Arme und Körpermitte gestärkt und gestrafft werden.', 'img/shop-images/yogaring.png', 'img/shop-images/yogaring.png', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(11, 'Notizbuch', 15.99, 3, 'Unser Notizbuch ist der perfekte Begleiter durch den Tag. Er enthält einen Kalender und Bildanleitungen für Yoga und Pilates Übungen sowie Karierte Seiten für Notizen.', 'img/shop-images/notebook.png', 'rbtbtb', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
-(12, 'Herren T-Shirt', 19.99, 1, 'Herren T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/herren-tshirt-red-front.png', 'img/shop-images/herren-tshirt-red-front.png', 'img/shop-images/herren-tshirt-red-back.png', '', NULL, 0, 0, 1, NULL),
+(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-back.png', 'img/shop-images/damen-tshirt-black-front.png', NULL, 0, 0, 1, NULL),
+(8, 'Yogabag & Matte', 39.99, 2, 'Yogamatte mit praktischer Bag in schlichtem Schwarz. Mit einem verschließbaren Fach für Schlüssel oder Handy.', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_open.jpg', 'img/shop-images/tragetasche_yogamatte.png', NULL, 0, 0, 1, NULL),
+(9, 'Jumper', 39.99, 1, 'Stylischer Jumper für Männer und Frauen. Aus 100% Baumwolle und Machienenwaschbar.', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-front.png', NULL, 0, 0, 1, NULL),
+(10, 'Pilatesring', 24.99, 2, 'Dieser Pilatesring mit ergonomischen Griffen unterstützt perfekt beim Training. Es können sowohl Beine, als auch Arme und Körpermitte gestärkt und gestrafft werden.', 'img/shop-images/yogaring.png', 'img/shop-images/yogaring.png', 'img/shop-images/yogaring.png', 'img/shop-images/yogaring.png', NULL, 0, 0, 1, NULL),
+(11, 'Notizbuch', 15.99, 3, 'Unser Notizbuch ist der perfekte Begleiter durch den Tag. Er enthält einen Kalender und Bildanleitungen für Yoga und Pilates Übungen sowie Karierte Seiten für Notizen.', 'img/shop-images/notebook.png', 'img/shop-images/notebook.png', 'img/shop-images/notebook.png', 'img/shop-images/notebook.png', NULL, 0, 0, 1, NULL),
+(12, 'Herren T-Shirt', 19.99, 1, 'Herren T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/herren-tshirt-red-front.png', 'img/shop-images/herren-tshirt-red-front.png', 'img/shop-images/herren-tshirt-red-back.png', 'img/shop-images/herren-tshirt-red-front.png', NULL, 0, 0, 1, NULL),
 (13, 'Lotus Band', 9.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/2er-band-green.png', 'img/shop-images/2er-band-green.png', 'img/shop-images/2er-band-white.png', 'img/shop-images/2er-band-white.png', NULL, 1, 5.99, 1, NULL),
 (14, 'Lotus Band 3er', 15.99, 3, 'Latex Armband mit Lotusyoga Logo', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', 'img/shop-images/3er-band.png', NULL, 1, 8.99, 1, NULL),
 (15, 'Baumwollband', 12.99, 3, 'Das Baumwollband ist länger als andere Baumwollbänder um in jeder Position perfekte unterstützung zu bieten. ', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', 'img/shop-images/baumwoll-band.png', NULL, 1, 9.99, 1, NULL),
@@ -1037,7 +1044,7 @@ ALTER TABLE `carts`
 -- AUTO_INCREMENT für Tabelle `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 --
 -- AUTO_INCREMENT für Tabelle `coupon_codes`
 --
@@ -1062,7 +1069,7 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT für Tabelle `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- AUTO_INCREMENT für Tabelle `header_items`
 --
