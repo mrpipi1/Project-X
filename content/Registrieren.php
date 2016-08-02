@@ -129,12 +129,6 @@
         </div>
 
 
-
-        <div class="radio_datenschutz">
-            <input class="input_dateschutz" type="checkbox" name="agb-confirm" id="agb-confirm" /> <label>Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
-        </div>
-
-
         <p class="pflichtfeld">*Pflichtfelder</p>
 
         <div class="btn_checkout btn_big-checkout">
