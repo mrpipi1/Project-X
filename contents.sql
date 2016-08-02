@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 02. Aug 2016 um 16:52
+-- Erstellungszeit: 02. Aug 2016 um 16:57
 -- Server-Version: 5.5.42
 -- PHP-Version: 7.0.0
 
@@ -75,9 +75,9 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (35, 'footer', 'Instagram', 'http://www.instagram.com', 2, 1, NULL),
 (36, 'footer', 'Youtube', 'http://www.youtube.com', 3, 1, NULL),
 (37, 'footer', 'subheadline', 'Kurse', 4, 1, NULL),
-(38, 'footer', 'Yin Yoga', '#', 5, 1, NULL),
-(39, 'footer', 'Ashtanga Yoga', '#', 6, 1, NULL),
-(40, 'footer', 'Tri Yoga', '#', 7, 1, NULL),
+(38, 'footer', 'Yin Yoga', 'index.php?page=home#course', 5, 1, NULL),
+(39, 'footer', 'Ashtanga Yoga', 'index.php?page=home#course', 6, 1, NULL),
+(40, 'footer', 'Tri Yoga', 'index.php?page=home#course', 7, 1, NULL),
 (41, 'footer', 'subheadline', 'Shop', 8, 1, NULL),
 (42, 'footer', 'Angebote', 'index.php?page=home#saleproducts_main', 9, 1, NULL),
 (43, 'footer', 'Rückgaberecht', 'index.php?page=Rueckgaberecht', 10, 1, NULL),
