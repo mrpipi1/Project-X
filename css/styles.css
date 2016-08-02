@@ -2658,3 +2658,8 @@ cursor: pointer;
 .wrapper_form_zusammenfassung{
   margin-top: 3em;
 }
+.contact_success {
+    color: #5a8e7d;
+    font-size:120%;
+    display: none;
+}

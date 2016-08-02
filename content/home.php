@@ -198,13 +198,14 @@
         <?php
         $cnt = 0;
         while( $row = mysqli_fetch_assoc($contact_form) ){
-            if($cnt == 0) {
-                echo '<section class="' . $row['_name'] . '">';
+          if($cnt == 0) {
+              echo '<section id="' . $row['_name'] . '" class="' . $row['_name'] . '">';
+              if (count($_POST)>0) echo '<div id="form-submit-alert" class="contact_success">Nachricht erfolgreich gesendet! Danke dass Sie uns kontaktiert haben!</div>';
+          }
 
-            }
-            if ($cnt == 0) {
-                echo '<form class="form_main" action="#" method="post">';
-            }
+          if ($cnt == 0) {
+              echo '<form class="form_main" action="#map" method="post">';
+          }
             if ($row['type'] == 'headline') {
                 echo '<h3>' . $row['content'] . '</h3>';
             } else if ($row['type'] == 'subheadline') {
