@@ -46,23 +46,6 @@ if($column == 'birthday'){
   //$result = array_push($result, $unter18,$neunzehn_30,$einunddreißig,$einundvierzig,$older_than);
   //$result = array_push($result, 1,2,9,4,8);
   echo json_encode($result);
-} else if($column == 'created_at'){
-    $sql = "SELECT * FROM ".$tablename."";
-    $res = mysqli_query($link, $sql);
-    $days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
-    $result = ['mon' => 0, 'tue' => 0, 'wed' => 0, 'thu' => 0, 'fri' => 0, 'sat' => 0, 'sun' => 0];
-    while($row = mysqli_fetch_assoc($res)){
-    //echo $row['birthday'];
-      
-      
-      $date = $row['created_at'];
-      $dt = strtotime($date);
-      $day = strtolower(date("D", $dt));
-      $result[$day]++;
-      
-    }
-  echo json_encode($result);
-
 }else{
   for($i = 0; $i < count($values); $i++){
     $sql = "SELECT * FROM ".$tablename." WHERE ".$column. " = '" .$values[$i]."'";

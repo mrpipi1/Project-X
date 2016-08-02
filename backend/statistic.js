@@ -117,7 +117,8 @@
  // here are the colors for the statistics defined
 var colors = ['#EC644B', '#F1A9A0', '#DCC6E0', '#E4F1FE', '#4183D7', '#A2DED0', '#FDE3A7'];
 statistik_data_Query('users', 'gender', ['female', 'male'], colors, 'Gender');
-statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment', 'Test Subheadline');
+statistik_data_Query('users', 'pref_delivery', ['DHL', 'Post', 'express'], colors, 'prefered Payment');
 statistik_data_Query('users', 'pref_payment', ['Rechnung', 'Vorkasse', 'Kreditkarte'], colors, 'prefered Delivery');
 statistik_data_Query('users', 'city', ['Wien', 'Graz', 'Linz'], colors, 'City');
 statistik_data_Query('users', 'birthday', ['younger than 18','19 - 30', '31 - 40', '41 - 60', 'older than 60'], colors, 'Age');
+statistik_data_Query('orders', 'created_at', colors, 'Day');

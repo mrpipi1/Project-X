@@ -2357,7 +2357,7 @@ ____            _____  _  __ ______  _   _  _____
 .radiobutton_wrapper_backend {
   padding: 0 1em;
   margin: 1.3em 0;
-
+  flex-basis: 100%;
 }
 
 .form_backend {
@@ -2388,7 +2388,6 @@ ____            _____  _  __ ______  _   _  _____
 
 
 .btn_backend {
-  flex-basis: 100%;
   transition: all 0.3s linear;
   text-transform: uppercase;
   margin: 1em 0;
