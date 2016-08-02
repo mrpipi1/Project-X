@@ -460,6 +460,9 @@ $('.form-group input[type="text"][name!="gutschein"] , .form-group input[type="p
         } else if ($(this).attr('name') == 'fullname') {
             re = /^[a-zA-Z ,.'-]+$/;
             errtxt = 'Bitte geben Sie gültige Vor und Nachnamen ein!';
+        } else if ($(this).attr('name') == 'city') {
+            re = /^([a-zA-Z\u0080-\u024F]+(?:(\. )|-| |'))*[a-zA-Z\u0080-\u024F]*$/;
+            errtxt = 'Bitte geben Sie gültige Stadt ein!';
         }
         var check = re.test(input.val());
         if (check) {

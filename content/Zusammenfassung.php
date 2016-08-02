@@ -2,7 +2,10 @@
 
 <?php
 include("breadcrumbs.php");
+
+while( $row = mysqli_fetch_assoc($orders) ) {
 ?>
+
     <!-- Adressen -->
     <section class="wrapper_form wrapper_form_zusammenfassung">
       <?php
@@ -110,10 +113,14 @@ include("breadcrumbs.php");
               <form class="form_checkout" action="#" method="post">
 
                 <?php
-                  while( $row = mysqli_fetch_assoc($user_info) ){
+                $reciept_address_all = $row['receipt_address'];
+                $reciept_address_array = explode(',', $reciept_address_all);
+                $reciept_address = $reciept_address_array[0];
+                $reciept_city = $reciept_address_array[1];
+                $reciept_zip = $reciept_address_array[2];
                 ?>
                   <div class="form-group">
-                      <input type="text" name="address" value="<?php if(isset($row['address'])){echo $row['address'];} ?>" required class="input">
+                      <input type="text" name="address" value="<?php echo $reciept_address?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Strasse | Hausnummer*</label>
@@ -122,14 +129,14 @@ include("breadcrumbs.php");
 
 
                   <div class="form-group">
-                      <input type="text" name="city" value="<?php if(isset($row['city'])){echo $row['city'];} ?>" required class="input">
+                      <input type="text" name="city" value="<?php echo $reciept_city?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Stadt*</label>
                       <span class="error">
                   </div>
                   <div class="form-group">
-                      <input type="text" name="zip_code" value="<?php if(isset($row['zip_code'])){echo $row['zip_code'];} ?>" required class="input">
+                      <input type="text" name="zip_code" value="<?php echo $reciept_zip?>" required class="input">
                       <span class="highlight"></span>
                       <span class="form-bar"></span>
                       <label class="label">Postleitzahl*</label>
@@ -190,7 +197,7 @@ include("breadcrumbs.php");
 
           </section>
           <?php
-          }
+
         }
         ?>
     </section>
@@ -404,6 +411,8 @@ include("breadcrumbs.php");
 
 </section>
 
+
+
         <div class="sum_card_wrapper">
 
             <ul class="versand-datum">
@@ -419,7 +428,9 @@ include("breadcrumbs.php");
             </ul>
         </div>
 
-
+<?php
+}
+ ?>
         <!-- AGB und Datenschutzbestimmungen akzeptieren -->
         <form class="form_confirmation" action="#" method="post">
 
@@ -439,6 +450,8 @@ include("breadcrumbs.php");
             <a href="index.php?page=Abschluss" >zahlungspflichtig bestellen</a>
         </div>
     </div>
-
+    <?php
+  //  }
+     ?>
 
 </section>
