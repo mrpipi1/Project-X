@@ -95,7 +95,7 @@ $breadcrubms_checkout = get_content_data('breadcrumbs_checkouts');
     }else if(!isset($_SESSION['guest_id'])){
         $guest_id = insert_guest();
         $_SESSION['guest_id'] = $guest_id;
-        $cart = get_specific_content_data('carts', 'user_id', $_SESSION['guest_id']);
+        $cart = get_specific_content_data('carts', 'guest_id', $_SESSION['guest_id']);
     }
 
 
