@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.5
+-- version 4.6.0
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Erstellungszeit: 02. Aug 2016 um 00:30
--- Server-Version: 5.5.49-log
--- PHP-Version: 7.0.6
+-- Host: localhost
+-- Erstellungszeit: 02. Aug 2016 um 13:55
+-- Server-Version: 5.5.42
+-- PHP-Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,14 +27,14 @@ SET time_zone = "+00:00";
 --
 
 DROP TABLE IF EXISTS `admins`;
-CREATE TABLE IF NOT EXISTS `admins` (
+CREATE TABLE `admins` (
   `id` int(11) NOT NULL,
   `admin_name` varchar(50) NOT NULL,
   `admin_email` varchar(200) NOT NULL,
   `password_hash` varchar(250) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `admins`
@@ -53,13 +53,13 @@ INSERT INTO `admins` (`id`, `admin_name`, `admin_email`, `password_hash`, `is_ac
 --
 
 DROP TABLE IF EXISTS `bestell_items`;
-CREATE TABLE IF NOT EXISTS `bestell_items` (
+CREATE TABLE `bestell_items` (
   `id` int(11) NOT NULL,
   `bestellnummer` int(100) NOT NULL,
   `shopitem_id` int(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `bestell_items`
@@ -75,13 +75,13 @@ INSERT INTO `bestell_items` (`id`, `bestellnummer`, `shopitem_id`, `is_active`, 
 --
 
 DROP TABLE IF EXISTS `breadcrubms_checkout`;
-CREATE TABLE IF NOT EXISTS `breadcrubms_checkout` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `breadcrubms_checkout` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(70) DEFAULT NULL,
   `position` int(3) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `breadcrubms_checkout`
@@ -101,13 +101,13 @@ INSERT INTO `breadcrubms_checkout` (`id`, `name`, `position`, `is_active`, `dele
 --
 
 DROP TABLE IF EXISTS `breadcrumbs_checkouts`;
-CREATE TABLE IF NOT EXISTS `breadcrumbs_checkouts` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `breadcrumbs_checkouts` (
+  `id` int(11) UNSIGNED NOT NULL,
   `name` varchar(70) DEFAULT NULL,
   `position` int(3) DEFAULT NULL,
   `is_active` tinyint(1) DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `breadcrumbs_checkouts`
@@ -123,11 +123,46 @@ INSERT INTO `breadcrumbs_checkouts` (`id`, `name`, `position`, `is_active`, `del
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `cart`
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `size` varchar(100) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Daten für Tabelle `cart`
+--
+
+INSERT INTO `cart` (`id`, `user_id`, `product_id`, `quantity`, `size`, `created_at`, `deleted_at`) VALUES
+(1, 2, 7, 0, '', '2016-07-30 09:06:48', NULL),
+(2, 2, 9, 0, '', '2016-07-30 09:21:19', NULL),
+(3, 2, 9, 0, '', '2016-07-31 08:53:50', '0000-00-00 00:00:00'),
+(4, 2, 9, 0, '', '2016-07-30 09:21:20', NULL),
+(5, 2, 9, 0, '', '2016-07-30 09:21:22', NULL),
+(6, 2, 9, 0, '', '2016-07-30 09:21:23', NULL),
+(7, 2, 9, 0, '', '2016-07-31 08:54:05', '0000-00-00 00:00:00'),
+(8, 2, 9, 0, '', '2016-07-30 09:21:26', NULL),
+(9, 2, 9, 0, '', '2016-07-30 09:21:27', NULL),
+(10, 2, 9, 0, '', '2016-07-30 09:21:27', NULL),
+(11, 2, 9, 0, '', '2016-07-31 08:53:56', '0000-00-00 00:00:00'),
+(12, 2, 9, 0, '', '2016-07-30 09:21:28', NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `carts`
 --
 
 DROP TABLE IF EXISTS `carts`;
-CREATE TABLE IF NOT EXISTS `carts` (
+CREATE TABLE `carts` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `guest_id` int(11) DEFAULT NULL,
@@ -138,7 +173,7 @@ CREATE TABLE IF NOT EXISTS `carts` (
   `is_active` tinyint(1) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `carts`
@@ -169,7 +204,8 @@ INSERT INTO `carts` (`id`, `user_id`, `guest_id`, `product_id`, `order_id`, `qua
 (25, 2, 18, 7, NULL, 1, 's', 0, '2016-08-01 10:54:15', '0000-00-00 00:00:00'),
 (26, 2, 18, 9, 3, 1, 's', 1, '2016-08-01 21:33:04', NULL),
 (27, 2, 18, 7, 3, 1, 'm', 1, '2016-08-01 21:33:04', NULL),
-(28, 2, 18, 12, 3, 1, 'm', 1, '2016-08-01 21:33:04', NULL);
+(28, 2, 18, 12, 3, 1, 'm', 1, '2016-08-01 21:33:04', NULL),
+(29, 0, 29, 9, NULL, 1, 'xs', 0, '2016-08-02 09:54:07', NULL);
 
 -- --------------------------------------------------------
 
@@ -178,7 +214,7 @@ INSERT INTO `carts` (`id`, `user_id`, `guest_id`, `product_id`, `order_id`, `qua
 --
 
 DROP TABLE IF EXISTS `contents`;
-CREATE TABLE IF NOT EXISTS `contents` (
+CREATE TABLE `contents` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(150) NOT NULL,
@@ -186,7 +222,7 @@ CREATE TABLE IF NOT EXISTS `contents` (
   `sequence` int(11) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `contents`
@@ -247,8 +283,48 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 (55, 'ads', 'asdasd', 'adsasd', 1, 0, '0000-00-00 00:00:00'),
 (56, 'testaktion', 'headline', 'test', 1, 1, NULL),
 (57, 'agb', 'headline', 'AGB', 1, 1, NULL),
-(58, 'agb', 'subheadline', 'subheadline', 1, 1, NULL),
-(59, 'agb', 'content', 'content', 1, 1, NULL);
+(58, 'agb', 'subheadline', 'I. Allgemeines', 1, 1, NULL),
+(59, 'agb', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 1, 1, NULL),
+(61, 'faqs', 'headline', 'FAQs', 1, 1, NULL),
+(62, 'faqs', 'subheadline', 'Ich habe mein Passwort vergessen, was kann ich tun?', 1, 1, NULL),
+(63, 'faqs', 'content', 'Tragen Sie ihre E-Mailadresse oder Ihren Usernamen in das Formular ein und klicken Sie auf den "Passwort vergessen" Link unter dem Formular. Sie erhalten danach eine E-Mail mit allen Informationen um Ihr Passwort zurück zusetzten.', 1, 1, NULL),
+(64, 'faqs', 'subheadline', 'Als ich einen Artikel in die Einkaufstasche gelegt habe, war er noch verfügbar, aber an der Kasse war er dann vergriffen. Wie kann das sein?', 2, 1, NULL),
+(65, 'faqs', 'content', 'Wir reservieren den Artikel an der Kasse für Sie, sobald Sie Ihren Einkauf abgeschlossen haben. Wenn der Artikel besonders beliebt ist, kann es vorkommen, dass er noch verfügbar ist, wenn Sie ihn in die Einkaufstasche legen, aber bereits verkauft ist, wenn Sie zur Kasse kommen. Ein Artikel, der sich in Ihrer Einkaufstasche befindet, wird für 7 Tage gespeichert, die Verfügbarkeit kann aber nicht garantiert werden.\r\n', 2, 1, NULL),
+(66, 'faqs', 'subheadline', 'Wo gebe ich beim Einkaufen meinen Gutscheincode ein', 3, 1, NULL),
+(67, 'faqs', 'content', 'Um einen Gutscheincode einzulösen müssen Sie "zur Kasse" gehen und unter dem Punkt Bezahlung und Versand Ihren Gutscheincode eingeben.\r\n', 3, 1, NULL),
+(68, 'faqs', 'subheadline', 'Wie bezahle ich?', 4, 1, NULL),
+(69, 'faqs', 'content', 'Sie könne per Nachnahmen, Rechnung oder Vorkasse bezahlen. Weitere Informationen dazu finden Sie hier.', 4, 1, NULL),
+(74, 'faqs', 'subheadline', 'Wie lange dauert die Lieferung?', 5, 1, NULL),
+(75, 'faqs', 'content', 'Ihre Bestellung sollte innerhalb von 3 bis 5 Tagen nach Bestellbestätigung der vorrätigen Artikel geliefert werden. Weitere Informationen zur Lieferung erhalten Sie an der Kasse.\r\n', 5, 1, NULL),
+(76, 'faqs', 'subheadline', 'Wohin liefern Sie?', 6, 1, NULL),
+(77, 'faqs', 'content', 'Wie liefern nur nach innerhalb von Österreich.', 6, 1, NULL),
+(78, 'faqs', 'subheadline', 'Wie gebe ich einen Artikel zurück?', 7, 1, NULL),
+(79, 'faqs', 'content', 'Sie können Ihre(n) Artikel innerhalb von 14 Tagen nach Erhalt Ihres Pakets für eine Gebühr in Höhe von 1,00 € zurückschicken. Die Artikel müssen ungetragen und in einwandfreiem Zustand sein.  Alle Pakete enthalten ein Rücksendeetikett und einen Lieferschein. Bitte verwenden Sie dieses Etikett, wenn Sie Artikel zurücksenden möchten.\r\n', 7, 1, NULL),
+(80, 'agb', 'subheadline', 'II. BESONDERE BEDINGUNGEN', 2, 1, NULL),
+(81, 'agb', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 2, 1, NULL),
+(82, 'agb', 'subheadline', 'III. GEWÄHRLEISTUNG', 3, 1, NULL),
+(83, 'agb', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 3, 1, NULL),
+(84, 'datenschutz', 'headline', 'DATENSCHUTZ', 1, 1, NULL),
+(85, 'datenschutz', 'subheadline', 'Lorem Ipsum', 1, 1, NULL),
+(86, 'datenschutz', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 1, 1, NULL),
+(87, 'datenschutz', 'subheadline', 'Lorem Ipsum', 2, 1, NULL),
+(88, 'datenschutz', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 2, 1, NULL),
+(89, 'datenschutz', 'subheadline', 'Lorem Ipsum', 3, 1, NULL),
+(90, 'datenschutz', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 3, 1, NULL),
+(91, 'datenschutz', 'subheadline', 'Lorem Ipsum', 4, 1, NULL),
+(93, 'datenschutz', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 4, 1, NULL),
+(94, 'agb', 'subheadline', 'IV. LOREM', 4, 1, NULL),
+(95, 'agb', 'content', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n', 4, 1, NULL),
+(96, 'impressum', 'headline', 'IMPRESSUM', 1, 1, NULL),
+(97, 'impressum', 'subheadline', 'Yoga Studio - Lotus Yoga', 1, 1, NULL),
+(98, 'impressum', 'content', 'Siebensterngasse 2\r\n', 1, 1, NULL),
+(99, 'impressum', 'content', 'Tel.: 01 555 555 55', 2, 1, NULL),
+(100, 'impressum', 'content', 'E-Mail: office@lotusyoga.at', 3, 1, NULL),
+(101, 'impressum', 'content', 'Web: wwww.lotusyoga.at', 4, 1, NULL),
+(103, 'impressum', 'subheadline', 'Firmenname: Lotus Yoga', 2, 1, NULL),
+(104, 'impressum', 'content', 'Firmengericht: Handelsgericht Wien', 5, 1, NULL),
+(105, 'impressum', 'content', 'FN: 12345LY', 5, 1, NULL),
+(106, 'impressum', 'content', 'UID: ATU12345', 6, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -257,7 +333,7 @@ INSERT INTO `contents` (`id`, `_name`, `type`, `content`, `sequence`, `is_active
 --
 
 DROP TABLE IF EXISTS `coupon_codes`;
-CREATE TABLE IF NOT EXISTS `coupon_codes` (
+CREATE TABLE `coupon_codes` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `code` varchar(100) NOT NULL,
@@ -265,7 +341,7 @@ CREATE TABLE IF NOT EXISTS `coupon_codes` (
   `flat_value` int(11) DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `coupon_codes`
@@ -282,13 +358,13 @@ INSERT INTO `coupon_codes` (`id`, `_name`, `code`, `percentage_value`, `flat_val
 --
 
 DROP TABLE IF EXISTS `courses`;
-CREATE TABLE IF NOT EXISTS `courses` (
+CREATE TABLE `courses` (
   `id` int(11) NOT NULL,
   `_name` varchar(40) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `courses`
@@ -306,12 +382,12 @@ INSERT INTO `courses` (`id`, `_name`, `description`, `is_active`, `deleted_at`) 
 --
 
 DROP TABLE IF EXISTS `delivery_options`;
-CREATE TABLE IF NOT EXISTS `delivery_options` (
+CREATE TABLE `delivery_options` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `delivery_options`
@@ -329,7 +405,7 @@ INSERT INTO `delivery_options` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `employees`;
-CREATE TABLE IF NOT EXISTS `employees` (
+CREATE TABLE `employees` (
   `id` int(11) NOT NULL,
   `fullname` varchar(50) NOT NULL,
   `email` varchar(60) NOT NULL,
@@ -339,7 +415,7 @@ CREATE TABLE IF NOT EXISTS `employees` (
   `description` varchar(700) NOT NULL DEFAULT '',
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `employees`
@@ -363,13 +439,13 @@ INSERT INTO `employees` (`id`, `fullname`, `email`, `telno`, `pic`, `courses_id`
 --
 
 DROP TABLE IF EXISTS `guests`;
-CREATE TABLE IF NOT EXISTS `guests` (
+CREATE TABLE `guests` (
   `id` int(11) NOT NULL,
   `guest_mail` varchar(100) NOT NULL,
   `is_active` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `guests`
@@ -412,12 +488,12 @@ INSERT INTO `guests` (`id`, `guest_mail`, `is_active`, `created_at`, `deleted_at
 --
 
 DROP TABLE IF EXISTS `header_items`;
-CREATE TABLE IF NOT EXISTS `header_items` (
+CREATE TABLE `header_items` (
   `id` int(11) NOT NULL,
   `h_name` varchar(50) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `header_items`
@@ -433,7 +509,7 @@ INSERT INTO `header_items` (`id`, `h_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `logs`;
-CREATE TABLE IF NOT EXISTS `logs` (
+CREATE TABLE `logs` (
   `id` int(11) NOT NULL,
   `_name` varchar(1000) NOT NULL,
   `type` varchar(1000) NOT NULL,
@@ -441,7 +517,7 @@ CREATE TABLE IF NOT EXISTS `logs` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `logs`
@@ -460,12 +536,12 @@ INSERT INTO `logs` (`id`, `_name`, `type`, `location`, `created_at`, `is_active`
 --
 
 DROP TABLE IF EXISTS `menu_backend_items`;
-CREATE TABLE IF NOT EXISTS `menu_backend_items` (
+CREATE TABLE `menu_backend_items` (
   `id` int(11) NOT NULL,
   `item_name` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL,
   `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `menu_backend_items`
@@ -495,10 +571,11 @@ INSERT INTO `menu_backend_items` (`id`, `item_name`, `is_active`, `deleted_at`) 
 --
 
 DROP TABLE IF EXISTS `orders`;
-CREATE TABLE IF NOT EXISTS `orders` (
+CREATE TABLE `orders` (
   `id` int(11) NOT NULL,
   `user_id` int(11) DEFAULT NULL,
   `guest_id` int(11) DEFAULT NULL,
+  `guest_name` varchar(150) NOT NULL,
   `payment_option_id` int(11) NOT NULL,
   `delivery_option_id` int(11) NOT NULL,
   `delivery_address` varchar(1000) NOT NULL,
@@ -509,26 +586,26 @@ CREATE TABLE IF NOT EXISTS `orders` (
   `is_active` int(11) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` date DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_id`, `guest_id`, `payment_option_id`, `delivery_option_id`, `delivery_address`, `receipt_address`, `cart_id`, `coupon_code_id`, `status`, `is_active`, `created_at`, `deleted_at`) VALUES
-(1, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:05:37', NULL),
-(2, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:05:37', NULL),
-(3, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:08', NULL),
-(4, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:14', NULL),
-(5, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:18', NULL),
-(6, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:22', NULL),
-(7, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:26', NULL),
-(8, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:30', NULL),
-(9, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:35', NULL),
-(10, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:39', NULL),
-(11, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:43', NULL),
-(12, 2, 0, 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:47', NULL),
-(13, 2, 0, 3, 2, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 1, '2016-08-01 23:24:55', NULL);
+INSERT INTO `orders` (`id`, `user_id`, `guest_id`, `guest_name`, `payment_option_id`, `delivery_option_id`, `delivery_address`, `receipt_address`, `cart_id`, `coupon_code_id`, `status`, `is_active`, `created_at`, `deleted_at`) VALUES
+(1, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:05:37', NULL),
+(2, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:05:37', NULL),
+(3, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:08', NULL),
+(4, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:14', NULL),
+(5, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:18', NULL),
+(6, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:22', NULL),
+(7, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:26', NULL),
+(8, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:30', NULL),
+(9, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:35', NULL),
+(10, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:39', NULL),
+(11, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:43', NULL),
+(12, 2, 0, '', 2, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 0, '2016-08-01 23:24:47', NULL),
+(13, 2, 0, '', 1, 1, 'Blagasse 42/13,1210,Wien', 'Blagasse 42/13,1210,Wien', NULL, 0, 0, 1, '2016-08-02 10:01:57', NULL);
 
 -- --------------------------------------------------------
 
@@ -537,12 +614,12 @@ INSERT INTO `orders` (`id`, `user_id`, `guest_id`, `payment_option_id`, `deliver
 --
 
 DROP TABLE IF EXISTS `payment_options`;
-CREATE TABLE IF NOT EXISTS `payment_options` (
+CREATE TABLE `payment_options` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `is_active` int(11) NOT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `payment_options`
@@ -560,7 +637,7 @@ INSERT INTO `payment_options` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
+CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `_name` varchar(150) NOT NULL,
   `price` float NOT NULL,
@@ -575,14 +652,14 @@ CREATE TABLE IF NOT EXISTS `products` (
   `price_in_aktion` float NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `products`
 --
 
 INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `description`, `pic`, `thumb_1`, `thumb_2`, `thumb_3`, `color`, `in_aktion`, `price_in_aktion`, `is_active`, `deleted_at`) VALUES
-(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt-front.png', 'img/shop-images/damen-tshirt-front.png', 'img/shop-images/damen-tshirt-back.png', '', NULL, 0, 0, 1, NULL),
+(7, 'Damen T-Shirt', 19.99, 1, 'Damen T-Shirt aus 100% Bio-Baumwolle. Durch die angenehme Passform und den längeren Schnitt ist dieses schlichte T-Shirt optimal um Yoga zu praktizieren. Maschienenwaschbar bei 40°C.', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-front.png', 'img/shop-images/damen-tshirt-black-back.png', '', NULL, 0, 0, 1, NULL),
 (8, 'Yogabag & Matte', 39.99, 2, 'Yogamatte mit praktischer Bag in schlichtem Schwarz. Mit einem verschließbaren Fach für Schlüssel oder Handy.', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_yogamatte.png', 'img/shop-images/tragetasche_open.jpg', '', NULL, 0, 0, 1, NULL),
 (9, 'Jumper', 39.99, 1, 'Stylischer Jumper für Männer und Frauen. Aus 100% Baumwolle und Machienenwaschbar.', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-front.png', 'img/shop-images/jumper-white-back.png', '', NULL, 0, 0, 1, NULL),
 (10, 'Pilatesring', 24.99, 2, 'Dieser Pilatesring mit ergonomischen Griffen unterstützt perfekt beim Training. Es können sowohl Beine, als auch Arme und Körpermitte gestärkt und gestrafft werden.', 'img/shop-images/yogaring.png', 'img/shop-images/yogaring.png', 'tbtbtb', 'rtbtb', NULL, 0, 0, 1, NULL),
@@ -602,12 +679,12 @@ INSERT INTO `products` (`id`, `_name`, `price`, `shop_categories_id`, `descripti
 --
 
 DROP TABLE IF EXISTS `shop_categories`;
-CREATE TABLE IF NOT EXISTS `shop_categories` (
+CREATE TABLE `shop_categories` (
   `id` int(11) NOT NULL,
   `_name` varchar(100) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `shop_categories`
@@ -626,13 +703,13 @@ INSERT INTO `shop_categories` (`id`, `_name`, `is_active`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `socialmedia_icons`;
-CREATE TABLE IF NOT EXISTS `socialmedia_icons` (
+CREATE TABLE `socialmedia_icons` (
   `id` int(11) NOT NULL,
   `icon_name` varchar(100) NOT NULL,
   `pic` varchar(400) NOT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `socialmedia_icons`
@@ -648,13 +725,13 @@ INSERT INTO `socialmedia_icons` (`id`, `icon_name`, `pic`, `is_active`, `deleted
 --
 
 DROP TABLE IF EXISTS `stocks`;
-CREATE TABLE IF NOT EXISTS `stocks` (
-  `id` int(11) unsigned NOT NULL,
+CREATE TABLE `stocks` (
+  `id` int(11) UNSIGNED NOT NULL,
   `product_id` int(11) NOT NULL,
   `size` varchar(11) NOT NULL DEFAULT '',
   `stock` int(11) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `stocks`
@@ -684,7 +761,7 @@ INSERT INTO `stocks` (`id`, `product_id`, `size`, `stock`, `deleted_at`) VALUES
 --
 
 DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `_name` varchar(50) NOT NULL,
   `fullname` varchar(100) NOT NULL,
@@ -700,7 +777,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `users`
@@ -752,7 +829,7 @@ INSERT INTO `users` (`id`, `_name`, `fullname`, `email`, `password_hash`, `gende
 --
 
 DROP TABLE IF EXISTS `user_messages`;
-CREATE TABLE IF NOT EXISTS `user_messages` (
+CREATE TABLE `user_messages` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
   `telno` int(15) NOT NULL,
@@ -761,7 +838,7 @@ CREATE TABLE IF NOT EXISTS `user_messages` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_answered` tinyint(1) DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Daten für Tabelle `user_messages`
@@ -796,6 +873,12 @@ ALTER TABLE `breadcrubms_checkout`
 -- Indizes für die Tabelle `breadcrumbs_checkouts`
 --
 ALTER TABLE `breadcrumbs_checkouts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `cart`
+--
+ALTER TABLE `cart`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -914,112 +997,117 @@ ALTER TABLE `user_messages`
 -- AUTO_INCREMENT für Tabelle `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `bestell_items`
 --
 ALTER TABLE `bestell_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `breadcrubms_checkout`
 --
 ALTER TABLE `breadcrubms_checkout`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `breadcrumbs_checkouts`
 --
 ALTER TABLE `breadcrumbs_checkouts`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT für Tabelle `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT für Tabelle `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT für Tabelle `contents`
 --
 ALTER TABLE `contents`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 --
 -- AUTO_INCREMENT für Tabelle `coupon_codes`
 --
 ALTER TABLE `coupon_codes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT für Tabelle `courses`
 --
 ALTER TABLE `courses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT für Tabelle `delivery_options`
 --
 ALTER TABLE `delivery_options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT für Tabelle `guests`
 --
 ALTER TABLE `guests`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT für Tabelle `header_items`
 --
 ALTER TABLE `header_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `logs`
 --
 ALTER TABLE `logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `menu_backend_items`
 --
 ALTER TABLE `menu_backend_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT für Tabelle `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT für Tabelle `payment_options`
 --
 ALTER TABLE `payment_options`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT für Tabelle `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT für Tabelle `shop_categories`
 --
 ALTER TABLE `shop_categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT für Tabelle `socialmedia_icons`
 --
 ALTER TABLE `socialmedia_icons`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT für Tabelle `stocks`
 --
 ALTER TABLE `stocks`
-  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=39;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT für Tabelle `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 --
 -- AUTO_INCREMENT für Tabelle `user_messages`
 --
 ALTER TABLE `user_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
