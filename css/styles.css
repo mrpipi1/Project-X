@@ -1738,6 +1738,7 @@ Adressen
     color: #5a8e7d;
     border: 1px solid #5a8e7d;
     background-color: white;
+    cursor: pointer !important;
 }
  .form_checkout .btn_big-checkout:hover, .btn_big-checkout_profile:hover{
     color: white;
