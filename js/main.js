@@ -641,9 +641,12 @@ $('.address_zusammenfassung input').focus(function(){
 
 $('.btn_order_final').click(function(){
     if($('#agbs').is(':checked')){
+      $('.agb_error').css('display', 'none');
       var user_id = $('.btn_order_final').attr('id');
       send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
       window.location.href = "index.php?page=Abschluss";
+    }else{
+      $('.agb_error').css('display', 'block');
     }
 
 });

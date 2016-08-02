@@ -2662,3 +2662,7 @@ cursor: pointer;
     color: #5a8e7d;
     font-size:120%;
 }
+.agb_error{
+  display: none;
+  color: #b50101;
+}
