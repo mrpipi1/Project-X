@@ -169,7 +169,7 @@ function add_to_Cart(user_id, guest_id, product_id){
             quantity: quantity
           }, function (response, status) {
               if (response == 1 && status == 'success') {
-                  window.location.href = "index.php?page=shop";
+                  window.location.href = "index.php?page=Shop";
                   $('.error_detailansicht').text('');
                   $('.errormessage_detail_wrapper').css('display', 'none');
               } else if(response == 2 && status == 'success'){
@@ -641,9 +641,12 @@ $('.address_zusammenfassung input').focus(function(){
 
 $('.btn_order_final').click(function(){
     if($('#agbs').is(':checked')){
+      $('.agb_error').css('display', 'none');
       var user_id = $('.btn_order_final').attr('id');
       send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
       window.location.href = "index.php?page=Abschluss";
+    }else{
+      $('.agb_error').css('display', 'block');
     }
 
 });

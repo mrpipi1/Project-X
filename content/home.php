@@ -145,7 +145,7 @@
         </section>
 
         <div class="btn">
-             <a href="index.php?page=shop">Zum Shop</a>
+             <a href="index.php?page=Shop">Zum Shop</a>
         </div>
 
      </section>

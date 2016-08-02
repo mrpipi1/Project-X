@@ -391,7 +391,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
 
         <!-- AGB und Datenschutzbestimmungen akzeptieren -->
         <form class="form_confirmation" action="#" method="post">
-
+            <div class="agb_error">Bitte stimme den AGBs und Datenschutzbedingungen zu.</div>
             <p class="form_confirmation_content">
                 <input type="checkbox" id="agbs" name="agb-confirmation"/>
                 <label class="label_normal" for="agbs">Ich stimme den <a href="#">Datenschutzbestimmungen</a> und <a href="#">AGBs</a> zu.*</label>
