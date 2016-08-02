@@ -81,7 +81,7 @@
         </div>
 
         <div class="form-group register_tel">
-            <input id="register_tel" type='text' name="tel" value="" required class="input" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
+            <input id="register_tel" type='number' name="tel" value="" required class="input" pattern='[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}'>
             <span class="highlight"></span>
             <span class="form-bar"></span>
             <label class="label">Telefonnummer*</label>

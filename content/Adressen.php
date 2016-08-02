@@ -9,14 +9,6 @@
             <form class="form_checkout checkout_billing" action="#" method="post">
 
                 <div class="form-group">
-                    <input type="text" name="fullname" value="" required class="input">
-                    <span class="highlight"></span>
-                    <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname*</label>
-                    <span class="error">
-                </div>
-
-                <div class="form-group">
                     <input type="text" name="address" value="" required class="input">
                     <span class="highlight"></span>
                     <span class="form-bar"></span>
@@ -61,14 +53,6 @@
               </div>
 
               <div class="shipping_form_wrapper">
-
-                <div class="form-group">
-                    <input type="text" name="fullname" value="" required class="input">
-                    <span class="highlight"></span>
-                    <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname*</label>
-                    <span class="error">
-                </div>
 
                 <div class="form-group">
                     <input type="text" name="address" value="" required class="input">

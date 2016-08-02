@@ -380,13 +380,36 @@ function insert_or_update(page, action, id){
 function insert_or_update_checkout_address(action, step){
     var billing_values = {};
     var shipping_values = {};
-    console.log($('.checkout_billing input'));
+    var error = 0;
+    var check_shipping = $('#is_shipping_address:checked').length > 0 ? false : true;
+
     $.each($('.checkout_billing input').serializeArray(), function(i, field) {
-        billing_values[field.name] = field.value;
+        var el = $('.checkout_billing input').eq(i);
+        if(field.value != ""){
+          billing_values[field.name] = field.value;
+          el.parent().children('.error').text('');
+          el.removeClass('invalid');
+        }else{
+          el.addClass('invalid');
+          el.parent().children('.error').text('Dieses Feld darf nicht leer sein');
+          error++;
+        }
         if(i == $('.checkout_billing input').serializeArray().length -1 ){
-            $.each($('.checkout_shipping input').serializeArray(), function(j, field) {
-                shipping_values[field.name] = field.value;
+            $.each($('.checkout_shipping input').serializeArray(), function(j, field2) {
+              var el2 = $('.checkout_shipping input').eq(j+1);
+              console.log(el2)
+                      if(field2.value == "" && check_shipping == true){
+                                el2.addClass('invalid');
+                                el2.parent().children('.error').text('Dieses Feld darf nicht leer sein');
+                                error++;
+                              }else{
+                                el2.parent().children('.error').text('');
+                                el2.removeClass('invalid');
+                                 shipping_values[field2.name] = field2.value;
+                              }
+
                 if (j == $('.checkout_shipping input').serializeArray().length - 1) {
+                  if(error == 0){
                     var data = {action: action, billing: billing_values, shipping: shipping_values, step: step};
                     $.post('logic/insert_checkout.php', data, function (response, status) {
                         console.log(response);
@@ -401,6 +424,9 @@ function insert_or_update_checkout_address(action, step){
                             $('.errors_checkout_wrapper').css('display', 'block');
                         }
                     });
+                  }else{
+                      console.log('fields empty '+error);
+                  }
                 }
             });
         }
@@ -579,7 +605,6 @@ $('.next_btn_adressen').on('click',function(event){
 });
 
 $('.next_btn_versand').on('click',function(event){
-    console.log($(this).parent().parent().parent().find('input.invalid'));
     var form_data=$(this).parent().parent().parent().find('input.invalid');
     if(form_data.length > 0){
         console.log('error hier anzeigen');
@@ -592,53 +617,6 @@ $('.next_btn_versand').on('click',function(event){
         insert_or_update_checkout_payment('new', 'payment_shipping');
     }
 });
-
-
-
-
-/*$('.next_btn_versand').click(function(){
-    var error_shipping = 1;
-    var error_payment = 1;
-    var values = {};
-    $.each($('.form_shipping').serializeArray(), function(i, field) {
-        values[field.name] = field.value;
-        if(i == $('.form_shipping').serializeArray().length -1 ){
-            var data = {page: 'orders', action: 'edit', data: values};
-            $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
-                if(response == 1 && status == 'success'){
-                  error_shipping = 0;
-                }else{
-                  $('.error_message_checkout').text('');
-                  $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
-                  $('.errors_checkout_wrapper').css('display', 'block');
-                  error_shipping = 1;
-                }
-            });
-        }
-    });
-    $.each($('.form_payment').serializeArray(), function(i, field) {
-        values[field.name] = field.value;
-        if(i == $('.form_payment').serializeArray().length -1 ){
-            var data = {page: 'orders', action: 'edit', data: values};
-            $.post('backend/logic/insert_or_update_contents.php', data, function(response, status) {
-                if(response == 1 && status == 'success'){
-                  error_payment = 0;
-                }else{
-                    $('.error_message_checkout').text('');
-                    $('.error_message_checkout').text('Ein Fehler ist aufgetreten!');
-                    $('.errors_checkout_wrapper').css('display', 'block');
-                    error_payment = 1;
-                }
-            });
-        }
-    });
-    if(error_shipping == 0 && error_payment == 0){
-      window.location.href = "index.php?page=Zusammenfassung";
-    }else{
-      console.log(error_shipping+" / "+error_payment);
-    }
-});*/
-
 
 $('.btn_cart_next').click(function(event){
   console.log('click');
@@ -658,9 +636,10 @@ $('.btn_cart_next').click(function(event){
 
 $('.btn_order_final').click(function(){
 
-  var user_id = $('.btn_order_final').attr('id');
-      send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
-    });
+    var user_id = $('.btn_order_final').attr('id');
+    send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
+    window.location.href = "index.php?page=shop";
+});
 
 
 $('.address_zusammenfassung input').focus(function(){

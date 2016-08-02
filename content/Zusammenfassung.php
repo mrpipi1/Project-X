@@ -21,15 +21,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
               $reciept_address = $reciept_address_array[0];
               $reciept_city = $reciept_address_array[2];
               $reciept_zip = $reciept_address_array[1];
-              $guest_name = $row['guest_name'];
               ?>
-                <div class="form-group">
-                    <input type="text" name="name" value="<?php echo $guest_name ?>" required class="input">
-                    <span class="highlight"></span>
-                    <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname*</label>
-                    <span class="error">
-                </div>
 
                 <div class="form-group">
                     <input type="text" name="address" value="<?php echo $reciept_address?>" required class="input">
@@ -55,7 +47,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
                 </div>
 
                 <div class="btn_checkout btn_big-checkout change_reciept_address">
-                    <input type="submit" name="change_reciept_address" value="Ändern" class="btn_big-checkout input checkout_default_address_submit">
+                    <input type="submit" name="change_reciept_address" value="Ändern" class="btn_big-checkout input checkout_default_address_submit hange_reciept_address">
                 </div>
 
             </form>
@@ -79,16 +71,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
                 $shipping_address = $shipping_address_array[0];
                 $shipping_city = $shipping_address_array[2];
                 $shipping_zip = $shipping_address_array[1];
-                $guest_name = $row['guest_name'];
                 ?>
-
-                <div class="form-group">
-                    <input type="text" name="name" value="<?php echo $guest_name ?>" required class="input">
-                    <span class="highlight"></span>
-                    <span class="form-bar"></span>
-                    <label class="label">Vorname | Nachname*</label>
-                    <span class="error">
-                </div>
 
                 <div class="form-group">
                     <input type="text" name="address" value="<?php echo $shipping_address ?>" required class="input">
@@ -422,7 +405,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
         </div>
 
         <div class="btn_checkout btn_order_final" id="<?php if(isset($_SESSION['user']['user_id'])){echo $_SESSION['user']['user_id'];}elseif(isset($_SESSION['guest_id'])){echo $_SESSION['guest_id'];} ?>">
-            <a href="index.php?page=Abschluss" >zahlungspflichtig bestellen</a>
+            <span>zahlungspflichtig bestellen</span>
         </div>
     </div>
     <?php
