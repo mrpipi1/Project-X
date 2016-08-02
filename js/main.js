@@ -459,7 +459,7 @@ $('.form-group input[type="text"][name!="gutschein"] , .form-group input[type="p
             re = /^[a-zA-Z0-9-\/] ?([a-zA-Z0-9-\/]|[a-zA-Z0-9-\/] )*[a-zA-Z0-9-\/]$/;
             errtxt = 'Bitte geben Sie eine gültige Adresse ein!';
         } else if ($(this).attr('name') == 'fullname') {
-            re = /^[a-z ,.'-]+$/;
+            re = /^[a-zA-Z ,.'-]+$/;
             errtxt = 'Bitte geben Sie gültige Vor und Nachnamen ein!';
         }
         var check = re.test(input.val());
