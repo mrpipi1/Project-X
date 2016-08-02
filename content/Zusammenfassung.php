@@ -398,7 +398,6 @@ while( $row = mysqli_fetch_assoc($orders) ) {
             </p>
 
         </form>
-    </section>
     <div class="btn-wrapper_checkout">
         <div  class="btn_checkout">
             <a href="index.php?page=Versand">zurück</a>
