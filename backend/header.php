@@ -119,11 +119,6 @@
                             <span class="selected"></span>
                         </p>
                     </li>
-                    <li><p onClick="load_Content('header_items', '1', 'id', 'ASC')">
-                            <i class="fa fa-anchor"></i><span class="title">Header Items</span>
-                            <span class="selected"></span>
-                        </p>
-                    </li>
                     <li><p onClick="load_Content('employees', '1', 'id', 'ASC')">
                             <i class="fa fa-user-md"></i><span class="title">Employees</span>
                             <span class="selected"></span>
