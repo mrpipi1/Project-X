@@ -4,7 +4,7 @@
 include("breadcrumbs.php");
 ?>
     <!-- Adressen -->
-    <section class="wrapper_form">
+    <section class="wrapper_form wrapper_form_zusammenfassung">
       <?php
       if(isset($_SESSION['guest_id'])){
         ?>
@@ -196,7 +196,7 @@ include("breadcrumbs.php");
     </section>
 
 
-        <section class="wrapper_shipping-info">
+        <section class="wrapper_shipping-info wrapper_shipping-info_zusammenfassung">
           <?php
           if(isset($_SESSION['user']['user_id'])){
           ?>

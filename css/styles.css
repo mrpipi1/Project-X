@@ -2651,3 +2651,9 @@ cursor: pointer;
 .onesize{
   opacity: 0;
 }
+.wrapper_shipping-info_zusammenfassung{
+  margin: 1.7em 0;
+}
+.wrapper_form_zusammenfassung{
+  margin-top: 3em;
+}
