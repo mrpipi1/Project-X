@@ -640,7 +640,7 @@ $('.address_zusammenfassung input').focus(function(){
 
 
 $('.btn_order_final').click(function(){
-    if($('#agbs input:checked')){
+    if($('#agbs').is(':checked')){
       var user_id = $('.btn_order_final').attr('id');
       send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
       window.location.href = "index.php?page=Abschluss";
