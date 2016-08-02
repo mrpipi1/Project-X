@@ -638,7 +638,7 @@ $('.btn_order_final').click(function(){
 
     var user_id = $('.btn_order_final').attr('id');
     send_user_email('keine_mail', 'Deine Bestellung bei lotusyoga', user_id);
-    window.location.href = "index.php?page=shop";
+    window.location.href = "index.php?page=Abschluss";
 });
 
 

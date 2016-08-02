@@ -167,7 +167,7 @@ while( $row = mysqli_fetch_assoc($orders) ) {
 
                 <div class="raidiobutton_wrapper_shipping">
                   <input type="checkbox" name="is_shipping_address" id="is_shipping_address"  checked/>
-                  <label for="is_shipping_addess" class="">gleich wie Rechnungsadresse</label>
+                  <label for="is_shipping_address" class="">gleich wie Rechnungsadresse</label>
                 </div>
 
                 <div class="shipping_form_wrapper">

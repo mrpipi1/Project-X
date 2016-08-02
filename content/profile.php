@@ -8,7 +8,6 @@
 if(mysqli_num_rows($orders) > 0){
   while( $row = mysqli_fetch_assoc($orders) ){ ?>
   <p>
-  <?php echo $row['email']; ?>
   </p>
   <?php
   }

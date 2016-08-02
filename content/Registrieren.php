@@ -116,7 +116,7 @@
             <input id="register_address" type="text" name="address" value="" required class="input">
             <span class="highlight"></span>
             <span class="form-bar"></span>
-            <label class="label">Adresse*</label>
+            <label class="label">Strasse und Hausnummer*</label>
             <span class="error error_register_address">
         </div>
 
