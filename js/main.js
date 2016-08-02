@@ -114,6 +114,20 @@ function onScroll(event){
        }
        contentObj.value = value;
  }
+ function updateSpinner_detail(obj){
+     var contentObj = document.getElementById('content');
+       var value = parseInt(contentObj.value);
+       if(obj.id == "down") {
+           if(value != 0 ){
+               value--;
+           }
+       } else {
+           if(value < 11){
+               value++;
+           }
+       }
+       contentObj.value = value;
+ }
 
 // ### GOOGLE MAPS API - VIEW CONFIGS ###
 function initMap() {
