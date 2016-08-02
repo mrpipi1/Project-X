@@ -176,7 +176,7 @@ function add_to_Cart(user_id, guest_id, product_id){
                   $('.errormessage_detail_wrapper').css('display', 'block');
               } else {
                   $('.error_detailansicht').text('');
-                  $('.error_detailansicht').text('Produkt konnt enicht in den Warenkorb hinzugefügt werden.');
+                  $('.error_detailansicht').text('Produkt konnte nicht in den Warenkorb hinzugefügt werden.');
                   $('.errormessage_detail_wrapper').css('display', 'block');
               }
           });
@@ -378,7 +378,6 @@ function insert_or_update(page, action, id){
 function insert_or_update_checkout_address(action){
     var billing_values = {};
     var shipping_values = {};
-    console.log($('.checkout_billing input'));
     $.each($('.checkout_billing input').serializeArray(), function(i, field) {
         billing_values[field.name] = field.value;
         if(i == $('.checkout_billing input').serializeArray().length -1 ){
@@ -656,6 +655,9 @@ $('.btn_order_final').click(function(){
     });
 
 
+$('.address_zusammenfassung input').focus(function(){
+  $('.change_reciept_address').css('display', 'block');
+});
 
 
 

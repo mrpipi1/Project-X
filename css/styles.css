@@ -1209,7 +1209,7 @@ Abschluss
     font-size: small;
 }
 h2.hl_checkout {
-    font-size: 2vw;
+    font-size: 1.5em;
     margin: 0 0 2em 0;
     text-transform: capitalize;
     text-align: center;
@@ -2630,4 +2630,15 @@ cursor: pointer;
   font-size: 14px;
   margin: 5px;
   padding: 0 6px 0;
+}
+.address_zusammenfassung .form-group{
+  margin-bottom: 1em;
+}
+.address_zusammenfassung .input:focus~ .label, .input:valid~ .label {
+    font-size: 0.8em;
+    top: -9px;
+    color: #5a8e7d;
+}
+.address_zusammenfassung .change_delivery_address, .change_reciept_address{
+  display: none;
 }
