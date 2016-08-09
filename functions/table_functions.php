@@ -170,7 +170,7 @@ function update_contents($tablename, $id, $content_array) {
     $sql = "UPDATE " .$tablename ." SET " .$insert_string ."  WHERE id = '$id'";
     $result = mysqli_query($link, $sql);
     if($result) {
-        $sql = "INSERT INTO log (_name, type, location )  VALUES ('{$log_name}','update','{$tablename}' )";
+        $sql = "INSERT INTO logs (_name, type, location )  VALUES ('{$log_name}','update','{$tablename}' )";
         $result = mysqli_query($link, $sql);
         if ($result) {
             echo $result;
@@ -218,7 +218,7 @@ function insert_contents($tablename, $content_array) {
     $sql = "INSERT INTO " .$tablename ." (" .$insert_col ." )" ." VALUES (" .$insert_wert ." )";
     $result = mysqli_query($link, $sql);
     if($result) {
-        $sql = "INSERT INTO log (_name, type, location )  VALUES ('{$log_name}','insert' ,'{$tablename}' )";
+        $sql = "INSERT INTO logs (_name, type, location )  VALUES ('{$log_name}','insert' ,'{$tablename}' )";
         $result = mysqli_query($link, $sql);
         if ($result) {
             echo $result;

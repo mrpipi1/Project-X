@@ -51,7 +51,7 @@ global $link;
                         $_SESSION['is_admin'] = true;
                         $_SESSION['logged_in'] = true;
                         $_SESSION['user'] = array('username' => $user["admin_name"], 'user_id' => $user["id"]);
-                        redirect_to("http://localhost/lotusyoga/backend/index.php", "Erfolgreich eingeloggt!");
+                        redirect_to("http://www.abenkoe.at/backend/index.php", "Erfolgreich eingeloggt!");
                         session_write_close();
                     }
                 }

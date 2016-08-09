@@ -10,7 +10,7 @@ if(isset($_POST['table']) && isset($_POST['id'])) {
         $sql = "UPDATE {$_POST['table']} SET is_active = 0, deleted_at = " . $timestamp . " WHERE id = {$_POST['id']}";
         $result = mysqli_query($link, $sql);
         if($result) {
-            $sql = "INSERT INTO log (_name, type, location )  VALUES ('{$row['_name']}','delete','{$_POST['table']}' )";
+            $sql = "INSERT INTO logs (_name, type, location )  VALUES ('{$row['_name']}','delete','{$_POST['table']}' )";
             $result = mysqli_query($link, $sql);
             if ($result) {
                 echo $result;
